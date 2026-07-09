@@ -288,6 +288,29 @@ async function showAutocomplete(q) {
     }
     const normSearchQ = normalizeKhmer(searchQ).toLowerCase();
 
+    // 0.8 Check if user pasted a Google Maps URL directly
+    if (/maps\.app\.goo\.gl|goo\.gl\/maps|google\.com\/maps/i.test(q)) {
+      autocompleteDropdown.innerHTML = '';
+      const item = document.createElement('div');
+      item.className = 'ac-item';
+      item.innerHTML = `
+        <span class="ac-icon-marker" style="margin-right: 12px; font-size: 1.1rem; color: #DA251D;">🗺️</span>
+        <div class="ac-details" style="display: flex; flex-direction: column; gap: 2px;">
+          <span class="ac-label" style="font-size: 13px; font-weight: 600; color: #1e293b;">Go to Google Maps Link Location</span>
+          <span class="ac-sub" style="font-size: 11px; color: #64748b; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 250px;">${q}</span>
+        </div>
+      `;
+      item.addEventListener('click', () => {
+        searchInput.value = q;
+        clearBtn.style.display = 'block';
+        closeAutocomplete();
+        runSmartFind();
+      });
+      autocompleteDropdown.appendChild(item);
+      autocompleteDropdown.classList.add('open');
+      return;
+    }
+
     // 1. Check if user typed direct GPS coordinates
     const coords = parseCoordinates(q);
     if (coords) {
@@ -881,10 +904,45 @@ async function runSmartFind() {
         return;
       }
     }
+    // 0.5 Check if user pasted a Google Maps URL directly
+    if (/maps\.app\.goo\.gl|goo\.gl\/maps|google\.com\/maps/i.test(q)) {
+      try {
+        if (provinceSelect) {
+          provinceSelect.value = ''; // Reset province filter because URL coordinates are absolute
+        }
+        const geoUrl = `${API}/api/google-geocode?q=${encodeURIComponent(q)}`;
+        const geoRes = await fetch(geoUrl);
+        if (geoRes.ok) {
+          const coordsData = await geoRes.json();
+          if (coordsData.type === 'multiple') {
+            presentProvinceSelection(coordsData.results, q, coordsData.isOtherProvince || false);
+            return;
+          }
+          const selectedLoc = {
+            id: 'target_' + Date.now(),
+            market: coordsData.name || 'Google Maps Location',
+            latitude: coordsData.lat,
+            longitude: coordsData.lng,
+            province: coordsData.province || 'Google Location',
+            province_kh: coordsData.province_kh || '',
+            district: coordsData.district || '',
+            district_kh: coordsData.district_kh || '',
+            google_maps_url: q.trim()
+          };
+          await selectLocationAndFindNearbyPOs(selectedLoc, [selectedLoc]);
+          return;
+        }
+      } catch (err) {
+        console.warn('Google maps URL geocoding failed:', err.message);
+      }
+    }
 
     // 1. Check if user typed direct GPS coordinates (e.g. 11.556, 104.928)
     const coords = parseCoordinates(q);
     if (coords) {
+      if (provinceSelect) {
+        provinceSelect.value = ''; // Reset province filter because GPS coordinates are absolute
+      }
       const selectedLoc = {
         id: 'target_' + Date.now(),
         market: `GPS Coordinates: ${coords.lat}, ${coords.lng}`,
@@ -1378,35 +1436,58 @@ function renderResultsList(results, isNearbyList = false, targetTitle = null, ta
     const shortProv = r.province ? extractProvinceName(r.province) : '';
 
     card.innerHTML = `
-      <div class="card-grid">
-        <div class="card-index">
-          <span class="index-num">${indexStr}</span>
-          <span class="type-badge">${!r.branch_id && !isNearbyList ? 'MKT' : 'PO'}</span>
-        </div>
-        <div class="card-content">
-          <div class="card-top" style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 2px;">
-            <span class="card-title">${highlightMatch(title, q)}</span>
+      <div class="card-content" style="padding: 4px 0;">
+        <div class="card-top" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; margin-bottom: 2px; width: 100%;">
+          <div style="display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1;">
+            <span class="card-title" style="font-size: 14px; font-weight: 700; color: var(--forest-900); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${highlightMatch(title, q)}</span>
             ${shortProv ? `
-              <span class="card-province-tag" style="background-color: #fef3c7; color: #b45309; font-size: 9.5px; font-weight: 700; padding: 1.5px 5px; border-radius: 4px; border: 1px solid #fde68a; text-transform: uppercase;">
+              <span class="card-province-tag" style="background-color: #fef3c7; color: #b45309; font-size: 9px; font-weight: 700; padding: 1.5px 5px; border-radius: 4px; border: 1px solid #fde68a; text-transform: uppercase; white-space: nowrap; flex-shrink: 0;">
                 ${escHtml(shortProv)}
               </span>
             ` : ''}
-            ${r.branch_id ? `<span class="card-branch-tag">ID: ${highlightMatch(r.branch_id, q)}</span>` : ''}
           </div>
-          ${titleKh ? `<div class="card-title-kh">${highlightMatch(titleKh, q)}</div>` : ''}
-          <div class="card-address">
-            <span class="label-mono">📍</span> ${highlightMatch([r.village, r.commune, r.district, r.province].filter(Boolean).join(', '), q)}
-          </div>
-          ${r.village_kh || r.district_kh ? `
-          <div class="card-address-kh">
-            ${highlightMatch([r.village_kh, r.commune_kh, r.district_kh, r.province_kh].filter(Boolean).join(', '), q)}
-          </div>` : ''}
-          ${r.distance_km != null ? `<div class="card-po-line">
-            <span class="label-mono">Ref: <b>${highlightMatch(r.branch_id || 'MKT', q)}</b></span>
-            <span class="distance-badge">📡 ចំងាយ Distance: ${formatDistance(r.distance_km)}</span>
-          </div>` : ''}
-          <a class="card-gmaps-link" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
+          ${r.branch_id ? `<span class="card-branch-tag" style="background: var(--metfone-red); color: white; font-size: 9.5px; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill); white-space: nowrap; flex-shrink: 0;">ID: ${highlightMatch(r.branch_id, q)}</span>` : ''}
         </div>
+        ${titleKh ? `<div class="card-title-kh" style="font-family: var(--font-khmer); font-size: 12.5px; color: var(--text-muted); margin-bottom: 4px;">${highlightMatch(titleKh, q)}</div>` : ''}
+        
+        <!-- Modern Administrative Details Block -->
+        <div style="font-size: 11px; color: var(--forest-900); display: flex; flex-direction: column; gap: 4px; margin: 6px 0; background: var(--bg-canvas); border-radius: 6px; padding: 8px 10px; border: 1px solid var(--sage-200);">
+          ${(r.village || r.village_kh) ? `
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:8.5px; font-weight:800; color:#475569; background:#e2e8f0; padding:1px 4px; border-radius:3px; text-transform:uppercase; white-space:nowrap; line-height:1.4;">ភូមិ Village</span>
+              <span style="font-weight:600; font-size: 11px;">${r.village_kh ? escHtml(r.village_kh) : ''}${r.village_kh && r.village ? ' · ' : ''}${r.village ? escHtml(r.village) : ''}</span>
+            </div>
+          ` : ''}
+          ${(r.commune || r.commune_kh) ? `
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:8.5px; font-weight:800; color:#475569; background:#e2e8f0; padding:1px 4px; border-radius:3px; text-transform:uppercase; white-space:nowrap; line-height:1.4;">ឃុំ/សង្កាត់ Sangkat</span>
+              <span style="font-weight:600; font-size: 11px;">${r.commune_kh ? escHtml(r.commune_kh) : ''}${r.commune_kh && r.commune ? ' · ' : ''}${r.commune ? escHtml(r.commune) : ''}</span>
+            </div>
+          ` : ''}
+          ${(r.district || r.district_kh) ? `
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:8.5px; font-weight:800; color:#475569; background:#e2e8f0; padding:1px 4px; border-radius:3px; text-transform:uppercase; white-space:nowrap; line-height:1.4;">ស្រុក/ខណ្ឌ District</span>
+              <span style="font-weight:600; font-size: 11px;">${r.district_kh ? escHtml(r.district_kh) : ''}${r.district_kh && r.district ? ' · ' : ''}${r.district ? escHtml(r.district) : ''}</span>
+            </div>
+          ` : ''}
+          ${(r.province || r.province_kh) ? `
+            <div style="display:flex; align-items:center; gap:6px;">
+              <span style="font-size:8.5px; font-weight:800; color:#475569; background:#e2e8f0; padding:1px 4px; border-radius:3px; text-transform:uppercase; white-space:nowrap; line-height:1.4;">ខេត្ត Province</span>
+              <span style="font-weight:600; font-size: 11px;">${r.province_kh ? escHtml(r.province_kh) : ''}${r.province_kh && r.province ? ' · ' : ''}${r.province ? escHtml(r.province) : ''}</span>
+            </div>
+          ` : ''}
+        </div>
+
+        ${r.distance_km != null ? `
+          <div style="border-top: 1px dashed var(--sage-200); padding-top: 6px; margin-top: 6px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; width:100%;">
+            <span class="distance-badge" style="margin-left: 0; font-size: 10px;">📡 ចំងាយ Distance: ${formatDistance(r.distance_km)}</span>
+            <a class="card-gmaps-link" style="margin-top: 0; font-size: 10px;" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
+          </div>
+        ` : `
+          <div style="border-top: 1px dashed var(--sage-200); padding-top: 6px; margin-top: 6px; display:flex; justify-content:flex-end; width:100%;">
+            <a class="card-gmaps-link" style="margin-top: 0; font-size: 10px;" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
+          </div>
+        `}
       </div>
     `;
 

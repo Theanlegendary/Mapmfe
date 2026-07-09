@@ -2038,5 +2038,62 @@
     ],
     "priority_score": 100,
     "google_maps_url": "https://www.google.com/maps?q=11.130317,105.130143"
+  },
+  {
+    "id": 9070,
+    "market": "Prek Chrey Market",
+    "market_kh": "ផ្សារព្រែកជ្រៃ",
+    "aliases": [
+      "Phsar Prek Chrey",
+      "Psar Prek Chrey",
+      "Prek Chrey"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Dangkao",
+    "district_kh": "ដង្កោ",
+    "latitude": 11.4647145,
+    "longitude": 104.8904545,
+    "search_keywords": [
+      "prek chrey",
+      "prekchrey",
+      "phsar prek chrey",
+      "psar prek chrey",
+      "prek chrey market",
+      "phnom penh",
+      "dangkao",
+      "ផ្សារព្រែកជ្រៃ",
+      "ព្រែកជ្រៃ"
+    ],
+    "priority_score": 100,
+    "google_maps_url": "https://www.google.com/maps?q=11.4647145,104.8904545"
+  },
+  {
+    "id": 9071,
+    "market": "Chbar Ampov Market",
+    "market_kh": "ផ្សារច្បារអំពៅ",
+    "aliases": [
+      "Phsar Chbar Ampov",
+      "Psar Chbar Ampov",
+      "Chbar Ampov"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Chbar Ampov",
+    "district_kh": "ច្បារអំពៅ",
+    "latitude": 11.533722,
+    "longitude": 104.945089,
+    "search_keywords": [
+      "chbar ampov",
+      "phsar chbar ampov",
+      "psar chbar ampov",
+      "chbar ampov market",
+      "phnom penh",
+      "chbar ampov district",
+      "ផ្សារច្បារអំពៅ",
+      "ច្បារអំពៅ"
+    ],
+    "priority_score": 100,
+    "google_maps_url": "https://www.google.com/maps?q=11.533722,104.945089"
   }
 ]

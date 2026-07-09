@@ -10,6 +10,13 @@ const PORT = process.env.PORT || 3000;
 
 // ── Middleware ──
 app.use(cors());
+app.use((req, res, next) => {
+  res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+  res.setHeader('Pragma', 'no-cache');
+  res.setHeader('Expires', '0');
+  res.setHeader('Surrogate-Control', 'no-store');
+  next();
+});
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -23,6 +30,27 @@ let famousMarkets = [];
 let fuse;
 let branchFuse;
 const translationDict = {};
+const khmerToEnglishDict = {};
+
+const KHMER_TO_ENGLISH_MANUAL = {
+  'ព្រៃស': 'prey sar',
+  'ចោមចៅ': 'chom chao',
+  'ទឹកថ្លា': 'tuek thla',
+  'ស្ទឹងមានជ័យ': 'steung meanchey',
+  'បឹងកេងកង': 'boeng keng kang',
+  'ទួលគោក': 'tuol kouk',
+  'ដូនពេញ': 'daun penh',
+  'ប្រាំពីរមករា': 'prampir meakkara',
+  'សែនសុខ': 'sen sok',
+  'ដង្កោ': 'dangkao',
+  'មានជ័យ': 'meanchey',
+  'ជ្រោយចង្វារ': 'chroy changvar',
+  'ព្រែកព្នៅ': 'prek pnov',
+  'ច្បារអំពៅ': 'chbar ampov',
+  'កំបូល': 'kamboul',
+  'កោះដាច់': 'koh dach',
+  'ភ្នំពេញថ្មី': 'phnom penh thmei'
+};
 
 
 try {
@@ -132,15 +160,27 @@ function initializeFuse() {
 }
 
 function buildTranslationDict() {
-  const clean = (s) => (s || '').trim().replace(/\b(Khan|Srok|Krong|Sangkat|Sangkat\/Commune|Commune|Village|Phsar|Psar|Market|District|Province|Capital)\b/gi, '').trim();
-
-  const add = (en, kh) => {
-    const cen = clean(en).toLowerCase();
-    const ckh = clean(kh);
+  const add = (en, kh, isMarket = false) => {
+    const cen = stripAdministrativePrefixes(normalizeKhmer(en));
+    const ckh = stripAdministrativePrefixes(normalizeKhmer(kh));
     if (cen && ckh && !translationDict[cen]) {
       translationDict[cen] = ckh;
     }
+    // Only add to reverse dictionary if it's not a generic market name to prevent false suffix matches (e.g. forest)
+    if (cen && ckh && !isMarket && !khmerToEnglishDict[ckh]) {
+      khmerToEnglishDict[ckh] = cen;
+    }
   };
+
+  // Populate manual translations first so they take precedence
+  for (const [kh, en] of Object.entries(KHMER_TO_ENGLISH_MANUAL)) {
+    const normKh = normalizeKhmer(kh);
+    const normEn = stripAdministrativePrefixes(normalizeKhmer(en));
+    if (normKh && normEn) {
+      khmerToEnglishDict[normKh] = normEn;
+      translationDict[normEn] = normKh;
+    }
+  }
 
   // Populate from routes
   routes.forEach(r => {
@@ -148,7 +188,7 @@ function buildTranslationDict() {
     add(r.district, r.district_kh);
     add(r.commune, r.commune_kh);
     add(r.village, r.village_kh);
-    add(r.market, r.market_kh);
+    add(r.market, r.market_kh, true);
   });
 
   // Populate from pickup branches
@@ -178,6 +218,32 @@ function getKhmerStoreName(storeName) {
   const rawKh = translationDict[cleanEn];
   if (rawKh) {
     return stripKhmerPrefix(rawKh);
+  }
+  return '';
+}
+
+function translateKhmerToEnglish(query) {
+  const normQ = stripAdministrativePrefixes(normalizeKhmer(query));
+  if (!normQ) return '';
+
+  if (khmerToEnglishDict[normQ]) {
+    return khmerToEnglishDict[normQ];
+  }
+
+  let translated = normQ;
+  const keys = Object.keys(khmerToEnglishDict).sort((a, b) => b.length - a.length);
+  let replaced = false;
+  
+  for (const k of keys) {
+    if (translated.includes(k)) {
+      const en = khmerToEnglishDict[k];
+      translated = translated.replace(new RegExp(k, 'g'), ' ' + en + ' ');
+      replaced = true;
+    }
+  }
+
+  if (replaced) {
+    return translated.replace(/\s+/g, ' ').trim();
   }
   return '';
 }
@@ -314,6 +380,16 @@ function getKhmerProvince(prov) {
   if (!prov) return '';
   const norm = prov.toLowerCase().trim();
   return PROVINCE_MAP[norm] || prov;
+}
+
+function getEnglishProvince(khmerProv) {
+  if (!khmerProv) return '';
+  for (const [en, kh] of Object.entries(PROVINCE_MAP)) {
+    if (kh === khmerProv) {
+      return en.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    }
+  }
+  return khmerProv;
 }
 
 /** Find the nearest pickup branch to a coordinate */
@@ -564,7 +640,7 @@ app.get('/api/search', (req, res) => {
       branch_id: r.store_code,
       market: r.store_name,
       market_kh: getKhmerStoreName(r.store_name),
-      province: r.province_kh,
+      province: getEnglishProvince(r.province_kh),
       province_kh: r.province_kh,
       district: r.district_en,
       district_kh: r.district_kh,
@@ -649,7 +725,7 @@ app.get('/api/nearby', (req, res) => {
           branch_id: r.store_code,
           market: r.store_name,
           market_kh: getKhmerStoreName(r.store_name),
-          province: r.province_kh,
+          province: getEnglishProvince(r.province_kh),
           province_kh: r.province_kh,
           district: r.district_en,
           district_kh: r.district_kh,
@@ -752,16 +828,6 @@ app.get('/api/google-autocomplete', async (req, res) => {
 function isWithinCambodia(lat, lng) {
   if (!lat || !lng) return false;
   return lat >= 9.5 && lat <= 15.0 && lng >= 102.0 && lng <= 108.0;
-}
-
-function getEnglishProvince(khmerProv) {
-  if (!khmerProv) return '';
-  for (const [en, kh] of Object.entries(PROVINCE_MAP)) {
-    if (kh === khmerProv) {
-      return en.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-    }
-  }
-  return khmerProv;
 }
 
 function inferProvinceAndDistrict(lat, lng) {
@@ -969,8 +1035,115 @@ app.get('/api/google-geocode', async (req, res) => {
   res.status(404).json({ error: 'Coordinates not found' });
 });
 
+async function parseGoogleMapsLink(urlStr) {
+  let targetUrl = urlStr.trim();
+  try {
+    targetUrl = decodeURIComponent(targetUrl);
+  } catch (e) {
+    // ignore decoding errors if URL is already partially decoded/invalid
+  }
+  
+  if (/maps\.app\.goo\.gl|goo\.gl\/maps/i.test(targetUrl)) {
+    try {
+      const response = await fetch(targetUrl, {
+        method: 'GET',
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept-Language': 'en-US,en;q=0.9,km;q=0.8'
+        },
+        redirect: 'follow'
+      });
+      targetUrl = response.url;
+    } catch (err) {
+      console.error('Error resolving short Google Maps URL:', err.message);
+    }
+  }
+
+  // 1. Try to find !3d...!4d... parameters (more precise place pin location, choosing the last occurrence if multiple exist)
+  const matches3d4d = [...targetUrl.matchAll(/!3d([-+]?\d+\.\d+)!4d([-+]?\d+\.\d+)/g)];
+  if (matches3d4d.length > 0) {
+    const lastMatch = matches3d4d[matches3d4d.length - 1];
+    return {
+      lat: parseFloat(lastMatch[1]),
+      lng: parseFloat(lastMatch[2]),
+      name: 'Google Maps Link Pin'
+    };
+  }
+
+  // 2. Try to find @lat,lng
+  const atCoords = targetUrl.match(/@([-+]?\d+\.\d+),([-+]?\d+\.\d+)/);
+  if (atCoords) {
+    return {
+      lat: parseFloat(atCoords[1]),
+      lng: parseFloat(atCoords[2]),
+      name: 'Google Maps Viewport'
+    };
+  }
+
+  // 3. Try to find q=lat,lng or query=lat,lng or ll=lat,lng
+  const qCoords = targetUrl.match(/[?&](q|query|ll)=([-+]?\d+\.\d+),([-+]?\d+\.\d+)/i);
+  if (qCoords) {
+    return {
+      lat: parseFloat(qCoords[2]),
+      lng: parseFloat(qCoords[3]),
+      name: 'Google Maps Query Location'
+    };
+  }
+
+  // 4. Look for general latitude, longitude pattern in URL path/query
+  const generalCoords = targetUrl.match(/([-+]?\d+\.\d+)\s*,\s*([-+]?\d+\.\d+)/);
+  if (generalCoords) {
+    return {
+      lat: parseFloat(generalCoords[1]),
+      lng: parseFloat(generalCoords[2]),
+      name: 'Google Maps URL Coordinates'
+    };
+  }
+
+  // 5. Fallback: try crawling page content for static map or location center if url has coordinates embedded but we couldn't parse it
+  try {
+    const res = await fetch(targetUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      }
+    });
+    if (res.ok) {
+      const html = await res.text();
+      const staticMapMatch = html.match(/center=([-+]?\d+\.\d+)(?:%2C|,)([-+]?\d+\.\d+)/i);
+      if (staticMapMatch) {
+        return {
+          lat: parseFloat(staticMapMatch[1]),
+          lng: parseFloat(staticMapMatch[2]),
+          name: 'Google Maps Embedded Coordinates'
+        };
+      }
+      const initMatch = html.match(/\[\[\s*([-+]?\d+\.\d+)\s*,\s*([-+]?\d+\.\d+)\s*\]/);
+      if (initMatch) {
+        return {
+          lat: parseFloat(initMatch[1]),
+          lng: parseFloat(initMatch[2]),
+          name: 'Google Maps Page Coordinates'
+        };
+      }
+    }
+  } catch (err) {
+    console.error('Failed to parse Google Maps page HTML:', err.message);
+  }
+
+  return null;
+}
+
 async function resolveCoordsWithSpellingCorrection(query, province = '') {
-  // 0. Support direct GPS coordinates parsing (e.g. "11.556, 104.928")
+  // 0. Support Google Maps Link parsing (e.g. https://maps.app.goo.gl/xxx or https://www.google.com/maps/...)
+  if (/maps\.app\.goo\.gl|goo\.gl\/maps|google\.com\/maps/i.test(query)) {
+    const parsedCoords = await parseGoogleMapsLink(query);
+    if (parsedCoords && isWithinCambodia(parsedCoords.lat, parsedCoords.lng)) {
+      return parsedCoords;
+    }
+    return null; // Do not fall back to text matching for a URL query
+  }
+
+  // 0.5 Support direct GPS coordinates parsing (e.g. "11.556, 104.928")
   const gpsRegex = /^\s*([-+]?\d+\.\d+)\s*[\s,]\s*([-+]?\d+\.\d+)\s*$/;
   const gpsMatch = query.match(gpsRegex);
   if (gpsMatch) {
@@ -1118,11 +1291,37 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     }
   }
 
+  // 1. Try translating Khmer to English using our dictionary
+  let translatedQuery = '';
+  const hasKhmer = /[\u1780-\u17FF]/.test(processedQuery);
+  if (hasKhmer) {
+    translatedQuery = translateKhmerToEnglish(processedQuery);
+    if (translatedQuery) {
+      console.log(`♻️ Translated Khmer query to English: "${processedQuery}" -> "${translatedQuery}"`);
+    }
+  }
+
   // Build the search query string, restricting strictly to Cambodia
   const searchQuery = province ? `${processedQuery}, ${province}, Cambodia` : `${processedQuery}, Cambodia`;
+  const enSearchQuery = (translatedQuery && province) 
+    ? `${translatedQuery}, ${province}, Cambodia` 
+    : (translatedQuery ? `${translatedQuery}, Cambodia` : '');
 
-  // 1. Try to geocode the query directly using Nominatim (with our high-precision User-Agent)
-  let nomResults = await queryNominatim(searchQuery, 5);
+  // 1. Try Google Maps HTML crawler geocoding first (gives the exact Google Maps coordinates & coverage)
+  try {
+    const qToCrawl = enSearchQuery || searchQuery;
+    const googleCoords = await crawlGoogleMapsCoords(qToCrawl);
+    if (googleCoords && isWithinCambodia(googleCoords.lat, googleCoords.lng)) {
+      console.log(`🎯 Geocoded successfully via Google Maps Crawler: "${qToCrawl}" -> (${googleCoords.lat}, ${googleCoords.lng})`);
+      return googleCoords;
+    }
+  } catch (err) {
+    console.error('Google Maps Crawler direct geocode failed:', err.message);
+  }
+
+  // 2. Try to geocode the query directly using Nominatim (with our high-precision User-Agent)
+  const qToNom = enSearchQuery || searchQuery;
+  let nomResults = await queryNominatim(qToNom, 5);
   
   if (!nomResults || nomResults.length === 0) {
     const strippedQuery = stripAdministrativePrefixes(processedQuery);
@@ -1233,9 +1432,8 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     console.error('Spelling correction autocomplete failed:', err.message);
   }
 
-  // 3. Fallback to Google Maps HTML crawler geocoding for the original query
-  const coords = await crawlGoogleMapsCoords(searchQuery);
-  return coords;
+  // 3. Fallback: return null since Google Maps was already queried first
+  return null;
 }
 
 async function queryPhoton(query, limit = 1) {
@@ -1488,7 +1686,7 @@ app.get('/api/smart-find', async (req, res) => {
           branch_id: matchingBranch.store_code,
           market: matchingBranch.store_name,
           market_kh: getKhmerStoreName(matchingBranch.store_name),
-          province: matchingBranch.province_kh,
+          province: getEnglishProvince(matchingBranch.province_kh),
           province_kh: matchingBranch.province_kh,
           district: matchingBranch.district_en,
           district_kh: matchingBranch.district_kh,
@@ -1550,7 +1748,7 @@ app.get('/api/smart-find', async (req, res) => {
         id: `po_${foundBranch.store_code}`,
         branch_id: foundBranch.store_code,
         market: foundBranch.store_name,
-        province: foundBranch.province_kh,
+        province: getEnglishProvince(foundBranch.province_kh),
         district: foundBranch.district_en,
         latitude: foundBranch.latitude,
         longitude: foundBranch.longitude
@@ -1569,7 +1767,7 @@ app.get('/api/smart-find', async (req, res) => {
       branch_id: nearest.store_code,
       market: nearest.store_name,
       market_kh: getKhmerStoreName(nearest.store_name),
-      province: nearest.province_kh,
+      province: getEnglishProvince(nearest.province_kh),
       province_kh: nearest.province_kh,
       district: nearest.district_en,
       district_kh: nearest.district_kh,
