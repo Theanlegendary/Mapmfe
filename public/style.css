@@ -109,18 +109,84 @@ input, button, select, textarea {
   position: relative;
 }
 
-/* ─── EDITORIAL DASHBOARD (Sidebar - 450px) ─── */
+/* ─── EDITORIAL DASHBOARD (Sidebar - 514px with Nav Rail) ─── */
 .sidebar {
-  width: 450px;
+  width: 514px;
   height: 100%;
   background: var(--bg-surface);
   border-right: 1px solid var(--sage-200);
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Nav rail on left, content on right */
+  overflow: hidden;
   flex-shrink: 0;
   z-index: 15;
   position: relative;
   box-shadow: var(--shadow-lg);
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  min-width: 0;
+  background: var(--bg-surface);
+}
+
+/* Left Navigation Rail (Google Maps Style) */
+.nav-rail {
+  width: 64px;
+  height: 100%;
+  background: var(--white);
+  border-right: 1px solid var(--sage-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4) 0;
+  gap: var(--space-4);
+  flex-shrink: 0;
+  z-index: 20;
+}
+
+.nav-item {
+  width: 52px;
+  height: 52px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 4px;
+  outline: none;
+}
+
+.nav-item:hover {
+  background: var(--bg-canvas);
+  color: var(--forest-900);
+}
+
+.nav-item.active {
+  background: var(--metfone-red-light);
+  color: var(--metfone-red);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+}
+
+.nav-label {
+  font-size: 8px;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Brand Header */
@@ -1183,6 +1249,27 @@ strong {
     flex-direction: column;
     transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: visible;
+  }
+
+  .nav-rail {
+    width: 100% !important;
+    height: 52px !important;
+    border-right: none !important;
+    border-top: 1px solid var(--sage-200) !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    padding: 0 !important;
+    order: 3 !important; /* Push to the very bottom */
+  }
+
+  .nav-item {
+    height: 100% !important;
+    width: 25% !important;
+    border-radius: 0 !important;
+  }
+
+  .nav-spacer {
+    display: none !important;
   }
 
   /* Bottom sheet height toggle states */

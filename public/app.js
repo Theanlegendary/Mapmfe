@@ -456,6 +456,14 @@ function parseCoordinates(q) {
 
 // Event Listeners Setup
 function setupEventListeners() {
+  const navSearch = document.getElementById('navSearch');
+  const navSaved = document.getElementById('navSaved');
+  const navRecents = document.getElementById('navRecents');
+  
+  if (navSearch) navSearch.addEventListener('click', () => switchTab('search'));
+  if (navSaved) navSaved.addEventListener('click', () => switchTab('saved'));
+  if (navRecents) navRecents.addEventListener('click', () => switchTab('recents'));
+
   // Clear search input
   clearBtn.addEventListener('click', () => {
     searchInput.value = '';
@@ -464,6 +472,7 @@ function setupEventListeners() {
     closeAutocomplete();
     clearAllMapLayers();
     activeMarkers = [];
+    currentResults = [];
     showState('welcome');
     if (resultsCount) {
       resultsCount.textContent = 'Welcome to Metfone Express Eco-Route Grid';
@@ -1100,6 +1109,7 @@ async function runSmartFind() {
     return;
   }
 
+  addRecentSearch(q);
   showState('loading');
   expandMobileDrawer('sheet-peeking');
   closeAutocomplete();
@@ -1698,10 +1708,18 @@ function renderResultsList(results, isNearbyList = false, targetTitle = null, ta
         ${r.distance_km != null ? `
           <div style="border-top: 1px dashed var(--sage-200); padding-top: 6px; margin-top: 6px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px; width:100%;">
             <span class="distance-badge" style="margin-left: 0; font-size: 10px;">📡 ចំងាយ Distance: ${formatDistance(r.distance_km)}</span>
-            <a class="card-gmaps-link" style="margin-top: 0; font-size: 10px;" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <button class="card-save-btn" style="background: transparent; border: none; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 3px; padding: 0; outline: none; ${isBranchSaved(r.id) ? 'color: var(--metfone-red); font-weight: 700;' : 'color: var(--text-light);'}" onclick="event.stopPropagation(); toggleSaveBranch('${r.id}');">
+                ${isBranchSaved(r.id) ? '🔖 Saved' : '🔖 Save'}
+              </button>
+              <a class="card-gmaps-link" style="margin-top: 0; font-size: 10px;" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
+            </div>
           </div>
         ` : `
-          <div style="border-top: 1px dashed var(--sage-200); padding-top: 6px; margin-top: 6px; display:flex; justify-content:flex-end; width:100%;">
+          <div style="border-top: 1px dashed var(--sage-200); padding-top: 6px; margin-top: 6px; display:flex; justify-content:space-between; align-items:center; width:100%;">
+            <button class="card-save-btn" style="background: transparent; border: none; font-size: 10px; cursor: pointer; display: flex; align-items: center; gap: 3px; padding: 0; outline: none; ${isBranchSaved(r.id) ? 'color: var(--metfone-red); font-weight: 700;' : 'color: var(--text-light);'}" onclick="event.stopPropagation(); toggleSaveBranch('${r.id}');">
+              ${isBranchSaved(r.id) ? '🔖 Saved' : '🔖 Save'}
+            </button>
             <a class="card-gmaps-link" style="margin-top: 0; font-size: 10px;" href="${r.google_maps_url || `https://www.google.com/maps?q=${r.latitude},${r.longitude}`}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Open in Google Maps ↗</a>
           </div>
         `}
@@ -2526,5 +2544,243 @@ function expandMobileDrawer(state = 'sheet-peeking') {
     sidebar.classList.add(state);
   }
 }
+
+// ─── GOOGLE MAPS STYLE LOCAL SAVED & RECENTS MODULE ───
+
+// Saved locations LocalStorage manager
+function getSavedBranches() {
+  try {
+    return JSON.parse(localStorage.getItem('metfone_saved_branches')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveBranch(branchId) {
+  let saved = getSavedBranches();
+  if (!saved.includes(branchId)) {
+    saved.push(branchId);
+    localStorage.setItem('metfone_saved_branches', JSON.stringify(saved));
+  }
+}
+
+function unsaveBranch(branchId) {
+  let saved = getSavedBranches();
+  saved = saved.filter(id => id !== branchId);
+  localStorage.setItem('metfone_saved_branches', JSON.stringify(saved));
+}
+
+function isBranchSaved(branchId) {
+  return getSavedBranches().includes(branchId);
+}
+
+// Recent Searches LocalStorage manager
+function getRecentSearches() {
+  try {
+    return JSON.parse(localStorage.getItem('metfone_recent_searches')) || [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function addRecentSearch(query) {
+  if (!query) return;
+  let recents = getRecentSearches();
+  recents = recents.filter(item => item.query.toLowerCase() !== query.toLowerCase());
+  recents.unshift({
+    query: query,
+    time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+    date: new Date().toLocaleDateString()
+  });
+  if (recents.length > 10) recents.pop();
+  localStorage.setItem('metfone_recent_searches', JSON.stringify(recents));
+}
+
+function clearRecentSearches() {
+  localStorage.removeItem('metfone_recent_searches');
+}
+
+// Expose Save Toggle to DOM click handlers
+function toggleSaveBranch(id) {
+  if (isBranchSaved(id)) {
+    unsaveBranch(id);
+  } else {
+    saveBranch(id);
+  }
+  
+  if (currentTab === 'saved') {
+    renderSavedBranchesList();
+  } else {
+    const btn = document.querySelector(`.location-card[data-id="${id}"] .card-save-btn`);
+    if (btn) {
+      const saved = isBranchSaved(id);
+      btn.innerHTML = saved ? '🔖 Saved' : '🔖 Save';
+      btn.style.color = saved ? 'var(--metfone-red)' : 'var(--text-light)';
+      btn.style.fontWeight = saved ? '700' : 'normal';
+    }
+  }
+}
+window.toggleSaveBranch = toggleSaveBranch;
+
+// Render Saved Branches View
+function renderSavedBranchesList() {
+  showState('welcome');
+  resultsList.innerHTML = '';
+  
+  const savedIds = getSavedBranches();
+  if (savedIds.length === 0) {
+    if (resultsCount) resultsCount.innerHTML = 'No Saved Locations';
+    resultsList.innerHTML = `
+      <div style="padding: var(--space-6) var(--space-4); text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: var(--space-3);">🔖</div>
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--forest-900); margin: 0 0 8px 0;">No Saved Locations</h3>
+        <p style="font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.5;">Click "Save" on any branch or market card to add it here for quick access.</p>
+      </div>
+    `;
+    return;
+  }
+
+  if (resultsCount) resultsCount.innerHTML = `Saved Locations: <span>${savedIds.length}</span>`;
+  
+  const savedItems = [];
+  savedIds.forEach(id => {
+    let item = clientMarkets.find(m => String(m.id) === String(id));
+    if (!item) {
+      item = clientBranches.find(b => String(b.branch_id) === String(id) || String(b.id) === String(id));
+    }
+    if (item) savedItems.push(item);
+  });
+  
+  renderResultsList(savedItems, false);
+}
+
+// Render Recent Searches View
+function renderRecentSearchesList() {
+  showState('welcome');
+  resultsList.innerHTML = '';
+  
+  const recents = getRecentSearches();
+  if (recents.length === 0) {
+    if (resultsCount) resultsCount.innerHTML = 'No Recent Searches';
+    resultsList.innerHTML = `
+      <div style="padding: var(--space-6) var(--space-4); text-align: center;">
+        <div style="font-size: 3rem; margin-bottom: var(--space-3);">🕒</div>
+        <h3 style="font-size: 16px; font-weight: 700; color: var(--forest-900); margin: 0 0 8px 0;">No Search History</h3>
+        <p style="font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.5;">Your search queries will appear here so you can easily run them again.</p>
+      </div>
+    `;
+    return;
+  }
+
+  if (resultsCount) resultsCount.innerHTML = `Recent Searches: <span>${recents.length}</span>`;
+  
+  const historyContainer = document.createElement('div');
+  historyContainer.style.display = 'flex';
+  historyContainer.style.flexDirection = 'column';
+  historyContainer.style.gap = '8px';
+  historyContainer.style.padding = 'var(--space-3) var(--space-4)';
+  
+  recents.forEach(item => {
+    const row = document.createElement('div');
+    row.style.background = 'var(--bg-card)';
+    row.style.border = '1px solid var(--sage-200)';
+    row.style.borderRadius = 'var(--radius-md)';
+    row.style.padding = '12px 14px';
+    row.style.display = 'flex';
+    row.style.alignItems = 'center';
+    row.style.justifyContent = 'space-between';
+    row.style.cursor = 'pointer';
+    row.style.transition = 'all 0.2s ease';
+    
+    row.addEventListener('mouseover', () => {
+      row.style.borderColor = 'var(--metfone-red)';
+      row.style.transform = 'translateY(-1px)';
+      row.style.boxShadow = 'var(--shadow-sm)';
+    });
+    row.addEventListener('mouseout', () => {
+      row.style.borderColor = 'var(--sage-200)';
+      row.style.transform = 'none';
+      row.style.boxShadow = 'none';
+    });
+    
+    row.addEventListener('click', () => {
+      searchInput.value = item.query;
+      switchTab('search');
+      runSmartFind();
+    });
+    
+    row.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 10px; min-width: 0; flex: 1;">
+        <span style="font-size: 1.1rem; flex-shrink: 0;">🕒</span>
+        <div style="min-width: 0; flex: 1;">
+          <div style="font-size: 13px; font-weight: 700; color: var(--forest-900); overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${escHtml(item.query)}</div>
+          <div style="font-size: 10px; color: var(--text-light); margin-top: 2px;">${item.date} · ${item.time}</div>
+        </div>
+      </div>
+      <span style="font-size: 10px; color: var(--metfone-red); font-weight: 700; padding: 2px 6px; background: var(--metfone-red-light); border-radius: 4px; flex-shrink: 0;">RE-RUN</span>
+    `;
+    
+    historyContainer.appendChild(row);
+  });
+  
+  const clearBtnRow = document.createElement('div');
+  clearBtnRow.style.display = 'flex';
+  clearBtnRow.style.justifyContent = 'center';
+  clearBtnRow.style.marginTop = '12px';
+  
+  const clearBtn = document.createElement('button');
+  clearBtn.innerHTML = '🗑️ Clear History';
+  clearBtn.style.background = 'transparent';
+  clearBtn.style.border = '1px solid var(--metfone-red)';
+  clearBtn.style.color = 'var(--metfone-red)';
+  clearBtn.style.fontSize = '11px';
+  clearBtn.style.fontWeight = '700';
+  clearBtn.style.padding = '6px 16px';
+  clearBtn.style.borderRadius = 'var(--radius-pill)';
+  clearBtn.style.cursor = 'pointer';
+  clearBtn.style.transition = 'all 0.2s ease';
+  
+  clearBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (confirm('Clear all search history?')) {
+      clearRecentSearches();
+      renderRecentSearchesList();
+    }
+  });
+  
+  clearBtnRow.appendChild(clearBtn);
+  historyContainer.appendChild(clearBtnRow);
+  resultsList.appendChild(historyContainer);
+}
+
+// Switching Tab Action
+let currentTab = 'search';
+function switchTab(tabId) {
+  currentTab = tabId;
+  
+  document.querySelectorAll('.nav-item').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.getElementById('nav' + tabId.charAt(0).toUpperCase() + tabId.slice(1));
+  if (activeBtn) activeBtn.classList.add('active');
+  
+  const searchSection = document.querySelector('.grid-section');
+  
+  if (tabId === 'search') {
+    if (searchSection) searchSection.style.display = 'block';
+    if (currentResults && currentResults.length > 0) {
+      showState('welcome');
+      renderResultsList(currentResults, false);
+    } else {
+      showState('welcome');
+      if (resultsCount) resultsCount.innerHTML = '';
+    }
+  } else if (tabId === 'saved') {
+    if (searchSection) searchSection.style.display = 'none';
+    renderSavedBranchesList();
+  } else if (tabId === 'recents') {
+    if (searchSection) searchSection.style.display = 'none';
+    renderRecentSearchesList();
+  }
+}
+window.switchTab = switchTab;
 
 

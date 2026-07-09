@@ -25,6 +25,29 @@
     <!-- ── ASYMMETRIC SMART LOGISTICS DASHBOARD ── -->
     <aside class="sidebar">
 
+      <!-- Left Navigation Rail (Google Maps Style) -->
+      <div class="nav-rail">
+        <button class="nav-item active" id="navSearch" title="Search Map">
+          <span class="nav-icon">🔍</span>
+          <span class="nav-label">Search</span>
+        </button>
+        <button class="nav-item" id="navSaved" title="Saved Branches">
+          <span class="nav-icon">🔖</span>
+          <span class="nav-label">Saved</span>
+        </button>
+        <button class="nav-item" id="navRecents" title="Recent Searches">
+          <span class="nav-icon">🕒</span>
+          <span class="nav-label">Recents</span>
+        </button>
+        <div style="flex-grow: 1;" class="nav-spacer"></div>
+        <button class="nav-item" id="navGetApp" title="Get Mobile App">
+          <span class="nav-icon">📱</span>
+          <span class="nav-label">Get App</span>
+        </button>
+      </div>
+
+      <div class="sidebar-content">
+
       <!-- Section 01: Search Bar & Options -->
       <section class="grid-section" style="padding-top: var(--space-4);">
         <!-- Dropdown is now placed above search bar -->
@@ -128,8 +151,8 @@
           </div>
         </div>
       </section>
-
-    </aside>
+    </div>
+  </aside>
 
     <!-- ── CARTOGRAPHIC MAP PANEL ── -->
     <main class="map-container" id="map">
