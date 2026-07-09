@@ -1972,17 +1972,7 @@ function presentProvinceSelection(results, query, isOtherProvinceMatches = false
         </p>
       </div>
     </div>
-  ` : `
-    <div style="background-color: ${lighterBg}; border: 1px solid ${lightBorder}; border-radius: var(--radius-lg); padding: var(--space-4); display: flex; align-items: flex-start; gap: var(--space-3); margin-bottom: 4px; box-shadow: var(--shadow-sm);">
-      <span style="font-size: 1.5rem; line-height: 1;">🗺️</span>
-      <div>
-        <h3 style="font-size: var(--text-sm); font-weight: 700; color: ${darkerColor}; margin: 0 0 4px 0;">Multiple Matches Found</h3>
-        <p style="font-size: var(--text-xs); color: ${textColor}; margin: 0; line-height: 1.5;">
-          To ensure <b>100% routing accuracy</b>, please select the correct location and province below:
-        </p>
-      </div>
-    </div>
-  `;
+  ` : '';
 
   container.innerHTML = `
     ${bannerHtml}
