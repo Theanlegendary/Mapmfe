@@ -2002,6 +2002,27 @@ app.post('/api/update-market-coords', (req, res) => {
   }
 });
 
+// GET /api/clear-cache - Clear the persistent geocoding cache on the server
+app.get('/api/clear-cache', (req, res) => {
+  try {
+    geocodingCache = {};
+    fs.writeFileSync(CACHE_PATH, '{}', 'utf-8');
+    console.log('🧹 Geocoding cache cleared successfully via API request');
+    res.send(`
+      <div style="font-family: sans-serif; text-align: center; padding: 50px;">
+        <h1 style="color: #10b981;">✅ Geocoding Cache Cleared!</h1>
+        <p style="color: #4b5563; font-size: 16px;">The persistent search cache has been successfully wiped clean.</p>
+        <p style="color: #6b7280; font-size: 14px;">Next searches will now fetch fresh, correct coordinates from geocoding services.</p>
+        <br/>
+        <a href="/" style="background: #3b82f6; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 14px;">Back to Map</a>
+      </div>
+    `);
+  } catch (err) {
+    console.error('Failed to clear geocoding cache:', err.message);
+    res.status(500).send(`Failed to clear cache: ${err.message}`);
+  }
+});
+
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Branch Search Server running at http://0.0.0.0:${PORT}`);
 });
