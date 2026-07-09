@@ -2145,3 +2145,27 @@ input:checked + .slider:before {
     padding: 10px !important;
   }
 }
+
+/* Sidebar Resizer Handle */
+.sidebar-resizer {
+  width: 5px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+  z-index: 1000;
+  position: relative;
+  margin-left: -3px; /* Overlap border */
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.sidebar-resizer:hover,
+.sidebar-resizer.resizing {
+  background: var(--metfone-red);
+}
+
+@media (max-width: 768px) {
+  .sidebar-resizer {
+    display: none !important;
+  }
+}

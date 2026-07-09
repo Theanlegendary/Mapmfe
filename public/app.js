@@ -109,6 +109,7 @@ const selectedMarketIcon = L.divIcon({
   setupEventListeners();
   setupLabelsControl();
   setupMobileDrawer();
+  setupSidebarResizer();
   // Clear/empty map state at startup
   showState('welcome');
 })();
@@ -236,12 +237,13 @@ async function loadClientData() {
     // Initialize Fuse.js on clientMergedRoutes (Markets / Routes)
     clientMarketFuse = new Fuse(clientMergedRoutes, {
       keys: [
-        { name: 'market',       weight: 0.35 },
-        { name: 'market_kh',    weight: 0.35 },
-        { name: 'commune',      weight: 0.10 },
-        { name: 'commune_kh',   weight: 0.10 },
-        { name: 'district',     weight: 0.05 },
-        { name: 'district_kh',  weight: 0.05 }
+        { name: 'market',          weight: 0.30 },
+        { name: 'market_kh',       weight: 0.30 },
+        { name: 'search_keywords', weight: 0.20 },
+        { name: 'commune',         weight: 0.08 },
+        { name: 'commune_kh',      weight: 0.08 },
+        { name: 'district',        weight: 0.02 },
+        { name: 'district_kh',     weight: 0.02 }
       ],
       threshold: 0.42,
       includeScore: true,
@@ -352,7 +354,8 @@ function clientMatchesPickupBranchQuery(branch, q) {
 }
 
 function clientSearch(q, type, province = '') {
-  const processedQ = q.trim();
+  const cleanQ = q.replace(/[()]/g, ' ').replace(/\s+/g, ' ').trim();
+  const processedQ = cleanQ;
   let results = [];
   const isMarket = (type === 'market');
 
@@ -494,10 +497,23 @@ function setupEventListeners() {
     
     clearTimeout(debounceTimer);
     if (!q) {
-      closeAutocomplete();
+      showAutocomplete('');
       return;
     }
     debounceTimer = setTimeout(() => showAutocomplete(q), 250);
+  });
+
+  // Re-open autocomplete dropdown on focus
+  searchInput.addEventListener('focus', () => {
+    const q = searchInput.value.trim();
+    showAutocomplete(q);
+  });
+
+  // Close autocomplete when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!searchInput.contains(e.target) && !autocompleteDropdown.contains(e.target)) {
+      closeAutocomplete();
+    }
   });
 
   // Enter key in search box
@@ -542,6 +558,95 @@ function setupEventListeners() {
 // Queries both local database and the FREE Google Maps Autocomplete proxy in parallel.
 async function showAutocomplete(q) {
   try {
+    if (!q) {
+      autocompleteDropdown.innerHTML = '';
+      
+      // 1. Render Recents (up to 5 items)
+      const recents = getRecentSearches();
+      if (recents.length > 0) {
+        const header = document.createElement('div');
+        header.style.padding = '10px 14px 4px 14px';
+        header.style.fontSize = '9px';
+        header.style.fontWeight = '800';
+        header.style.color = 'var(--text-light)';
+        header.style.textTransform = 'uppercase';
+        header.style.letterSpacing = '0.08em';
+        header.style.fontFamily = 'var(--font-heading)';
+        header.innerHTML = '🕒 Recent Searches (ស្វែងរកថ្មីៗ)';
+        autocompleteDropdown.appendChild(header);
+        
+        recents.slice(0, 5).forEach(item => {
+          const acItem = document.createElement('div');
+          acItem.className = 'ac-item';
+          acItem.style.display = 'flex';
+          acItem.style.alignItems = 'center';
+          acItem.style.padding = '8px 14px';
+          acItem.style.cursor = 'pointer';
+          acItem.innerHTML = `
+            <span class="ac-icon-marker" style="margin-right: 12px; font-size: 1.1rem; color: var(--text-light);">🕒</span>
+            <div class="ac-details" style="display: flex; flex-direction: column;">
+              <span class="ac-label" style="font-size: 12.5px; font-weight: 600; color: #1e293b;">${escHtml(item.query)}</span>
+              <span class="ac-sub" style="font-size: 10px; color: #64748b;">${item.date} · ${item.time}</span>
+            </div>
+          `;
+          acItem.addEventListener('click', (e) => {
+            e.stopPropagation();
+            searchInput.value = item.query;
+            clearBtn.style.display = 'block';
+            closeAutocomplete();
+            runSmartFind();
+          });
+          autocompleteDropdown.appendChild(acItem);
+        });
+      }
+      
+      // 2. Render Trending / Top Searches Today
+      const headerTrending = document.createElement('div');
+      headerTrending.style.padding = '10px 14px 4px 14px';
+      headerTrending.style.fontSize = '9px';
+      headerTrending.style.fontWeight = '800';
+      headerTrending.style.color = 'var(--metfone-red)';
+      headerTrending.style.textTransform = 'uppercase';
+      headerTrending.style.letterSpacing = '0.08em';
+      headerTrending.style.fontFamily = 'var(--font-heading)';
+      headerTrending.innerHTML = '🔥 Top Searches Today (ពេញនិយម)';
+      autocompleteDropdown.appendChild(headerTrending);
+      
+      const trendingItems = [
+        { name: 'ផ្សារធំថ្មី (Phsar Thmey)', q: 'ផ្សារធំថ្មី' },
+        { name: 'ផ្សារព្រែកជ្រៃ (Prek Chrey)', q: 'ផ្សារព្រែកជ្រៃ' },
+        { name: 'ចោមចៅ (Chom Chao)', q: 'ចោមចៅ' },
+        { name: 'អង្គរវត្ត (Angkor Wat)', q: 'អង្គរវត្ត' },
+        { name: 'រង្វង់មូលធុរេន (Kampot)', q: 'រង្វង់មូលធុរេន' }
+      ];
+      
+      trendingItems.forEach(item => {
+        const acItem = document.createElement('div');
+        acItem.className = 'ac-item';
+        acItem.style.display = 'flex';
+        acItem.style.alignItems = 'center';
+        acItem.style.padding = '8px 14px';
+        acItem.style.cursor = 'pointer';
+        acItem.innerHTML = `
+          <span class="ac-icon-marker" style="margin-right: 12px; font-size: 1.1rem; color: var(--metfone-red);">🔥</span>
+          <div class="ac-details" style="display: flex; flex-direction: column;">
+            <span class="ac-label" style="font-size: 12.5px; font-weight: 600; color: #1e293b;">${item.name}</span>
+          </div>
+        `;
+        acItem.addEventListener('click', (e) => {
+          e.stopPropagation();
+          searchInput.value = item.q;
+          clearBtn.style.display = 'block';
+          closeAutocomplete();
+          runSmartFind();
+        });
+        autocompleteDropdown.appendChild(acItem);
+      });
+      
+      autocompleteDropdown.classList.add('open');
+      return;
+    }
+
     const normQ = normalizeKhmer(q).toLowerCase();
 
     // Detect if user is typing a Khmer/English administrative prefix query
@@ -2782,5 +2887,51 @@ function switchTab(tabId) {
   }
 }
 window.switchTab = switchTab;
+
+// Sidebar Resizer Handler
+function setupSidebarResizer() {
+  const resizer = document.getElementById('sidebarResizer');
+  const sidebar = document.querySelector('.sidebar');
+  if (!resizer || !sidebar) return;
+
+  let isResizing = false;
+
+  resizer.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    isResizing = true;
+    resizer.classList.add('resizing');
+    document.body.style.cursor = 'col-resize';
+    document.body.style.userSelect = 'none';
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isResizing) return;
+    
+    let newWidth = e.clientX;
+    const minWidth = 514;
+    const maxWidth = Math.min(800, window.innerWidth * 0.55);
+    
+    if (newWidth < minWidth) newWidth = minWidth;
+    if (newWidth > maxWidth) newWidth = maxWidth;
+    
+    sidebar.style.width = newWidth + 'px';
+    
+    if (map) {
+      map.invalidateSize({ animate: false });
+    }
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (isResizing) {
+      isResizing = false;
+      resizer.classList.remove('resizing');
+      document.body.style.cursor = '';
+      document.body.style.userSelect = '';
+      if (map) {
+        map.invalidateSize();
+      }
+    }
+  });
+}
 
 
