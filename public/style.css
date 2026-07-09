@@ -1158,27 +1158,129 @@ strong {
 
 @media (max-width: 768px) {
   .app-layout {
-    flex-direction: column-reverse; /* Map on top, results/search on bottom */
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
   }
   .sidebar {
-    width: 100%;
-    height: 58vh; /* Extra space to view scrollable search results */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    height: 130px; /* Peeking mode height */
+    max-height: 80vh;
+    z-index: 999;
+    background: var(--bg-card);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     border-right: none;
     border-top: 2px solid var(--sage-200);
-    box-shadow: 0 -8px 24px rgba(23, 48, 32, 0.08);
+    box-shadow: 0 -8px 30px rgba(23, 48, 32, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: visible;
   }
+
+  /* Bottom sheet height toggle states */
+  .sidebar.sheet-collapsed {
+    height: 60px !important;
+  }
+  .sidebar.sheet-peeking {
+    height: 32vh !important;
+  }
+  .sidebar.sheet-expanded {
+    height: 75vh !important;
+  }
+
+  /* Drag handle / toggle bar on mobile sheet */
+  .sidebar::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 5px;
+    background-color: var(--text-muted);
+    opacity: 0.5;
+    border-radius: 3px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  /* Make the search box (grid-section) stick to the top of the mobile screen */
+  .sidebar .grid-section {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    padding: var(--space-2) var(--space-3) !important;
+    margin: 0;
+    border: 1px solid var(--sage-200);
+  }
+
+  /* Result section below the floating search */
+  .sidebar .results-panel {
+    margin-top: 0;
+    padding-top: 18px; /* space for drag handle */
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Position autocomplete dropdown below the floating search input */
+  .sidebar .autocomplete-dropdown {
+    position: fixed;
+    top: 96px; /* below floating search */
+    left: 12px;
+    right: 12px;
+    width: calc(100% - 24px);
+    max-height: 50vh;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    z-index: 1002;
+  }
+
   .map-container {
-    height: 42vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
   }
   .map-hud {
     display: none;
   }
   .map-legend {
-    bottom: 8px;
-    right: 8px;
+    position: absolute;
+    bottom: 145px; /* float above the peeking sheet */
+    right: 12px;
+    z-index: 99;
     width: 160px;
     font-size: var(--text-2xs);
     padding: 6px 10px;
+    transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Move legend up if sheet is expanded or peeking */
+  .sidebar.sheet-peeking ~ .map-container .map-legend {
+    bottom: calc(32vh + 15px) !important;
+  }
+  .sidebar.sheet-expanded ~ .map-container .map-legend {
+    bottom: calc(75vh + 15px) !important;
   }
 
   /* Compact spacing to maximize list scroll space on mobile */

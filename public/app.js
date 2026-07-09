@@ -108,6 +108,7 @@ const selectedMarketIcon = L.divIcon({
   await loadStats();
   setupEventListeners();
   setupLabelsControl();
+  setupMobileDrawer();
   // Clear/empty map state at startup
   showState('welcome');
 })();
@@ -878,6 +879,7 @@ async function runSearch(page = 1) {
 async function selectLocationAndFindNearbyPOs(selectedLoc, allMatchedLocs, fly = true) {
   currentResults = allMatchedLocs || [selectedLoc];
   showState('loading');
+  expandMobileDrawer('sheet-peeking');
   try {
     const radius = 30; // Max 30km
     const province = provinceSelect ? provinceSelect.value : '';
@@ -1015,6 +1017,7 @@ async function selectLocationAndFindNearbyPOs(selectedLoc, allMatchedLocs, fly =
       marker.bindPopup(popupContent);
       
       marker.on('click', () => {
+        expandMobileDrawer('sheet-peeking');
         const card = document.querySelector(`.location-card[data-id="${po.id}"]`);
         if (card) {
           document.querySelectorAll('.location-card').forEach(c => c.classList.remove('selected'));
@@ -1098,6 +1101,7 @@ async function runSmartFind() {
   }
 
   showState('loading');
+  expandMobileDrawer('sheet-peeking');
   closeAutocomplete();
 
   try {
@@ -1760,6 +1764,7 @@ function renderMapMarkers(results) {
     marker.bindPopup(popupContent);
 
     marker.on('click', () => {
+      expandMobileDrawer('sheet-peeking');
       if (!r.branch_id) {
         selectLocationAndFindNearbyPOs(r, currentResults, false);
       } else {
@@ -2487,6 +2492,49 @@ function customAlert(message, title = 'Notification') {
 
 function customConfirm(message, title = 'Please Confirm') {
   return showCustomModal({ title, message, icon: '❓', showCancel: true });
+}
+
+// Mobile Sliding Bottom Drawer Control
+function setupMobileDrawer() {
+  const sidebar = document.querySelector('.sidebar');
+  if (!sidebar) return;
+
+  // Set default state on mobile
+  if (window.innerWidth <= 768) {
+    sidebar.classList.add('sheet-peeking');
+  }
+
+  // Double tap or click on peeking header/grab handle area to expand/collapse
+  sidebar.addEventListener('click', (e) => {
+    if (window.innerWidth > 768) return;
+
+    // Detect if click happened in the top grab handle zone (top 32px)
+    const rect = sidebar.getBoundingClientRect();
+    const clickY = e.clientY - rect.top;
+    
+    if (clickY >= 0 && clickY <= 38) {
+      e.stopPropagation();
+      if (sidebar.classList.contains('sheet-collapsed')) {
+        sidebar.classList.remove('sheet-collapsed');
+        sidebar.classList.add('sheet-peeking');
+      } else if (sidebar.classList.contains('sheet-peeking')) {
+        sidebar.classList.remove('sheet-peeking');
+        sidebar.classList.add('sheet-expanded');
+      } else {
+        sidebar.classList.remove('sheet-expanded');
+        sidebar.classList.add('sheet-collapsed');
+      }
+    }
+  });
+}
+
+function expandMobileDrawer(state = 'sheet-peeking') {
+  if (window.innerWidth > 768) return;
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    sidebar.classList.remove('sheet-collapsed', 'sheet-peeking', 'sheet-expanded');
+    sidebar.classList.add(state);
+  }
 }
 
 
