@@ -2332,7 +2332,7 @@ function refreshStickerLabels() {
           direction: 'top',
           className: `map-sticker-tooltip size-${labelSize}`,
           interactive: false,
-          offset: [0, -6]
+          offset: [0, -42]
         });
       }
     }
