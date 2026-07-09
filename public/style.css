@@ -117,11 +117,12 @@ input, button, select, textarea {
   border-right: 1px solid var(--sage-200);
   display: flex;
   flex-direction: row; /* Nav rail on left, content on right */
-  overflow: hidden;
+  overflow: visible; /* Allow curtain button to hang outside */
   flex-shrink: 0;
   z-index: 15;
   position: relative;
   box-shadow: var(--shadow-lg);
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sidebar-content {
@@ -2182,4 +2183,41 @@ input:checked + .slider:before {
   .sidebar-resizer {
     display: none !important;
   }
+  .sidebar-curtain-toggle {
+    display: none !important;
+  }
+}
+
+/* Sidebar Curtain Toggle Button (Google Maps Style) */
+.sidebar-curtain-toggle {
+  position: absolute;
+  top: 50%;
+  right: -23px; /* Hangs half-way outside the sidebar */
+  transform: translateY(-50%);
+  width: 23px;
+  height: 48px;
+  background: var(--white);
+  border: 1.5px solid var(--sage-200);
+  border-left: none;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1005; /* Sit above resizer & map layers */
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  color: var(--text-light);
+  padding: 0;
+  outline: none;
+}
+
+.sidebar-curtain-toggle:hover {
+  background: #f8f9fa;
+  color: var(--metfone-red);
+  box-shadow: 3px 1px 6px rgba(0, 0, 0, 0.12);
+}
+
+.sidebar-curtain-toggle svg {
+  transition: transform 0.2s ease;
 }

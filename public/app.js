@@ -110,6 +110,7 @@ const selectedMarketIcon = L.divIcon({
   setupLabelsControl();
   setupMobileDrawer();
   setupSidebarResizer();
+  setupSidebarCurtain();
   // Clear/empty map state at startup
   showState('welcome');
 })();
@@ -2935,6 +2936,49 @@ function setupSidebarResizer() {
         map.invalidateSize();
       }
     }
+  });
+}
+
+// Sidebar Curtain Collapse/Expand toggle handler (Google Maps Style)
+function setupSidebarCurtain() {
+  const toggleBtn = document.getElementById('sidebarCurtainToggle');
+  const sidebar = document.querySelector('.sidebar');
+  if (!toggleBtn || !sidebar) return;
+
+  let isCollapsed = false;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    isCollapsed = !isCollapsed;
+    
+    if (isCollapsed) {
+      // Collapse sidebar: shift left by its current offsetWidth
+      sidebar.style.marginLeft = `-${sidebar.offsetWidth}px`;
+      // Update SVG arrow icon to face right (▶)
+      toggleBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      `;
+      toggleBtn.title = "Expand Sidebar";
+    } else {
+      // Expand sidebar
+      sidebar.style.marginLeft = '0px';
+      // Update SVG arrow icon to face left (◀)
+      toggleBtn.innerHTML = `
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      `;
+      toggleBtn.title = "Collapse Sidebar";
+    }
+
+    // Trigger map invalidation loop during the 300ms CSS transition
+    let count = 0;
+    const interval = setInterval(() => {
+      if (map) map.invalidateSize({ animate: false });
+      count++;
+      if (count >= 18) { // 18 * 16ms = ~288ms
+        clearInterval(interval);
+        if (map) map.invalidateSize();
+      }
+    }, 16);
   });
 }
 
