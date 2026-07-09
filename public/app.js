@@ -62,42 +62,52 @@ const stateWelcome = document.getElementById('stateWelcome');
 const stateLoading = document.getElementById('stateLoading');
 const stateEmpty = document.getElementById('stateEmpty');
 
-// Custom Eco-Organic Metfone Red Pin (Post Office / Branch)
+// Custom Red Location Pin (Post Office / Branch) 
 const redIcon = L.divIcon({
   html: `
-    <div class="eco-pin eco-pin--metfone">
-      <div class="eco-pin__bubble"><span style="transform: rotate(45deg); display: inline-block;">📮</span></div>
+    <div style="position:relative; width:32px; height:40px;">
+      <svg viewBox="0 0 24 36" width="32" height="40" style="filter: drop-shadow(0 3px 6px rgba(220,38,38,0.4));">
+        <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z" fill="#dc2626"/>
+        <circle cx="12" cy="12" r="5" fill="#ffffff"/>
+      </svg>
     </div>
   `,
   className: 'custom-eco-pin',
-  iconSize: [36, 42],
-  iconAnchor: [18, 42],
-  popupAnchor: [0, -38]
+  iconSize: [32, 40],
+  iconAnchor: [16, 40],
+  popupAnchor: [0, -36]
 });
 
-// Custom Market Target Pin (Using beautiful single color red)
+// Custom Yellow Target Pin (Search target / Market - the ONE result for nearby search)
 const marketIcon = L.divIcon({
   html: `
-    <div class="eco-pin eco-pin--target" style="filter: drop-shadow(0 6px 12px rgba(218, 37, 29, 0.35));">
-      <div class="eco-pin__bubble" style="background: #DA251D; border-color: #ffffff;"><span style="transform: rotate(45deg); display: inline-block;">📍</span></div>
+    <div style="position:relative; width:36px; height:44px;">
+      <svg viewBox="0 0 24 36" width="36" height="44" style="filter: drop-shadow(0 4px 8px rgba(202,138,4,0.45));">
+        <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z" fill="#eab308"/>
+        <circle cx="12" cy="12" r="5" fill="#ffffff"/>
+      </svg>
     </div>
   `,
   className: 'custom-eco-pin',
-  iconSize: [36, 42],
-  iconAnchor: [18, 42],
-  popupAnchor: [0, -38]
+  iconSize: [36, 44],
+  iconAnchor: [18, 44],
+  popupAnchor: [0, -40]
 });
 
 const selectedMarketIcon = L.divIcon({
   html: `
-    <div class="eco-pin eco-pin--target" style="filter: drop-shadow(0 6px 12px rgba(218, 37, 29, 0.45));">
-      <div class="eco-pin__bubble" style="background: #DA251D; border-color: #ffffff; width: 40px; height: 40px;"><span style="transform: rotate(45deg); display: inline-block; font-size: 1.2rem;">📍</span></div>
+    <div style="position:relative; width:40px; height:48px;">
+      <svg viewBox="0 0 24 36" width="40" height="48" style="filter: drop-shadow(0 5px 10px rgba(202,138,4,0.5));">
+        <path d="M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24C24 5.4 18.6 0 12 0z" fill="#eab308"/>
+        <circle cx="12" cy="12" r="6" fill="#ffffff"/>
+        <circle cx="12" cy="12" r="3" fill="#eab308"/>
+      </svg>
     </div>
   `,
   className: 'custom-eco-pin',
-  iconSize: [40, 46],
-  iconAnchor: [20, 46],
-  popupAnchor: [0, -42]
+  iconSize: [40, 48],
+  iconAnchor: [20, 48],
+  popupAnchor: [0, -44]
 });
 
 // Initialize Application
@@ -786,7 +796,7 @@ async function showAutocomplete(q) {
     const localResults = clientSearch(searchQ, 'market', prov);
     const branchResults = clientSearch(searchQ, 'branch', prov);
 
-    const googleUrl = `${API}/api/google-autocomplete?q=${encodeURIComponent(searchQ + ' Cambodia')}` + (prov ? `&province=${encodeURIComponent(prov)}` : '');
+    const googleUrl = `${API}/api/google-autocomplete?q=${encodeURIComponent(searchQ)}` + (prov ? `&province=${encodeURIComponent(prov)}` : '');
     const googleData = await fetch(googleUrl)
       .then(r => r.json())
       .catch(() => []);
@@ -883,24 +893,25 @@ async function showAutocomplete(q) {
 
     // 3. Add Google Autocomplete suggestions (Tagged as "Google Maps Search")
     googleData.forEach(text => {
+      // Remove "cambodia" from the suggestion text for cleaner display
+      let cleanText = text.replace(/,?\s*cambodia$/i, '').replace(/\bcambodia\b/gi, '').replace(/\s{2,}/g, ' ').trim();
+      if (!cleanText) cleanText = text;
+      
       // Avoid duplicate names if they already exist in database markets
-      const isDuplicate = suggestions.some(s => s.label.toLowerCase() === text.toLowerCase());
+      const isDuplicate = suggestions.some(s => s.label.toLowerCase() === cleanText.toLowerCase());
       if (!isDuplicate && suggestions.length < 6) {
-        const parts = text.split(',');
+        const parts = cleanText.split(',');
         let extractedProv = '';
         if (parts.length > 1) {
           const cityIndex = parts.length > 2 ? parts.length - 2 : parts.length - 1;
           extractedProv = parts[cityIndex].trim().replace(/\s*Province/gi, '');
-          if (extractedProv.toLowerCase() === 'cambodia') {
-            extractedProv = '';
-          }
         }
         suggestions.push({
           isLocal: false,
           isBranch: false,
-          label: text,
-          displayLabel: text,
-          address: prov ? `🌐 Google Maps Search (in ${prov})` : `🌐 Google Maps Search (in Cambodia)`,
+          label: cleanText,
+          displayLabel: cleanText,
+          address: prov ? `🌐 Search in ${prov}` : `🌐 Search in Cambodia`,
           lat: null, // Will geocode dynamically on click!
           lng: null,
           province: extractedProv || null
@@ -916,7 +927,7 @@ async function showAutocomplete(q) {
         isBranch: false,
         label: q,
         displayLabel: `Search for "${q}"`,
-        address: prov ? `🌐 Google Maps Search (in ${prov})` : `🌐 Google Maps Search (in Cambodia)`,
+        address: prov ? `🌐 Search in ${prov}` : `🌐 Search in Cambodia`,
         lat: null,
         lng: null
       });
