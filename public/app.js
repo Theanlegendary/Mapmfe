@@ -157,6 +157,7 @@ const selectedMarketIcon = L.divIcon({
   setupHamburgerMenu();
   setupSidebarResizer();
   setupSidebarCurtain();
+  renderMobileQuickChips(); // Initialize category chips for mobile
   // Clear/empty map state at startup
   showState('welcome');
 })();
@@ -2709,9 +2710,9 @@ function setupMobileDrawer() {
   const sidebar = document.querySelector('.sidebar');
   if (!sidebar) return;
 
-  // Set default state on mobile
+  // Set default state on mobile: start collapsed (full map)
   if (window.innerWidth <= 768) {
-    sidebar.classList.add('sheet-peeking');
+    sidebar.classList.add('sheet-collapsed');
   }
 
   // Double tap or click on peeking header/grab handle area to expand/collapse
@@ -2764,12 +2765,13 @@ function setupHamburgerMenu() {
   };
 
   if (hamburgerMenuBtn) {
-    hamburgerMenuBtn.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768) {
-        e.stopPropagation();
-        openDrawer();
-      }
-    });
+    const handleToggle = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      openDrawer();
+    };
+    hamburgerMenuBtn.addEventListener('click', handleToggle);
+    hamburgerMenuBtn.addEventListener('touchstart', handleToggle, { passive: false });
   }
 
   if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
@@ -2791,6 +2793,56 @@ function setupHamburgerMenu() {
         closeDrawer();
       });
     }
+  });
+}
+
+function renderMobileQuickChips() {
+  const container = document.getElementById('mobileQuickChips');
+  if (!container) return;
+
+  const provinces = [
+    { name: 'Phnom Penh', kh: 'ភ្នំពេញ' },
+    { name: 'Kandal', kh: 'កណ្តាល' },
+    { name: 'Battambang', kh: 'បាត់ដំបង' },
+    { name: 'Siem Reap', kh: 'សៀមរាប' },
+    { name: 'Kampong Cham', kh: 'កំពង់ចាម' },
+    { name: 'Preah Sihanouk', kh: 'ព្រះសីហនុ' },
+    { name: 'Kampot', kh: 'កំពត' }
+  ];
+
+  container.innerHTML = '';
+  provinces.forEach(p => {
+    const chip = document.createElement('div');
+    chip.className = 'quick-chip';
+    chip.textContent = `📍 ${p.kh}`;
+    chip.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (provinceSelect) {
+        provinceSelect.value = p.name;
+        provinceSelect.dispatchEvent(new Event('change'));
+      }
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      closeAutocomplete();
+      
+      // Auto expand bottom sheet drawer to show branches in that province!
+      expandMobileDrawer('sheet-expanded');
+    });
+    // Add touchstart event listener for instant response on mobile
+    chip.addEventListener('touchstart', (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      if (provinceSelect) {
+        provinceSelect.value = p.name;
+        provinceSelect.dispatchEvent(new Event('change'));
+      }
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      closeAutocomplete();
+      expandMobileDrawer('sheet-expanded');
+    }, { passive: false });
+    
+    container.appendChild(chip);
   });
 }
 
