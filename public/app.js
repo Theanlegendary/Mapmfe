@@ -519,11 +519,26 @@ function showAllPOsInProvince(province) {
   if (!province) return;
   const normProv = normalizeKhmer(province);
   
+  // Also get the Khmer equivalent of the English province name
+  const khmerProvMap = {
+    'phnom penh': 'ភ្នំពេញ', 'banteay meanchey': 'បន្ទាយមានជ័យ', 'battambang': 'បាត់ដំបង',
+    'kampong cham': 'កំពង់ចាម', 'kampong chhnang': 'កំពង់ឆ្នាំង', 'kampong speu': 'កំពង់ស្ពឺ',
+    'kampong thom': 'កំពង់ធំ', 'kampot': 'កំពត', 'kandal': 'កណ្តាល', 'kep': 'កែប',
+    'koh kong': 'កោះកុង', 'kratie': 'ក្រចេះ', 'mondulkiri': 'មណ្ឌលគិរី',
+    'otdar meanchey': 'ឧត្តរមានជ័យ', 'pailin': 'ប៉ៃលិន', 'preah sihanouk': 'ព្រះសីហនុ',
+    'preah vihear': 'ព្រះវិហារ', 'prey veng': 'ព្រៃវែង', 'pursat': 'ពោធិ៍សាត់',
+    'ratanakiri': 'រតនគិរី', 'siem reap': 'សៀមរាប', 'stung treng': 'ស្ទឹងត្រែង',
+    'svay rieng': 'ស្វាយរៀង', 'takeo': 'តាកែវ', 'tboung khmum': 'ត្បូងឃ្មុំ'
+  };
+  const khmerProv = khmerProvMap[province.toLowerCase()] || '';
+  const normKhProv = khmerProv ? normalizeKhmer(khmerProv) : '';
+  
   // Filter branches that belong to this province
   const filtered = clientBranches.filter(b => {
     const pKh = normalizeKhmer(b.province_kh || '');
     const pEn = normalizeKhmer(b.province || '');
-    return pKh.includes(normProv) || pEn.includes(normProv);
+    return pKh.includes(normProv) || pEn.includes(normProv) || 
+           (normKhProv && pKh.includes(normKhProv));
   });
 
   if (filtered.length === 0) {
