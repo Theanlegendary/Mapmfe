@@ -115,6 +115,10 @@ try {
         });
         if (closestBranch) {
           m.branch_id = closestBranch.store_code;
+          // Auto-fill missing province/district using nearest branch as a proxy (e.g. Overpass-imported entries)
+          if (!m.province_kh) m.province_kh = closestBranch.province_kh || '';
+          if (!m.district_kh) m.district_kh = closestBranch.district_kh || '';
+          if (!m.district) m.district = closestBranch.district_en || '';
         } else {
           m.branch_id = "PNP01";
         }
@@ -427,6 +431,15 @@ function getEnglishProvince(khmerProv) {
   }
   return khmerProv;
 }
+
+// Second pass: fill in missing English province names for famous markets/routes
+// (e.g. Overpass-imported entries only have province_kh at load time, before
+// PROVINCE_MAP was available)
+routes.forEach(r => {
+  if (!r.province && r.province_kh) {
+    r.province = getEnglishProvince(r.province_kh) || '';
+  }
+});
 
 /** Find the nearest pickup branch to a coordinate */
 function findNearestPickupBranch(lat, lng, maxDist = Infinity, province = '') {
