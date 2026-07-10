@@ -1520,9 +1520,12 @@ strong {
     display: none !important;
   }
 
-  /* Hide autocomplete dropdown on mobile */
+  /* Hide autocomplete dropdown on mobile by default, show when open */
   .autocomplete-dropdown {
-    display: none !important;
+    display: none;
+  }
+  .autocomplete-dropdown.open {
+    display: block !important;
   }
 
   /* Simplify sidebar-content on mobile */
@@ -2313,4 +2316,90 @@ input:checked + .slider:before {
 .apple-card-btn.save-btn.saved:hover {
   background: #fecdd3 !important;
   transform: scale(1.03);
+}
+
+/* Desktop default for hamburger menu */
+.hamburger-icon-svg {
+  display: none !important;
+}
+.search-icon-svg {
+  display: block !important;
+}
+.mobile-hamburger-drawer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Toggle icon display in search bar on mobile */
+  .hamburger-icon-svg {
+    display: block !important;
+    color: #475569;
+  }
+  .search-icon-svg {
+    display: none !important;
+  }
+  .search-icon-box {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+  }
+  
+  /* Hide the bottom navigation tabs completely on mobile! */
+  .nav-rail {
+    display: none !important;
+  }
+  
+  /* Slide-out Drawer styles */
+  .mobile-hamburger-drawer {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2000;
+    pointer-events: none;
+  }
+  
+  .mobile-hamburger-drawer .drawer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: auto;
+  }
+  
+  .mobile-hamburger-drawer.open .drawer-overlay {
+    opacity: 1;
+  }
+  
+  .mobile-hamburger-drawer .drawer-content {
+    position: absolute;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+  }
+  
+  .mobile-hamburger-drawer.open .drawer-content {
+    left: 0;
+  }
+  
+  .drawer-menu-item:hover {
+    background-color: #f8fafc !important;
+  }
+  
+  .drawer-menu-item.active {
+    background-color: #f1f5f9 !important;
+    color: var(--metfone-red, #d32f2f) !important;
+  }
 }

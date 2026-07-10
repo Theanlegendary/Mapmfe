@@ -154,6 +154,7 @@ const selectedMarketIcon = L.divIcon({
   setupEventListeners();
   setupLabelsControl();
   setupMobileDrawer();
+  setupHamburgerMenu();
   setupSidebarResizer();
   setupSidebarCurtain();
   // Clear/empty map state at startup
@@ -631,26 +632,21 @@ function setupEventListeners() {
     runSmartFind();
   });
 
-  // Search input typing - show autocomplete suggestions
+  // Search input typing - show autocomplete suggestions on both mobile and desktop
   let acDebounce = null;
   searchInput.addEventListener('input', () => {
     const q = searchInput.value.trim();
     clearBtn.style.display = q ? 'block' : 'none';
-    // Only show autocomplete on desktop
-    if (window.innerWidth > 768) {
-      clearTimeout(acDebounce);
-      acDebounce = setTimeout(() => {
-        showAutocomplete(q);
-      }, 200);
-    }
+    clearTimeout(acDebounce);
+    acDebounce = setTimeout(() => {
+      showAutocomplete(q);
+    }, 200);
   });
 
-  // Show autocomplete on focus (desktop only)
+  // Show autocomplete on focus on both mobile and desktop
   searchInput.addEventListener('focus', () => {
-    if (window.innerWidth > 768) {
-      const q = searchInput.value.trim();
-      showAutocomplete(q);
-    }
+    const q = searchInput.value.trim();
+    showAutocomplete(q);
   });
 
   // Enter key in search box
@@ -2738,6 +2734,62 @@ function setupMobileDrawer() {
         sidebar.classList.remove('sheet-expanded');
         sidebar.classList.add('sheet-collapsed');
       }
+    }
+  });
+}
+
+// Mobile Hamburger Menu Control
+function setupHamburgerMenu() {
+  const hamburgerMenuBtn = document.getElementById('hamburgerMenuBtn');
+  const mobileHamburgerDrawer = document.getElementById('mobileHamburgerDrawer');
+  const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+  const drawerOverlay = document.getElementById('drawerOverlay');
+
+  const openDrawer = () => {
+    if (mobileHamburgerDrawer) {
+      mobileHamburgerDrawer.style.display = 'block';
+      setTimeout(() => {
+        mobileHamburgerDrawer.classList.add('open');
+      }, 10);
+    }
+  };
+
+  const closeDrawer = () => {
+    if (mobileHamburgerDrawer) {
+      mobileHamburgerDrawer.classList.remove('open');
+      setTimeout(() => {
+        mobileHamburgerDrawer.style.display = 'none';
+      }, 300);
+    }
+  };
+
+  if (hamburgerMenuBtn) {
+    hamburgerMenuBtn.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.stopPropagation();
+        openDrawer();
+      }
+    });
+  }
+
+  if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+  if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
+
+  // Setup tab selections from hamburger drawer
+  const tabs = ['Search', 'Saved', 'Recents', 'GetApp'];
+  tabs.forEach(tab => {
+    const item = document.getElementById(`drawerItem${tab}`);
+    if (item) {
+      item.addEventListener('click', () => {
+        const tabId = tab.charAt(0).toLowerCase() + tab.slice(1);
+        
+        // Highlight active item in drawer
+        document.querySelectorAll('.drawer-menu-item').forEach(el => el.classList.remove('active'));
+        item.classList.add('active');
+        
+        switchTab(tabId);
+        closeDrawer();
+      });
     }
   });
 }
