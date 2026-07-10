@@ -356,7 +356,8 @@ async function loadClientData() {
     console.error('❌ Failed to initialize Fuse for branches:', err);
   }
 
-    // Build translation dictionaries
+  // 6. Build translation dictionaries
+  try {
     const addTrans = (en, kh, isMarket = false) => {
       const cen = stripAdministrativePrefixes(normalizeKhmer(en));
       const ckh = stripAdministrativePrefixes(normalizeKhmer(kh));
