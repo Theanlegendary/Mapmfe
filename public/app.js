@@ -2706,37 +2706,6 @@ function customConfirm(message, title = 'Please Confirm') {
   return showCustomModal({ title, message, icon: '❓', showCancel: true });
 }
 
-// Hamburger Menu Control
-(function setupHamburgerMenu() {
-  const btn = document.getElementById('hamburgerBtn');
-  const menu = document.getElementById('hamburgerMenu');
-  const overlay = document.getElementById('hamburgerOverlay');
-  const closeBtn = document.getElementById('hamburgerClose');
-  if (!btn || !menu) return;
-
-  function openMenu() {
-    menu.classList.add('open');
-    if (overlay) overlay.classList.add('open');
-  }
-  function closeMenu() {
-    menu.classList.remove('open');
-    if (overlay) overlay.classList.remove('open');
-  }
-
-  btn.addEventListener('click', openMenu);
-  if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-  if (overlay) overlay.addEventListener('click', closeMenu);
-
-  // Close menu when a menu item is clicked
-  menu.querySelectorAll('.hamburger-item').forEach(item => {
-    item.addEventListener('click', () => {
-      menu.querySelectorAll('.hamburger-item').forEach(i => i.classList.remove('active'));
-      item.classList.add('active');
-      closeMenu();
-    });
-  });
-})();
-
 // Mobile Sliding Bottom Drawer Control
 function setupMobileDrawer() {
   const sidebar = document.querySelector('.sidebar');
