@@ -104,6 +104,110 @@ let labelSize = 'normal';    // default normal (medium)
 let labelContentMode = 'id'; // default to only show post code / ID
 let activeStickerMarkers = [];
 
+// ── Feature 1: Province Bounding-Box Bias ────────────────────────────────────
+// Used to spatially bias geocoder requests when a province is selected.
+// Format: [minLat, minLng, maxLat, maxLng]
+const PROVINCE_BBOXES = {
+  'phnom penh':        [11.4490, 104.7500, 11.6890, 104.9900],
+  'kandal':            [11.0000, 104.5000, 11.6500, 105.3000],
+  'kampong cham':      [11.4500, 105.3000, 12.4000, 106.0000],
+  'kampong chhnang':   [11.6000, 103.9000, 12.3000, 104.8000],
+  'kampong speu':      [10.9000, 103.6000, 11.8000, 104.5000],
+  'kampong thom':      [12.0000, 104.3000, 13.0000, 105.5000],
+  'kampot':            [10.2000, 103.7500, 11.0000, 104.5000],
+  'banteay meanchey':  [13.3000, 102.3000, 14.0000, 103.2000],
+  'battambang':        [12.4000, 102.5000, 13.5000, 103.4000],
+  'siem reap':         [12.7000, 103.4000, 14.0000, 104.3000],
+  'preah vihear':      [13.5000, 104.4000, 14.6000, 106.0000],
+  'stung treng':       [13.0000, 105.5000, 14.6000, 107.0000],
+  'ratanakiri':        [13.0000, 106.0000, 14.6000, 107.5000],
+  'mondulkiri':        [11.8000, 106.0000, 13.0000, 107.5000],
+  'kratie':            [11.5000, 105.4000, 13.2000, 106.5000],
+  'prey veng':         [10.7000, 105.0000, 11.6000, 106.0000],
+  'svay rieng':        [10.8000, 105.5000, 11.5000, 106.0000],
+  'takeo':             [10.4000, 104.0000, 11.2000, 105.0000],
+  'kep':               [10.3500, 104.2500, 10.6500, 104.5500],
+  'kampot':            [10.2000, 103.7500, 11.0000, 104.5000],
+  'koh kong':          [ 9.7000, 102.8000, 11.7000, 103.8000],
+  'pursat':            [11.3000, 102.4000, 12.9000, 103.9000],
+  'pailin':            [12.6000, 102.2000, 13.0000, 102.7000],
+  'otdar meanchey':    [13.5000, 103.1000, 14.5000, 104.1000],
+  'preah sihanouk':    [10.3000, 103.2000, 10.9000, 104.0000],
+  'tboung khmum':      [11.4500, 105.7000, 12.4000, 106.5000]
+};
+
+// Returns "minLng,minLat,maxLng,maxLat" string for Nominatim viewbox param, or '' if unknown
+function getBboxForProvince(provinceName) {
+  if (!provinceName) return '';
+  const key = provinceName.trim().toLowerCase();
+  // Try exact key first, then partial match
+  if (PROVINCE_BBOXES[key]) {
+    const [minLat, minLng, maxLat, maxLng] = PROVINCE_BBOXES[key];
+    return `${minLng},${minLat},${maxLng},${maxLat}`;
+  }
+  for (const [k, bbox] of Object.entries(PROVINCE_BBOXES)) {
+    if (key.includes(k) || k.includes(key)) {
+      const [minLat, minLng, maxLat, maxLng] = bbox;
+      return `${minLng},${minLat},${maxLng},${maxLat}`;
+    }
+  }
+  return '';
+}
+
+// ── Feature 2: Levenshtein "Did You Mean?" ───────────────────────────────────
+function levenshteinDistance(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, (_, i) =>
+    Array.from({ length: n + 1 }, (_, j) => (i === 0 ? j : j === 0 ? i : 0))
+  );
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      dp[i][j] = a[i-1] === b[j-1]
+        ? dp[i-1][j-1]
+        : 1 + Math.min(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]);
+    }
+  }
+  return dp[m][n];
+}
+
+// Returns up to `limit` best-matching names from local DB for a mis-typed query
+function getDidYouMeanSuggestions(rawQuery, maxResults = 3) {
+  const q = stripAdministrativePrefixes(normalizeKhmer(rawQuery).toLowerCase());
+  if (!q || q.length < 2) return [];
+
+  const candidates = [];
+
+  // Collect all unique names from local DB
+  const seen = new Set();
+  const addCandidate = (name, record) => {
+    if (!name) return;
+    const norm = stripAdministrativePrefixes(normalizeKhmer(name).toLowerCase());
+    if (!norm || norm.length < 2 || seen.has(norm)) return;
+    seen.add(norm);
+    // Only suggest names that share at least one starting character (avoids wildly irrelevant suggestions)
+    if (norm[0] !== q[0] && norm.length > 3 && q.length > 3) return;
+    const dist = levenshteinDistance(q, norm);
+    // Normalised score: 0 = perfect, 1 = completely different
+    const score = dist / Math.max(q.length, norm.length);
+    if (score <= 0.55) candidates.push({ name, norm, dist, score, record });
+  };
+
+  clientMergedRoutes.forEach(r => {
+    addCandidate(r.market, r);
+    addCandidate(r.market_kh, r);
+    addCandidate(r.village, r);
+    addCandidate(r.commune, r);
+  });
+  clientBranches.forEach(b => {
+    addCandidate(b.store_name, b);
+    addCandidate(b.store_code, b);
+  });
+
+  return candidates
+    .sort((a, b) => a.score - b.score)
+    .slice(0, maxResults);
+}
+
 // DOM Elements
 const searchInput = document.getElementById('searchInput');
 const clearBtn = document.getElementById('clearBtn');
@@ -371,13 +475,15 @@ async function loadClientData() {
       keys: [
         { name: 'market',          weight: 0.30 },
         { name: 'market_kh',       weight: 0.30 },
-        { name: 'search_keywords', weight: 0.20 },
-        { name: 'commune',         weight: 0.08 },
-        { name: 'commune_kh',      weight: 0.08 },
-        { name: 'district',        weight: 0.02 },
-        { name: 'district_kh',     weight: 0.02 }
+        { name: 'search_keywords', weight: 0.15 },
+        { name: 'village',         weight: 0.10 },
+        { name: 'village_kh',      weight: 0.10 },
+        { name: 'commune',         weight: 0.07 },
+        { name: 'commune_kh',      weight: 0.07 },
+        { name: 'district',        weight: 0.04 },
+        { name: 'district_kh',     weight: 0.04 }
       ],
-      threshold: 0.42,
+      threshold: 0.45,
       includeScore: true,
       minMatchCharLength: 2
     });
@@ -852,18 +958,20 @@ async function showAutocomplete(q) {
       return;
     }
 
-    const normQ = normalizeKhmer(q).toLowerCase();
+    const cleanedQ = cleanSearchQuery(q);
+    const resolvedQ = cleanedQ || q;
+    const normQ = normalizeKhmer(resolvedQ).toLowerCase();
 
     // Detect if user is typing a Khmer/English administrative prefix query
     const khmerAdminPrefixRe = /^(ភូមិ|ឃុំ|សង្កាត់|ស្រុក|ក្រុង|ខណ្ឌ|ខេត្ត|រាជធានី)/;
     const enAdminPrefixRe = /^(village|commune|sangkat|district|khan|krong|khet|province)\s+/i;
-    const isAdminSearch = khmerAdminPrefixRe.test(normQ) || enAdminPrefixRe.test(q.trim());
+    const isAdminSearch = khmerAdminPrefixRe.test(normQ) || enAdminPrefixRe.test(resolvedQ.trim());
 
-    let searchQ = q;
-    const stripped = stripAdministrativePrefixes(q);
+    let searchQ = resolvedQ;
+    const stripped = stripAdministrativePrefixes(resolvedQ);
     // For admin searches: use the FULL query first (to match district_kh/commune_kh/village_kh)
     // For regular searches: use stripped query to skip prefix noise
-    if (!isAdminSearch && stripped && stripped.length >= 2 && stripped !== q.normalize("NFC").toLowerCase().trim()) {
+    if (!isAdminSearch && stripped && stripped.length >= 2 && stripped !== resolvedQ.normalize("NFC").toLowerCase().trim()) {
       searchQ = stripped;
     }
     const normSearchQ = normalizeKhmer(searchQ).toLowerCase();
@@ -971,66 +1079,106 @@ async function showAutocomplete(q) {
       });
     });
 
-    // Filter local database matches strictly (Only matching ones)
+    // ─── Helper: detect which admin field a route matched the query on ──────────
+    function detectHierarchyMatch(r, nq, nsq) {
+      const strippedQ = stripAdministrativePrefixes(nq);
+      const check = (val) => {
+        if (!val) return false;
+        const nv = normalizeKhmer(val).toLowerCase();
+        return nv.includes(nq) || nv.includes(nsq) ||
+               (strippedQ && strippedQ.length >= 2 && stripAdministrativePrefixes(nv).includes(strippedQ));
+      };
+      // Determine match tier: market > alias/keyword > commune > village > district
+      if (check(r.market) || check(r.market_kh)) return null;        // normal market match — no badge
+      if (r.aliases && r.aliases.some(check)) return null;            // alias match — no badge
+      if (r.search_keywords && r.search_keywords.some(check)) return null;
+      if (check(r.commune) || check(r.commune_kh)) {
+        const name = r.commune_kh || r.commune;
+        return { field: 'commune', label: `ឃុំ/សង្កាត់: ${name}` };
+      }
+      if (check(r.village) || check(r.village_kh)) {
+        const name = r.village_kh || r.village;
+        return { field: 'village', label: `ភូមិ: ${name}` };
+      }
+      if (check(r.district) || check(r.district_kh)) {
+        const name = r.district_kh || r.district;
+        return { field: 'district', label: `ស្រុក/ខណ្ឌ: ${name}` };
+      }
+      return null;
+    }
+
+    // Filter local database matches — market name OR any admin hierarchy field
     const filteredLocal = (localData.results || []).filter(r => {
       // Special case: Allow Phnom Penh's Central Market (id: 43) for Phsar Thmey/Central Market queries
       if (r.id === 43 && (normQ.includes('ផ្សារ') || normQ.includes('ថ្មី') || normQ.includes('psar') || normQ.includes('thmey') || normQ.includes('phsar') || normQ.includes('central') || normSearchQ.includes('ផ្សារ') || normSearchQ.includes('ថ្មី') || normSearchQ.includes('psar') || normSearchQ.includes('thmey') || normSearchQ.includes('phsar') || normSearchQ.includes('central'))) {
         return true;
       }
-      const marketEn = (r.market || '').toLowerCase();
-      const marketKh = (r.market_kh || '').toLowerCase();
-      const branchId = (r.branch_id || '').toLowerCase();
-      if (marketEn.includes(normQ) || marketKh.includes(normQ) || branchId.includes(normQ) || marketEn.includes(normSearchQ) || marketKh.includes(normSearchQ) || branchId.includes(normSearchQ)) return true;
-
       const strippedQ = stripAdministrativePrefixes(normQ);
-      if (strippedQ && strippedQ.length >= 2) {
-        if (stripAdministrativePrefixes(marketEn).includes(strippedQ) ||
-            stripAdministrativePrefixes(marketKh).includes(strippedQ) ||
-            stripAdministrativePrefixes(branchId).includes(strippedQ)) return true;
-      }
+      const checkField = (val) => {
+        if (!val) return false;
+        const nv = normalizeKhmer(val).toLowerCase();
+        return nv.includes(normQ) || nv.includes(normSearchQ) ||
+               (strippedQ && strippedQ.length >= 2 && stripAdministrativePrefixes(nv).includes(strippedQ));
+      };
 
-      // Also check aliases and search_keywords for famous markets
-      if (r.aliases && r.aliases.some(a => {
-        const normA = normalizeKhmer(a);
-        return normA.includes(normQ) || normA.includes(normSearchQ) ||
-               (strippedQ && strippedQ.length >= 2 && stripAdministrativePrefixes(normA).includes(strippedQ));
-      })) return true;
-      if (r.search_keywords && r.search_keywords.some(k => {
-        const normK = normalizeKhmer(k);
-        return normK.includes(normQ) || normK.includes(normSearchQ) ||
-               (strippedQ && strippedQ.length >= 2 && stripAdministrativePrefixes(normK).includes(strippedQ));
-      })) return true;
-
+      // Market name / branch_id
+      if (checkField(r.market) || checkField(r.market_kh) || checkField(r.branch_id)) return true;
+      // Aliases / search_keywords (famous markets)
+      if (r.aliases && r.aliases.some(checkField)) return true;
+      if (r.search_keywords && r.search_keywords.some(checkField)) return true;
+      // ── Admin Hierarchy Cascade ────────────────────────────────────────────────
+      if (checkField(r.village) || checkField(r.village_kh)) return true;
+      if (checkField(r.commune) || checkField(r.commune_kh)) return true;
+      if (checkField(r.district) || checkField(r.district_kh)) return true;
       return false;
     });
 
-    // Sort local matches to prioritize prefix/exact matches
+    // Sort: market-name matches first, then commune, village, district
     filteredLocal.sort((a, b) => {
-      const aName = (a.market || '').toLowerCase();
-      const bName = (b.market || '').toLowerCase();
-      const aStarts = aName.startsWith(normQ);
-      const bStarts = bName.startsWith(normQ);
-      if (aStarts && !bStarts) return -1;
-      if (!aStarts && bStarts) return 1;
-      return aName.localeCompare(bName);
+      const tier = (r) => {
+        const strippedQ = stripAdministrativePrefixes(normQ);
+        const hit = (val) => {
+          if (!val) return false;
+          const nv = normalizeKhmer(val).toLowerCase();
+          return nv.includes(normQ) || nv.includes(normSearchQ) ||
+                 (strippedQ && strippedQ.length >= 2 && stripAdministrativePrefixes(nv).includes(strippedQ));
+        };
+        if (hit(r.market) || hit(r.market_kh) || hit(r.branch_id) ||
+            (r.aliases && r.aliases.some(hit)) ||
+            (r.search_keywords && r.search_keywords.some(hit))) return 0; // market match
+        if (hit(r.commune) || hit(r.commune_kh)) return 1;  // commune match
+        if (hit(r.village) || hit(r.village_kh)) return 2;  // village match
+        if (hit(r.district) || hit(r.district_kh)) return 3; // district match
+        return 4;
+      };
+      const ta = tier(a), tb = tier(b);
+      if (ta !== tb) return ta - tb;
+      return (a.market || '').toLowerCase().localeCompare((b.market || '').toLowerCase());
     });
 
-    // Add local matches to suggestions list (Tagged as "Metfone Partner Market")
+    // Add local matches to suggestions list — with admin hierarchy badge if needed
     filteredLocal.forEach(r => {
       const label = r.market || r.village || r.commune || 'Market';
       const labelKh = r.market_kh || r.village_kh || r.commune_kh || '';
       const fullLabel = labelKh ? `${label} (${labelKh})` : label;
       const addressString = [r.commune || r.village, r.district, r.province].filter(Boolean).join(', ');
+      const hierarchyMatch = detectHierarchyMatch(r, normQ, normSearchQ);
 
       // Avoid duplicates with branch matches
       const exists = suggestions.some(s => s.isBranch && s.label.toLowerCase() === (r.branch_id || '').toLowerCase());
       if (!exists) {
+        const tagText = hierarchyMatch
+          ? `🛒 Partner Market · 📍 ${hierarchyMatch.label}`
+          : `🛒 Partner Market`;
         suggestions.push({
           isLocal: true,
           isBranch: false,
+          isHierarchyMatch: !!hierarchyMatch,
+          hierarchyField: hierarchyMatch ? hierarchyMatch.field : null,
+          hierarchyLabel: hierarchyMatch ? hierarchyMatch.label : null,
           label: label,
           displayLabel: fullLabel,
-          address: `${addressString} · 🛒 Partner Market`,
+          address: `${addressString} · ${tagText}`,
           lat: r.latitude,
           lng: r.longitude,
           province: r.province,
@@ -1480,11 +1628,17 @@ function haversine(lat1, lon1, lat2, lon2) {
  * Search Like Google & Include Nearby Branches Logic
  */
 async function runSmartFind() {
-  const q = searchInput.value.trim();
+  const rawQ = searchInput.value.trim();
+  const q = cleanSearchQuery(rawQ) || rawQ;
 
   if (!q) {
     customAlert('Please enter a location first.', 'Search Notice');
     return;
+  }
+
+  // Auto-clear province filter on every new search so it doesn't carry over
+  if (provinceSelect && provinceSelect.value) {
+    provinceSelect.value = '';
   }
 
   addRecentSearch(q);
@@ -1649,6 +1803,56 @@ async function runSmartFind() {
         if (!seen.has(r.id)) { seen.add(r.id); merged.push(r); }
       }
 
+      // ── Feature 3: Admin Hierarchy Cascade ──────────────────────────────────
+      // If direct village/commune search has 0 results, automatically widen
+      // the search up the hierarchy: village → commune → district → province
+      if (merged.length === 0 && strippedQ && strippedQ.length >= 2) {
+        const adminLevels = [
+          { field: ['commune', 'commune_kh'],   label: 'commune' },
+          { field: ['district', 'district_kh'], label: 'district' },
+          { field: ['province', 'province_kh'], label: 'province' }
+        ];
+
+        for (const level of adminLevels) {
+          const widened = clientMergedRoutes.filter(r => {
+            return level.field.some(f => {
+              const val = normalizeKhmer((r[f] || '')).toLowerCase();
+              return val && (val.includes(strippedQ) || strippedQ.includes(val));
+            });
+          });
+
+          if (widened.length > 0) {
+            // Show results with a cascade banner
+            const cascadeLabel = widened[0][level.field[0]] || widened[0][level.field[1]] || strippedQ;
+            const topMatch = findBestLocalResult(widened, q);
+            const selectedLoc = {
+              id: topMatch.id,
+              market: topMatch.market || topMatch.village || topMatch.commune || 'Location',
+              market_kh: topMatch.market_kh || '',
+              latitude: topMatch.latitude,
+              longitude: topMatch.longitude,
+              province: topMatch.province,
+              province_kh: topMatch.province_kh || '',
+              district: topMatch.district,
+              district_kh: topMatch.district_kh || '',
+              commune: topMatch.commune || '',
+              commune_kh: topMatch.commune_kh || '',
+              village: topMatch.village || '',
+              village_kh: topMatch.village_kh || '',
+              google_maps_url: topMatch.google_maps_url || `https://www.google.com/maps?q=${topMatch.latitude},${topMatch.longitude}`
+            };
+
+            if (resultsCount) {
+              resultsCount.innerHTML = `📍 No exact village found — showing results for <b>${escHtml(cascadeLabel)}</b> (${level.label})`;
+            }
+
+            selectLocationAndFindNearbyPOs(selectedLoc, widened);
+            return;
+          }
+        }
+      }
+      // ── End Admin Cascade ────────────────────────────────────────────────────
+
       if (merged.length > 0) {
         // Check if all in same province
         const allSameProv = merged.length === 1 || (() => {
@@ -1757,9 +1961,13 @@ async function runSmartFind() {
     }
 
     // 2. Query FREE Google Maps Geocoding proxy first
+    // ── Feature 1: Province BBox Bias — append spatial viewbox when province is selected ──
     try {
       const prov = provinceSelect ? provinceSelect.value : '';
-      const geoUrl = `${API}/api/google-geocode?q=${encodeURIComponent(q)}` + (prov ? `&province=${encodeURIComponent(prov)}` : '');
+      const bbox = getBboxForProvince(prov);
+      const geoUrl = `${API}/api/google-geocode?q=${encodeURIComponent(q)}`
+        + (prov  ? `&province=${encodeURIComponent(prov)}` : '')
+        + (bbox  ? `&bbox=${encodeURIComponent(bbox)}`     : '');
       const geoRes = await fetch(geoUrl);
       if (geoRes.ok) {
         const coordsData = await geoRes.json();
@@ -1859,13 +2067,16 @@ async function runSmartFind() {
       }
     }
 
-    // 4. Ultimate Fallback: Location is not found anywhere in Cambodia. Say not found, and show all post offices in the selected province!
+    // 4. Ultimate Fallback: Location is not found anywhere in Cambodia.
+    // ── Feature 2: Levenshtein "Did You Mean?" ──────────────────────────────
+    const suggestions = getDidYouMeanSuggestions(q, 3);
+    // ── End Did You Mean ─────────────────────────────────────────────────────
+
     const fallbackProv = provinceSelect ? provinceSelect.value : '';
     showState('none');
     clearAllMapLayers();
     activeMarkers = [];
     activeStickerMarkers = [];
-    // Reset map view to default Cambodia center so it doesn't get stuck on previous coordinates
     if (map) {
       map.setView([12.5657, 104.9910], 7.5);
     }
@@ -1878,17 +2089,34 @@ async function runSmartFind() {
       }
     }
 
+    // Build "Did you mean?" chips HTML
+    let didYouMeanHtml = '';
+    if (suggestions.length > 0) {
+      const chips = suggestions.map(s => `
+        <button
+          onclick="searchInput.value=${JSON.stringify(s.name)}; clearBtn.style.display='block'; runSmartFind();"
+          style="display:inline-block; margin:3px 4px; padding:5px 12px; background:#eff6ff; border:1.5px solid #bfdbfe; border-radius:20px; font-size:11.5px; font-weight:600; color:#1d4ed8; cursor:pointer; transition:background 0.15s;"
+          onmouseover="this.style.background='#dbeafe'" onmouseout="this.style.background='#eff6ff'"
+        >${escHtml(s.name)}</button>`).join('');
+      didYouMeanHtml = `
+        <div style="margin-top:14px; padding-top:12px; border-top:1px solid #e2e8f0; text-align:center;">
+          <p style="font-size:11.5px; font-weight:600; color:#64748b; margin:0 0 6px 0;">🤔 Did you mean?</p>
+          <div>${chips}</div>
+        </div>`;
+    }
+
     const notFoundBox = document.createElement('div');
     notFoundBox.style.cssText = 'padding: 20px 16px;';
     notFoundBox.innerHTML = `
       <div style="background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:12px; padding:20px; text-align:center;">
         <div style="font-size:2rem; margin-bottom:10px;">📍</div>
         <h3 style="font-size:15px; font-weight:700; color:#1e293b; margin:0 0 8px 0;">Location Not Found</h3>
-        <p style="font-size:12.5px; color:#64748b; margin:0 0 16px 0; line-height:1.5;">
+        <p style="font-size:12.5px; color:#64748b; margin:0 0 12px 0; line-height:1.5;">
           We couldn't find "<b style="color:#dc2626;">${escHtml(q)}</b>" in our database.<br>
           Try pasting a <b>Google Maps link</b> instead for exact location.
         </p>
-        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px; text-align:left;">
+        ${didYouMeanHtml}
+        <div style="background:#fff; border:1px solid #e2e8f0; border-radius:8px; padding:12px; text-align:left; margin-top:12px;">
           <p style="font-size:11px; font-weight:600; color:#475569; margin:0 0 8px 0;">💡 How to use Google Maps link:</p>
           <ol style="font-size:11px; color:#64748b; margin:0; padding-left:18px; line-height:1.8;">
             <li>Open <b>Google Maps</b> on your phone or browser</li>
@@ -1897,7 +2125,7 @@ async function runSmartFind() {
             <li>Paste it into the search box above</li>
           </ol>
         </div>
-        <button onclick="searchInput.value=''; searchInput.focus(); clearBtn.style.display='none';" style="margin-top:14px; background:#dc2626; color:white; border:none; padding:8px 20px; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">Try Again</button>
+        <button onclick="searchInput.value=''; if(provinceSelect) provinceSelect.value=''; clearBtn.style.display='none'; clearAllMapLayers(); activeMarkers=[]; currentResults=[]; showState('welcome'); if(resultsCount) resultsCount.textContent='Welcome to Metfone Express Grid'; map.setView([12.5657, 104.9910], 7.5); searchInput.focus();" style="margin-top:14px; background:#dc2626; color:white; border:none; padding:8px 20px; border-radius:8px; font-size:12px; font-weight:700; cursor:pointer;">🔄 Try Again</button>
       </div>
     `;
     resultsList.innerHTML = '';
@@ -2400,10 +2628,31 @@ function getPopupAddressHtml(item) {
 function normalizeKhmer(str) {
   if (!str) return '';
   let normalized = str.normalize('NFC').trim();
-  normalized = normalized.replace(/\u17C1\u17B8/g, '\u17BE');
-  normalized = normalized.replace(/\u17C1\u17B6/g, '\u17C4');
-  normalized = normalized.replace(/\u200B/g, '');
+  normalized = normalized.replace(/\u17C1\u17B8/g, '\u17BE');  // decomposed OE (េី -> ើ)
+  normalized = normalized.replace(/\u17C1\u17B6/g, '\u17C4');  // decomposed OO (េា -> ោ)
+  normalized = normalized.replace(/\u200B/g, '');               // zero-width space
+  // Strip trailing orphan Coeng (្ U+17D2) — OSM truncates ឧដុង្គ -> ឧដុង្
+  normalized = normalized.replace(/\u17D2$/, '');
+  // Normalize Khmer numerals to Arabic numerals (០-៩ -> 0-9)
+  normalized = normalized.replace(/[០-៩]/g, d => String.fromCharCode(d.charCodeAt(0) - 0x17E0 + 48));
   return normalized;
+}
+
+/** Preprocess search query: strip label prefixes, fix common spellings, handle Khmer truncation */
+function cleanSearchQuery(q) {
+  if (!q) return '';
+  let cleaned = q.normalize('NFC').trim();
+  // 1. Strip labels like "Location:", "Khmer:", "Name:", "Branch:"
+  cleaned = cleaned.replace(/(Location|Khmer|Name|Branch|Place|Addr|Address)\s*:\s*/gi, ' ');
+  cleaned = cleaned.replace(/\s+/g, ' ').trim();
+  // 2. Strip trailing orphan Coeng (U+17D2) mid-string too (OSM truncation)
+  cleaned = cleaned.replace(/\u17D2(\s|$)/g, '$1').trim();
+  // 3. Normalize common English misspellings of Cambodian place names
+  cleaned = cleaned.replace(/\b(odong)(?!k)\b/gi, 'Odongk');   // Odong -> Odongk
+  cleaned = cleaned.replace(/\b(udong)\b/gi, 'Oudong');          // Udong -> Oudong
+  // 4. Normalize Phsar variations
+  cleaned = cleaned.replace(/\b(pshar|psar|phsa(?!r)|psha(?!r)|(?<!ph)psa(?!r))\b/gi, 'Phsar');
+  return cleaned;
 }
 
 function stripAdministrativePrefixes(str) {

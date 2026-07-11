@@ -432,6 +432,44 @@ function getEnglishProvince(khmerProv) {
   return khmerProv;
 }
 
+const PROVINCE_BBOX = {
+  'phnom penh': '104.72,11.45,104.99,11.75',
+  'siem reap': '103.50,12.80,104.50,14.20',
+  'battambang': '102.30,12.50,103.60,13.40',
+  'kandal': '104.60,11.00,105.40,11.90',
+  'kampong cham': '104.80,11.80,105.80,12.50',
+  'kampong chhnang': '104.20,11.70,104.90,12.70',
+  'kampong speu': '104.00,11.00,104.80,12.00',
+  'kampong thom': '104.30,12.30,105.50,13.20',
+  'kampot': '103.80,10.30,104.70,11.00',
+  'kep': '104.25,10.40,104.45,10.60',
+  'koh kong': '102.80,10.90,104.00,12.00',
+  'kratie': '105.70,11.90,106.60,13.00',
+  'mondul kiri': '106.70,12.00,107.70,13.30',
+  'mondulkiri': '106.70,12.00,107.70,13.30',
+  'oddar meanchey': '103.00,13.90,104.50,14.50',
+  'otdar meanchey': '103.00,13.90,104.50,14.50',
+  'pailin': '102.40,12.70,102.70,13.00',
+  'preah sihanouk': '103.30,10.30,104.10,11.20',
+  'preah vihear': '104.30,13.30,105.50,14.50',
+  'prey veng': '105.10,11.00,105.80,11.90',
+  'pursat': '102.70,11.90,104.30,12.80',
+  'ratanak kiri': '106.60,13.30,107.70,14.50',
+  'ratanakkiri': '106.60,13.30,107.70,14.50',
+  'stung treng': '105.70,13.00,106.80,14.40',
+  'svay rieng': '105.60,10.90,106.30,11.50',
+  'takeo': '104.40,10.70,105.10,11.30',
+  'tboung khmum': '105.40,11.70,106.30,12.20',
+  'tboungkhmum': '105.40,11.70,106.30,12.20',
+  'banteay meanchey': '102.30,13.30,103.40,14.00'
+};
+
+function getProvinceBBox(province) {
+  if (!province) return '102.35,9.90,107.63,14.69'; // Default Cambodia BBox
+  const norm = province.toLowerCase().trim();
+  return PROVINCE_BBOX[norm] || '102.35,9.90,107.63,14.69';
+}
+
 // Second pass: fill in missing English province names for famous markets/routes
 // (e.g. Overpass-imported entries only have province_kh at load time, before
 // PROVINCE_MAP was available)
@@ -557,6 +595,58 @@ function matchesQuery(route, q) {
 /**
  * GET /api/search
  */
+function levenshtein(a, b) {
+  const dp = Array(a.length + 1).fill(null).map(() => Array(b.length + 1).fill(0));
+  for (let i = 0; i <= a.length; i++) dp[i][0] = i;
+  for (let j = 0; j <= b.length; j++) dp[0][j] = j;
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      dp[i][j] = Math.min(
+        dp[i-1][j] + 1,
+        dp[i][j-1] + 1,
+        dp[i-1][j-1] + (a[i-1] === b[j-1] ? 0 : 1)
+      );
+    }
+  }
+  return dp[a.length][b.length];
+}
+
+function findLevenshteinMatches(query, dataset, maxMatches = 5) {
+  const normQ = normalizeKhmer(query).toLowerCase();
+  if (normQ.length < 2) return [];
+
+  // Set adaptive max distance based on query length
+  let maxDist = 2;
+  if (normQ.length <= 3) maxDist = 1;
+  else if (normQ.length >= 8) maxDist = 3;
+
+  const matches = [];
+  const seenKeys = new Set();
+
+  for (const r of dataset) {
+    const marketEn = (r.market || '').toLowerCase();
+    const marketKh = (r.market_kh || '').toLowerCase();
+    
+    // Unique key to avoid duplicate markets in results
+    const key = `${r.market || ''}||${r.market_kh || ''}`;
+    if (seenKeys.has(key)) continue;
+
+    const distEn = levenshtein(normQ, normalizeKhmer(marketEn).toLowerCase());
+    const distKh = levenshtein(normQ, normalizeKhmer(marketKh).toLowerCase());
+    const minDist = Math.min(distEn, distKh);
+
+    if (minDist <= maxDist) {
+      matches.push({ item: r, dist: minDist });
+      seenKeys.add(key);
+    }
+  }
+
+  return matches
+    .sort((a, b) => a.dist - b.dist)
+    .slice(0, maxMatches)
+    .map(m => m.item);
+}
+
 app.get('/api/search', (req, res) => {
   const { q = '', branch_id, province, district, limit = 20, page = 1, type } = req.query;
 
@@ -610,6 +700,11 @@ app.get('/api/search', (req, res) => {
       // Combine and remove duplicates
       const combined = [...exactMatches, ...fuzzyMatches];
       results = Array.from(new Set(combined));
+
+      // If no exact or fuzzy match, try Levenshtein spelling suggestions!
+      if (results.length === 0) {
+        results = findLevenshteinMatches(processedQ, dataset, 5);
+      }
 
       // Check if this is Phsar Thmey query and prioritize central market
       const isPhsarThmeyQuery = /p[h]?s[h]?ar.*t[h]?me[yi]/i.test(processedQ) || 
@@ -1504,12 +1599,12 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     // 2. Alphanumeric fallback (Only if normQuery is not empty to avoid matching everything)
     if (!matchesMarket && normQuery) {
       const alphaMarket = m.market.toLowerCase().replace(/[^a-z0-9]/g, '');
-      if (alphaMarket.includes(normQuery) || normQuery.includes(alphaMarket)) {
+      if (alphaMarket && alphaMarket.includes(normQuery)) {
         matchesMarket = true;
       }
       if (!matchesMarket && (m.aliases || []).some(a => {
         const alphaA = a.toLowerCase().replace(/[^a-z0-9]/g, '');
-        return alphaA.includes(normQuery) || normQuery.includes(alphaA);
+        return alphaA && alphaA.includes(normQuery);
       })) {
         matchesMarket = true;
       }
@@ -1517,7 +1612,7 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
         const alphaK = k.toLowerCase().replace(/[^a-z0-9]/g, '');
         // To avoid generic keyword matches like 'phsar' matching 'phsar samaki' query,
         // we check if the clean keyword contains normQuery, OR if it's an exact match
-        return alphaK.includes(normQuery) || alphaK === normQuery;
+        return alphaK && (alphaK.includes(normQuery) || alphaK === normQuery);
       })) {
         matchesMarket = true;
       }
@@ -1648,14 +1743,14 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
 
   // 1. Try to geocode the query directly using Nominatim/Photon first (free, fast, and no rate limits)
   const qToNom = enSearchQuery || searchQuery;
-  let nomResults = await queryNominatim(qToNom, 5);
+  let nomResults = await queryNominatim(qToNom, 5, province);
   
   if (!nomResults || nomResults.length === 0) {
     const strippedQuery = stripAdministrativePrefixes(processedQuery);
     if (strippedQuery && strippedQuery !== processedQuery) {
       const strippedSearchQuery = province ? `${strippedQuery}, ${province}, Cambodia` : `${strippedQuery}, Cambodia`;
       console.log(`🔍 Direct geocode failed. Retrying with stripped prefixes: "${strippedSearchQuery}"`);
-      nomResults = await queryNominatim(strippedSearchQuery, 5);
+      nomResults = await queryNominatim(strippedSearchQuery, 5, province);
     }
   }
 
@@ -1759,7 +1854,7 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     // Try to geocode the first 6 suggestions
     for (const sugg of suggestions.slice(0, 6)) {
       if (sugg.toLowerCase() !== autoQuery.toLowerCase()) {
-        const suggCoords = await queryNominatim(sugg, 1);
+        const suggCoords = await queryNominatim(sugg, 1, province);
         if (suggCoords && suggCoords.length > 0) {
           const lat = parseFloat(suggCoords[0].lat);
           const lng = parseFloat(suggCoords[0].lon);
@@ -1794,7 +1889,7 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
   return null;
 }
 
-async function queryPhoton(query, limit = 1) {
+async function queryPhoton(query, limit = 1, province = '') {
   let searchQueries = [query];
   const hasKhmer = /[\u1780-\u17FF]/.test(query);
   if (hasKhmer) {
@@ -1835,9 +1930,11 @@ async function queryPhoton(query, limit = 1) {
     }
   }
 
+  const bbox = getProvinceBBox(province);
+
   for (const q of searchQueries) {
     try {
-      const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&limit=${limit}`;
+      const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(q)}&bbox=${bbox}&limit=${limit}`;
       const res = await fetch(url, {
         headers: {
           'Accept-Encoding': 'identity',
@@ -1881,10 +1978,10 @@ async function queryPhoton(query, limit = 1) {
   return [];
 }
 
-async function queryNominatim(query, limit = 1) {
+async function queryNominatim(query, limit = 1, province = '') {
   // 1. Try Photon first (highly reliable, no rate limits, includes our Romanization helper)
   try {
-    const photonResults = await queryPhoton(query, limit);
+    const photonResults = await queryPhoton(query, limit, province);
     if (photonResults && photonResults.length > 0) {
       return photonResults;
     }

@@ -1051,7 +1051,39 @@
     "village_kh": "បឹង",
     "market": "Odongk",
     "market_kh": "ផ្សារូដូងក",
-    "google_maps_url": "https://www.google.com/maps?q=11.823312,104.743776"
+    "google_maps_url": "https://www.google.com/maps?q=11.823312,104.743776",
+    "aliases": [
+      "Odong",
+      "Oudong",
+      "Udong",
+      "Udongk",
+      "Oodong",
+      "Oadong",
+      "ឧដុង្គ",
+      "ឧដុង",
+      "ឧត្ដុង",
+      "ឧត្តុង",
+      "ឪត្ដុង",
+      "ឪដុង"
+    ],
+    "search_keywords": [
+      "odong",
+      "oudong",
+      "udong",
+      "odongk",
+      "udongk",
+      "oadong",
+      "phsar odong",
+      "phsar odongk",
+      "ឧដុង្គ",
+      "ឧដុង",
+      "ឧត្ដុង",
+      "ឧត្តុង",
+      "ឪត្ដុង",
+      "ឪដុង",
+      "ផ្សារឧដុង្គ",
+      "ផ្សារឧត្ដុង"
+    ]
   },
   {
     "id": 63,
