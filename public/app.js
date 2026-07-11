@@ -2531,7 +2531,7 @@ function presentProvinceSelection(results, query, isOtherProvinceMatches = false
               ${addrHtml}
             </div>
             <div style="margin-top: 8px; display: flex; justify-content: flex-end;">
-              <button style="background: linear-gradient(135deg,#dc2626,#b91c1c); color: #fff; border: none; padding: 10px 24px; font-size: 14px; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; box-shadow: 0 3px 10px rgba(220,38,38,0.3);">
+              <button onclick="event.stopPropagation(); selectLocationAndFindNearbyPOs(currentResults.find(r => r.id === '${r.id}'), currentResults);" style="background: linear-gradient(135deg,#dc2626,#b91c1c); color: #fff; border: none; padding: 10px 24px; font-size: 14px; font-weight: 700; border-radius: 10px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 6px; box-shadow: 0 3px 10px rgba(220,38,38,0.3);">
                 Select &amp; Route →
               </button>
             </div>
