@@ -2199,7 +2199,10 @@ function renderResultsList(results, isNearbyList = false, targetTitle = null, ta
               <span style="background:#dc2626; color:white; font-size:10px; font-weight:800; padding:4px 12px; border-radius:6px; letter-spacing:0.03em;">📍 TARGET</span>
             </div>
             <div style="font-size:15px; font-weight:700; color:#1e293b; line-height:1.3;">${escHtml(tTitle)}${tTitleKh ? ` <span style="font-family:var(--font-khmer); font-weight:500; color:#64748b; font-size:13.5px;">${escHtml(tTitleKh)}</span>` : ''}</div>
-            <div style="font-size:12px; color:#475569; margin-top:3px;">${[targetLoc.commune_kh || targetLoc.commune, targetLoc.district_kh || targetLoc.district, targetLoc.province_kh || targetLoc.province].filter(Boolean).join(' · ')}</div>
+            <div style="display:flex; align-items:center; gap:5px; margin-top:2px;">
+              ${[targetLoc.commune_kh || targetLoc.commune, targetLoc.district_kh || targetLoc.district].filter(Boolean).join(' · ')}
+              ${(targetLoc.province || targetLoc.province_kh) ? `<span style="display:inline-block; background:#fef2f2; border:1.5px solid #fecaca; color:#dc2626; font-weight:700; font-size:10.5px; padding:2px 9px; border-radius:20px;">📍 ${escHtml((targetLoc.province_kh && targetLoc.province) ? targetLoc.province + ' · ' + targetLoc.province_kh : targetLoc.province || targetLoc.province_kh || '')}</span>` : ''}
+            </div>
           </div>
           <button onclick="event.stopPropagation(); window.open('${targetLoc.google_maps_url || `https://www.google.com/maps?q=${targetLoc.latitude},${targetLoc.longitude}`}', '_blank');" title="View Route" style="border:none; background:#dc2626; color:white; width:36px; height:36px; border-radius:10px; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; box-shadow:0 3px 10px rgba(220,38,38,0.3);">
             <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
@@ -2254,7 +2257,12 @@ function renderResultsList(results, isNearbyList = false, targetTitle = null, ta
                 </button>
               ` : ''}
             </div>
-            <div><span style="color:#94a3b8; font-weight:600; font-size:9.5px; text-transform:uppercase; letter-spacing:0.03em;">Province:</span> <span style="font-weight:500;">${r.province || ''}${r.province_kh ? ' '+r.province_kh : ''}</span></div>
+            <div style="display:flex; align-items:center; gap:5px; margin-top:2px;">
+              <span style="color:#94a3b8; font-weight:600; font-size:9.5px; text-transform:uppercase; letter-spacing:0.03em;">Province:</span>
+              <span style="display:inline-block; background:#fef2f2; border:1.5px solid #fecaca; color:#dc2626; font-weight:700; font-size:10.5px; padding:2px 9px; border-radius:20px; letter-spacing:0.01em;">
+                📍 ${escHtml((r.province_kh && r.province) ? r.province + ' · ' + r.province_kh : r.province || r.province_kh || '')}
+              </span>
+            </div>
           </div>
         </div>
         <div style="display:flex; flex-direction:column; align-items:center; gap:8px; flex-shrink:0;">
@@ -2485,14 +2493,24 @@ function presentProvinceSelection(results, query, isOtherProvinceMatches = false
       isProvince: true
     });
 
-    const addrHtml = addrRows.map((row, i) => `
-      <div style="display:flex;align-items:flex-start;gap:6px;${i > 0 ? 'margin-top:3px;' : ''}${row.isProvince && addrRows.length > 1 ? 'border-top:1px dashed ' + lightBorder + ';padding-top:4px;margin-top:4px;' : ''}">
-        <span style="font-size:9px;font-weight:800;color:${darkerColor};background:${lightBorder};padding:1.5px 5px;border-radius:3px;flex-shrink:0;white-space:nowrap;line-height:1.6;">${escHtml(row.labelKh)} · ${escHtml(row.labelEn)}</span>
-        <span style="font-size:11.5px;color:${row.isProvince ? darkerColor : 'var(--forest-900)'};font-weight:${row.isProvince ? '700' : '600'};line-height:1.4;min-width:0;flex:1;">
-          ${row.valKh ? `<span style="font-family:var(--font-khmer);">${escHtml(row.valKh)}</span>` : ''}${row.valKh && row.valEn ? '<span style="color:var(--text-light);margin:0 2px;">·</span>' : ''}${row.valEn ? escHtml(row.valEn) : ''}
-        </span>
-      </div>
-    `).join('');
+    const addrHtml = addrRows.map((row, i) => {
+      if (row.isProvince) {
+        const provLabel = [row.valKh, row.valEn].filter(Boolean).join(' · ');
+        return `
+          <div style="margin-top:${addrRows.length > 1 ? '5px' : '0'}; padding-top:${addrRows.length > 1 ? '5px' : '0'}; ${addrRows.length > 1 ? 'border-top:1px dashed ' + lightBorder + ';' : ''}">
+            <span style="display:inline-flex;align-items:center;gap:4px;background:#fef2f2;border:1.5px solid #fecaca;color:#dc2626;font-weight:700;font-size:10.5px;padding:3px 10px;border-radius:20px;letter-spacing:0.01em;">
+              📍 ${escHtml(provLabel)}
+            </span>
+          </div>`;
+      }
+      return `
+        <div style="display:flex;align-items:flex-start;gap:6px;${i > 0 ? 'margin-top:3px;' : ''}">
+          <span style="font-size:9px;font-weight:800;color:${darkerColor};background:${lightBorder};padding:1.5px 5px;border-radius:3px;flex-shrink:0;white-space:nowrap;line-height:1.6;">${escHtml(row.labelKh)} · ${escHtml(row.labelEn)}</span>
+          <span style="font-size:11.5px;color:var(--forest-900);font-weight:600;line-height:1.4;min-width:0;flex:1;">
+            ${row.valKh ? `<span style="font-family:var(--font-khmer);">${escHtml(row.valKh)}</span>` : ''}${row.valKh && row.valEn ? '<span style="color:var(--text-light);margin:0 2px;">·</span>' : ''}${row.valEn ? escHtml(row.valEn) : ''}
+          </span>
+        </div>`;
+    }).join('');
 
     listHtml += `
       <div class="location-card candidate-card" style="border-left: 4px solid ${mainColor}; background: var(--bg-card); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); padding: 12px; cursor: pointer; transition: all 0.2s ease; margin-bottom: 8px;" onclick="triggerSelectLocation('${r.id}')">

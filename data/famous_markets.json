@@ -159,12 +159,15 @@
   },
   {
     "id": 9006,
-    "market": "Old Market",
-    "market_kh": "ផ្សារចាស់",
+    "market": "Old Market (Siem Reap)",
+    "market_kh": "ផ្សារចាស់ (សៀមរាប)",
     "aliases": [
       "Psar Chas",
       "Phsar Chas",
-      "Old Market Siem Reap"
+      "Psar Chas Siem Reap",
+      "Phsar Chas Siem Reap",
+      "Old Market Siem Reap",
+      "ផ្សារចាស់សៀមរាប"
     ],
     "province": "Siem Reap",
     "province_kh": "សៀមរាប",
@@ -179,13 +182,53 @@
       "pshar chas",
       "psa chas",
       "psah chas",
+      "psar chas siem reap",
+      "phsar chas siem reap",
       "wet market",
       "night market",
       "siem reap",
-      "ផ្សារចាស់"
+      "ផ្សារចាស់",
+      "ផ្សារចាស់សៀមរាប"
     ],
     "priority_score": 100,
     "google_maps_url": "https://www.google.com/maps?q=13.3533,103.855"
+  },
+  {
+    "id": 9006,
+    "market": "Psar Chas (Phnom Penh)",
+    "market_kh": "ផ្សារចាស់ (ភ្នំពេញ)",
+    "aliases": [
+      "Psar Chas",
+      "Phsar Chas",
+      "Psar Chas Phnom Penh",
+      "Phsar Chas Phnom Penh",
+      "Old Market Phnom Penh",
+      "ផ្សារចាស់ភ្នំពេញ"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Doun Penh",
+    "district_kh": "ដូនពេញ",
+    "latitude": 11.5676,
+    "longitude": 104.9218,
+    "search_keywords": [
+      "psar chas",
+      "phsar chas",
+      "pshar chas",
+      "psa chas",
+      "psah chas",
+      "psar chas phnom penh",
+      "phsar chas phnom penh",
+      "old market",
+      "old market phnom penh",
+      "doun penh",
+      "riverfront market",
+      "phnom penh",
+      "ផ្សារចាស់",
+      "ផ្សារចាស់ភ្នំពេញ"
+    ],
+    "priority_score": 95,
+    "google_maps_url": "https://www.google.com/maps?q=11.5676,104.9218"
   },
   {
     "id": 9007,
