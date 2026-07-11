@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metfone Express — Training Slides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Hanuman:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #dc2626; --red-dark: #991b1b; --red-light: #fef2f2; --red-mid: #fecaca;
+    --white: #ffffff; --slate: #1e293b; --muted: #64748b; --bg: #0f172a;
+  }
+  html, body { width:100%; height:100%; overflow:hidden; font-family:'Inter','Hanuman',sans-serif; background:var(--bg); }
+  .deck { width:100vw; height:100vh; position:relative; }
+  .slide {
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    justify-content:center; align-items:center; padding:48px 64px;
+    opacity:0; pointer-events:none; transform:translateX(60px);
+    transition:opacity 0.45s cubic-bezier(.4,0,.2,1), transform 0.45s cubic-bezier(.4,0,.2,1);
+    text-align:center;
+  }
+  .slide.active { opacity:1; pointer-events:all; transform:translateX(0); }
+  .slide.out-left { opacity:0; transform:translateX(-60px); }
+  .slide-hero  { background:linear-gradient(145deg,#1e0505 0%,#3b0e0e 40%,#7f1d1d 100%); }
+  .slide-light { background:linear-gradient(145deg,#fff8f8 0%,#fff 60%,#fef2f2 100%); }
+  .slide-dark  { background:linear-gradient(145deg,#0f172a 0%,#1e293b 100%); }
+  .slide-accent{ background:linear-gradient(145deg,#dc2626 0%,#7f1d1d 100%); }
+  .tag { display:inline-block; background:rgba(220,38,38,0.18); color:#fca5a5; font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:5px 14px; border-radius:30px; margin-bottom:20px; border:1px solid rgba(220,38,38,0.3); }
+  .slide-hero .tag, .slide-accent .tag { background:rgba(255,255,255,0.12); color:rgba(255,255,255,0.7); border-color:rgba(255,255,255,0.2); }
+  h1 { font-size:clamp(2.2rem,5vw,4rem); font-weight:900; line-height:1.1; }
+  h2 { font-size:clamp(1.6rem,3.5vw,2.8rem); font-weight:800; line-height:1.2; }
+  h3 { font-size:clamp(1.1rem,2.5vw,1.6rem); font-weight:700; line-height:1.3; }
+  p  { font-size:clamp(0.9rem,1.8vw,1.15rem); line-height:1.7; }
+  .kh { font-family:'Hanuman',sans-serif; }
+  .red { color:var(--red); } .muted { color:var(--muted); } .white { color:#fff; } .light-red { color:#fca5a5; }
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:20px; width:100%; max-width:900px; }
+  .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; width:100%; max-width:960px; }
+  .grid-5 { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; width:100%; max-width:1000px; }
+  .card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:22px 20px; backdrop-filter:blur(10px); }
+  .card-light { background:#fff; border:1.5px solid #fee2e2; border-radius:16px; padding:22px 20px; box-shadow:0 4px 24px rgba(220,38,38,0.08); }
+  .method { display:flex; flex-direction:column; align-items:center; gap:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:14px; padding:18px 12px; transition:transform 0.2s; }
+  .method:hover { transform:translateY(-3px); }
+  .method .icon { font-size:2rem; line-height:1; }
+  .method h4 { font-size:12px; font-weight:700; color:#fff; text-align:center; margin-top:2px; }
+  .method code { font-size:10px; background:rgba(220,38,38,0.25); color:#fca5a5; padding:3px 8px; border-radius:6px; font-family:monospace; text-align:center; word-break:break-all; }
+  .pill { display:inline-block; background:#fef2f2; border:1.5px solid #fecaca; color:#dc2626; font-weight:700; font-size:13px; padding:4px 14px; border-radius:20px; }
+  .pill-dark { display:inline-block; background:rgba(220,38,38,0.2); border:1px solid rgba(220,38,38,0.35); color:#fca5a5; font-weight:700; font-size:13px; padding:4px 14px; border-radius:20px; }
+  .do-dont { display:grid; grid-template-columns:1fr 1fr; gap:16px; width:100%; max-width:860px; }
+  .do-box   { background:#f0fdf4; border:2px solid #86efac; border-radius:14px; padding:20px; text-align:left; }
+  .dont-box { background:#fef2f2; border:2px solid #fecaca; border-radius:14px; padding:20px; text-align:left; }
+  .do-box h4   { color:#16a34a; font-size:13px; font-weight:800; letter-spacing:0.08em; margin-bottom:10px; }
+  .dont-box h4 { color:#dc2626; font-size:13px; font-weight:800; letter-spacing:0.08em; margin-bottom:10px; }
+  .do-box li, .dont-box li { font-size:13px; color:#334155; line-height:2; list-style:none; }
+  .do-box li::before { content:"✅ "; } .dont-box li::before { content:"❌ "; }
+  .prov-badge { display:inline-flex; align-items:center; gap:5px; background:#fef2f2; border:1.5px solid #fecaca; color:#dc2626; font-weight:700; font-size:13px; padding:4px 12px; border-radius:20px; }
+  .nav { position:fixed; bottom:28px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:14px; z-index:100; background:rgba(15,23,42,0.85); border:1px solid rgba(255,255,255,0.1); padding:10px 20px; border-radius:40px; backdrop-filter:blur(12px); }
+  .nav-btn { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:15px; transition:all 0.2s; }
+  .nav-btn:hover { background:var(--red); border-color:var(--red); }
+  .nav-dots { display:flex; gap:7px; align-items:center; }
+  .dot { width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.25); cursor:pointer; transition:all 0.2s; }
+  .dot.active { background:var(--red); width:22px; border-radius:4px; }
+  .slide-num { position:fixed; top:22px; right:28px; font-size:12px; color:rgba(255,255,255,0.3); font-weight:600; z-index:100; }
+  .logo-badge { display:inline-flex; align-items:center; gap:10px; background:rgba(220,38,38,0.15); border:1px solid rgba(220,38,38,0.3); border-radius:12px; padding:8px 16px; margin-bottom:24px; }
+  .logo-text { font-size:14px; font-weight:800; color:#fca5a5; letter-spacing:0.05em; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .float { animation:float 3s ease-in-out infinite; }
+  .divider { width:60px; height:4px; background:var(--red); border-radius:2px; margin:16px auto; }
+  .big-emoji { font-size:clamp(3rem,8vw,5rem); line-height:1; margin-bottom:16px; }
+  .step { display:flex; align-items:flex-start; gap:14px; text-align:left; margin-bottom:14px; }
+  .step-num { flex-shrink:0; width:30px; height:30px; border-radius:50%; background:var(--red); color:#fff; font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center; }
+  .step-text { font-size:14px; line-height:1.6; color:#334155; }
+  .step-text strong { color:#1e293b; }
+</style>
+</head>
+<body>
+<div class="slide-num" id="slideNum">1 / 8</div>
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: HERO -->
+  <div class="slide slide-hero active" data-slide="0">
+    <div class="logo-badge"><span style="font-size:18px;">📮</span><span class="logo-text">METFONE EXPRESS</span></div>
+    <h1 class="white float" style="max-width:800px;">ការប្រើប្រាស់ Map<br><span style="color:#fca5a5;">Search System</span></h1>
+    <div class="divider"></div>
+    <p class="light-red" style="margin-top:8px; max-width:560px;">Training Guide · ការណែនាំការប្រើប្រាស់<br><span style="opacity:0.6;font-size:0.85em;">Press → or click arrow to advance</span></p>
+    <div style="margin-top:36px; display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+      <span class="pill-dark">📍 Find nearest PO branch</span>
+      <span class="pill-dark">🗺️ Map-based routing</span>
+      <span class="pill-dark">🔍 Smart search</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: 5 WAYS -->
+  <div class="slide slide-dark" data-slide="1">
+    <div class="tag">How to Search · របៀបស្វែងរក</div>
+    <h2 class="white" style="margin-bottom:8px;">5 Ways to Find a Location</h2>
+    <p class="muted" style="margin-bottom:28px;font-size:14px;">Use any of these methods — all work!</p>
+    <div class="grid-5">
+      <div class="method"><div class="icon">🏪</div><h4>Market Name</h4><code>ផ្សារថ្មី</code><code>psar thmey</code></div>
+      <div class="method"><div class="icon">📮</div><h4>Branch Code</h4><code>PNPP014</code><code>SRP001</code></div>
+      <div class="method"><div class="icon">🗺️</div><h4>Google Maps Link</h4><code>maps.app.goo.gl/...</code></div>
+      <div class="method"><div class="icon">📡</div><h4>GPS Coordinates</h4><code>11.5566, 104.9282</code></div>
+      <div class="method"><div class="icon">🏙️</div><h4>Province Dropdown</h4><code>Select from list</code></div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: GOOGLE MAPS LINK -->
+  <div class="slide slide-light" data-slide="2">
+    <div class="tag" style="background:#fee2e2;color:#dc2626;border-color:#fecaca;">Pro Tip · ល្អបំផុត</div>
+    <h2 style="color:#1e293b;">Google Maps Link = <span class="red">Always Works</span></h2>
+    <div class="divider"></div>
+    <p style="color:#475569;max-width:580px;margin-bottom:28px;">When you're not sure what to type — just copy the link from Google Maps.<br><span class="kh" style="color:#dc2626;font-weight:600;">នៅពេលមិនដឹងវាយអ្វី — ចម្លង link ពី Google Maps</span></p>
+    <div style="width:100%;max-width:700px;">
+      <div class="step"><div class="step-num">1</div><div class="step-text">Open <strong>Google Maps</strong> on your phone · <span class="kh">បើក Google Maps នៅលើទូរស័ព្ទ</span></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-text">Find the location and tap it · <span class="kh">រកឃើញកន្លែង ចុចលើវា</span></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-text">Tap <strong>"Share"</strong> and copy the link · <span class="kh">ចុច "Share" ហើយចម្លង link</span></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-text">Paste into the search box · <span class="kh">ដាក់ link ក្នុងប្រអប់ស្វែងរក</span></div></div>
+    </div>
+    <div style="margin-top:20px;background:#fef2f2;border:2px solid #fecaca;border-radius:14px;padding:14px 20px;">
+      <p style="font-size:13px;color:#dc2626;font-weight:700;">📋 Example:</p>
+      <code style="font-size:12px;color:#7f1d1d;">https://maps.app.goo.gl/XYZ123ABC</code>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: RED PROVINCE BADGE -->
+  <div class="slide slide-dark" data-slide="3">
+    <div class="tag">New Feature · លក្ខណៈថ្មី</div>
+    <h2 class="white">Province <span style="color:#fca5a5;">Highlighted in Red</span></h2>
+    <div class="divider"></div>
+    <p class="muted" style="max-width:600px;margin-bottom:28px;">Every result now shows the province as a <strong style="color:#fca5a5;">red pill badge</strong> — instantly verify you got the right location!<br><span class="kh" style="font-size:14px;">ខេត្តបង្ហាញជាស្លាកក្រហម — ងាយពិនិត្យ!</span></p>
+    <div class="grid-2" style="max-width:760px;">
+      <div class="card">
+        <p style="font-size:11px;color:#64748b;font-weight:600;margin-bottom:10px;text-align:left;">📮 BRANCH RESULT CARD</p>
+        <div style="background:#1e293b;border-radius:10px;padding:14px;text-align:left;">
+          <div style="display:flex;gap:8px;margin-bottom:8px;"><span style="background:#dc2626;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:6px;">PNPP014</span><span style="background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;">2.3 km</span></div>
+          <p style="color:#fff;font-size:13px;font-weight:700;margin-bottom:4px;">ព្រៃសា Post Office</p>
+          <p style="color:#94a3b8;font-size:11px;margin-bottom:8px;">District: Dangkao · ដង្កោ</p>
+          <span class="prov-badge">📍 Phnom Penh · ភ្នំពេញ</span>
+        </div>
+      </div>
+      <div class="card">
+        <p style="font-size:11px;color:#64748b;font-weight:600;margin-bottom:10px;text-align:left;">📍 PROVINCE PICKER</p>
+        <div style="background:#1e293b;border-radius:10px;padding:14px;text-align:left;">
+          <p style="color:#fca5a5;font-size:11px;margin-bottom:8px;">Found 2 Matches. Please choose:</p>
+          <div style="border-left:4px solid #dc2626;padding:10px;margin-bottom:8px;background:rgba(220,38,38,0.08);border-radius:6px;">
+            <p style="color:#fff;font-size:12px;font-weight:700;">ផ្សារចាស់ (Siem Reap)</p>
+            <span class="prov-badge" style="font-size:10px;margin-top:5px;display:inline-flex;">📍 Siem Reap · សៀមរាប</span>
+          </div>
+          <div style="border-left:4px solid #dc2626;padding:10px;background:rgba(220,38,38,0.08);border-radius:6px;">
+            <p style="color:#fff;font-size:12px;font-weight:700;">ផ្សារចាស់ (Phnom Penh)</p>
+            <span class="prov-badge" style="font-size:10px;margin-top:5px;display:inline-flex;">📍 Phnom Penh · ភ្នំពេញ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: PSAR CHAS -->
+  <div class="slide slide-accent" data-slide="4">
+    <div class="tag">Smart Disambiguation · ការជ្រើសរើស</div>
+    <h2 class="white">ផ្សារចាស់ — Which Province?</h2>
+    <div class="divider" style="background:rgba(255,255,255,0.4);"></div>
+    <p style="color:rgba(255,255,255,0.85);max-width:580px;margin-bottom:28px;">"Psar Chas" exists in <strong>both Siem Reap and Phnom Penh.</strong><br>The system now asks you to choose — no more wrong province!</p>
+    <div class="grid-2" style="max-width:760px;">
+      <div style="background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px;text-align:left;">
+        <div style="font-size:2rem;margin-bottom:10px;">🏛️</div>
+        <h3 class="white">Siem Reap</h3>
+        <p style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:6px;line-height:1.6;">Near Pub Street · Tourist area<br>Souvenirs, silk, street food<br><strong style="color:#fde68a;">Most internationally famous</strong></p>
+      </div>
+      <div style="background:rgba(255,255,255,0.12);border:2px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px;text-align:left;">
+        <div style="font-size:2rem;margin-bottom:10px;">🏙️</div>
+        <h3 class="white">Phnom Penh</h3>
+        <p style="color:rgba(255,255,255,0.7);font-size:13px;margin-top:6px;line-height:1.6;">Doun Penh District · Riverfront<br>Local market, everyday commerce<br><strong style="color:#fde68a;">Used by Cambodian locals</strong></p>
+      </div>
+    </div>
+    <p style="margin-top:22px;color:rgba(255,255,255,0.65);font-size:13px;">💡 Type <strong style="color:#fff;">"psar chas siem reap"</strong> or <strong style="color:#fff;">"psar chas phnom penh"</strong> to skip the picker</p>
+  </div>
+
+  <!-- SLIDE 6: DID YOU MEAN + CASCADE -->
+  <div class="slide slide-dark" data-slide="5">
+    <div class="tag">Smart Recovery · ការស្ទុះសង្គ្រោះ</div>
+    <h2 class="white">When Search Finds <span style="color:#fca5a5;">Nothing</span></h2>
+    <div class="divider"></div>
+    <div class="grid-2" style="max-width:860px;margin-top:10px;">
+      <div class="card" style="text-align:left;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">🤔</div>
+        <h3 class="white" style="margin-bottom:8px;">Did You Mean?</h3>
+        <p style="color:#94a3b8;font-size:13px;line-height:1.6;margin-bottom:14px;">Typo? The system finds the closest matching name and shows clickable suggestion chips.</p>
+        <div style="background:rgba(220,38,38,0.12);border:1px solid rgba(220,38,38,0.2);border-radius:10px;padding:12px;">
+          <p style="color:#fca5a5;font-size:11px;font-weight:700;margin-bottom:8px;">🤔 Did you mean?</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="background:#eff6ff;border:1.5px solid #bfdbfe;color:#1d4ed8;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Phsar Thmey</span>
+            <span style="background:#eff6ff;border:1.5px solid #bfdbfe;color:#1d4ed8;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;">Phsar Kandal</span>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="text-align:left;">
+        <div style="font-size:1.8rem;margin-bottom:10px;">📍</div>
+        <h3 class="white" style="margin-bottom:8px;">Admin Cascade</h3>
+        <p style="color:#94a3b8;font-size:13px;line-height:1.6;margin-bottom:14px;">Village not in DB? System auto-widens:<br>Village → Commune → District → Province</p>
+        <div style="background:rgba(220,38,38,0.12);border:1px solid rgba(220,38,38,0.2);border-radius:10px;padding:12px;">
+          <p style="color:#fca5a5;font-size:12px;font-weight:600;line-height:1.6;">📍 No exact village found —<br>showing results for <strong style="color:#fff;">Dangkao (district)</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: DO / DON'T -->
+  <div class="slide slide-light" data-slide="6">
+    <div class="tag" style="background:#fee2e2;color:#dc2626;border-color:#fecaca;">Common Mistakes · កំហុសសំខាន់</div>
+    <h2 style="color:#1e293b;margin-bottom:24px;">Do's and <span class="red">Don'ts</span></h2>
+    <div class="do-dont">
+      <div class="do-box">
+        <h4>✅ DO — ត្រូវវាយ</h4>
+        <ul>
+          <li>ផ្សារថ្មី <span style="color:#94a3b8;font-size:11px;">(Khmer name)</span></li>
+          <li>Phsar Thmey <span style="color:#94a3b8;font-size:11px;">(Romanized)</span></li>
+          <li>PNPP014 <span style="color:#94a3b8;font-size:11px;">(Branch code)</span></li>
+          <li>maps.app.goo.gl/... <span style="color:#94a3b8;font-size:11px;">(Maps link)</span></li>
+          <li>11.5566, 104.9282 <span style="color:#94a3b8;font-size:11px;">(GPS)</span></li>
+          <li>psar chas siem reap <span style="color:#94a3b8;font-size:11px;">(Be specific!)</span></li>
+        </ul>
+      </div>
+      <div class="dont-box">
+        <h4>❌ DON'T — កុំវាយ</h4>
+        <ul>
+          <li>2004 <span style="color:#94a3b8;font-size:11px;">(years/numbers)</span></li>
+          <li>PP <span style="color:#94a3b8;font-size:11px;">(too short)</span></li>
+          <li>near me <span style="color:#94a3b8;font-size:11px;">(not supported)</span></li>
+          <li>12345 <span style="color:#94a3b8;font-size:11px;">(random numbers)</span></li>
+          <li>abc <span style="color:#94a3b8;font-size:11px;">(meaningless)</span></li>
+          <li>psar only <span style="color:#94a3b8;font-size:11px;">(too generic!)</span></li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:20px;background:#fff7ed;border:2px solid #fed7aa;border-radius:12px;padding:12px 20px;">
+      <p style="font-size:13px;color:#c2410c;font-weight:600;">💡 Golden rule: <strong>not sure what to type? → paste the Google Maps link!</strong><br><span class="kh" style="color:#9a3412;font-size:12px;">មិនដឹងវាយអ្វី → ចម្លង link ពី Google Maps!</span></p>
+    </div>
+  </div>
+
+  <!-- SLIDE 8: CLOSING -->
+  <div class="slide slide-hero" data-slide="7">
+    <div class="big-emoji float">🎉</div>
+    <h1 class="white" style="max-width:700px;">Ready to Use!<br><span style="color:#fca5a5;" class="kh">រួចរាល់ហើយ!</span></h1>
+    <div class="divider"></div>
+    <p class="light-red" style="max-width:520px;margin-bottom:32px;">You now know everything to find any Metfone Express post office in Cambodia.<br><span style="opacity:0.7;font-size:0.9em;" class="kh">អ្នកដឹងគ្រប់អ្វីដើម្បីស្វែងរកការិយាល័យ Metfone Express</span></p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:640px;">
+      <div class="card" style="text-align:center;"><div style="font-size:1.6rem;margin-bottom:6px;">🏪</div><p style="color:#fca5a5;font-size:12px;font-weight:700;">Market name</p></div>
+      <div class="card" style="text-align:center;"><div style="font-size:1.6rem;margin-bottom:6px;">📮</div><p style="color:#fca5a5;font-size:12px;font-weight:700;">Branch code</p></div>
+      <div class="card" style="text-align:center;"><div style="font-size:1.6rem;margin-bottom:6px;">🗺️</div><p style="color:#fca5a5;font-size:12px;font-weight:700;">Maps link</p></div>
+    </div>
+    <p style="margin-top:28px;color:rgba(255,255,255,0.3);font-size:12px;">Metfone Express · ប្រៃសណីយ៍ Express · Training 2026</p>
+  </div>
+
+</div>
+
+<div class="nav">
+  <button class="nav-btn" onclick="changeSlide(-1)">‹</button>
+  <div class="nav-dots" id="dots"></div>
+  <button class="nav-btn" onclick="changeSlide(1)">›</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dotsEl = document.getElementById('dots');
+  const slideNum = document.getElementById('slideNum');
+  let current = 0, isAnimating = false;
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsEl.appendChild(d);
+  });
+  function goTo(n) {
+    if (isAnimating || n === current) return;
+    isAnimating = true;
+    slides[current].classList.add('out-left');
+    slides[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === current));
+    slideNum.textContent = (current + 1) + ' / ' + slides.length;
+    setTimeout(() => { slides.forEach(s => s.classList.remove('out-left')); isAnimating = false; }, 480);
+  }
+  function changeSlide(dir) { goTo(current + dir); }
+  document.addEventListener('keydown', e => {
+    if (e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){e.preventDefault();changeSlide(1);}
+    if (e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();changeSlide(-1);}
+  });
+  let tx=0;
+  document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
+  document.addEventListener('touchend', e => { const d=tx-e.changedTouches[0].clientX; if(Math.abs(d)>50) changeSlide(d>0?1:-1); });
+</script>
+</body>
+</html>
