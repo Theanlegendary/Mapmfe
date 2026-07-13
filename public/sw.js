@@ -1,16 +1,16 @@
-﻿// ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // Metfone Express — PWA Service Worker
 // Caches core app shell for offline/fast load. Data APIs always go network-first.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const CACHE_NAME = 'metfone-express-v1';
+const CACHE_NAME = 'metfone-express-v3.0.1';
 
 // App shell files to pre-cache on install
 const PRECACHE_URLS = [
   '/',
   '/index.html',
-  '/style.css',
-  '/app.js',
+  '/style.css?v=3.0.1',
+  '/app.js?v=3.0.1',
   '/icon-192.png',
   '/icon-512.png',
   '/manifest.json',

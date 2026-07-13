@@ -1,6 +1,6 @@
 {
   "name": "branch-search",
-  "version": "1.0.0",
+  "version": "3.0.1",
   "description": "Cambodia Branch & Route Search API",
   "main": "server.js",
   "scripts": {
