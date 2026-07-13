@@ -2394,6 +2394,7 @@ function fitMapToMarkers(customMaxZoom = 15) {
 function presentProvinceSelection(results, query, isOtherProvinceMatches = false) {
   currentResults = results;
   showState('none');
+  expandMobileDrawer('sheet-expanded');
   clearAllMapLayers();
   activeMarkers = [];
   activeStickerMarkers = [];
