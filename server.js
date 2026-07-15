@@ -31,6 +31,14 @@ app.get('/training-slides.html', (req, res) => {
   res.sendFile(path.join(__dirname, 'train.html'));
 });
 
+app.get('/pastemaster', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'pastemaster.html'));
+});
+
+app.get('/pastemaster.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'pastemaster.html'));
+});
+
 // ── Load data once at startup ──
 const DATA_PATH = path.join(__dirname, 'data', 'routes.json');
 const PICKUP_DATA_PATH = path.join(__dirname, 'data', 'pickup_branches.json');

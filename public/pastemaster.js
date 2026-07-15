@@ -1,0 +1,899 @@
+// ─── STANDALONE PASTE MASTER RESOLVER LOGIC ──────────────────────────────────
+let pmRows = [];
+let pmMap;
+let markerClusterGroup;
+let clientMergedRoutes = [];
+let clientBranches = [];
+let activeMarkers = [];
+
+// Custom icons matching style.css
+const blueIcon = L.icon({
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+document.addEventListener('DOMContentLoaded', async () => {
+  initMap();
+  await loadClientData();
+  setupPasteMasterController();
+});
+
+function initMap() {
+  pmMap = L.map('pmMap', {
+    zoomControl: true,
+    attributionControl: true
+  }).setView([12.5657, 104.9910], 7); // Center Cambodia
+  
+  // Voyager base layer
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(pmMap);
+  
+  markerClusterGroup = L.markerClusterGroup({
+    showCoverageOnHover: false,
+    maxClusterRadius: 40
+  });
+  pmMap.addLayer(markerClusterGroup);
+}
+
+async function loadClientData() {
+  try {
+    const routesRes = await fetch('/data/routes.json');
+    const branchesRes = await fetch('/data/pickup_branches.json');
+    if (routesRes.ok) clientMergedRoutes = await routesRes.json();
+    if (branchesRes.ok) clientBranches = await branchesRes.json();
+    console.log('✅ Standalone Paste Master loaded', clientMergedRoutes.length, 'routes,', clientBranches.length, 'branches');
+  } catch (e) {
+    console.error('Failed to load client data', e);
+  }
+}
+
+// Search local databases for market/PO branch matches
+function clientSearch(query, type, province) {
+  if (!query) return [];
+  const normQ = normalizeKhmer(query).toLowerCase();
+  
+  return clientMergedRoutes.filter(r => {
+    if (province) {
+      const normP = normalizeKhmer(province).toLowerCase();
+      const routeP = normalizeKhmer(r.province_kh || r.province || '').toLowerCase();
+      if (routeP !== normP && !routeP.includes(normP) && !normP.includes(routeP)) return false;
+    }
+    
+    const mKh = normalizeKhmer(r.market_kh || '').toLowerCase();
+    const mEn = normalizeKhmer(r.market || '').toLowerCase();
+    const vKh = normalizeKhmer(r.village_kh || '').toLowerCase();
+    const vEn = normalizeKhmer(r.village || '').toLowerCase();
+    const cKh = normalizeKhmer(r.commune_kh || '').toLowerCase();
+    const cEn = normalizeKhmer(r.commune || '').toLowerCase();
+    
+    return mKh.includes(normQ) || mEn.includes(normQ) || 
+           vKh.includes(normQ) || vEn.includes(normQ) ||
+           cKh.includes(normQ) || cEn.includes(normQ);
+  });
+}
+
+function setupPasteMasterController() {
+  const pmRunBtn = document.getElementById('pmRunBtn');
+  const pmClearBtn = document.getElementById('pmClearBtn');
+  const pmPlotBtn = document.getElementById('pmPlotBtn');
+  const pmExportBtn = document.getElementById('pmExportBtn');
+  const pmRawInput = document.getElementById('pmRawInput');
+
+  if (pmClearBtn) {
+    pmClearBtn.addEventListener('click', () => {
+      if (pmRawInput) pmRawInput.value = '';
+      pmRows = [];
+      const body = document.getElementById('pmResultsBody');
+      if (body) {
+        body.innerHTML = `
+          <tr>
+            <td colspan="5" class="pm-empty-cell">
+              <div style="font-size: 2.5rem; margin-bottom: 8px;">📋</div>
+              No data resolved. Paste address list on the left and click "Resolve Addresses".
+            </td>
+          </tr>
+        `;
+      }
+      if (pmPlotBtn) pmPlotBtn.disabled = true;
+      if (pmExportBtn) pmExportBtn.disabled = true;
+      markerClusterGroup.clearLayers();
+      activeMarkers = [];
+      updatePmStats();
+    });
+  }
+
+  if (pmRunBtn) {
+    pmRunBtn.addEventListener('click', resolveAddresses);
+  }
+
+  if (pmPlotBtn) {
+    pmPlotBtn.addEventListener('click', plotPmLocationsOnMap);
+  }
+
+  if (pmExportBtn) {
+    pmExportBtn.addEventListener('click', exportPmCsv);
+  }
+}
+
+// Global provinces list for context extraction
+const pmProvincesList = [
+  { en: 'phnom penh', kh: 'ភ្នំពេញ', val: 'Phnom Penh' },
+  { en: 'kandal', kh: 'កណ្តាល', val: 'Kandal' },
+  { en: 'battambang', kh: 'បាត់ដំបង', val: 'Battambang' },
+  { en: 'siem reap', kh: 'សៀមរាប', val: 'Siem Reap' },
+  { en: 'siemreap', kh: 'សៀមរាប', val: 'Siem Reap' },
+  { en: 'pursat', kh: 'ពោធិ៍សាត់', val: 'Pursat' },
+  { en: 'banteay meanchey', kh: 'បន្ទាយមានជ័យ', val: 'Banteay Meanchey' },
+  { en: 'kampong cham', kh: 'កំពង់ចាម', val: 'Kampong Cham' },
+  { en: 'kampong chhnang', kh: 'កំពង់ឆ្នាំង', val: 'Kampong Chhnang' },
+  { en: 'kampong speu', kh: 'កំពង់ស្ពឺ', val: 'Kampong Speu' },
+  { en: 'kampong thom', kh: 'កំពង់ធំ', val: 'Kampong Thom' },
+  { en: 'kampot', kh: 'កំពត', val: 'Kampot' },
+  { en: 'kep', kh: 'កែប', val: 'Kep' },
+  { en: 'koh kong', kh: 'កោះកុង', val: 'Koh Kong' },
+  { en: 'kratie', kh: 'ក្រចេះ', val: 'Kratie' },
+  { en: 'mondulkiri', kh: 'មណ្ឌលគិរី', val: 'Mondulkiri' },
+  { en: 'otdar meanchey', kh: 'ឧត្តរមានជ័យ', val: 'Oddar Meanchey' },
+  { en: 'oddar meanchey', kh: 'ឧត្តរមានជ័យ', val: 'Oddar Meanchey' },
+  { en: 'pailin', kh: 'ប៉ៃលិន', val: 'Pailin' },
+  { en: 'preah sihanouk', kh: 'ព្រះសីហនុ', val: 'Preah Sihanouk' },
+  { en: 'preah vihear', kh: 'ព្រះវិហារ', val: 'Preah Vihear' },
+  { en: 'prey veng', kh: 'ព្រៃវែង', val: 'Prey Veng' },
+  { en: 'ratanakiri', kh: 'រតនគិរី', val: 'Ratanakiri' },
+  { en: 'stung treng', kh: 'ស្ទឹងត្រែង', val: 'Stung Treng' },
+  { en: 'svay rieng', kh: 'ស្វាយរៀង', val: 'Svay Rieng' },
+  { en: 'takeo', kh: 'តាកែវ', val: 'Takeo' },
+  { en: 'tboung khmum', kh: 'ត្បូងឃ្មុំ', val: 'Tboung Khmum' }
+];
+
+// Helper to extract keywords from Khmer address sentences to match NCDD hierarchy
+function cleanAndExtractKeywords(line) {
+  let q = line.normalize("NFC").trim();
+  
+  // Remove conversational noise prefixes
+  q = q.replace(/^(ផ្ទះបងនៅម្ដុំ|ផ្ទះនៅម្ដុំ|នៅម្ដុំ|ទីតាំង|ជិត|ក្បែរ|ផ្ទះ|ផ្លូវ|ទីតាំង:ក្នុងតំបន់|ក្នុងតំបន់|ក្រោយ|ជិត)\s*/gi, '');
+  
+  // Extract parts between Khmer admin markers
+  const parts = [];
+  const markers = ['ភូមិ', 'ឃុំ', 'សង្កាត់', 'ស្រុក', 'ខណ្ឌ', 'ក្រុង', 'ខេត្ត', 'រាជធានី'];
+  
+  let currentText = q;
+  markers.forEach(marker => {
+    if (currentText.includes(marker)) {
+      const idx = currentText.indexOf(marker);
+      const prefixVal = currentText.substring(0, idx).trim();
+      if (prefixVal) parts.push(prefixVal);
+      currentText = currentText.substring(idx + marker.length).trim();
+    }
+  });
+  if (currentText) parts.push(currentText);
+  
+  return parts.map(p => p.trim()).filter(p => p.length >= 2);
+}
+
+// Helper to lookup matching NCDD code for resolved geocoded names
+async function lookupNcddCodeForNames(province, district, commune, village) {
+  let query = '';
+  if (village && commune) {
+    query = `${village}, ${commune}`;
+  } else if (commune && district) {
+    query = `${commune}, ${district}`;
+  } else if (commune) {
+    query = commune;
+  } else if (district) {
+    query = district;
+  }
+  
+  if (!query) return null;
+  
+  try {
+    const res = await fetch(`/api/ncdd/search?q=${encodeURIComponent(query)}&limit=5`);
+    if (res.ok) {
+      const list = await res.json();
+      if (list && list.length > 0) {
+        let bestMatch = list[0];
+        if (province) {
+          const normProv = normalizeKhmer(province).toLowerCase();
+          const match = list.find(item => {
+            const itemProv = normalizeKhmer(item.province_kh || item.province_en || '').toLowerCase();
+            return itemProv === normProv || itemProv.includes(normProv) || normProv.includes(itemProv);
+          });
+          if (match) bestMatch = match;
+        }
+        return bestMatch.code;
+      }
+    }
+  } catch (e) {
+    console.warn('NCDD code lookup failed for names:', query, e);
+  }
+  return null;
+}
+
+async function resolveAddresses() {
+  const pmRawInput = document.getElementById('pmRawInput');
+  const pmRunBtn = document.getElementById('pmRunBtn');
+  const body = document.getElementById('pmResultsBody');
+
+  if (!pmRawInput || !body) return;
+
+  const lines = pmRawInput.value.split('\n').map(l => l.trim()).filter(Boolean);
+  if (lines.length === 0) {
+    alert('Please paste some addresses first.');
+    return;
+  }
+
+  pmRunBtn.disabled = true;
+  pmRunBtn.textContent = 'Resolving...';
+  body.innerHTML = '';
+
+  pmRows = lines.map((line, idx) => ({
+    index: idx,
+    rawText: line,
+    status: 'loading',
+    resolvedName: '',
+    lat: null,
+    lng: null,
+    code: '',
+    province: '',
+    province_kh: '',
+    district: '',
+    district_kh: '',
+    commune: '',
+    commune_kh: '',
+    candidates: [],
+    nearestPo: null
+  }));
+
+  // Initial render of loading rows
+  pmRows.forEach(row => {
+    const tr = document.createElement('tr');
+    tr.id = `pm-row-${row.index}`;
+    tr.innerHTML = `
+      <td style="text-align: center; font-weight: 700; color: #94a3b8;">${row.index + 1}</td>
+      <td style="font-weight: 600;">${escHtml(row.rawText)}</td>
+      <td id="pm-row-val-${row.index}" style="color: #64748b; font-style: italic;">Parsing address...</td>
+      <td style="text-align: center;"><span class="pm-status-badge loading">Loading</span></td>
+      <td id="pm-row-po-${row.index}">-</td>
+    `;
+    body.appendChild(tr);
+  });
+
+  updatePmStats();
+
+  // Resolve all rows in parallel
+  const resolvePromises = pmRows.map(async (row) => {
+    try {
+      const query = row.rawText;
+      const normQ = normalizeKhmer(query).toLowerCase();
+
+      // Extract province context
+      let detectedProvince = '';
+      for (const p of pmProvincesList) {
+        if (normQ.includes(p.en) || normQ.includes(p.kh)) {
+          detectedProvince = p.val;
+          break;
+        }
+      }
+
+      // Check if it's direct coordinates e.g. "11.556, 104.928"
+      const coords = parseCoordinates(query);
+      if (coords) {
+        row.status = 'exact';
+        row.resolvedName = `GPS Coordinates (${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)})`;
+        row.lat = coords.lat;
+        row.lng = coords.lng;
+        row.province = 'GPS Location';
+        row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+        renderPmRow(row.index);
+        return;
+      }
+
+      const candidates = [];
+
+      // 1. Primary NCDD Search
+      const ncddUrl = `/api/ncdd/search?q=${encodeURIComponent(query)}&limit=15`;
+      const ncddRes = await fetch(ncddUrl);
+      let ncddData = [];
+      if (ncddRes.ok) {
+        ncddData = await ncddRes.json();
+      }
+
+      // 2. Local database search
+      const localResults = clientSearch(query, 'market', detectedProvince || '');
+      localResults.slice(0, 5).forEach(r => {
+        candidates.push({
+          source: 'local',
+          name: r.market || r.village || r.commune,
+          name_kh: r.market_kh || r.village_kh || r.commune_kh || '',
+          lat: r.latitude,
+          lng: r.longitude,
+          province: r.province,
+          district: r.district,
+          commune: r.commune,
+          path_en: [r.commune, r.district, r.province].filter(Boolean).join(', '),
+          path_kh: [r.commune_kh, r.district_kh, r.province_kh].filter(Boolean).join(', ')
+        });
+      });
+
+      // Add primary NCDD matches
+      ncddData.forEach(item => {
+        const localMatch = clientMergedRoutes.find(r => {
+          const itemProv = normalizeKhmer(item.province_kh).toLowerCase();
+          const routeProv = normalizeKhmer(r.province_kh || r.province || '').toLowerCase();
+          if (routeProv !== itemProv && !routeProv.includes(itemProv) && !itemProv.includes(routeProv)) return false;
+          
+          if (item.type === 'village') {
+            const itemVill = normalizeKhmer(item.village_kh).toLowerCase();
+            const routeVill = normalizeKhmer(r.village_kh || r.village || '').toLowerCase();
+            return routeVill && (routeVill === itemVill || routeVill.includes(itemVill));
+          } else if (item.type === 'commune') {
+            const itemComm = normalizeKhmer(item.commune_kh).toLowerCase();
+            const routeComm = normalizeKhmer(r.commune_kh || r.commune || '').toLowerCase();
+            return routeComm && (routeComm === itemComm || routeComm.includes(itemComm));
+          } else if (item.type === 'district') {
+            const itemDist = normalizeKhmer(item.district_kh).toLowerCase();
+            const routeDist = normalizeKhmer(r.district_kh || r.district || '').toLowerCase();
+            return routeDist && (routeDist === itemDist || routeDist.includes(itemDist));
+          }
+          return false;
+        });
+
+        candidates.push({
+          source: 'ncdd',
+          name: item.path_en,
+          name_kh: item.path_kh,
+          code: item.code,
+          lat: localMatch ? localMatch.latitude : null,
+          lng: localMatch ? localMatch.longitude : null,
+          province: item.province_en,
+          province_kh: item.province_kh,
+          district: item.district_en,
+          district_kh: item.district_kh,
+          commune: item.commune_en,
+          commune_kh: item.commune_kh,
+          village: item.village_en,
+          village_kh: item.village_kh,
+          path_en: item.path_en,
+          path_kh: item.path_kh
+        });
+      });
+
+      // 3. Fallback to keyword-isolated NCDD search if no matches
+      if (candidates.length === 0) {
+        const keywords = cleanAndExtractKeywords(query);
+        for (const kw of keywords) {
+          if (kw === query) continue;
+          const ncddResKw = await fetch(`/api/ncdd/search?q=${encodeURIComponent(kw)}&limit=10`);
+          if (ncddResKw.ok) {
+            const ncddDataKw = await ncddResKw.json();
+            ncddDataKw.forEach(item => {
+              const localMatch = clientMergedRoutes.find(r => {
+                const itemProv = normalizeKhmer(item.province_kh).toLowerCase();
+                const routeProv = normalizeKhmer(r.province_kh || r.province || '').toLowerCase();
+                if (routeProv !== itemProv && !routeProv.includes(itemProv) && !itemProv.includes(routeProv)) return false;
+                
+                if (item.type === 'village') {
+                  const itemVill = normalizeKhmer(item.village_kh).toLowerCase();
+                  const routeVill = normalizeKhmer(r.village_kh || r.village || '').toLowerCase();
+                  return routeVill && (routeVill === itemVill || routeVill.includes(itemVill));
+                } else if (item.type === 'commune') {
+                  const itemComm = normalizeKhmer(item.commune_kh).toLowerCase();
+                  const routeComm = normalizeKhmer(r.commune_kh || r.commune || '').toLowerCase();
+                  return routeComm && (routeComm === itemComm || routeComm.includes(itemComm));
+                } else if (item.type === 'district') {
+                  const itemDist = normalizeKhmer(item.district_kh).toLowerCase();
+                  const routeDist = normalizeKhmer(r.district_kh || r.district || '').toLowerCase();
+                  return routeDist && (routeDist === itemDist || routeDist.includes(itemDist));
+                }
+                return false;
+              });
+
+              candidates.push({
+                source: 'ncdd',
+                name: item.path_en,
+                name_kh: item.path_kh,
+                code: item.code,
+                lat: localMatch ? localMatch.latitude : null,
+                lng: localMatch ? localMatch.longitude : null,
+                province: item.province_en,
+                province_kh: item.province_kh,
+                district: item.district_en,
+                district_kh: item.district_kh,
+                commune: item.commune_en,
+                commune_kh: item.commune_kh,
+                village: item.village_en,
+                village_kh: item.village_kh,
+                path_en: item.path_en,
+                path_kh: item.path_kh
+              });
+            });
+          }
+        }
+      }
+
+      // Filter by province context
+      let filteredCandidates = candidates;
+      if (detectedProvince) {
+        const normDet = normalizeKhmer(detectedProvince).toLowerCase();
+        filteredCandidates = candidates.filter(c => {
+          const p = normalizeKhmer(c.province || '').toLowerCase();
+          return p === normDet || p.includes(normDet) || normDet.includes(p);
+        });
+      }
+
+      // Deduplicate candidates
+      const seen = new Set();
+      const uniqueCandidates = [];
+      filteredCandidates.forEach(c => {
+        const key = `${c.name}-${c.province}`.toLowerCase();
+        if (!seen.has(key)) {
+          seen.add(key);
+          uniqueCandidates.push(c);
+        }
+      });
+
+      // 4. Fallback to background geocoding automatically if 0 matches
+      if (uniqueCandidates.length === 0) {
+        const geocodeQuery = query + ', Cambodia';
+        const geoRes = await fetch(`/api/google-geocode?q=${encodeURIComponent(geocodeQuery)}`);
+        if (geoRes.ok) {
+          const geoData = await geoRes.json();
+          if (geoData.type === 'multiple' && geoData.results && geoData.results.length > 0) {
+            for (const r of geoData.results) {
+              const ncddCode = await lookupNcddCodeForNames(r.province, r.district, r.commune, null);
+              uniqueCandidates.push({
+                source: 'google',
+                name: r.market || r.village || r.commune || r.name || query,
+                name_kh: r.market_kh || r.village_kh || r.commune_kh || '',
+                code: ncddCode,
+                lat: r.latitude || r.lat,
+                lng: r.longitude || r.lng,
+                province: r.province || '',
+                province_kh: r.province_kh || '',
+                district: r.district || '',
+                district_kh: r.district_kh || '',
+                commune: r.commune || '',
+                commune_kh: r.commune_kh || '',
+                path_en: [r.commune, r.district, r.province].filter(Boolean).join(', '),
+                path_kh: [r.commune_kh, r.district_kh, r.province_kh].filter(Boolean).join(', ')
+              });
+            }
+          } else if (geoData.lat && geoData.lng) {
+            const ncddCode = await lookupNcddCodeForNames(geoData.province, geoData.district, geoData.commune, null);
+            row.status = 'exact';
+            row.resolvedName = geoData.name || query;
+            row.lat = geoData.lat;
+            row.lng = geoData.lng;
+            row.code = ncddCode;
+            row.province = geoData.province || '';
+            row.province_kh = geoData.province_kh || '';
+            row.district = geoData.district || '';
+            row.district_kh = geoData.district_kh || '';
+            row.commune = geoData.commune || '';
+            row.commune_kh = geoData.commune_kh || '';
+            row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+
+            // Dynamically learn geocoded locations
+            fetch('/api/learn-location', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                name: geoData.name || query,
+                name_kh: '',
+                latitude: geoData.lat,
+                longitude: geoData.lng,
+                source: 'geocode',
+                query: query
+              })
+            }).catch(() => {});
+
+            renderPmRow(row.index);
+            return;
+          }
+        }
+      }
+
+      row.candidates = uniqueCandidates;
+
+      if (uniqueCandidates.length === 1) {
+        const match = uniqueCandidates[0];
+        row.status = 'exact';
+        row.resolvedName = match.name_kh ? `${match.name_kh} (${match.name})` : match.name;
+        row.lat = match.lat;
+        row.lng = match.lng;
+        row.code = match.code;
+        row.province = match.province || '';
+        row.province_kh = match.province_kh || '';
+        row.district = match.district || '';
+        row.district_kh = match.district_kh || '';
+        row.commune = match.commune || '';
+        row.commune_kh = match.commune_kh || '';
+        row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+      } else if (uniqueCandidates.length > 1) {
+        row.status = 'ambiguous';
+      } else {
+        row.status = 'not-found';
+      }
+    } catch (e) {
+      console.warn('Failed to resolve row:', row.index, e);
+      row.status = 'not-found';
+    }
+    renderPmRow(row.index);
+  });
+
+  await Promise.all(resolvePromises);
+  
+  pmRunBtn.disabled = false;
+  pmRunBtn.textContent = '⚡ Resolve Addresses';
+  
+  const hasExact = pmRows.some(r => r.status === 'exact' && r.lat && r.lng);
+  if (pmPlotBtn) pmPlotBtn.disabled = !hasExact;
+  if (pmExportBtn) pmExportBtn.disabled = pmRows.length === 0;
+
+  updatePmStats();
+}
+
+function renderPmRow(index) {
+  const row = pmRows[index];
+  const tr = document.getElementById(`pm-row-${row.index}`);
+  if (!tr) return;
+
+  let resolvedTd = '';
+  let statusBadge = '';
+  let poTd = '-';
+
+  if (row.status === 'exact') {
+    let codeInfo = '';
+    if (row.code) {
+      const distCode = row.code.substring(0, 4);
+      const commCode = row.code.substring(0, 6);
+      const distName = row.district_kh || row.district || '';
+      const commName = row.commune_kh || row.commune || '';
+      
+      codeInfo = `
+        <div style="font-size: 11px; margin-bottom: 3px; display: flex; align-items: center; gap: 4px;">
+          <span style="display: inline-block; padding: 2px 5px; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; border-radius: 4px; font-weight: 700;">
+            ${distCode}-${distName}
+          </span>
+          <span style="color: #94a3b8; font-weight: 700;">➔</span>
+          <span style="display: inline-block; padding: 2px 5px; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; border-radius: 4px; font-weight: 700;">
+            ${commCode}-${commName}
+          </span>
+        </div>
+      `;
+    }
+
+    resolvedTd = `
+      <div style="display: flex; flex-direction: column;">
+        ${codeInfo}
+        <span style="font-weight: 600; color: #1e293b;">${escHtml(row.resolvedName)}</span>
+    `;
+    if (row.lat && row.lng) {
+      resolvedTd += `<span style="font-size: 10px; color: #64748b; margin-top: 1px;">📍 ${row.lat.toFixed(4)}, ${row.lng.toFixed(4)}</span>`;
+    } else {
+      resolvedTd += `<span style="font-size: 10px; color: #dc2626; font-weight: 700; margin-top: 1px;">⚠️ Coordinates missing (Click search online)</span>`;
+    }
+    resolvedTd += `</div>`;
+    statusBadge = `<span class="pm-status-badge exact">Exact</span>`;
+  } else if (row.status === 'ambiguous') {
+    statusBadge = `<span class="pm-status-badge ambiguous">Ambiguous (${row.candidates.length})</span>`;
+    
+    let selectHtml = `<select class="pm-select-disambig" onchange="resolveRowAmbiguity(${row.index}, this.value)">`;
+    selectHtml += `<option value="">Select correct location...</option>`;
+    row.candidates.forEach((c, cIdx) => {
+      let codePrefix = "";
+      if (c.code) {
+        const distCode = c.code.substring(0, 4);
+        const commCode = c.code.substring(0, 6);
+        codePrefix = `${distCode} ➔ ${commCode} · `;
+      }
+      const label = c.path_kh ? `${codePrefix}${c.name_kh} (${c.path_en})` : `${codePrefix}${c.name} (${c.province})`;
+      selectHtml += `<option value="${cIdx}">${escHtml(label)}</option>`;
+    });
+    selectHtml += `</select>`;
+    resolvedTd = selectHtml;
+  } else if (row.status === 'not-found') {
+    statusBadge = `<span class="pm-status-badge not-found">Not Found</span>`;
+    resolvedTd = `
+      <div style="display: flex; gap: 6px; align-items: center;">
+        <span style="color: #ef4444; font-style: italic; font-size: 11px;">No match. Geocode:</span>
+        <button class="pm-btn pm-btn-secondary" style="padding: 4px 8px; font-size: 10px; border-radius: 4px;" onclick="geocodeRow(${row.index})">🔍 Search Online</button>
+      </div>
+    `;
+  } else if (row.status === 'loading') {
+    statusBadge = `<span class="pm-status-badge loading">Loading</span>`;
+    resolvedTd = `<span style="color: #64748b; font-style: italic;">Resolving location...</span>`;
+  }
+
+  if (row.nearestPo) {
+    const { branch, distance } = row.nearestPo;
+    const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
+    poTd = `
+      <div style="font-weight: 700; color: #1e293b;">${escHtml(branch.store_name)}</div>
+      <div style="font-size: 10px; color: #64748b;">ID: ${branch.store_code} · <b>${distText}</b> away</div>
+    `;
+  }
+
+  tr.innerHTML = `
+    <td style="text-align: center; font-weight: 700; color: #475569;">${row.index + 1}</td>
+    <td style="font-weight: 600; color: #334155;">${escHtml(row.rawText)}</td>
+    <td id="pm-row-val-${row.index}">${resolvedTd}</td>
+    <td style="text-align: center;">${statusBadge}</td>
+    <td id="pm-row-po-${row.index}">${poTd}</td>
+  `;
+}
+
+function resolveRowAmbiguity(rowIndex, candIndex) {
+  if (candIndex === "") return;
+  const row = pmRows[rowIndex];
+  const cand = row.candidates[parseInt(candIndex)];
+  if (!cand) return;
+
+  row.status = 'exact';
+  row.resolvedName = cand.name_kh ? `${cand.name_kh} (${cand.name})` : cand.name;
+  row.lat = cand.lat;
+  row.lng = cand.lng;
+  row.code = cand.code;
+  row.province = cand.province || '';
+  row.province_kh = cand.province_kh || '';
+  row.district = cand.district || '';
+  row.district_kh = cand.district_kh || '';
+  row.commune = cand.commune || '';
+  row.commune_kh = cand.commune_kh || '';
+  row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+
+  renderPmRow(rowIndex);
+  
+  if (!row.lat || !row.lng) {
+    geocodeRow(rowIndex);
+  }
+
+  const pmPlotBtn = document.getElementById('pmPlotBtn');
+  const hasExact = pmRows.some(r => r.status === 'exact' && r.lat && r.lng);
+  if (pmPlotBtn) pmPlotBtn.disabled = !hasExact;
+  updatePmStats();
+}
+
+async function geocodeRow(rowIndex) {
+  const row = pmRows[rowIndex];
+  row.status = 'loading';
+  renderPmRow(rowIndex);
+
+  try {
+    const query = row.rawText + ', Cambodia';
+    const res = await fetch(`/api/google-geocode?q=${encodeURIComponent(query)}`);
+    if (!res.ok) throw new Error('Geocode failed');
+    const data = await res.json();
+
+    if (data.type === 'multiple' && data.results && data.results.length > 0) {
+      row.status = 'ambiguous';
+      const parsedResults = [];
+      for (const r of data.results) {
+        const ncddCode = await lookupNcddCodeForNames(r.province, r.district, r.commune, null);
+        parsedResults.push({
+          source: 'google',
+          name: r.market || r.village || r.commune || r.name || query,
+          name_kh: r.market_kh || r.village_kh || r.commune_kh || '',
+          code: ncddCode,
+          lat: r.latitude || r.lat,
+          lng: r.longitude || r.lng,
+          province: r.province || '',
+          province_kh: r.province_kh || '',
+          district: r.district || '',
+          district_kh: r.district_kh || '',
+          commune: r.commune || '',
+          commune_kh: r.commune_kh || '',
+          path_en: r.google_maps_url || '',
+          path_kh: ''
+        });
+      }
+      row.candidates = parsedResults;
+    } else if (data.lat && data.lng) {
+      const ncddCode = await lookupNcddCodeForNames(data.province, data.district, data.commune, null);
+      row.status = 'exact';
+      row.resolvedName = data.name || row.rawText;
+      row.lat = data.lat;
+      row.lng = data.lng;
+      row.code = ncddCode;
+      row.province = data.province || '';
+      row.province_kh = data.province_kh || '';
+      row.district = data.district || '';
+      row.district_kh = data.district_kh || '';
+      row.commune = data.commune || '';
+      row.commune_kh = data.commune_kh || '';
+      row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+
+      fetch('/api/learn-location', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name || row.rawText,
+          name_kh: '',
+          latitude: data.lat,
+          longitude: data.lng,
+          source: 'geocode',
+          query: row.rawText
+        })
+      }).catch(() => {});
+    } else {
+      row.status = 'not-found';
+    }
+  } catch (e) {
+    console.warn('Geocoding row failed:', rowIndex, e);
+    row.status = 'not-found';
+  }
+
+  renderPmRow(rowIndex);
+  const pmPlotBtn = document.getElementById('pmPlotBtn');
+  const hasExact = pmRows.some(r => r.status === 'exact' && r.lat && r.lng);
+  if (pmPlotBtn) pmPlotBtn.disabled = !hasExact;
+  updatePmStats();
+}
+
+function updatePmStats() {
+  const pmStats = document.getElementById('pmStats');
+  if (!pmStats) return;
+
+  if (pmRows.length === 0) {
+    pmStats.textContent = 'Resolved: 0 / 0 rows (0% complete)';
+    return;
+  }
+
+  const exactCount = pmRows.filter(r => r.status === 'exact' && r.lat && r.lng).length;
+  const pct = Math.round((exactCount / pmRows.length) * 100);
+  pmStats.textContent = `Resolved: ${exactCount} / ${pmRows.length} rows (${pct}% complete)`;
+}
+
+function plotPmLocationsOnMap() {
+  if (pmRows.length === 0) return;
+
+  const validRows = pmRows.filter(r => r.status === 'exact' && r.lat && r.lng);
+  if (validRows.length === 0) return;
+
+  markerClusterGroup.clearLayers();
+  activeMarkers = [];
+  
+  validRows.forEach(row => {
+    const marker = L.marker([row.lat, row.lng], { icon: blueIcon }).addTo(markerClusterGroup);
+    
+    let popupHtml = `
+      <div class="map-popup-content">
+        <div class="popup-header" style="display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom: 6px;">
+          <span class="popup-badge" style="background:#2563eb; color:white; padding:2px 5px; font-size:9px; border-radius:3px; font-weight:700;">Batch Resolved</span>
+          <span class="popup-coord" style="font-size:10px; color:#64748b;">${row.lat.toFixed(4)}°, ${row.lng.toFixed(4)}°</span>
+        </div>
+        <h4 style="margin:4px 0; font-size:13px;">📍 ${escHtml(row.rawText)}</h4>
+        <p class="popup-addr" style="margin:4px 0; font-size:11px; color:#334155;">Resolved: <b>${escHtml(row.resolvedName)}</b></p>
+    `;
+
+    if (row.code) {
+      const distCode = row.code.substring(0, 4);
+      const commCode = row.code.substring(0, 6);
+      const distName = row.district_kh || row.district || '';
+      const commName = row.commune_kh || row.commune || '';
+      popupHtml += `
+        <div style="margin-top: 6px; padding: 6px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 4px; font-size: 11px; line-height: 1.4;">
+          🗂️ District: <b>${distCode} (${distName})</b><br>
+          📁 Commune: <b>${commCode} (${commName})</b>
+        </div>
+      `;
+    }
+
+    if (row.nearestPo) {
+      const { branch, distance } = row.nearestPo;
+      const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
+      popupHtml += `
+        <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #f1f5f9; font-size: 11px;">
+          📮 Nearest PO: <b>${escHtml(branch.store_name)}</b> (${distText} away)
+        </div>
+      `;
+    }
+
+    popupHtml += `</div>`;
+    marker.bindPopup(popupHtml);
+    activeMarkers.push({ id: row.index, marker });
+  });
+
+  // Fit bounds automatically
+  if (activeMarkers.length > 0) {
+    const group = new L.featureGroup(activeMarkers.map(m => m.marker));
+    pmMap.fitBounds(group.getBounds().pad(0.1));
+  }
+}
+
+function exportPmCsv() {
+  if (pmRows.length === 0) return;
+
+  let csvContent = "data:text/csv;charset=utf-8,";
+  csvContent += "Line,Raw Address,Status,Resolved Name,District Code,District Name,Commune Code,Commune Name,Latitude,Longitude,Nearest Post Office,PO Distance (km)\n";
+
+  pmRows.forEach((row, idx) => {
+    const rawStr = row.rawText.replace(/"/g, '""');
+    const resStr = row.resolvedName.replace(/"/g, '""');
+    const status = row.status;
+    const lat = row.lat || '';
+    const lng = row.lng || '';
+    
+    const distCode = row.code ? row.code.substring(0, 4) : '';
+    const distName = (row.district_kh || row.district || '').replace(/"/g, '""');
+    const commCode = row.code ? row.code.substring(0, 6) : '';
+    const commName = (row.commune_kh || row.commune || '').replace(/"/g, '""');
+    
+    let poName = '';
+    let poDist = '';
+    if (row.nearestPo) {
+      poName = row.nearestPo.branch.store_name.replace(/"/g, '""');
+      poDist = row.nearestPo.distance.toFixed(3);
+    }
+
+    csvContent += `"${idx + 1}","${rawStr}","${status}","${resStr}","${distCode}","${distName}","${commCode}","${commName}","${lat}","${lng}","${poName}","${poDist}"\n`;
+  });
+
+  const encodedUri = encodeURI(csvContent);
+  const link = document.createElement("a");
+  link.setAttribute("href", encodedUri);
+  link.setAttribute("download", `paste_master_results_${Date.now()}.csv`);
+  document.body.appendChild(link); // Required for FF
+  link.click();
+  document.body.removeChild(link);
+}
+
+function findNearestPoForCoords(lat, lng) {
+  if (!lat || !lng || !clientBranches || clientBranches.length === 0) return null;
+  let minD = Infinity;
+  let closest = null;
+  clientBranches.forEach(b => {
+    if (b.latitude && b.longitude) {
+      const d = haversine(lat, lng, b.latitude, b.longitude);
+      if (d < minD) { minD = d; closest = b; }
+    }
+  });
+  return closest ? { branch: closest, distance: minD } : null;
+}
+
+// Calculate distance in kilometers between two lat/lng points using Haversine formula
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
+// Escape HTML utility
+function escHtml(str) {
+  if (!str) return '';
+  return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// Khmer spelling unicode normalization helper
+function normalizeKhmer(str) {
+  if (!str) return '';
+  let normalized = str.normalize('NFC').trim();
+  normalized = normalized.replace(/\u17C1\u17B8/g, '\u17BE');
+  normalized = normalized.replace(/\u17C1\u17B6/g, '\u17C4');
+  normalized = normalized.replace(/\u200B/g, '');
+  normalized = normalized.replace(/\u17D2$/, '');
+  normalized = normalized.replace(/[០-៩]/g, d => String.fromCharCode(d.charCodeAt(0) - 0x17E0 + 48));
+  return normalized;
+}
+
+// Check for coordinate values
+function parseCoordinates(q) {
+  const match = q.match(/^[-+]?([1-9]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/);
+  if (match) {
+    const parts = q.split(',').map(num => parseFloat(num.trim()));
+    return { lat: parts[0], lng: parts[1] };
+  }
+  return null;
+}
