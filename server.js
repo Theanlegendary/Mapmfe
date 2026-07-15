@@ -1737,13 +1737,21 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     let matchesMarket = false;
     
     if (normQ) {
-      if (normMarket.includes(normQ) || normMarketKh.includes(normQ)) {
+      if (normMarket.includes(normQ) || normMarketKh.includes(normQ) || 
+          (normMarket.length >= 4 && cleanQ.toLowerCase().includes(normMarket.toLowerCase())) || 
+          (normMarketKh.length >= 4 && cleanQ.includes(normMarketKh))) {
         matchesMarket = true;
       }
-      if (!matchesMarket && (m.aliases || []).some(a => normalizeKhmer(a).includes(normQ))) {
+      if (!matchesMarket && (m.aliases || []).some(a => {
+        const normA = normalizeKhmer(a);
+        return normA.includes(normQ) || (normA.length >= 4 && cleanQ.toLowerCase().includes(normA.toLowerCase()));
+      })) {
         matchesMarket = true;
       }
-      if (!matchesMarket && (m.search_keywords || []).some(k => normalizeKhmer(k).includes(normQ))) {
+      if (!matchesMarket && (m.search_keywords || []).some(k => {
+        const normK = normalizeKhmer(k);
+        return normK.includes(normQ) || (normK.length >= 4 && cleanQ.toLowerCase().includes(normK.toLowerCase()));
+      })) {
         matchesMarket = true;
       }
     }

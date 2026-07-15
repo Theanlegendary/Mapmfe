@@ -11098,5 +11098,271 @@
     "source_id": "way/1460145234",
     "confidence": 70,
     "is_verified": false
+  },
+  {
+    "id": 10001,
+    "market": "Wat Steung Meanchey",
+    "market_kh": "វត្តស្ទឹងមានជ័យ",
+    "aliases": [
+      "វត្តស្ទឹងមានជ័យ",
+      "Wat Stoeng Meanchey",
+      "Wat Steung Meanchey Pagoda"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Mean Chey",
+    "district_kh": "មានជ័យ",
+    "latitude": 11.529285,
+    "longitude": 104.896791,
+    "search_keywords": [
+      "wat steung meanchey",
+      "wat stoeng meanchey",
+      "steung meanchey pagoda",
+      "វត្តស្ទឹងមានជ័យ",
+      "ស្ទឹងមានជ័យ"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.529285,104.896791",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10002,
+    "market": "Wat Prek Thleung",
+    "market_kh": "វត្តព្រែកថ្លឹង",
+    "aliases": [
+      "វត្តព្រែកថ្លឹង",
+      "Wat Prek Thleung Pagoda",
+      "Wat Prek Thleang"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Dangkao",
+    "district_kh": "ដង្កោ",
+    "latitude": 11.464612,
+    "longitude": 104.91421,
+    "search_keywords": [
+      "wat prek thleung",
+      "wat prek thleang",
+      "វត្តព្រែកថ្លឹង",
+      "ព្រែកថ្លឹង"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.464612,104.91421",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10003,
+    "market": "Prek Pnov Bridge",
+    "market_kh": "ស្ពានព្រែកព្នៅ",
+    "aliases": [
+      "ស្ពានព្រែកព្នៅ",
+      "Prek Pnov Bridge",
+      "Ly Yong Phat Bridge"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Prek Pnov",
+    "district_kh": "ព្រែកព្នៅ",
+    "latitude": 11.657512,
+    "longitude": 104.887211,
+    "search_keywords": [
+      "prek pnov bridge",
+      "ly yong phat bridge",
+      "ស្ពានព្រែកព្នៅ",
+      "ស្ពាន លីយ៉ុងផាត់",
+      "ព្រែកព្នៅ"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.657512,104.887211",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10004,
+    "market": "Techo Santipheap Hospital",
+    "market_kh": "មន្ទីរពេទ្យជាតិ តេជោសន្តិភាព",
+    "aliases": [
+      "មន្ទីរពេទ្យជាតិ តេជោសន្តិភាព",
+      "Techo Santipheap Hospital",
+      "Samdech Techo Santepheap Hospital"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Prek Pnov",
+    "district_kh": "ព្រែកព្នៅ",
+    "latitude": 11.524456,
+    "longitude": 104.757344,
+    "search_keywords": [
+      "techo santipheap hospital",
+      "techo santepheap hospital",
+      "មន្ទីរពេទ្យជាតិ តេជោសន្តិភាព",
+      "ពេទ្យតេជោសន្តិភាព",
+      "ពេទ្យសម្ដេចតេជោសន្តិភាព"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.524456,104.757344",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10005,
+    "market": "Royal University of Fine Arts (RUFA) - Chroy Changvar",
+    "market_kh": "សាកលវិទ្យាល័យភូមិន្ទវិចិត្រសិល្បៈ ជ្រោយចង្វារ",
+    "aliases": [
+      "សាកលវិទ្យាល័យភូមិន្ទវិចិត្រសិល្បៈ ជ្រោយចង្វារ",
+      "RUFA Chroy Changvar",
+      "RUFA New Campus"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Chroy Changvar",
+    "district_kh": "ជ្រោយចង្វារ",
+    "latitude": 11.603412,
+    "longitude": 104.921312,
+    "search_keywords": [
+      "rufa chroy changvar",
+      "rufa new campus",
+      "royal university of fine arts new",
+      "សាកលវិទ្យាល័យភូមិន្ទវិចិត្រសិល្បៈ ជ្រោយចង្វារ",
+      "rufa ថ្មី ជ្រោយចង្វារ"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.603412,104.921312",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10006,
+    "market": "Borey Sony",
+    "market_kh": "បុរីសូនី",
+    "aliases": [
+      "បុរីសូនី",
+      "Borey Sony"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Mean Chey",
+    "district_kh": "មានជ័យ",
+    "latitude": 11.535812,
+    "longitude": 104.873211,
+    "search_keywords": [
+      "borey sony",
+      "borei sony",
+      "បុរីសូនី",
+      "សូនី"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.535812,104.873211",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10007,
+    "market": "Borey Phnom Penh Park",
+    "market_kh": "បុរីភ្នំពេញផាក",
+    "aliases": [
+      "បុរីភ្នំពេញផាក",
+      "Borey Phnom Penh Park"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Chroy Changvar",
+    "district_kh": "ជ្រោយចង្វារ",
+    "latitude": 11.642112,
+    "longitude": 104.935412,
+    "search_keywords": [
+      "borey phnom penh park",
+      "phnom penh park",
+      "បុរីភ្នំពេញផាក",
+      "ភ្នំពេញផាក"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.642112,104.935412",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10008,
+    "market": "Phsar Dei Thmei Veng Sreng",
+    "market_kh": "ផ្សារដីថ្មី វេងស្រេង",
+    "aliases": [
+      "ផ្សារដីថ្មី វេងស្រេង",
+      "Dei Thmei Market Veng Sreng",
+      "Phsar Dei Thmey"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Mean Chey",
+    "district_kh": "មានជ័យ",
+    "latitude": 11.527311,
+    "longitude": 104.858212,
+    "search_keywords": [
+      "phsar dei thmei veng sreng",
+      "phsar dei thmey",
+      "ផ្សារដីថ្មី វេងស្រេង",
+      "ផ្សារដីថ្មី",
+      "វេងស្រេង",
+      "veng sreng"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.527311,104.858212",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10009,
+    "market": "Kdan 2 Landmark",
+    "market_kh": "ក្តាន់២",
+    "aliases": [
+      "ក្តាន់២",
+      "Kdan 2 Statue",
+      "Kdan Pi Intersection"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Daun Penh",
+    "district_kh": "ដូនពេញ",
+    "latitude": 11.572421,
+    "longitude": 104.914311,
+    "search_keywords": [
+      "kdan 2",
+      "kdan pi",
+      "kdan two",
+      "ក្តាន់២",
+      "ក្តាន់ពីរ",
+      "រង្វង់មូលក្តាន់ពីរ"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.572421,104.914311",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
+  },
+  {
+    "id": 10010,
+    "market": "Yellow Shirt Factory",
+    "market_kh": "រោងចក្រអាវលឿង",
+    "aliases": [
+      "រោងចក្រអាវលឿង",
+      "Yellow Shirt Factory",
+      "Yellow Factory"
+    ],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Sen Sok",
+    "district_kh": "សែនសុខ",
+    "latitude": 11.530511,
+    "longitude": 104.851212,
+    "search_keywords": [
+      "yellow shirt factory",
+      "រោងចក្រអាវលឿង",
+      "អាវលឿង",
+      "yellow factory"
+    ],
+    "google_maps_url": "https://www.google.com/maps?q=11.530511,104.851212",
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true
   }
 ]

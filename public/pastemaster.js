@@ -439,6 +439,9 @@ async function resolveAddresses() {
         }
       });
 
+      // Sort uniqueCandidates by priority score
+      uniqueCandidates.sort((a, b) => scoreCandidate(b, query) - scoreCandidate(a, query));
+
       // 4. Fallback to background geocoding automatically if 0 matches
       if (uniqueCandidates.length === 0) {
         const geocodeQuery = query + ', Cambodia';
@@ -694,6 +697,7 @@ async function geocodeRow(rowIndex) {
           path_kh: ''
         });
       }
+      parsedResults.sort((a, b) => scoreCandidate(b, row.rawText) - scoreCandidate(a, row.rawText));
       row.candidates = parsedResults;
     } else if (data.lat && data.lng) {
       const ncddCode = await lookupNcddCodeForNames(data.province, data.district, data.commune, null);
@@ -896,4 +900,63 @@ function parseCoordinates(q) {
     return { lat: parts[0], lng: parts[1] };
   }
   return null;
+}
+
+// Structured ranking scoring algorithm for locations
+function scoreCandidate(c, query) {
+  let score = 0;
+  const nameLower = (c.name || '').toLowerCase();
+  const nameKhLower = (c.name_kh || '').toLowerCase();
+  const qLower = query.toLowerCase();
+  
+  // 1. Match type ranking (Boost admin divisions and landmarks)
+  if (c.source === 'ncdd') {
+    // Exact admin division
+    score += 1000;
+  }
+  
+  // Boost landmarks (pagoda/wat, bridge, hospital, university, school, factory, borey)
+  const isLandmark = /\b(wat|pagoda|bridge|hospital|university|school|rufa|itc|college|mosque|church|temple|monastery|factory|borey|buri)\b/i.test(nameLower) ||
+                    /(វត្ត|ស្ពាន|មន្ទីរពេទ្យ|ពេទ្យ|សាកលវិទ្យាល័យ|សាលា|វិទ្យាល័យ|វិទ្យាស្ថាន|រោងចក្រ|បុរី)\b/i.test(nameKhLower);
+  if (isLandmark) {
+    score += 500;
+  }
+  
+  // Boost markets
+  const isMarket = /\b(market|phsar|psar)\b/i.test(nameLower) || /(ផ្សារ)\b/i.test(nameKhLower);
+  if (isMarket) {
+    score += 400;
+  }
+  
+  // Boost streets
+  const isStreet = /\b(street|st|road|way|boulevard|blvd|ផ្លូវ|មហាវិថី)\b/i.test(nameLower) || /(ផ្លូវ|មហាវិថី)\b/i.test(nameKhLower);
+  if (isStreet) {
+    score += 300;
+  }
+  
+  // 2. Exact match boost: if the query matches the name exactly
+  if (nameLower === qLower || nameKhLower === qLower) {
+    score += 1000;
+  } else if (nameLower.includes(qLower) || nameKhLower.includes(qLower)) {
+    score += 200;
+  }
+  
+  // 3. Prevent province jumping: if candidate province is Siem Reap or other provinces,
+  // and the query does NOT mention it, but mentions Phnom Penh (or default to Phnom Penh boost)
+  const mentionsPhnomPenh = qLower.includes('phnom penh') || qLower.includes('ភ្នំពេញ') || qLower.includes('pp');
+  const candIsPhnomPenh = nameLower.includes('phnom penh') || (c.province && c.province.toLowerCase() === 'phnom penh') || (c.province_kh && c.province_kh === 'ភ្នំពេញ');
+  
+  if (candIsPhnomPenh) {
+    score += 200; // General Phnom Penh bias since 90% of logistics data is in Phnom Penh
+  } else {
+    // Siem Reap / other provinces downranked if query doesn't explicitly mention them
+    const mentionsSiemReap = qLower.includes('siem reap') || qLower.includes('សៀមរាប') || qLower.includes('sr');
+    const candIsSiemReap = nameLower.includes('siem reap') || (c.province && c.province.toLowerCase() === 'siem reap');
+    
+    if (candIsSiemReap && !mentionsSiemReap) {
+      score -= 800; // Major penalty to prevent province jumping!
+    }
+  }
+  
+  return score;
 }
