@@ -444,6 +444,44 @@ async function resolveAddresses() {
 
       // 4. Fallback to background geocoding automatically if 0 matches
       if (uniqueCandidates.length === 0) {
+        // 4a. Try smart-find API first (uses entity extraction + full pipeline)
+        try {
+          const sfRes = await fetch(`/api/smart-find?q=${encodeURIComponent(query)}`);
+          if (sfRes.ok) {
+            const sfData = await sfRes.json();
+            if (sfData.found_coords && sfData.found_coords.lat && sfData.found_coords.lng) {
+              const ncddCode = await lookupNcddCodeForNames(
+                sfData.resolved_market?.province || '',
+                sfData.resolved_market?.district || '',
+                sfData.resolved_market?.commune || '',
+                null
+              );
+              row.status = 'exact';
+              row.resolvedName = sfData.resolved_market?.market_kh 
+                ? `${sfData.resolved_market.market_kh} (${sfData.resolved_market.market || ''})` 
+                : (sfData.resolved_market?.market || sfData.found_coords.name || query);
+              row.lat = sfData.found_coords.lat;
+              row.lng = sfData.found_coords.lng;
+              row.code = ncddCode || sfData.resolved_market?.code || '';
+              row.province = sfData.resolved_market?.province || '';
+              row.province_kh = sfData.resolved_market?.province_kh || '';
+              row.district = sfData.resolved_market?.district || '';
+              row.district_kh = sfData.resolved_market?.district_kh || '';
+              row.commune = sfData.resolved_market?.commune || '';
+              row.commune_kh = sfData.resolved_market?.commune_kh || '';
+              row.confidence = sfData.confidence || 90;
+              row.matchedFields = sfData.matchedFields || ['smart_find'];
+              row.reason = sfData.reason || 'Resolved via smart-find pipeline.';
+              row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
+              renderPmRow(row.index);
+              return;
+            }
+          }
+        } catch (sfErr) {
+          console.warn('Smart-find fallback failed:', sfErr.message);
+        }
+
+        // 4b. Try Google geocode as last resort
         const geocodeQuery = query + ', Cambodia';
         const geoRes = await fetch(`/api/google-geocode?q=${encodeURIComponent(geocodeQuery)}`);
         if (geoRes.ok) {
