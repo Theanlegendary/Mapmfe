@@ -1290,6 +1290,9 @@ async function showAutocomplete(q) {
 
     if (!suggestions.length) { closeAutocomplete(); return; }
 
+    // Sort suggestions by priority score to match Cambodia Address Resolver Rules
+    suggestions.sort((a, b) => scoreAutocompleteCandidate(b, q) - scoreAutocompleteCandidate(a, q));
+
     autocompleteDropdown.innerHTML = '';
     suggestions.slice(0, 6).forEach(s => {
       const item = document.createElement('div');
@@ -4098,6 +4101,72 @@ function setupNcddCascadingSelectors() {
     }
   });
 }
+
+// Structured ranking scoring algorithm for autocomplete suggestions matching AGENTS.md
+function scoreAutocompleteCandidate(c, query) {
+  let score = 0;
+  const nameLower = (c.displayLabel || c.label || '').toLowerCase();
+  const addressLower = (c.address || '').toLowerCase();
+  const qLower = query.toLowerCase();
+  
+  // 1. Match type ranking (Boost admin divisions and landmarks)
+  if (c.isNcdd) {
+    score += 1000;
+  }
+  if (c.isBranch) {
+    score += 800; // Metfone PO branch matches
+  }
+  
+  // Boost landmarks (pagoda/wat, bridge, hospital, university, school, factory, borey)
+  const isLandmark = /\b(wat|pagoda|bridge|hospital|university|school|rufa|itc|college|mosque|church|temple|monastery|factory|borey|buri)\b/i.test(nameLower) ||
+                    /(វត្ត|ស្ពាន|មន្ទីរពេទ្យ|ពេទ្យ|សាកលវិទ្យាល័យ|សាលា|វិទ្យាល័យ|វិទ្យាស្ថាន|រោងចក្រ|បុរី)\b/i.test(nameLower) ||
+                    /\b(wat|pagoda|bridge|hospital|university|school|rufa|itc|college|mosque|church|temple|monastery|factory|borey|buri)\b/i.test(addressLower) ||
+                    /(វត្ត|ស្ពាន|មន្ទីរពេទ្យ|ពេទ្យ|សាកលវិទ្យាល័យ|សាលា|វិទ្យាល័យ|វិទ្យាស្ថាន|រោងចក្រ|បុរី)\b/i.test(addressLower);
+  if (isLandmark) {
+    score += 500;
+  }
+  
+  // Boost markets
+  const isMarket = /\b(market|phsar|psar)\b/i.test(nameLower) || /(ផ្សារ)\b/i.test(nameLower) ||
+                    /\b(market|phsar|psar)\b/i.test(addressLower) || /(ផ្សារ)\b/i.test(addressLower);
+  if (isMarket) {
+    score += 400;
+  }
+  
+  // Boost streets
+  const isStreet = /\b(street|st|road|way|boulevard|blvd|ផ្លូវ|មហាវិថី)\b/i.test(nameLower) || /(ផ្លូវ|មហាវិថី)\b/i.test(nameLower) ||
+                    /\b(street|st|road|way|boulevard|blvd|ផ្លូវ|មហាវិថី)\b/i.test(addressLower) || /(ផ្លូវ|មហាវិថី)\b/i.test(addressLower);
+  if (isStreet) {
+    score += 300;
+  }
+  
+  // 2. Exact match boost: if the query matches the name exactly
+  if (nameLower === qLower) {
+    score += 1000;
+  } else if (nameLower.includes(qLower)) {
+    score += 200;
+  }
+  
+  // 3. Prevent province jumping: if candidate province is Siem Reap or other provinces,
+  // and the query does NOT mention it, but mentions Phnom Penh (or default to Phnom Penh boost)
+  const mentionsPhnomPenh = qLower.includes('phnom penh') || qLower.includes('ភ្នំពេញ') || qLower.includes('pp');
+  const candIsPhnomPenh = nameLower.includes('phnom penh') || addressLower.includes('phnom penh') || (c.province && c.province.toLowerCase() === 'phnom penh') || (c.raw && c.raw.province_kh === 'ភ្នំពេញ');
+  
+  if (candIsPhnomPenh) {
+    score += 200; // General Phnom Penh bias since 90% of logistics data is in Phnom Penh
+  } else {
+    // Siem Reap / other provinces downranked if query doesn't explicitly mention them
+    const mentionsSiemReap = qLower.includes('siem reap') || qLower.includes('សៀមរាប') || qLower.includes('sr');
+    const candIsSiemReap = nameLower.includes('siem reap') || addressLower.includes('siem reap') || (c.province && c.province.toLowerCase() === 'siem reap');
+    
+    if (candIsSiemReap && !mentionsSiemReap) {
+      score -= 800; // Major penalty to prevent province jumping!
+    }
+  }
+  
+  return score;
+}
+
 
 
 
