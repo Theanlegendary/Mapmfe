@@ -22,6 +22,15 @@ app.use(express.json());
 app.use('/data', express.static(path.join(__dirname, 'data')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve training slides directly from project root
+app.get('/train.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'train.html'));
+});
+
+app.get('/training-slides.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'train.html'));
+});
+
 // ── Load data once at startup ──
 const DATA_PATH = path.join(__dirname, 'data', 'routes.json');
 const PICKUP_DATA_PATH = path.join(__dirname, 'data', 'pickup_branches.json');
