@@ -11501,5 +11501,23 @@
     "confidence": 100,
     "is_verified": true,
     "google_maps_url": "https://www.google.com/maps?q=11.5469,104.8440"
+  },
+  {
+    "id": 9538,
+    "market": "The Star Quateria",
+    "market_kh": "ស្តារគ្វាទៀរ",
+    "aliases": ["Star Quateria", "The Star", "ស្តារ"],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Sen Sok",
+    "district_kh": "សែនសុខ",
+    "latitude": 11.5867,
+    "longitude": 104.8856,
+    "search_keywords": ["the star", "star quateria", "shopping", "mall"],
+    "priority_score": 85,
+    "source": "curated_landmark",
+    "confidence": 95,
+    "is_verified": true,
+    "google_maps_url": "https://www.google.com/maps?q=11.5867,104.8856"
   }
 ]

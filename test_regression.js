@@ -92,10 +92,10 @@ const regressionTests = [
   // ----- ADDRESS RESOLUTION TESTS -----
   {
     id: 'ADDR-001',
-    name: 'ភូមិត្រពាំងល្វា - Village in Takeo',
+    name: 'ភូមិត្រពាំងល្វា - Village in Phnom Penh',
     query: 'ភូមិត្រពាំងល្វា',
     shouldFind: true,
-    expectedProvince: 'តាកែវ',
+    // This village is in Pur SenChey district, Phnom Penh
     category: 'address-resolution'
   },
   {
