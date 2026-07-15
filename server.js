@@ -1710,7 +1710,11 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
   }
 
   // Check geocoding cache FIRST
-  const processedQuery = preprocessSpelling(query);
+  let cleanQ = query.trim();
+  if (cleanQ.toLowerCase() !== 'cambodia') {
+    cleanQ = cleanQ.replace(/,\s*cambodia$/gi, '').replace(/\s+cambodia$/gi, '').trim();
+  }
+  const processedQuery = preprocessSpelling(cleanQ);
   const normQ = normalizeKhmer(processedQuery);
   const normQuery = processedQuery.toLowerCase().replace(/[^a-z0-9]/g, '');
 
