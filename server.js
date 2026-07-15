@@ -2377,6 +2377,35 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
     return makeChainAmbiguityResult(chainNeedingLocation, candidates);
   }
 
+  // ── CURATED LANDMARK EXACT MATCH PRIORITY ──
+  // Curated landmarks with high priority_score that match exactly should resolve immediately
+  // This prevents fuzzy matching from overriding well-known locations
+  const curatedExactMatch = candidates.find(c => {
+    if (c.source !== 'famous_market') return false;
+    if (!c.priorityScore || c.priorityScore < 85) return false;
+    if (c.baseScore < 95) return false;
+    return true;
+  });
+  
+  if (curatedExactMatch && curatedExactMatch.latitude && curatedExactMatch.longitude) {
+    console.log(`🏆 Curated landmark exact match: "${curatedExactMatch.name}" (score: ${curatedExactMatch.baseScore}, priority: ${curatedExactMatch.priorityScore})`);
+    const result = {
+      lat: curatedExactMatch.latitude,
+      lng: curatedExactMatch.longitude,
+      name: curatedExactMatch.name_kh ? `${curatedExactMatch.name_kh} (${curatedExactMatch.name})` : curatedExactMatch.name,
+      province: curatedExactMatch.province || '',
+      province_kh: curatedExactMatch.province_kh || '',
+      district: curatedExactMatch.district || '',
+      district_kh: curatedExactMatch.district_kh || '',
+      object_type: curatedExactMatch.objectType || curatedExactMatch.type,
+      confidence: 100,
+      matchedFields: curatedExactMatch.matchedFields,
+      reason: `Curated landmark exact match: "${curatedExactMatch.name}" with priority ${curatedExactMatch.priorityScore}.`
+    };
+    saveToGeocodingCache(query, result.lat, result.lng, result.name);
+    return result;
+  }
+
   // If no good local candidates, try online geocoding to discover candidates
   const hasGoodLocal = candidates.some(c => c.baseScore >= 80);
   if (!hasGoodLocal) {
@@ -2415,6 +2444,9 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
 
   // 2. Filter candidates by requested Province (or default context)
   let detectedProvince = province;
+  let detectedDistrict = '';
+  
+  // Enhanced province/district detection from query text
   if (!detectedProvince) {
     const provWords = [
       { en: 'phnom penh', kh: 'ភ្នំពេញ' },
@@ -2426,7 +2458,17 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
       { en: 'takeo', kh: 'តាកែវ' },
       { en: 'pursat', kh: 'ពោធិ៍សាត់' },
       { en: 'prey veng', kh: 'ព្រៃវែង' },
-      { en: 'kampot', kh: 'កំពត' }
+      { en: 'kampot', kh: 'កំពត' },
+      { en: 'kratie', kh: 'ក្រចេះ' },
+      { en: 'stung treng', kh: 'ស្ទឹងត្រែង' },
+      { en: 'svay rieng', kh: 'ស្វាយរៀង' },
+      { en: 'koh kong', kh: 'កោះកុង' },
+      { en: 'mondulkiri', kh: 'មណ្ឌលគីរី' },
+      { en: 'ratanakkiri', kh: 'រតនគីរី' },
+      { en: 'preah vihear', kh: 'ព្រះវិហារ' },
+      { en: 'banteay meanchey', kh: 'បន្ទាយមានជ័យ' },
+      { en: 'oddar meanchey', kh: 'ឧត្តរមានជ័យ' },
+      { en: 'tboung khmum', kh: 'ត្បូងឃ្មុំ' }
     ];
     for (const pw of provWords) {
       if (normQuery.includes(pw.en.replace(/\s+/g, '')) || normQ.includes(pw.kh)) {
@@ -2435,15 +2477,63 @@ async function resolveCoordsWithSpellingCorrection(query, province = '') {
       }
     }
   }
+  
+  // Detect Phnom Penh district names in query (implies province = Phnom Penh)
+  const phnomPenhDistricts = [
+    { en: 'daun penh', kh: 'ដូនពេញ' },
+    { en: 'chamkar mon', kh: 'ចំការមន' },
+    { en: 'prampir meakkara', kh: 'ប្រាំពីរមករា' },
+    { en: 'tuol kouk', kh: 'ទួលគោក' },
+    { en: 'dangkao', kh: 'ដង្កោ' },
+    { en: 'meanchey', kh: 'មានជ័យ' },
+    { en: 'pur senchey', kh: 'ពោធិ៍សែនជ័យ' },
+    { en: 'sen sok', kh: 'សែនសុខ' },
+    { en: 'chbar ampov', kh: 'ច្បារអំពៅ' },
+    { en: 'chroy changvar', kh: 'ជ្រោយចង្វារ' },
+    { en: 'prek pnov', kh: 'ព្រែកព្នៅ' },
+    { en: 'russei keo', kh: 'ឫស្សីកែវ' },
+    { en: 'kamboul', kh: 'កំបូល' }
+  ];
+  
+  for (const dist of phnomPenhDistricts) {
+    if (normQuery.includes(dist.en.replace(/\s+/g, '')) || normQ.includes(dist.kh)) {
+      if (!detectedProvince) detectedProvince = 'phnom penh';
+      detectedDistrict = dist.en;
+      break;
+    }
+  }
+  
+  console.log(`   Province detected: "${detectedProvince || 'none'}", District detected: "${detectedDistrict || 'none'}"`);
 
   let filteredCandidates = candidates;
+  
+  // ── STRICT PROVINCE FILTERING ──
+  // When province is detected from query text, completely discard candidates from other provinces
+  // This prevents fuzzy matching from overriding administrative boundaries
   if (detectedProvince) {
     const normDet = normalizeKhmer(detectedProvince).toLowerCase();
-    filteredCandidates = candidates.filter(c => {
+    const provinceFiltered = candidates.filter(c => {
       const pEn = normalizeKhmer(c.province || '').toLowerCase();
       const pKh = normalizeKhmer(c.province_kh || '').toLowerCase();
       return pEn.includes(normDet) || normDet.includes(pEn) || pKh.includes(normDet) || normDet.includes(pKh);
     });
+    
+    // Only use province-filtered results if we found any
+    if (provinceFiltered.length > 0) {
+      filteredCandidates = provinceFiltered;
+    }
+    // If district is also detected, further filter
+    if (detectedDistrict && filteredCandidates.length > 1) {
+      const normDist = normalizeKhmer(detectedDistrict).toLowerCase();
+      const distFiltered = filteredCandidates.filter(c => {
+        const dEn = normalizeKhmer(c.district || '').toLowerCase();
+        const dKh = normalizeKhmer(c.district_kh || '').toLowerCase();
+        return dEn.includes(normDist) || normDist.includes(dEn) || dKh.includes(normDist) || normDist.includes(dKh);
+      });
+      if (distFiltered.length > 0) {
+        filteredCandidates = distFiltered;
+      }
+    }
   } else {
     filteredCandidates.forEach(c => {
       const pEn = (c.province || '').toLowerCase();

@@ -311,6 +311,113 @@ const regressionTests = [
     shouldFind: true,
     shouldBeAmbiguous: false,
     category: 'chain'
+  },
+
+  // ----- USER REGRESSION TESTS (from real-world address testing) -----
+  {
+    id: 'USER-001',
+    name: 'ជិតផ្សារអូរឬស្សី ភ្នំពេញ - Orussey Market',
+    query: 'ជិតផ្សារអូរឬស្សី ភ្នំពេញ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-002',
+    name: 'ក្រោយវត្តស្ទឹងមានជ័យ - Pagoda in Meanchey',
+    query: 'ក្រោយវត្តស្ទឹងមានជ័យ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-003',
+    name: 'ក្បែរផ្សារសែនសុខ - Sen Sok Market',
+    query: 'ក្បែរផ្សារសែនសុខ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-004',
+    name: 'ទល់មុខមន្ទីរពេទ្យកាល់ម៉ែត្រ - Calmette Hospital',
+    query: 'ទល់មុខមន្ទីរពេទ្យកាល់ម៉ែត្រ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-005',
+    name: 'បុរីប៉េងហorg បឹងស្នោ - Borey Peng Huoth',
+    query: 'បុរីប៉េងorg បឹងស្នោ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-006',
+    name: 'ជិតស្ពានជ្រោយចង្វារ - Chroy Changvar Bridge',
+    query: 'ជិតស្ពានជ្រោយចង្វារ',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-007',
+    name: 'វត្តព្រែកថ្លឹង សង្កាត់ព្រែកកំពិស - Pagoda with Sangkat',
+    query: 'វត្តព្រែកថ្លឹង សង្កាត់ព្រែកកំពិស',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-008',
+    name: 'ជិតផ្សារព្រៃទា ពោធិ៍សorg នជ័យ - Prey Tea Market in Pur SenChey',
+    query: 'ជorg រព្រorg ា org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-009',
+    name: 'ផ្org org org org org org org org org org - Dei Thmey Veng Sreng',
+    query: 'ផorg org វorg org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-010',
+    name: 'ក្org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org - Techo Santipheap Hospital',
+    query: 'ក្org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-011',
+    name: 'បorg org org org org org org org org org org org org org org org - Borey Phnom Penh Park Chroy Changvar',
+    query: 'org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-012',
+    name: 'ក org org org org org org org org org org org org org org org org org org org org org org org - Wat Phnom',
+    query: 'ក org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-013',
+    name: 'ទorg org org org org org org org org org org org org org org org org org org org org org org org org org org org - PP International Airport',
+    query: 'org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-014',
+    name: 'ក org org org org org org org org org org org org org org org org org org org org - Chbar Ampov Market',
+    query: 'org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
+  },
+  {
+    id: 'USER-015',
+    name: 'ក org org org org org org org org org org org org org org org org org - Prek Pnov Bridge',
+    query: 'org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org org',
+    shouldFind: true,
+    category: 'user-regression'
   }
 ];
 

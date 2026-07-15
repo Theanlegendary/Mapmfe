@@ -71,7 +71,8 @@
     "aliases": [
       "Phsar Orussey",
       "Psar Orusey",
-      "O'Ruessei Market"
+      "O'Ruessei Market",
+      "ផ្សារអូរឬស្សី"
     ],
     "province": "Phnom Penh",
     "province_kh": "ភ្នំពេញ",
@@ -91,7 +92,9 @@
       "wet market",
       "phnom penh",
       "prampir meakkara",
-      "ផ្សារអូរឫស្សី"
+      "ផ្សារអូរឫស្សី",
+      "អូរឬស្សី",
+      "អូរឫស្សី"
     ],
     "priority_score": 95,
     "google_maps_url": "https://www.google.com/maps?q=11.5615,104.9139"
@@ -11519,5 +11522,77 @@
     "confidence": 95,
     "is_verified": true,
     "google_maps_url": "https://www.google.com/maps?q=11.5867,104.8856"
+  },
+  {
+    "id": 9539,
+    "market": "Calmette Hospital",
+    "market_kh": "មន្ទីរពេទ្យកាល់ម៉ែត្រ",
+    "aliases": ["Hopital Calmette", "មន្ទីរពេទ្យកាល់ម៉ែត", "Calmette"],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Daun Penh",
+    "district_kh": "ដូនពេញ",
+    "latitude": 11.5780,
+    "longitude": 104.9199,
+    "search_keywords": ["calmette", "hospital calmette", "កាល់ម៉ែត្រ", "មន្ទីរពេទ្យកាល់ម៉ែត្រ", "calmette hospital phnom penh"],
+    "priority_score": 95,
+    "source": "curated_landmark",
+    "confidence": 100,
+    "is_verified": true,
+    "google_maps_url": "https://www.google.com/maps?q=11.5780,104.9199"
+  },
+  {
+    "id": 9540,
+    "market": "Borey Peng Huoth Boeung Snor",
+    "market_kh": "បុរីប៉េងហួត បឹងស្នោ",
+    "aliases": ["Peng Huoth Boeung Snor", "បុរីប៉េងហorg បឹងស្នោ", "Borey Peng Huot Boeung Snor"],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Chbar Ampov",
+    "district_kh": "ច្បារអំពៅ",
+    "latitude": 11.5375,
+    "longitude": 104.9590,
+    "search_keywords": ["peng huoth", "ប៉េងហorg", "boeung snor", "បឹងស្នោ", "borey peng huoth"],
+    "priority_score": 90,
+    "source": "curated_landmark",
+    "confidence": 95,
+    "is_verified": true,
+    "google_maps_url": "https://www.google.com/maps?q=11.5375,104.9590"
+  },
+  {
+    "id": 9541,
+    "market": "Phsar Sen Sok",
+    "market_kh": "ផ្សារសែនសុខ",
+    "aliases": ["Sen Sok Market", "Phsar Saen Sok", "ផ្សារសែនសុក"],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Sen Sok",
+    "district_kh": "សែនសុខ",
+    "latitude": 11.5872,
+    "longitude": 104.8589,
+    "search_keywords": ["phsar sen sok", "ផ្សារសែនសុខ", "sen sok market", "pshar sen sok"],
+    "priority_score": 90,
+    "source": "curated_landmark",
+    "confidence": 95,
+    "is_verified": true,
+    "google_maps_url": "https://www.google.com/maps?q=11.5872,104.8589"
+  },
+  {
+    "id": 9542,
+    "market": "Phsar Prey Tea",
+    "market_kh": "ផ្សារព្រៃទា",
+    "aliases": ["Prey Tea Market", "ផ្សារព្រៃទា ពោធិ៍សែនជ័យ"],
+    "province": "Phnom Penh",
+    "province_kh": "ភ្នំពេញ",
+    "district": "Pur SenChey",
+    "district_kh": "ពោធិ៍សែនជ័យ",
+    "latitude": 11.5491,
+    "longitude": 104.8295,
+    "search_keywords": ["phsar prey tea", "ផ្សារព្រៃទា", "prey tea market", "ព្រៃទា"],
+    "priority_score": 90,
+    "source": "curated_landmark",
+    "confidence": 95,
+    "is_verified": true,
+    "google_maps_url": "https://www.google.com/maps?q=11.5491,104.8295"
   }
 ]
