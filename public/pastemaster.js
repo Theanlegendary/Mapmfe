@@ -685,9 +685,19 @@ function renderPmRow(index) {
     `;
   }
 
+  const distDisplay = row.district_kh 
+    ? `<span style="font-weight:700; color:#0369a1;">${escHtml(row.district_kh)}</span> <span style="font-size:11px; color:#64748b;">(${escHtml(row.district || '')})</span>` 
+    : (row.district ? escHtml(row.district) : '<span style="color:#94a3b8; font-style:italic;">-</span>');
+  
+  const commDisplay = row.commune_kh 
+    ? `<span style="font-weight:700; color:#047857;">${escHtml(row.commune_kh)}</span> <span style="font-size:11px; color:#64748b;">(${escHtml(row.commune || '')})</span>` 
+    : (row.commune ? escHtml(row.commune) : '<span style="color:#94a3b8; font-style:italic;">-</span>');
+
   tr.innerHTML = `
     <td style="text-align: center; font-weight: 700; color: #475569;">${row.index + 1}</td>
     <td style="font-weight: 600; color: #334155;">${escHtml(row.rawText)}</td>
+    <td>${distDisplay}</td>
+    <td>${commDisplay}</td>
     <td id="pm-row-val-${row.index}">${resolvedTd}</td>
     <td style="text-align: center;">${statusBadge}</td>
     <td id="pm-row-po-${row.index}">${poTd}</td>
@@ -882,10 +892,12 @@ function exportPmCsv() {
   // Use BOM for Excel UTF-8 compatibility
   const BOM = '\uFEFF';
   let csvContent = BOM;
-  csvContent += "Line,Raw Address,Status,Resolved Name,Province,District Code,District Name,Commune Code,Commune Name,Latitude,Longitude,Nearest PO ID,Nearest Post Office,PO Distance (km)\n";
+  csvContent += "Line,Raw Address,Destination District (Khan),Destination Commune (Sangkat),Resolved Location,Status,Province,District Code,Commune Code,Latitude,Longitude,Nearest PO ID,Nearest Post Office,PO Distance (km)\n";
 
   pmRows.forEach((row, idx) => {
     const rawStr = (row.rawText || '').replace(/"/g, '""').replace(/\n/g, ' ').replace(/\r/g, '');
+    const distStr = row.district_kh ? `${row.district_kh} (${row.district || ''})` : (row.district || '');
+    const commStr = row.commune_kh ? `${row.commune_kh} (${row.commune || ''})` : (row.commune || '');
     const resStr = (row.resolvedName || '').replace(/"/g, '""');
     const status = row.status || '';
     const lat = row.lat || '';
@@ -893,9 +905,7 @@ function exportPmCsv() {
     
     const province = (row.province_kh || row.province || '').replace(/"/g, '""');
     const distCode = row.code ? row.code.substring(0, 4) : '';
-    const distName = (row.district_kh || row.district || '').replace(/"/g, '""');
     const commCode = row.code ? row.code.substring(0, 6) : '';
-    const commName = (row.commune_kh || row.commune || '').replace(/"/g, '""');
     
     let poId = '';
     let poName = '';
@@ -906,7 +916,7 @@ function exportPmCsv() {
       poDist = row.nearestPo.distance.toFixed(2);
     }
 
-    csvContent += `"${idx + 1}","${rawStr}","${status}","${resStr}","${province}","${distCode}","${distName}","${commCode}","${commName}","${lat}","${lng}","${poId}","${poName}","${poDist}"\n`;
+    csvContent += `"${idx + 1}","${rawStr}","${distStr.replace(/"/g, '""')}","${commStr.replace(/"/g, '""')}","${resStr}","${status}","${province}","${distCode}","${commCode}","${lat}","${lng}","${poId}","${poName}","${poDist}"\n`;
   });
 
   // Use Blob for proper UTF-8 encoding (fixes Khmer characters in Excel)
