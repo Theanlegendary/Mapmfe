@@ -1629,7 +1629,8 @@ Only return valid JSON conforming to the schema.`;
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
-        responseMimeType: 'application/json'
+        responseMimeType: 'application/json',
+        tools: [{ googleSearch: {} }]
       }
     });
 
