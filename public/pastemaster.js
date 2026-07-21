@@ -611,7 +611,7 @@ function renderPmRow(index) {
   if (row.nearestPo) {
     const { branch, distance } = row.nearestPo;
     const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
-    poCodeTd = `<button onclick="copyTextWithToast('${escHtml(branch.store_code)}', this)" title="Click to 1-click copy PO Code" style="font-weight:900; font-family:monospace,Consolas,'Courier New',serif; background:#0f172a; color:#38bdf8; padding:4px 9px; border-radius:6px; font-size:12px; border:1px solid #334155; cursor:pointer; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.15); transition:all 0.15s ease;"><span>📮</span> ${escHtml(branch.store_code)}</button>`;
+    poCodeTd = `<button onclick="copyTextWithToast('${escHtml(branch.store_code)}', this)" title="1-Click Copy Code" style="background:transparent; border:none; color:#dc2626; font-weight:800; font-size:14px; font-family:monospace,Consolas,sans-serif; cursor:pointer; padding:0; margin:0; outline:none;">${escHtml(branch.store_code)}</button>`;
     poBranchTd = `<div style="font-weight:700; color:#1e293b;">${escHtml(branch.store_name)}</div><div style="font-size:10px; color:#64748b;">${distText} away</div>`;
   }
 
@@ -1062,7 +1062,7 @@ function copyFullRowData(index, btn) {
 function copyAllPmResults() {
   const pmCopyAllBtn = document.getElementById('pmCopyAllBtn');
   if (pmRows.length === 0) return;
-  let text = "Line\tAddress Details\tDestination District (Khan)\tDestination Commune (Sangkat)\tPost Office Code\tNearest Post Office Branch\tResolved Location\tStatus\n";
+  let text = "Line\tAddress Details\tDestination District (Khan)\tDestination Commune (Sangkat)\tNearby Match\tNearest Post Office Branch\tResolved Location\tStatus\n";
   pmRows.forEach((row, idx) => {
     const raw = (row.rawText || '').replace(/\t/g, ' ').replace(/\n/g, ' ');
     const dist = row.district_kh ? `${row.district_kh} (${row.district || ''})` : (row.district || '');
