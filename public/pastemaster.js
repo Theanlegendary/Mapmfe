@@ -611,7 +611,7 @@ function renderPmRow(index) {
   if (row.nearestPo) {
     const { branch, distance } = row.nearestPo;
     const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
-    poCodeTd = `<span style="font-weight:800; font-family:monospace; background:#e0e7ff; color:#3730a3; padding:3px 8px; border-radius:4px; font-size:11px; border:1px solid #c7d2fe; display:inline-block;">${escHtml(branch.store_code)}</span>`;
+    poCodeTd = `<button onclick="copyTextWithToast('${escHtml(branch.store_code)}', this)" title="Click to 1-click copy PO Code" style="font-weight:900; font-family:monospace,Consolas,'Courier New',serif; background:#0f172a; color:#38bdf8; padding:4px 9px; border-radius:6px; font-size:12px; border:1px solid #334155; cursor:pointer; display:inline-flex; align-items:center; gap:4px; box-shadow:0 1px 2px rgba(0,0,0,0.15); transition:all 0.15s ease;"><span>📮</span> ${escHtml(branch.store_code)}</button>`;
     poBranchTd = `<div style="font-weight:700; color:#1e293b;">${escHtml(branch.store_name)}</div><div style="font-size:10px; color:#64748b;">${distText} away</div>`;
   }
 
