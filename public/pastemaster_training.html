@@ -3,28 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Paste Master — Training & User Guide</title>
+<title>Paste Master — Executive Training & User Guide</title>
 <style>
   :root {
     --green-dark: #0b592e;
     --green-main: #107c41;
-    --green-light: #dcfce7;
+    --green-light: #e6f4ea;
     --green-border: #0e6b37;
     --red-accent: #dc2626;
     --navy-dark: #0f172a;
     --slate-bg: #f8fafc;
-    --text-main: #1e293b;
-    --text-muted: #64748b;
+    --text-main: #0f172a;
+    --text-muted: #475569;
     --white: #ffffff;
-    --border-color: #e2e8f0;
-    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+    --border-color: #cbd5e1;
+    --shadow: 0 12px 36px rgba(15,23,42,0.1);
   }
 
   * { box-sizing: border-box; }
   html, body {
     width: 100%; height: 100%; margin: 0; padding: 0;
     overflow: hidden;
-    background: var(--navy-dark);
+    background: #090d16;
     color: var(--text-main);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Khmer OS Battambang", "Noto Sans Khmer", Roboto, Helvetica, Arial, sans-serif;
   }
@@ -36,55 +36,56 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: var(--slate-bg);
+    background: #f1f5f9;
   }
 
-  /* Header Bar */
+  /* Executive Header Bar */
   .deck-header {
-    height: 60px;
+    height: 64px;
     background: var(--green-main);
     color: var(--white);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 10;
+    padding: 0 28px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    z-index: 20;
   }
   .deck-header h1 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 800;
     margin: 0;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     letter-spacing: -0.01em;
   }
   .deck-header .header-badge {
-    background: rgba(255,255,255,0.2);
-    padding: 3px 10px;
+    background: rgba(255,255,255,0.22);
+    padding: 4px 12px;
     border-radius: 20px;
     font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    font-weight: 800;
+    letter-spacing: 0.06em;
   }
   .deck-header-right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
   .lang-switch {
     display: flex;
     align-items: center;
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.28);
     border-radius: 6px;
     padding: 2px;
+    border: 1px solid rgba(255,255,255,0.2);
   }
   .lang-btn {
     background: transparent;
     color: var(--white);
     border: none;
-    padding: 4px 10px;
+    padding: 4px 12px;
     border-radius: 4px;
     font-size: 11px;
     font-weight: 800;
@@ -94,18 +95,20 @@
   .lang-btn.active {
     background: var(--white);
     color: var(--green-main);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
   }
   .deck-btn-back {
     background: var(--white);
     color: var(--green-main);
     border: none;
-    padding: 6px 14px;
+    padding: 7px 16px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 800;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   }
   .deck-btn-back:hover {
     background: #e2e8f0;
@@ -123,13 +126,13 @@
   .slide {
     position: absolute;
     inset: 0;
-    padding: 32px 48px;
+    padding: 28px 40px;
     display: flex;
     flex-direction: column;
     opacity: 0;
     pointer-events: none;
-    transform: translateX(30px);
-    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transform: translateX(40px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     overflow-y: auto;
   }
   .slide.active {
@@ -143,107 +146,145 @@
     font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.14em;
     color: var(--green-main);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
   .slide-title {
-    font-size: 1.8rem;
-    font-weight: 800;
+    font-size: 1.9rem;
+    font-weight: 850;
     color: var(--navy-dark);
-    margin: 0 0 4px 0;
-    line-height: 1.25;
+    margin: 0 0 2px 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
   }
   .slide-subtitle {
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin: 0 0 24px 0;
+    margin: 0 0 20px 0;
     font-weight: 500;
   }
 
-  /* Grid Layouts for Slide Cards */
-  .card-grid-3 {
+  /* Image-Driven 2-Column Split Layout */
+  .slide-content-split {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    flex: 1;
-  }
-  .card-grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 380px 1fr;
     gap: 24px;
     flex: 1;
+    min-height: 0;
   }
 
-  /* Visual Cards */
-  .guide-card {
+  .slide-content-split-reverse {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+  }
+
+  /* Image Container Frame */
+  .image-frame {
     background: var(--white);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 24px;
+    padding: 12px;
+    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-    transition: all 0.2s ease;
     position: relative;
     overflow: hidden;
   }
-  .guide-card:hover {
-    border-color: #cbd5e1;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  .image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
   }
-  .card-step-num {
-    position: absolute;
-    top: 16px;
-    right: 18px;
-    font-size: 2rem;
-    font-weight: 900;
-    color: #f1f5f9;
-    user-select: none;
+  .image-caption {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
   }
-  .card-icon {
-    width: 44px;
-    height: 44px;
+
+  /* Steps Sidebar Container */
+  .steps-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .step-item {
+    background: var(--white);
+    border: 1px solid var(--border-color);
     border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    transition: all 0.2s ease;
+  }
+  .step-item:hover {
+    border-color: var(--green-main);
+    box-shadow: 0 6px 16px rgba(16,124,65,0.08);
+  }
+  .step-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
     background: var(--green-light);
     color: var(--green-main);
+    font-size: 1rem;
+    font-weight: 900;
     display: grid;
     place-items: center;
-    font-size: 1.3rem;
-    font-weight: 800;
-    margin-bottom: 16px;
+    flex-shrink: 0;
   }
-  .card-title {
-    font-size: 1.1rem;
+  .step-info h3 {
+    margin: 0 0 4px 0;
+    font-size: 0.95rem;
     font-weight: 800;
     color: var(--navy-dark);
-    margin-bottom: 4px;
   }
-  .card-desc {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-    flex: 1;
-  }
-
-  /* Mini Mockup Visual Box */
-  .mockup-box {
-    background: #0f172a;
-    color: #f8fafc;
-    border-radius: 8px;
-    padding: 12px 14px;
-    font-family: monospace;
-    font-size: 11px;
+  .step-info p {
+    margin: 0;
+    font-size: 0.82rem;
     line-height: 1.5;
-    margin-top: 14px;
-    border-left: 4px solid var(--green-main);
+    color: var(--text-muted);
   }
-  .mockup-box .hl-green { color: #4ade80; font-weight: 700; }
-  .mockup-box .hl-red { color: #f87171; font-weight: 700; }
-  .mockup-box .hl-cyan { color: #38bdf8; font-weight: 700; }
 
-  /* Bottom Controls Footer */
+  /* Pro Tips Grid */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .tip-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+  .tip-card h3 {
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--navy-dark);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tip-card p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-muted);
+  }
+
+  /* Bottom Executive Footer Controls */
   .deck-footer {
     height: 64px;
     background: var(--white);
@@ -251,80 +292,63 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 32px;
-    z-index: 10;
+    padding: 0 36px;
+    z-index: 20;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.03);
   }
   .deck-progress {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
   }
   .dot {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background: #cbd5e1;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
   }
   .dot.active {
     background: var(--green-main);
-    width: 24px;
+    width: 32px;
     border-radius: 10px;
   }
   .slide-counter {
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 13px;
+    font-weight: 800;
     color: var(--text-muted);
-    margin-left: 12px;
+    margin-left: 14px;
   }
   .nav-buttons {
     display: flex;
-    gap: 10px;
+    gap: 12px;
   }
   .nav-btn {
     background: var(--navy-dark);
     color: var(--white);
     border: none;
-    padding: 8px 18px;
-    border-radius: 6px;
+    padding: 10px 22px;
+    border-radius: 8px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     transition: all 0.2s ease;
   }
   .nav-btn:hover:not(:disabled) {
     background: var(--green-main);
+    box-shadow: 0 4px 12px rgba(16,124,65,0.25);
   }
   .nav-btn:disabled {
-    opacity: 0.4;
+    opacity: 0.35;
     cursor: not-allowed;
   }
 
-  /* Highlight Badges */
-  .badge-tip {
-    background: #fef3c7;
-    color: #92400e;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 800;
-    font-size: 10px;
-    text-transform: uppercase;
-  }
-  .badge-good {
-    background: #dcfce7;
-    color: #166534;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 800;
-    font-size: 10px;
-  }
-
-  @media (max-width: 900px) {
-    .card-grid-3, .card-grid-2 { grid-template-columns: 1fr; }
+  @media (max-width: 1024px) {
+    .slide-content-split, .slide-content-split-reverse { grid-template-columns: 1fr; }
     .slide { padding: 20px; }
   }
 </style>
@@ -333,7 +357,7 @@
 
 <div class="deck-container">
 
-  <!-- Header -->
+  <!-- Executive Header -->
   <header class="deck-header">
     <h1 id="txtHeaderTitle">
       <span>📖</span> Paste Master — Training & User Guide
@@ -351,94 +375,90 @@
   <!-- Slide Stage -->
   <main class="deck-stage">
 
-    <!-- SLIDE 1: HOW TO USE PASTE MASTER -->
+    <!-- SLIDE 1: IMAGE-DRIVEN WORKFLOW UI -->
     <section class="slide active" id="slide-1">
-      <div class="slide-tag" id="txtSlideTag1">SLIDE 1 — BASIC WORKFLOW</div>
-      <h2 class="slide-title" id="txtSlideTitle1">How to Use Paste Master in 3 Simple Steps</h2>
+      <div class="slide-tag" id="txtSlideTag1">SLIDE 1 — INTERACTIVE SYSTEM WORKFLOW</div>
+      <h2 class="slide-title" id="txtSlideTitle1">Paste Master Batch Address Resolution</h2>
       <p class="slide-subtitle" id="txtSlideSub1">Learn how to resolve, match, and export batch addresses into Excel format</p>
 
-      <div class="card-grid-3">
+      <div class="slide-content-split">
         
-        <!-- Step 1 -->
-        <div class="guide-card">
-          <div class="card-step-num">01</div>
-          <div class="card-icon">📋</div>
-          <div class="card-title" id="txtStep1Title">1. Paste Raw Address List</div>
-          <div class="card-desc" id="txtStep1Desc">
-            Copy customer addresses directly from Excel, Telegram, or Facebook into Column 1 (One address per line). Click ⚡ Resolve Addresses.
+        <!-- Left Steps Column -->
+        <div class="steps-sidebar">
+          
+          <div class="step-item">
+            <div class="step-badge">1</div>
+            <div class="step-info">
+              <h3 id="txtStep1Title">1. Paste Raw Address List</h3>
+              <p id="txtStep1Desc">Copy addresses from Excel/Telegram into Column 1 (one per line) and click <b>⚡ Resolve Addresses</b>.</p>
+            </div>
           </div>
-          <div class="mockup-box">
-            <span class="hl-cyan">Input:</span><br/>
-            ផ្ទះបងនៅម្ដុំបាលីរីសតភូមិត្រពាំងល្វាសង្កាត់កាកាប<br/>
-            បឹងកេងកង<br/>
-            ផ្សារទួលពង្រ
+
+          <div class="step-item">
+            <div class="step-badge">2</div>
+            <div class="step-info">
+              <h3 id="txtStep2Title">2. Review & Disambiguate</h3>
+              <p id="txtStep2Desc">Auto-maps District (Khan), Commune (Sangkat), and Nearby Match PO Code (`PNPP014`, `MEGA1`). Re-select candidates anytime!</p>
+            </div>
           </div>
+
+          <div class="step-item">
+            <div class="step-badge">3</div>
+            <div class="step-info">
+              <h3 id="txtStep3Title">3. Copy or Export to Excel</h3>
+              <p id="txtStep3Desc">Click <b>📋 Copy All (Excel Format)</b> to paste directly into your Excel sheet with clean columns or click red PO Code for 1-click copy.</p>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Step 2 -->
-        <div class="guide-card">
-          <div class="card-step-num">02</div>
-          <div class="card-icon">⚡</div>
-          <div class="card-title" id="txtStep2Title">2. Review & Disambiguate</div>
-          <div class="card-desc" id="txtStep2Desc">
-            Exact locations automap District (Khan), Commune (Sangkat), and Nearby Match PO Code. If ambiguous, pick from dropdown. Re-select anytime!
-          </div>
-          <div class="mockup-box">
-            <span class="hl-green">District:</span> ពោធិ៍សែនជ័យ (Pur SenChey)<br/>
-            <span class="hl-green">Commune:</span> កាកាប (Kakab)<br/>
-            <span class="hl-red">Nearby Match:</span> PNPP014
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="guide-card">
-          <div class="card-step-num">03</div>
-          <div class="card-icon">📊</div>
-          <div class="card-title" id="txtStep3Title">3. Copy or Export to Excel</div>
-          <div class="card-desc" id="txtStep3Desc">
-            Click 📋 Copy All (Excel Format) to paste directly into your Excel sheet with clean columns (#, Address, Khan, Sangkat, Nearby Match, Status).
-          </div>
-          <div class="mockup-box">
-            <span class="hl-cyan">1-Click Copy:</span> Click any red PO Code (e.g. PNPP014) to copy code instantly!
-          </div>
+        <!-- Right Visual Screenshot Mockup Frame -->
+        <div class="image-frame">
+          <img src="/images/pastemaster_workflow_ui.png" alt="Paste Master UI Workflow Screenshot Mockup" />
+          <div class="image-caption" id="txtCap1">Figure 1.1 — Full-Width Paste Master Excel Grid & Post Office Branch Resolution UI</div>
         </div>
 
       </div>
     </section>
 
 
-    <!-- SLIDE 2: PRO TIPS & BEST PRACTICES -->
+    <!-- SLIDE 2: IMAGE-DRIVEN PRO TIPS & BEST PRACTICES -->
     <section class="slide" id="slide-2">
-      <div class="slide-tag" id="txtSlideTag2">SLIDE 2 — PRO TIPS & BEST PRACTICES</div>
+      <div class="slide-tag" id="txtSlideTag2">SLIDE 2 — PRO TIPS & ACCURACY GUIDE</div>
       <h2 class="slide-title" id="txtSlideTitle2">Tips for 100% Exact Matching Results</h2>
       <p class="slide-subtitle" id="txtSlideSub2">Follow these simple formatting rules to get instant exact matches</p>
 
-      <div class="card-grid-2">
+      <div class="slide-content-split-reverse">
         
-        <!-- Tip 1 -->
-        <div class="guide-card">
-          <div class="card-icon">💡</div>
-          <div class="card-title"><span id="txtTip1Title">Address Formatting Tips</span> <span class="badge-good">RECOMMENDED</span></div>
-          <div class="card-desc" id="txtTip1Desc">
-            Include Khan / Sangkat Names: Adding Sangkat or Khan keywords guarantees 100% exact resolution. Clean Prices & Phone Numbers: Strip out price tags ($10, $20) for faster matching.
-          </div>
-          <div class="mockup-box">
-            <span class="hl-red">❌ Ambiguous:</span> បឹងកេងកង (BKK 1, 2, or 3?)<br/>
-            <span class="hl-green">✓ 100% Exact:</span> បឹងកេងកង១ (Boeng Keng Kang 1)
-          </div>
+        <!-- Left Infographic Frame -->
+        <div class="image-frame">
+          <img src="/images/pastemaster_excel_export.png" alt="Paste Master Infographic Graphic" />
+          <div class="image-caption" id="txtCap2">Figure 2.1 — 100% Exact Khan/Sangkat Matching & 1-Click PO Code Copying Infographic</div>
         </div>
 
-        <!-- Tip 2 -->
-        <div class="guide-card">
-          <div class="card-icon">⚙️</div>
-          <div class="card-title"><span id="txtTip2Title">Advanced Features & Shortcuts</span> <span class="badge-tip">PRO FEATURES</span></div>
-          <div class="card-desc" id="txtTip2Desc">
-            1-Click PO Code Copy: Click directly on any red code in Nearby Match to copy PNPP014, MEGA1, etc. EN/KH Language Switcher: Click EN | KH at top right to toggle interface labels.
+        <!-- Right Pro Tips Grid -->
+        <div class="tips-grid">
+          
+          <div class="tip-card">
+            <h3><span>💡</span> <span id="txtTip1Title">Include Khan / Sangkat</span></h3>
+            <p id="txtTip1Desc">Adding Sangkat or Khan keywords (e.g. <i>"សង្កាត់បឹងកេងកងទី១"</i>) guarantees 100% exact resolution over generic names.</p>
           </div>
-          <div class="mockup-box">
-            <span class="hl-cyan">Language Toggle:</span> [ EN ] [ KH ] (Supports Khmer & English)<br/>
-            <span class="hl-red">Nearby Match:</span> PNPP014 (Click to copy code)
+
+          <div class="tip-card">
+            <h3><span>🧹</span> <span id="txtTip2Title">Clean Prices & Numbers</span></h3>
+            <p id="txtTip2Desc">Strip out price tags ($10, $20) or order IDs before pasting for faster Khmer fuzzy matching.</p>
           </div>
+
+          <div class="tip-card">
+            <h3><span>📮</span> <span id="txtTip3Title">1-Click PO Code Copy</span></h3>
+            <p id="txtTip3Desc">Click directly on any red code in <i>Nearby Match</i> to copy `PNPP014` or `MEGA1` instantly to clipboard.</p>
+          </div>
+
+          <div class="tip-card">
+            <h3><span>🌐</span> <span id="txtTip4Title">EN / KH Switcher</span></h3>
+            <p id="txtTip4Desc">Click EN | KH in the header to switch table headers and statuses between Khmer and English.</p>
+          </div>
+
         </div>
 
       </div>
@@ -446,7 +466,7 @@
 
   </main>
 
-  <!-- Footer Controls -->
+  <!-- Executive Footer -->
   <footer class="deck-footer">
     <div class="deck-progress">
       <div class="dot active" onclick="goToSlide(0)"></div>
@@ -478,23 +498,29 @@
 
   const dict = {
     en: {
-      headerTitle: "📖 Paste Master — Training & User Guide",
-      slideTag1: "SLIDE 1 — BASIC WORKFLOW",
-      slideTitle1: "How to Use Paste Master in 3 Simple Steps",
+      headerTitle: "📖 Paste Master — Executive Training Guide",
+      slideTag1: "SLIDE 1 — INTERACTIVE SYSTEM WORKFLOW",
+      slideTitle1: "Paste Master Batch Address Resolution",
       slideSubtitle1: "Learn how to resolve, match, and export batch addresses into Excel format",
       step1Title: "1. Paste Raw Address List",
       step1Desc: "Copy customer addresses directly from Excel, Telegram, or Facebook into Column 1 (One address per line). Click ⚡ Resolve Addresses.",
       step2Title: "2. Review & Disambiguate",
-      step2Desc: "Exact locations automap District (Khan), Commune (Sangkat), and Nearby Match PO Code. If ambiguous, pick from dropdown. Re-select anytime!",
+      step2Desc: "Exact locations automap District (Khan), Commune (Sangkat), and Nearby Match PO Code (PNPP014, MEGA1). Re-select candidates anytime!",
       step3Title: "3. Copy or Export to Excel",
-      step3Desc: "Click 📋 Copy All (Excel Format) to paste directly into your Excel sheet with clean columns (#, Address, Khan, Sangkat, Nearby Match, Status).",
-      slideTag2: "SLIDE 2 — PRO TIPS & BEST PRACTICES",
+      step3Desc: "Click 📋 Copy All (Excel Format) to paste directly into your Excel sheet with clean columns or click red PO Code for 1-click copy.",
+      cap1: "Figure 1.1 — Full-Width Paste Master Excel Grid & Post Office Branch Resolution UI",
+      slideTag2: "SLIDE 2 — PRO TIPS & ACCURACY GUIDE",
       slideTitle2: "Tips for 100% Exact Matching Results",
       slideSubtitle2: "Follow these simple formatting rules to get instant exact matches",
-      tip1Title: "Address Formatting Tips",
-      tip1Desc: "Include Khan / Sangkat Names: Adding Sangkat or Khan keywords guarantees 100% exact resolution. Clean Prices & Phone Numbers: Strip out price tags ($10, $20) for faster matching.",
-      tip2Title: "Advanced Features & Shortcuts",
-      tip2Desc: "1-Click PO Code Copy: Click directly on any red code in Nearby Match to copy PNPP014, MEGA1, etc. EN/KH Language Switcher: Click EN | KH at top right to toggle interface labels.",
+      tip1Title: "Include Khan / Sangkat",
+      tip1Desc: "Adding Sangkat or Khan keywords (e.g. 'សង្កាត់បឹងកេងកងទី១') guarantees 100% exact resolution over generic names.",
+      tip2Title: "Clean Prices & Numbers",
+      tip2Desc: "Strip out price tags ($10, $20) or order IDs before pasting for faster Khmer fuzzy matching.",
+      tip3Title: "1-Click PO Code Copy",
+      tip3Desc: "Click directly on any red code in Nearby Match to copy PNPP014 or MEGA1 instantly to clipboard.",
+      tip4Title: "EN / KH Switcher",
+      tip4Desc: "Click EN | KH in the header to switch table headers and statuses between Khmer and English.",
+      cap2: "Figure 2.1 — 100% Exact Khan/Sangkat Matching & 1-Click PO Code Copying Infographic",
       btnGoBack: "Go back to Paste Master",
       btnPrev: "‹ Previous",
       btnNext: "Next Slide ›"
@@ -502,21 +528,27 @@
     kh: {
       headerTitle: "📖 មេរៀន និងសៀវភៅណែនាំប្រើប្រាស់ Paste Master",
       slideTag1: "ស្លាយទី ១ — របៀបប្រើប្រាស់ទូទៅ",
-      slideTitle1: "របៀបប្រើប្រាស់ Paste Master ក្នុង ៣ ជំហានងាយៗ",
+      slideTitle1: "របៀបប្រើប្រាស់ Paste Master ស្វែងរកអាសយដ្ឋាន",
       slideSubtitle1: "របៀបស្វែងរក ចាត់ថ្នាក់ និងទាញយកទិន្នន័យអាសយដ្ឋានច្រើនជាទម្រង់ Excel",
       step1Title: "១. ចម្លងបញ្ជីអាសយដ្ឋាន",
       step1Desc: "ចម្លងអាសយដ្ឋានអតិថិជនពី Excel, Telegram ឬ Facebook ដាក់ក្នុងប្រអប់ទី១ (១អាសយដ្ឋាន/១បន្ទាត់) រួចចុច ⚡ ស្វែងរកអាសយដ្ឋាន។",
       step2Title: "២. ពិនិត្យ និងជ្រើសរើសជម្រើស",
       step2Desc: "អាសយដ្ឋានត្រឹមត្រូវនឹងបង្ហាញ ខណ្ឌ/ស្រុក, សង្កាត់/ឃុំ និង កូដសាខា ស្វ័យប្រវត្តិ។ ប្រសិនជាមានជម្រើសច្រើន សូមជ្រើសរើសក្នុងបញ្ជី (អាចប្ដូរបានគ្រប់ពេល)។",
       step3Title: "៣. ចម្លង ឬ ទាញយកជា Excel",
-      step3Desc: "ចុច 📋 ចម្លងទាំងអស់ (ទម្រង់ Excel) ដើម្បី Paste ចូលក្នុង Excel ភ្លាមៗ ឬចុច Export CSV / Excel ដើម្បីទាញយកឯកសារ។",
+      step3Desc: "ចុច 📋 ចម្លងទាំងអស់ (ទម្រង់ Excel) ដើម្បី Paste ចូលក្នុង Excel ភ្លាមៗ ឬចុចលើកូដពណ៌ក្រហមដើម្បី copy ភ្លាមៗ។",
+      cap1: "រូបភាព ១.១ — ទម្រង់តារាង Excel និងការចាត់ថ្នាក់សាខាប្រៃសណីយ៍ Paste Master",
       slideTag2: "ស្លាយទី ២ — ល្បិច និងគន្លឹះសំខាន់ៗ",
       slideTitle2: "គន្លឹះដើម្បីទទួលបានលទ្ធផលត្រឹមត្រូវ 100% ឥតខ្ចោះ",
       slideSubtitle2: "អនុវត្តតាមវិធានការងាយៗទាំងនេះដើម្បីទទួលបានលទ្ធផលត្រឹមត្រូវបំផុត",
-      tip1Title: "គន្លឹះរៀបចំអាសយដ្ឋាន",
-      tip1Desc: "ដាក់ឈ្មោះ ខណ្ឌ ឬ សង្កាត់៖ ការបន្ថែមពាក្យ សង្កាត់ ឬ ខណ្ឌ ជួយឲ្យប្រព័ន្ធស្វែងរកឃើញត្រឹមត្រូវ 100%។ លុបតម្លៃទំនិញ និងលេខទូរស័ព្ទចេញមុនស្វែងរក។",
-      tip2Title: "មុខងារបន្ថែម និងផ្លូវកាត់",
-      tip2Desc: "ចម្លងកូដសាខា ១ ចុច៖ ចុចលើកូដពណ៌ក្រហមក្នុងជួរ Nearby Match ដើម្បី copy PNPP014 ឬ MEGA1 ភ្លាមៗ។ ប្ដូរភាសា EN / KH៖ ចុច EN | KH នៅខាងស្តាំលើដើម្បីប្ដូរភាសា។",
+      tip1Title: "បន្ថែមឈ្មោះ ខណ្ឌ / សង្កាត់",
+      tip1Desc: "ការបន្ថែមពាក្យ សង្កាត់ ឬ ខណ្ឌ (ឧទាហរណ៍ 'សង្កាត់បឹងកេងកងទី១') ជួយឲ្យប្រព័ន្ធស្វែងរកឃើញត្រឹមត្រូវ 100%។",
+      tip2Title: "លុបតម្លៃទំនិញ និងលេខ",
+      tip2Desc: "លុបតម្លៃទំនិញ ($10, $20) ឬ លេខកូដទំនិញចេញមុនស្វែងរកដើម្បីទទួលបានលទ្ធផលលឿនជាងមុន។",
+      tip3Title: "ចម្លងកូដសាខា ១ ចុច",
+      tip3Desc: "ចុចលើកូដពណ៌ក្រហមក្នុងជួរ Nearby Match ដើម្បី copy PNPP014 ឬ MEGA1 ភ្លាមៗ។",
+      tip4Title: "ប្ដូរភាសា EN / KH",
+      tip4Desc: "ចុច EN | KH នៅខាងស្តាំលើដើម្បីប្ដូរភាសាតារាងរវាង ខ្មែរ និង អង់គ្លេស។",
+      cap2: "រូបភាព ២.១ — ការចាត់ថ្នាក់អាសយដ្ឋានត្រឹមត្រូវ 100% និងការចម្លងកូដ ១ ចុច",
       btnGoBack: "ត្រឡប់ទៅ Paste Master",
       btnPrev: "‹ ថយក្រោយ",
       btnNext: "ស្លាយបន្ទាប់ ›"
@@ -541,6 +573,8 @@
     document.getElementById('txtStep2Desc').textContent = t.step2Desc;
     document.getElementById('txtStep3Title').textContent = t.step3Title;
     document.getElementById('txtStep3Desc').textContent = t.step3Desc;
+    document.getElementById('txtCap1').textContent = t.cap1;
+
     document.getElementById('txtSlideTag2').textContent = t.slideTag2;
     document.getElementById('txtSlideTitle2').textContent = t.slideTitle2;
     document.getElementById('txtSlideSub2').textContent = t.slideSubtitle2;
@@ -548,6 +582,12 @@
     document.getElementById('txtTip1Desc').textContent = t.tip1Desc;
     document.getElementById('txtTip2Title').textContent = t.tip2Title;
     document.getElementById('txtTip2Desc').textContent = t.tip2Desc;
+    document.getElementById('txtTip3Title').textContent = t.tip3Title;
+    document.getElementById('txtTip3Desc').textContent = t.tip3Desc;
+    document.getElementById('txtTip4Title').textContent = t.tip4Title;
+    document.getElementById('txtTip4Desc').textContent = t.tip4Desc;
+    document.getElementById('txtCap2').textContent = t.cap2;
+
     btnPrev.textContent = t.btnPrev;
     btnNext.textContent = t.btnNext;
   }
