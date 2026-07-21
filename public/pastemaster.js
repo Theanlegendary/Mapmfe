@@ -603,95 +603,44 @@ function renderPmRow(index) {
 
   let resolvedTd = '';
   let statusBadge = '';
-  let poTd = '-';
+  let poCodeTd = '-';
+  let poBranchTd = '-';
+
+  if (row.nearestPo) {
+    const { branch, distance } = row.nearestPo;
+    const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
+    poCodeTd = `<span style="font-weight:800; font-family:monospace; background:#e0e7ff; color:#3730a3; padding:3px 8px; border-radius:4px; font-size:11px; border:1px solid #c7d2fe; display:inline-block;">${escHtml(branch.store_code)}</span>`;
+    poBranchTd = `<div style="font-weight:700; color:#1e293b;">${escHtml(branch.store_name)}</div><div style="font-size:10px; color:#64748b;">${distText} away</div>`;
+  }
 
   if (row.status === 'exact') {
-    let codeInfo = '';
-    if (row.code) {
-      const distCode = row.code.substring(0, 4);
-      const commCode = row.code.substring(0, 6);
-      const distName = row.district_kh || row.district || '';
-      const commName = row.commune_kh || row.commune || '';
-      
-      codeInfo = `
-        <div style="font-size: 11px; margin-bottom: 3px; display: flex; align-items: center; gap: 4px;">
-          <span style="display: inline-block; padding: 2px 5px; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; border-radius: 4px; font-weight: 700;">
-            ${distCode}-${distName}
-          </span>
-          <span style="color: #94a3b8; font-weight: 700;">➔</span>
-          <span style="display: inline-block; padding: 2px 5px; background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; border-radius: 4px; font-weight: 700;">
-            ${commCode}-${commName}
-          </span>
-        </div>
-      `;
-    }
-
-    resolvedTd = `
-      <div style="display: flex; flex-direction: column;">
-        ${codeInfo}
-        <span style="font-weight: 600; color: #1e293b;">${escHtml(row.resolvedName)}</span>
-    `;
+    resolvedTd = `<span style="font-weight: 600; color: #1e293b;">${escHtml(row.resolvedName)}</span>`;
     if (row.lat && row.lng) {
-      resolvedTd += `<span style="font-size: 10px; color: #64748b; margin-top: 1px;">📍 ${row.lat.toFixed(4)}, ${row.lng.toFixed(4)}</span>`;
-    } else {
-      resolvedTd += `<span style="font-size: 10px; color: #dc2626; font-weight: 700; margin-top: 1px;">⚠️ Coordinates missing (Click search online)</span>`;
+      resolvedTd += `<div style="font-size: 10px; color: #64748b; margin-top: 1px;">📍 ${row.lat.toFixed(4)}, ${row.lng.toFixed(4)}</div>`;
     }
-    
-    if (row.confidence !== undefined || row.reason) {
-      resolvedTd += `
-        <div style="margin-top: 4px; font-size: 10px; color: #64748b; line-height: 1.3;">
-          <div style="display: flex; gap: 6px; align-items: center; margin-bottom: 2px;">
-            <span style="display: inline-block; padding: 1px 4px; background: #f1f5f9; color: #475569; border-radius: 3px; font-weight: 700;">
-              Conf: ${row.confidence || 100}%
-            </span>
-            ${row.matchedFields && row.matchedFields.length ? `
-              <span style="color: #cbd5e1;">|</span>
-              <span style="color: #475569; font-weight: 600;">Fields: ${row.matchedFields.join(', ')}</span>
-            ` : ''}
-          </div>
-          ${row.reason ? `<span style="color: #475569; font-style: italic;">Reason: ${escHtml(row.reason)}</span>` : ''}
-        </div>
-      `;
-    }
-    resolvedTd += `</div>`;
-    statusBadge = `<span class="pm-status-badge exact">Exact</span>`;
+    statusBadge = `<span class="pm-status-badge exact" style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Exact</span>`;
   } else if (row.status === 'ambiguous') {
-    statusBadge = `<span class="pm-status-badge ambiguous">Ambiguous (${row.candidates.length})</span>`;
+    statusBadge = `<span class="pm-status-badge ambiguous" style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Ambiguous (${row.candidates.length})</span>`;
     
-    let selectHtml = `<select class="pm-select-disambig" onchange="resolveRowAmbiguity(${row.index}, this.value)">`;
+    let selectHtml = `<select class="pm-select-disambig" onchange="resolveRowAmbiguity(${row.index}, this.value)" style="width:100%; padding:4px; border:1px solid #cbd5e1; border-radius:4px;">`;
     selectHtml += `<option value="">Select correct location...</option>`;
     row.candidates.forEach((c, cIdx) => {
-      let codePrefix = "";
-      if (c.code) {
-        const distCode = c.code.substring(0, 4);
-        const commCode = c.code.substring(0, 6);
-        codePrefix = `${distCode} ➔ ${commCode} · `;
-      }
-      const label = c.path_kh ? `${codePrefix}${c.name_kh} (${c.path_en})` : `${codePrefix}${c.name} (${c.province})`;
+      const label = c.path_kh ? `${c.name_kh} (${c.path_en})` : `${c.name} (${c.province})`;
       selectHtml += `<option value="${cIdx}">${escHtml(label)}</option>`;
     });
     selectHtml += `</select>`;
     resolvedTd = selectHtml;
   } else if (row.status === 'not-found') {
-    statusBadge = `<span class="pm-status-badge not-found">Not Found</span>`;
+    statusBadge = `<span class="pm-status-badge not-found" style="background:#fee2e2; color:#991b1b; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Not Found</span>`;
     resolvedTd = `
       <div style="display: flex; gap: 6px; align-items: center;">
-        <span style="color: #ef4444; font-style: italic; font-size: 11px;">No match. Geocode:</span>
-        <button class="pm-btn pm-btn-secondary" style="padding: 4px 8px; font-size: 10px; border-radius: 4px;" onclick="geocodeRow(${row.index})">🔍 Search Online</button>
+        <span style="color: #ef4444; font-style: italic; font-size: 11px;">No match.</span>
+        <button class="pm-btn" style="padding: 3px 8px; font-size: 10px; border-radius: 4px; background:#475569; color:white; border:none; cursor:pointer;" onclick="geocodeRow(${row.index})">🔍 Search Online</button>
       </div>
     `;
   } else if (row.status === 'loading') {
-    statusBadge = `<span class="pm-status-badge loading">Loading</span>`;
+    statusBadge = `<span class="pm-status-badge loading" style="background:#f1f5f9; color:#475569; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Loading...</span>`;
     resolvedTd = `<span style="color: #64748b; font-style: italic;">Resolving location...</span>`;
-  }
-
-  if (row.nearestPo) {
-    const { branch, distance } = row.nearestPo;
-    const distText = distance < 1 ? `${Math.round(distance * 1000)}m` : `${distance.toFixed(1)}km`;
-    poTd = `
-      <div style="font-weight: 700; color: #1e293b;">${escHtml(branch.store_name)}</div>
-      <div style="font-size: 10px; color: #64748b;">ID: ${branch.store_code} · <b>${distText}</b> away</div>
-    `;
   }
 
   const distDisplay = row.district_kh 
@@ -702,22 +651,15 @@ function renderPmRow(index) {
     ? `<span style="font-weight:700; color:#047857;">${escHtml(row.commune_kh || row.commune)}</span> ${row.commune && row.commune !== row.commune_kh ? `<span style="font-size:11px; color:#64748b;">(${escHtml(row.commune)})</span>` : ''}` 
     : (row.district_kh ? `<span style="font-weight:700; color:#047857;">${escHtml(row.district_kh)}</span>` : '<span style="color:#94a3b8; font-style:italic;">-</span>');
 
-  const copyBtnTd = `
-    <div style="display:flex; flex-direction:column; gap:4px; align-items:center;">
-      <button class="pm-btn" style="padding:3px 6px; font-size:10px; background:#0284c7; color:white; border-radius:4px; font-weight:700; width:100%; border:none; cursor:pointer; font-family:var(--font-sans);" onclick="copyRowDistrictCommune(${row.index}, this)">📋 Dis/Com</button>
-      <button class="pm-btn" style="padding:3px 6px; font-size:10px; background:#475569; color:white; border-radius:4px; font-weight:700; width:100%; border:none; cursor:pointer; font-family:var(--font-sans);" onclick="copyFullRowData(${row.index}, this)">📋 Row</button>
-    </div>
-  `;
-
   tr.innerHTML = `
     <td style="text-align: center; font-weight: 700; color: #475569;">${row.index + 1}</td>
     <td style="font-weight: 600; color: #334155;">${escHtml(row.rawText)}</td>
     <td>${distDisplay}</td>
     <td>${commDisplay}</td>
+    <td style="text-align: center;">${poCodeTd}</td>
+    <td>${poBranchTd}</td>
     <td id="pm-row-val-${row.index}">${resolvedTd}</td>
     <td style="text-align: center;">${statusBadge}</td>
-    <td id="pm-row-po-${row.index}">${poTd}</td>
-    <td style="text-align: center;">${copyBtnTd}</td>
   `;
 }
 
@@ -1118,15 +1060,16 @@ function copyFullRowData(index, btn) {
 function copyAllPmResults() {
   const pmCopyAllBtn = document.getElementById('pmCopyAllBtn');
   if (pmRows.length === 0) return;
-  let text = "Line\tRaw Address\tDestination District (Khan)\tDestination Commune (Sangkat)\tResolved Location\tStatus\tNearest Post Office\n";
+  let text = "Line\tAddress Details\tDestination District (Khan)\tDestination Commune (Sangkat)\tPost Office Code\tNearest Post Office Branch\tResolved Location\tStatus\n";
   pmRows.forEach((row, idx) => {
     const raw = (row.rawText || '').replace(/\t/g, ' ').replace(/\n/g, ' ');
     const dist = row.district_kh ? `${row.district_kh} (${row.district || ''})` : (row.district || '');
     const comm = row.commune_kh ? `${row.commune_kh} (${row.commune || ''})` : (row.commune || '');
+    const poCode = row.nearestPo ? row.nearestPo.branch.store_code : '';
+    const poBranch = row.nearestPo ? `${row.nearestPo.branch.store_name} (${row.nearestPo.distance < 1 ? Math.round(row.nearestPo.distance * 1000) + 'm' : row.nearestPo.distance.toFixed(1) + 'km'})` : '';
     const res = (row.resolvedName || '').replace(/\t/g, ' ');
     const status = row.status || '';
-    const po = row.nearestPo ? `${row.nearestPo.branch.store_name} (${row.nearestPo.branch.store_code})` : '';
-    text += `${idx + 1}\t${raw}\t${dist}\t${comm}\t${res}\t${status}\t${po}\n`;
+    text += `${idx + 1}\t${raw}\t${dist}\t${comm}\t${poCode}\t${poBranch}\t${res}\t${status}\n`;
   });
   copyTextWithToast(text, pmCopyAllBtn);
 }
