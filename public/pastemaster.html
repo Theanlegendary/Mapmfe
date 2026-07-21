@@ -208,14 +208,17 @@
 
   <!-- Header Section -->
   <header class="pm-header" style="background:#107c41; border-bottom: 3px solid #0e6b37;">
-    <h1>
-      <span>📊</span> Paste Master Excel Address Resolver
+    <h1 id="pmHeaderTitle">
+      Paste Master Excel Address Resolver
     </h1>
     <div class="pm-header-right">
-      <span style="font-weight: 700; color: #e2e8f0;">Metfone Logistics Network v3.1.6</span>
-      <a href="/" class="home-link-btn">
-        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block; vertical-align:middle; margin-right:2px;"><polygon points="3 9 9 21 21 9 12 3 3 9"></polygon></svg>
-        Go to Map Search
+      <div style="display:flex; align-items:center; background:rgba(0,0,0,0.25); border-radius:6px; padding:2px; margin-right:4px;">
+        <button id="pmLangEn" style="background:white; color:#107c41; border:none; padding:3px 8px; border-radius:4px; font-weight:800; font-size:11px; cursor:pointer;">EN</button>
+        <button id="pmLangKh" style="background:transparent; color:white; border:none; padding:3px 8px; border-radius:4px; font-weight:800; font-size:11px; cursor:pointer;">KH</button>
+      </div>
+      <span id="pmNetworkVersion" style="font-weight: 700; color: #e2e8f0;">Metfone Logistics Network v3.1.6</span>
+      <a href="/" class="home-link-btn" id="pmGoBackBtn" style="padding: 5px 12px; text-decoration: none;">
+        Go back
       </a>
     </div>
   </header>
@@ -226,7 +229,7 @@
     <!-- Column 1: Inputs -->
     <div class="pm-left-col">
       <div class="pm-input-wrapper">
-        <label style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.05em; display: block; margin-bottom: 8px; font-family: var(--font-heading);">
+        <label id="pmInputLabel" style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #475569; letter-spacing: 0.05em; display: block; margin-bottom: 8px; font-family: var(--font-heading);">
           1. Raw Address Input (One per line)
         </label>
         <textarea 
@@ -243,7 +246,7 @@
     <!-- Column 2: Full-Width Excel Spreadsheet Results -->
     <div class="pm-center-col">
       <div class="pm-center-header">
-        <label style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #1e293b; letter-spacing: 0.05em; font-family: var(--font-heading);">
+        <label id="pmResultsLabel" style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #1e293b; letter-spacing: 0.05em; font-family: var(--font-heading);">
           2. Structured Results & Disambiguation (Excel Spreadsheet Grid)
         </label>
       </div>
@@ -253,20 +256,19 @@
           <table class="pm-results-table">
             <thead>
               <tr>
-                <th style="width: 40px; text-align: center;">#</th>
-                <th>Address Details</th>
-                <th>Destination District (Khan)</th>
-                <th>Destination Commune (Sangkat)</th>
-                <th style="width: 120px; text-align: center;">Nearby Match</th>
-                <th>Nearest Post Office Branch</th>
-                <th>Resolved Location</th>
-                <th style="width: 85px; text-align: center;">Status</th>
+                <th id="thNum" style="width: 40px; text-align: center;">#</th>
+                <th id="thAddress">Address Details</th>
+                <th id="thDistrict">Destination District (Khan)</th>
+                <th id="thCommune">Destination Commune (Sangkat)</th>
+                <th id="thNearby" style="width: 120px; text-align: center;">Nearby Match</th>
+                <th id="thPoBranch">Nearest Post Office Branch</th>
+                <th id="thResolved">Resolved Location</th>
+                <th id="thStatus" style="width: 85px; text-align: center;">Status</th>
               </tr>
             </thead>
             <tbody id="pmResultsBody">
               <tr>
-                <td colspan="8" class="pm-empty-cell" style="text-align: center; padding: 40px; color: #64748b;">
-                  <div style="font-size: 2.5rem; margin-bottom: 8px;">📊</div>
+                <td colspan="8" class="pm-empty-cell" id="pmEmptyCell" style="text-align: center; padding: 40px; color: #64748b;">
                   No data resolved. Paste address list on the left and click "Resolve Addresses".
                 </td>
               </tr>

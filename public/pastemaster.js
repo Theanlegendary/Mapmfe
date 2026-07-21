@@ -81,14 +81,104 @@ function clientSearch(query, type, province) {
   });
 }
 
+let pmLang = 'en';
+
+const pmDict = {
+  en: {
+    headerTitle: "Paste Master Excel Address Resolver",
+    networkVersion: "Metfone Logistics Network v3.1.6",
+    goBack: "Go back",
+    inputLabel: "1. Raw Address Input (One per line)",
+    inputPlaceholder: "Paste address keywords here. Example:\nផ្ទះបងនៅម្ដុំបាលីរីសតភូមិត្រពាំងល្វាសង្កាត់កាកាប ពោធិ៍សែនជ័យ\nបឹងកេងកង\nផ្សារទួលពង្រ\nក្រោយវត្តស្ទឹងមានជ័យ",
+    btnResolve: "⚡ Resolve Addresses",
+    resultsLabel: "2. Structured Results & Disambiguation (Excel Spreadsheet Grid)",
+    colNum: "#",
+    colAddress: "Address Details",
+    colDistrict: "Destination District (Khan)",
+    colCommune: "Destination Commune (Sangkat)",
+    colNearby: "Nearby Match",
+    colPoBranch: "Nearest Post Office Branch",
+    colResolved: "Resolved Location",
+    colStatus: "Status",
+    emptyText: "No data resolved. Paste address list on the left and click \"Resolve Addresses\".",
+    btnClear: "Clear",
+    btnCopyAll: "📋 Copy All (Excel Format)",
+    btnExport: "Export CSV / Excel"
+  },
+  kh: {
+    headerTitle: "កម្មវិធីស្វែងរកអាសយដ្ឋាន Paste Master",
+    networkVersion: "បណ្តាញដឹកជញ្ជូន Metfone Logistics v3.1.6",
+    goBack: "ត្រឡប់ក្រោយ",
+    inputLabel: "១. បញ្ចូលអាសយដ្ឋាន (១ បន្ទាត់ម្ដង)",
+    inputPlaceholder: "ចម្លងអាសយដ្ឋានដាក់នៅទីនេះ។ ឧទាហរណ៍៖\nផ្ទះបងនៅម្ដុំបាលីរីសតភូមិត្រពាំងល្វាសង្កាត់កាកាប ពោធិ៍សែនជ័យ\nបឹងកេងកង\nផ្សារទួលពង្រ\nក្រោយវត្តស្ទឹងមានជ័យ",
+    btnResolve: "⚡ ស្វែងរកអាសយដ្ឋាន",
+    resultsLabel: "២. លទ្ធផលដែលបានស្វែងរក (ទម្រង់ Excel)",
+    colNum: "ល.រ",
+    colAddress: "ព័ត៌មានអាសយដ្ឋាន",
+    colDistrict: "ខណ្ឌ / ស្រុក គោលដៅ",
+    colCommune: "សង្កាត់ / ឃុំ គោលដៅ",
+    colNearby: "កូដសាខា",
+    colPoBranch: "សាខាប្រៃសណីយ៍ជិតបំផុត",
+    colResolved: "ទីតាំងដែលរកឃើញ",
+    colStatus: "ស្ថានភាព",
+    emptyText: "មិនទាន់មានទិន្នន័យ។ សូមចម្លងបញ្ជីអាសយដ្ឋាននៅខាងឆ្វេង ហើយចុច \"ស្វែងរកអាសយដ្ឋាន\"។",
+    btnClear: "លុបសម្អាត",
+    btnCopyAll: "📋 ចម្លងទាំងអស់ (ទម្រង់ Excel)",
+    btnExport: "ទាញយក Excel / CSV"
+  }
+};
+
+function switchPmLanguage(lang) {
+  pmLang = lang;
+  const t = pmDict[lang] || pmDict.en;
+  
+  const btnEn = document.getElementById('pmLangEn');
+  const btnKh = document.getElementById('pmLangKh');
+  if (btnEn && btnKh) {
+    if (lang === 'kh') {
+      btnEn.style.background = 'transparent'; btnEn.style.color = 'white';
+      btnKh.style.background = 'white'; btnKh.style.color = '#107c41';
+    } else {
+      btnEn.style.background = 'white'; btnEn.style.color = '#107c41';
+      btnKh.style.background = 'transparent'; btnKh.style.color = 'white';
+    }
+  }
+
+  const elTitle = document.getElementById('pmHeaderTitle'); if (elTitle) elTitle.textContent = t.headerTitle;
+  const elVer = document.getElementById('pmNetworkVersion'); if (elVer) elVer.textContent = t.networkVersion;
+  const elBack = document.getElementById('pmGoBackBtn'); if (elBack) elBack.textContent = t.goBack;
+  const elInputLbl = document.getElementById('pmInputLabel'); if (elInputLbl) elInputLbl.textContent = t.inputLabel;
+  const elInput = document.getElementById('pmRawInput'); if (elInput) elInput.placeholder = t.inputPlaceholder;
+  const elRunBtn = document.getElementById('pmRunBtn'); if (elRunBtn) elRunBtn.textContent = t.btnResolve;
+  const elResLbl = document.getElementById('pmResultsLabel'); if (elResLbl) elResLbl.textContent = t.resultsLabel;
+  const thNum = document.getElementById('thNum'); if (thNum) thNum.textContent = t.colNum;
+  const thAddr = document.getElementById('thAddress'); if (thAddr) thAddr.textContent = t.colAddress;
+  const thDist = document.getElementById('thDistrict'); if (thDist) thDist.textContent = t.colDistrict;
+  const thComm = document.getElementById('thCommune'); if (thComm) thComm.textContent = t.colCommune;
+  const thNear = document.getElementById('thNearby'); if (thNear) thNear.textContent = t.colNearby;
+  const thPo = document.getElementById('thPoBranch'); if (thPo) thPo.textContent = t.colPoBranch;
+  const thRes = document.getElementById('thResolved'); if (thRes) thRes.textContent = t.colResolved;
+  const thStat = document.getElementById('thStatus'); if (thStat) thStat.textContent = t.colStatus;
+  const elClear = document.getElementById('pmClearBtn'); if (elClear) elClear.textContent = t.btnClear;
+  const elCopyAll = document.getElementById('pmCopyAllBtn'); if (elCopyAll) elCopyAll.textContent = t.btnCopyAll;
+  const elExport = document.getElementById('pmExportBtn'); if (elExport) elExport.textContent = t.btnExport;
+
+  // Re-render rows with updated language
+  pmRows.forEach((r, idx) => renderPmRow(idx));
+}
+
 function setupPasteMasterController() {
   const pmRunBtn = document.getElementById('pmRunBtn');
   const pmClearBtn = document.getElementById('pmClearBtn');
   const pmPlotBtn = document.getElementById('pmPlotBtn');
   const pmExportBtn = document.getElementById('pmExportBtn');
   const pmRawInput = document.getElementById('pmRawInput');
-
   const pmCopyAllBtn = document.getElementById('pmCopyAllBtn');
+
+  const btnEn = document.getElementById('pmLangEn');
+  const btnKh = document.getElementById('pmLangKh');
+  if (btnEn) btnEn.addEventListener('click', () => switchPmLanguage('en'));
+  if (btnKh) btnKh.addEventListener('click', () => switchPmLanguage('kh'));
 
   if (pmClearBtn) {
     pmClearBtn.addEventListener('click', () => {
@@ -96,11 +186,11 @@ function setupPasteMasterController() {
       pmRows = [];
       const body = document.getElementById('pmResultsBody');
       if (body) {
+        const t = pmDict[pmLang] || pmDict.en;
         body.innerHTML = `
           <tr>
-            <td colspan="8" class="pm-empty-cell">
-              <div style="font-size: 2.5rem; margin-bottom: 8px;">📋</div>
-              No data resolved. Paste address list on the left and click "Resolve Addresses".
+            <td colspan="8" class="pm-empty-cell" id="pmEmptyCell" style="text-align: center; padding: 40px; color: #64748b;">
+              ${t.emptyText}
             </td>
           </tr>
         `;
@@ -615,34 +705,45 @@ function renderPmRow(index) {
     poBranchTd = `<div style="font-weight:700; color:#1e293b;">${escHtml(branch.store_name)}</div><div style="font-size:10px; color:#64748b;">${distText} away</div>`;
   }
 
-  if (row.status === 'exact') {
+  if (row.candidates && row.candidates.length > 1) {
+    let selectHtml = `<div style="display:flex; flex-direction:column; gap:4px;">`;
+    selectHtml += `<select class="pm-select-disambig" onchange="resolveRowAmbiguity(${row.index}, this.value)" style="width:100%; padding:4px 6px; border:1px solid #cbd5e1; border-radius:4px; font-size:11px; background:#ffffff;">`;
+    selectHtml += `<option value="">${pmLang === 'kh' ? 'ជ្រើសរើសទីតាំង (អាចប្ដូរបាន)...' : 'Select location (can change)...'}</option>`;
+    row.candidates.forEach((c, cIdx) => {
+      const isSel = row.selectedIndex === cIdx;
+      const label = c.path_kh ? `${c.name_kh} (${c.path_en})` : `${c.name} (${c.province})`;
+      selectHtml += `<option value="${cIdx}" ${isSel ? 'selected' : ''}>${isSel ? '✓ ' : ''}${escHtml(label)}</option>`;
+    });
+    selectHtml += `</select>`;
+    if (row.status === 'exact') {
+      selectHtml += `<div style="font-size:11px; font-weight:700; color:#1e293b;">📍 ${escHtml(row.resolvedName)}</div>`;
+    }
+    selectHtml += `</div>`;
+    resolvedTd = selectHtml;
+    
+    const labelExact = pmLang === 'kh' ? 'ត្រឹមត្រូវ' : 'Exact';
+    const labelAmb = pmLang === 'kh' ? `ជម្រើស (${row.candidates.length})` : `Ambiguous (${row.candidates.length})`;
+    
+    statusBadge = row.status === 'exact' 
+      ? `<span class="pm-status-badge exact" style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">${labelExact}</span>`
+      : `<span class="pm-status-badge ambiguous" style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">${labelAmb}</span>`;
+  } else if (row.status === 'exact') {
     resolvedTd = `<span style="font-weight: 600; color: #1e293b;">${escHtml(row.resolvedName)}</span>`;
     if (row.lat && row.lng) {
       resolvedTd += `<div style="font-size: 10px; color: #64748b; margin-top: 1px;">📍 ${row.lat.toFixed(4)}, ${row.lng.toFixed(4)}</div>`;
     }
-    statusBadge = `<span class="pm-status-badge exact" style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Exact</span>`;
-  } else if (row.status === 'ambiguous') {
-    statusBadge = `<span class="pm-status-badge ambiguous" style="background:#fef3c7; color:#92400e; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Ambiguous (${row.candidates.length})</span>`;
-    
-    let selectHtml = `<select class="pm-select-disambig" onchange="resolveRowAmbiguity(${row.index}, this.value)" style="width:100%; padding:4px; border:1px solid #cbd5e1; border-radius:4px;">`;
-    selectHtml += `<option value="">Select correct location...</option>`;
-    row.candidates.forEach((c, cIdx) => {
-      const label = c.path_kh ? `${c.name_kh} (${c.path_en})` : `${c.name} (${c.province})`;
-      selectHtml += `<option value="${cIdx}">${escHtml(label)}</option>`;
-    });
-    selectHtml += `</select>`;
-    resolvedTd = selectHtml;
+    statusBadge = `<span class="pm-status-badge exact" style="background:#dcfce7; color:#166534; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">${pmLang === 'kh' ? 'ត្រឹមត្រូវ' : 'Exact'}</span>`;
   } else if (row.status === 'not-found') {
-    statusBadge = `<span class="pm-status-badge not-found" style="background:#fee2e2; color:#991b1b; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Not Found</span>`;
+    statusBadge = `<span class="pm-status-badge not-found" style="background:#fee2e2; color:#991b1b; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">${pmLang === 'kh' ? 'រកមិនឃើញ' : 'Not Found'}</span>`;
     resolvedTd = `
       <div style="display: flex; gap: 6px; align-items: center;">
-        <span style="color: #ef4444; font-style: italic; font-size: 11px;">No match.</span>
+        <span style="color: #ef4444; font-style: italic; font-size: 11px;">${pmLang === 'kh' ? 'គ្មានទិន្នន័យ' : 'No match.'}</span>
         <button class="pm-btn" style="padding: 3px 8px; font-size: 10px; border-radius: 4px; background:#475569; color:white; border:none; cursor:pointer;" onclick="geocodeRow(${row.index})">🔍 Search Online</button>
       </div>
     `;
   } else if (row.status === 'loading') {
-    statusBadge = `<span class="pm-status-badge loading" style="background:#f1f5f9; color:#475569; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">Loading...</span>`;
-    resolvedTd = `<span style="color: #64748b; font-style: italic;">Resolving location...</span>`;
+    statusBadge = `<span class="pm-status-badge loading" style="background:#f1f5f9; color:#475569; padding:3px 8px; border-radius:4px; font-weight:700; font-size:10px; display:inline-block;">${pmLang === 'kh' ? 'កំពុងស្វែងរក...' : 'Loading...'}</span>`;
+    resolvedTd = `<span style="color: #64748b; font-style: italic;">${pmLang === 'kh' ? 'កំពុងស្វែងរក...' : 'Resolving location...'}</span>`;
   }
 
   const distDisplay = row.district_kh 
@@ -668,9 +769,11 @@ function renderPmRow(index) {
 function resolveRowAmbiguity(rowIndex, candIndex) {
   if (candIndex === "") return;
   const row = pmRows[rowIndex];
-  const cand = row.candidates[parseInt(candIndex)];
+  const candIdx = parseInt(candIndex);
+  const cand = row.candidates[candIdx];
   if (!cand) return;
 
+  row.selectedIndex = candIdx;
   row.status = 'exact';
   row.resolvedName = cand.name_kh ? `${cand.name_kh} (${cand.name})` : cand.name;
   row.lat = cand.lat;
@@ -685,14 +788,9 @@ function resolveRowAmbiguity(rowIndex, candIndex) {
   row.nearestPo = findNearestPoForCoords(row.lat, row.lng);
 
   renderPmRow(rowIndex);
-  
   if (!row.lat || !row.lng) {
     geocodeRow(rowIndex);
   }
-
-  const pmPlotBtn = document.getElementById('pmPlotBtn');
-  const hasExact = pmRows.some(r => r.status === 'exact' && r.lat && r.lng);
-  if (pmPlotBtn) pmPlotBtn.disabled = !hasExact;
   updatePmStats();
 }
 
