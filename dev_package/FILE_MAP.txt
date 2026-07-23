@@ -1,0 +1,50 @@
+# GenRoute Files — What Each One Does
+# Quick reference for developers
+
+ROOT/
+├── server.js                    ← MAIN FILE — All Express routes + search logic
+├── package.json                 ← npm dependencies (express, fuse.js, fuzzball, etc.)
+├── .env                         ← Your API keys (copy from dev_package/.env.example)
+│
+├── lib/
+│   ├── auto_pick_engine.js      ← AUTO-PICK ENGINE — confidence scoring, learning system
+│   └── entity_extractor.js      ← NLP — detects market/district/commune from free text
+│
+├── data/
+│   ├── routes.json              ← 894 markets (GPS + province/district/commune)
+│   ├── famous_markets.json      ← 689 curated famous markets (GPS + NCDD)
+│   ├── curated_landmarks.json   ← 118 landmarks (pagodas, hospitals, bridges)
+│   ├── pickup_branches.json     ← 650 Post Office delivery branches
+│   ├── ncdd_hierarchy.json      ← Full Cambodia admin hierarchy (prov→dist→commune→village)
+│   ├── geocoding_cache.json     ← Cached Google Geocoding results (auto-grows)
+│   ├── auto_learned_locations.json ← Auto-learned geocoded places (auto-grows)
+│   └── learned_variants.json    ← Learned misspellings→canonical markets (auto-grows)
+│
+├── public/
+│   ├── pastemaster.html         ← Main UI — Paste Master tool
+│   └── ...                      ← Other frontend files
+│
+├── scripts/
+│   └── fix_user_markets.js      ← Generates all_markets_mapped_fixed.csv
+│
+└── dev_package/                 ← THIS FOLDER — For developers
+    ├── DEVELOPER_GUIDE.md       ← Full documentation
+    ├── FILE_MAP.txt             ← This file
+    ├── .env.example             ← Environment variables template
+    └── test_auto_pick.js        ← Test script for the auto-pick API
+
+===========================================================================
+HOW TO ADD A NEW MARKET:
+  1. Open data/famous_markets.json
+  2. Add entry: { "market": "EN Name", "market_kh": "ខ្មែរ", "latitude": 11.55, "longitude": 104.92, "province_kh": "ភ្នំពេញ", "district_kh": "...", "aliases": ["alt name"] }
+  3. Restart server — it will auto-assign nearest branch_id
+
+HOW TO ADD A PHONETIC ALIAS:
+  1. Open lib/auto_pick_engine.js
+  2. Find PHONETIC_ROMANIZATION_INDEX
+  3. Add: 'your english phonetic': 'ខ្មែរឈ្មោះ'
+  4. Restart server
+
+HOW TO SEE WHAT THE SYSTEM HAS LEARNED:
+  GET http://localhost:3000/api/variants
+===========================================================================

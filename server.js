@@ -873,6 +873,21 @@ app.get('/api/search', (req, res) => {
   const isMarket = (type === 'market');
 
   if (isMarket) {
+    // ── Variant Learning: check learned variants FIRST before any search ──
+    const variantHit = autoPick.lookupVariant(q, province || '');
+    if (variantHit) {
+      // We already know this misspelling — resolve instantly with high confidence
+      const scored = autoPick.scoreAndAutoPick([variantHit], q, province || '', {});
+      const total = 1;
+      return res.json({
+        total, page: 1, limit: parseInt(limit), pages: 1,
+        auto_pick: true,
+        auto_pick_result: { ...scored.results_with_confidence[0], _from_variant: true },
+        variant_hit: true,
+        results: scored.results_with_confidence
+      });
+    }
+
     // Improvement #3: Province-scoped early filter — scope dataset immediately
     let dataset = routes;
     if (province) {
@@ -1031,8 +1046,13 @@ app.get('/api/search', (req, res) => {
     results = scored.results_with_confidence;
     auto_pick = scored.auto_pick;
     auto_pick_result = scored.auto_pick_result;
+
+    // ── Variant Learning: learn mid-confidence fuzzy matches for next time ──
+    // If top result is a good-but-not-certain match (60–84), save it as a variant
+    if (!auto_pick && results.length > 0 && results[0].confidence >= 60) {
+      autoPick.learnVariant(q, results[0], results[0].confidence, false);
+    }
   } else if (isMarket && results.length > 0) {
-    // No query — enrich with NCDD codes only (Improvement #5)
     results = results.map(r => autoPick.enrichWithNcddCodes(r));
   }
 
@@ -1128,6 +1148,40 @@ app.get('/api/auto-pick', (req, res) => {
     auto_pick_result: scored.auto_pick_result,
     confidence_threshold: autoPick.AUTO_PICK_THRESHOLD,
     candidates: scored.results_with_confidence.slice(0, parseInt(limit))
+  });
+});
+
+
+/**
+ * POST /api/confirm-pick
+ * Called by the app when a user explicitly picks a result from the dropdown.
+ * This saves the query → canonical market as a HIGH-CONFIDENCE variant (95),
+ * so next time the same misspelling is typed, it auto-picks without asking.
+ *
+ * Body: { query, market, market_kh, province_kh, district_kh, branch_id, latitude, longitude }
+ */
+app.post('/api/confirm-pick', (req, res) => {
+  const { query, market, market_kh, province_kh, district_kh, branch_id, latitude, longitude } = req.body;
+  if (!query || (!market && !market_kh)) {
+    return res.status(400).json({ error: 'query and market/market_kh are required' });
+  }
+  const canonicalResult = { market, market_kh, province_kh, district_kh, branch_id, latitude, longitude };
+  autoPick.learnVariant(query, canonicalResult, 95, true);
+  res.json({ ok: true, learned: true, query, canonical: market || market_kh });
+});
+
+/**
+ * GET /api/variants
+ * Returns all learned query variants, sorted by hit_count descending.
+ * Useful for admin review — see what misspellings are being learned.
+ * Optional: ?limit=50 to cap results
+ */
+app.get('/api/variants', (req, res) => {
+  const limit = parseInt(req.query.limit) || 100;
+  const variants = autoPick.getAllVariants().slice(0, limit);
+  res.json({
+    total: variants.length,
+    variants
   });
 });
 
