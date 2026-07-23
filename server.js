@@ -6,8 +6,9 @@ const Fuse    = require('fuse.js');
 const fetch   = require('node-fetch'); // Import node-fetch for API/Geocoding proxying
 const fuzz    = require('fuzzball');
 
-// Auto-Pick Engine — 6 accuracy improvements
+// Auto-Pick Engine & 12km Spatial Branch Indexer
 const autoPick = require('./lib/auto_pick_engine');
+const spatialIndexer = require('./lib/spatial_branch_indexer');
 
 const app  = express();
 const PORT = process.env.PORT || 3000;
@@ -1192,14 +1193,28 @@ app.get('/api/variants', (req, res) => {
 
 /**
  * GET /api/branch/:id
+ * Returns branch info, direct routes, AND all related keywords/locations under 12km radius!
  */
 app.get('/api/branch/:id', (req, res) => {
-  const id = req.params.id.toLowerCase();
-  const results = routes.filter(r => r.branch_id.toLowerCase() === id);
-  if (results.length === 0) {
-    return res.status(404).json({ error: `No routes found for branch "${req.params.id}"` });
+  const rawId = req.params.id.trim();
+  const id = rawId.toLowerCase().replace(/^po_/, '');
+  const directRoutes = routes.filter(r => r.branch_id.toLowerCase() === id || r.branch_id.toLowerCase() === `po_${id}`);
+  
+  const spatialInfo = spatialIndexer.findLocationsForBranch(id, routes, pickupBranches, 12.0);
+
+  if (directRoutes.length === 0 && (!spatialInfo.branch || spatialInfo.total_locations_under_12km === 0)) {
+    return res.status(404).json({ error: `No branch or locations found for branch "${req.params.id}"` });
   }
-  res.json({ branch_id: req.params.id.toUpperCase(), count: results.length, routes: results });
+
+  res.json({
+    branch_id: rawId.toUpperCase(),
+    branch: spatialInfo.branch || null,
+    total_direct_routes: directRoutes.length,
+    direct_routes: directRoutes,
+    total_locations_under_12km: spatialInfo.total_locations_under_12km,
+    related_locations_12km: spatialInfo.related_locations_12km,
+    search_keywords_12km: spatialInfo.search_keywords_12km
+  });
 });
 
 /**

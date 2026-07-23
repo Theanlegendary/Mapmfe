@@ -356,10 +356,10 @@
     <div class="brand">
       <div class="brand-logo">METFONE</div>
       <div class="brand-title">Branch Auto-Assigner Engine</div>
-      <span class="badge-10km">10KM MAX LOGIC</span>
+      <span class="badge-10km">12KM MAX LOGIC</span>
     </div>
     <div style="font-size: 12px; opacity: 0.8;">
-      650 Pickup Branches · 1,701 Mapped Locations
+      650 Pickup Branches · 1,701 Mapped Locations · 12km Radius
     </div>
   </header>
 
@@ -389,7 +389,7 @@
       <!-- Auto-Assigned Branch Card -->
       <div id="assignedCard" class="assigned-card">
         <div class="card-header-status">
-          <span class="status-badge">AUTO-ASSIGNED (≤ 10KM)</span>
+          <span class="status-badge">AUTO-ASSIGNED (≤ 12KM)</span>
           <span id="distBadge" style="font-weight: 800; font-size: 13px; color: #a7f3d0;">0.00 km</span>
         </div>
         <h2 id="branchCode" class="branch-code">PNPA060</h2>
@@ -415,10 +415,10 @@
         </div>
       </div>
 
-      <!-- Surrounding Branches Table within 10km -->
+      <!-- Surrounding Branches Table within 12km -->
       <div class="nearby-section">
         <div class="section-title">
-          <span>Surrounding Branches (≤ 10km Radius)</span>
+          <span>Surrounding Branches (≤ 12km Radius)</span>
           <span id="nearbyCountBadge" style="background:#e2e8f0; padding:2px 8px; border-radius:10px; font-size:11px;">0</span>
         </div>
         <div class="nearby-table-wrapper">
@@ -441,7 +441,7 @@
 
       <!-- Download Excel / Batch Mode Button -->
       <button class="batch-btn" onclick="exportSampleCsv()">
-        📊 Download 10km Branch Assignment Table (CSV)
+        📊 Download 12km Branch Assignment Table (CSV)
       </button>
 
     </div>
@@ -584,7 +584,7 @@
       document.getElementById('metaCommuneCode').innerText = communeCode;
 
       const autoBranch = loc.auto_selected_branch;
-      const nearbyList = loc.nearby_branches_10km || [];
+      const nearbyList = loc.nearby_branches_12km || loc.nearby_branches_10km || [];
 
       if (autoBranch) {
         document.getElementById('assignedCard').classList.remove('no-match');
@@ -594,15 +594,15 @@
       } else {
         document.getElementById('assignedCard').classList.add('no-match');
         document.getElementById('branchCode').innerText = 'NO BRANCH';
-        document.getElementById('branchName').innerText = 'No branch found within 10km';
-        document.getElementById('distBadge').innerText = '> 10km';
+        document.getElementById('branchName').innerText = 'No branch found within 12km';
+        document.getElementById('distBadge').innerText = '> 12km';
       }
 
       // Render Nearby Table
       document.getElementById('nearbyCountBadge').innerText = nearbyList.length;
       const tbody = document.getElementById('nearbyTableBody');
       if (nearbyList.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; color:#94a3b8; padding:12px;">No branch within 10km</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="3" style="text-align:center; color:#94a3b8; padding:12px;">No branch within 12km</td></tr>`;
       } else {
         tbody.innerHTML = nearbyList.map((b, idx) => `
           <tr class="${idx === 0 ? 'selected' : ''}">
@@ -632,9 +632,9 @@
           })
         }).addTo(map).bindPopup(`<b>${locName}</b><br>${locNameKh}`);
 
-        // 10km Circle Radius
+        // 12km Circle Radius
         circle10km = L.circle([locLat, locLng], {
-          radius: 10000, // 10km in meters
+          radius: 12000, // 12km in meters
           color: '#10b981',
           fillColor: '#10b981',
           fillOpacity: 0.08,
