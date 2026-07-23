@@ -1,0 +1,1234 @@
+﻿sep=,
+No,ID,EN name,KH name,province_id,province_en,province_kh,district_id,district_en,district_kh,district_id,commune_,commune_,commune
+1,9001,Central Market,ផ្សារធំថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120201,Phsar Thmei Ti Muoy,ផ្សារថ្មីទី ១
+2,9002,Russian Market,ផ្សារទួលទំពូង,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120110,Tuol Tumpung Ti Muoy,ទួលទំពូងទី ១
+3,9003,Orussey Market,ផ្សារអូរឫស្សី,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120301,Ou Ruessei Ti Muoy,អូរឫស្សីទី ១
+4,9004,Olympic Market,ផ្សារអូឡាំពិក,12,Phnom Penh,ភ្នំពេញ,1213,Boeng Keng Kang,បឹងកេងកង,1213,121304,Olympic,អូឡាំពិក
+5,9005,Phnom Penh Night Market,ផ្សាររាត្រីភ្នំពេញ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120211,Voat Phnum,វត្ដភ្នំ
+6,9006,Psar Chas (Phnom Penh),ផ្សារចាស់ (ភ្នំពេញ),12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+7,9007,Phsar Leu Thom Thmey,ផ្សារលើធំថ្មី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+8,9008,Angkor Night Market,ផ្សាររាត្រីអង្គរ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+9,9009,Made in Cambodia Market,ផ្សារមេតអ៊ីនខេមបូឌា,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+10,9010,Phsar Nath,ផ្សារណាត់,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+11,9011,Boeung Chhouk Market,ផ្សារបឹងឈូក,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+12,9012,Battambang Night Market,ផ្សាររាត្រីបាត់ដំបង,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+13,9013,Phsar Leu Sihanoukville,ផ្សារលើក្រុងព្រះសីហនុ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+14,9014,Phsar Krom,ផ្សារក្រោម,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+15,9015,Sihanoukville Market,ផ្សាររាត្រីក្រុងព្រះសីហនុ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+16,9016,Kampot Market,ផ្សារសាមគ្គីកំពត,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+17,9017,Kampot Night Market,ផ្សាររាត្រីកំពត,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+18,9018,Kep Crab Market,ផ្សារក្តាម,23,Kep,កែប,2302,Kaeb,កែប,2302,230201,Kaeb,កែប
+19,9019,Kep Market,ផ្សារកែប,23,Kep,កែប,2302,Kaeb,កែប,2302,230201,Kaeb,កែប
+20,9020,Takhmao Market,ផ្សារតាខ្មៅ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+21,9021,Kien Svay Market,ផ្សារគៀនស្វាយ,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080204,Kampong Svay,កំពង់ស្វាយ
+22,9022,Arey Ksat Market,ផ្សារអរិយក្សត្រ,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080606,Lvea Sar,ល្វាសរ
+23,9023,Kampong Cham Market,ផ្សារធំកំពង់ចាម,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+24,9024,Phsar Thom Kampong Cham,ផ្សារធំកំពង់ចាម,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+25,9025,Skun Market,ផ្សារស្គន់,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030308,Soutib,សូទិព្វ
+26,9026,Suong Market,ផ្សារសួង,25,Tboung Khmum,ត្បូងឃ្មុំ,2506,Suong,សួង,2506,250601,Suong,សួង
+27,9027,Memot Market,ផ្សារមេមត់,25,Tboung Khmum,ត្បូងឃ្មុំ,2503,Memot,មេមត់,2503,250309,Memot,មេមត់
+28,9028,Tboung Khmum Market,ផ្សារត្បូងឃ្មុំ,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+29,9029,Takeo Market,ផ្សារតាកែវ,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,210803,Roka Krau,រកាក្រៅ
+30,9030,Ang Ta Som Market,ផ្សារអង្គតាសោម,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210901,Angk Ta Saom,អង្គតាសោម
+31,9031,Kirivong Market,ផ្សារគិរីវង់,21,Takeo,តាកែវ,2104,Kiri Vong,គីរីវង់,2104,210405,Kiri Chong Kaoh,គីរីចុងកោះ
+32,9032,Prey Veng Market,ផ្សារព្រៃវែង,14,Prey Veng,ព្រៃវែង,1410,Prey Veng,ព្រៃវែង,1410,141003,Kampong Leav,កំពង់លាវ
+33,9033,Neak Leung Market,ផ្សារអ្នកលឿង,14,Prey Veng,ព្រៃវែង,1407,Peam Ro,ពាមរក៍,1407,140705,Peam Ro,ពាមរក៍
+34,9034,Svay Rieng Market,ផ្សារស្វាយរៀង,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200604,Pou Ta Hao,ពោធិ៍តាហោ
+35,9035,Psar Nat Svay Rieng,ផ្សារស្វាយរៀង,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200604,Pou Ta Hao,ពោធិ៍តាហោ
+36,9036,Bavet Market,ផ្សារបាវិត,20,Svay Rieng,ស្វាយរៀង,2008,Bavet,បាវិត,2008,200805,Prey Angkunh,ព្រៃអង្គុញ
+37,9037,Kampong Speu Market,ផ្សារកំពង់ស្ពឺ,05,Kampong Speu,កំពង់ស្ពឺ,0502,Chbar Mon,ច្បារមន,0502,050201,Chbar Mon,ច្បារមន
+38,9038,Chbar Mon Market,ផ្សារច្បារមន,05,Kampong Speu,កំពង់ស្ពឺ,0502,Chbar Mon,ច្បារមន,0502,050201,Chbar Mon,ច្បារមន
+39,9039,Kampong Chhnang Market,ផ្សារកំពង់ឆ្នាំង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+40,9040,Phsar Leu Kampong Chhnang,ផ្សារលើកំពង់ឆ្នាំង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+41,9041,Kampong Thom Market,ផ្សារកំពង់ធំ,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060309,Achar Leak,អាចារ្យលាក់
+42,9042,Phsar Kampong Thom,ផ្សារកំពង់ធំ,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060309,Achar Leak,អាចារ្យលាក់
+43,9043,Stoung Market,ផ្សារស្ទោង,06,Kampong Thom,កំពង់ធំ,0608,Stoung,ស្ទោង,0608,060801,Banteay Stoung,បន្ទាយស្ទោង
+44,9044,Pursat Market,ផ្សារពោធិ៍សាត់,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150507,Svay At,ស្វាយអាត់
+45,9045,Phsar Thmey Pursat,ផ្សារថ្មីពោធិ៍សាត់,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150507,Svay At,ស្វាយអាត់
+46,9046,Krakor Market,ផ្សារក្រគរ,15,Pursat,ពោធិ៍សាត់,1503,Krakor,ក្រគរ,1503,150302,Ansa Chambak,អន្សាចំបក់
+47,9047,Poipet Market,ផ្សារប៉ោយប៉ែត,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011003,Phsar Kandal,ផ្សារកណ្តាល
+48,9048,Serei Saophoan Market,ផ្សារសិរីសោភ័ណ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+49,9049,Rong Kluea Market,ផ្សាររ៉ុងក្លឿ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011003,Phsar Kandal,ផ្សារកណ្តាល
+50,9050,Samraong Market,ផ្សារសំរោង,22,Oddar Meanchey,ឧត្តរមានជ័យ,2204,Samraong,សំរោង,2204,220404,Samraong,សំរោង
+51,9051,Anlong Veng Market,ផ្សារអន្លង់វែង,22,Oddar Meanchey,ឧត្តរមានជ័យ,2201,Anlong Veaeng,អន្លង់វែង,2201,220101,Anlong Veaeng,អន្លង់វែង
+52,9052,Samaki Market,ផ្សារសាមគ្គីប៉ៃលិន,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+53,9053,Phsar Thmey Pailin,ផ្សារថ្មីប៉ៃលិន,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+54,9054,Pailin Market,ផ្សារថ្មីប៉ៃលិន,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+55,9055,Koh Kong Market,ផ្សារដុងទុងកោះកុង,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+56,9056,Dong Tong Market,ផ្សារដុងទុង,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+57,9057,Phsar Leu Koh Kong,ផ្សារលើកោះកុង,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+58,9058,Kratie Central Market,ផ្សារធំក្រចេះ,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+59,9059,Kratie Night Market,ផ្សាររាត្រីក្រចេះ,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+60,9060,Stung Treng Market,ផ្សារសាមគ្គីស្ទឹងត្រែង,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+61,9061,Phsar Samaki Stung Treng,ផ្សារសាមគ្គីស្ទឹងត្រែង,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+62,9062,Banlung Market,ផ្សារបានលុង,16,Ratanak Kiri,រតនគិរី,1602,Ban Lung,បានលុង,1602,160204,Boeng Kansaeng,បឹងកន្សែង
+63,9063,Ratanakiri Market,ផ្សារបានលុង,16,Ratanak Kiri,រតនគិរី,1602,Ban Lung,បានលុង,1602,160204,Boeng Kansaeng,បឹងកន្សែង
+64,9064,Sen Monorom Market,ផ្សារសែនមនោរម្យ,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+65,9065,Mondulkiri Market,ផ្សារសែនមនោរម្យ,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+66,9066,Tbeng Meanchey Market,ផ្សារត្បែងមានជ័យ,13,Preah Vihear,ព្រះវិហារ,1307,Tbaeng Mean Chey,ត្បែងមានជ័យ,1307,130705,Prame,ប្រមេរុ
+67,9067,Preah Vihear Market,ផ្សារត្បែងមានជ័យ,13,Preah Vihear,ព្រះវិហារ,1307,Tbaeng Mean Chey,ត្បែងមានជ័យ,1307,130705,Prame,ប្រមេរុ
+68,9070,Prek Chrey Market,ផ្សារព្រែកជ្រៃ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+69,9071,Chbar Ampov Market,ផ្សារច្បារអំពៅ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121201,Chhbar Ampov Ti Muoy,ច្បារអំពៅទី ១
+70,9080,Phsar Moan Ang int.,ស្តុប ផ្សារមាន់អាំង,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+71,9081,Kbal Knol Market,ផ្សារក្បាលថ្នល់,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121202,Chbar Ampov Ti Pir,ច្បារអំពៅទី ២
+72,9083,Sydney super market (closed),ផ្សារទំនើបស៊ីដនី (បិទ),12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120305,Monourom,មនោរម្យ
+73,9085,Bayon Market,ផ្សារបាយ័ន,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120305,Monourom,មនោរម្យ
+74,9087,Beltei International School 8 (Pochentong Market Campus),សាលាប៊ែលធីអន្តរជាតិ ទី៨ (សាខាផ្សារពោធិ៍ចិនតុង),12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+75,9089,Thai Huot Market,ផ្សារថៃហួត,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+76,9096,Angkor Market,ផ្សារអង្គរ,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120111,Boeng Trabaek,បឹងត្របែក
+77,9097,Thai Huot Market,ផ្សារថៃហួត,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+78,9104,Phsar Chhbar Ampov,ផ្សារច្បារអំពៅ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121201,Chhbar Ampov Ti Muoy,ច្បារអំពៅទី ១
+79,9105,Phsar Boeung Keng Kang,ផ្សារបឹងកេងកង,12,Phnom Penh,ភ្នំពេញ,1213,Boeng Keng Kang,បឹងកេងកង,1213,121301,Boeng Keng Kang Ti Muoy,បឹងកេងកងទី ១
+80,9106,Phsar Depo,ផ្សារដេប៉ូ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120404,Tuek L'ak Ti Muoy,ទឹកល្អក់ទី ១
+81,9107,Phsar Kandal,ផ្សារកណ្តាល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120211,Voat Phnum,វត្ដភ្នំ
+82,9108,Phsar Century Plaza,ផ្សារសិនធូរីផ្លាហ្សា,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+83,9109,Makro Sen Sok,ផ្សារម៉ាក្រូ សែនសុខ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+84,9110,Global House Phnom Penh,ផ្សារហ្គ្លូប៊ល ហៅស៍,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+85,9111,K-Mall Veng Sreng,ផ្សារ K-Mall វេងស្រេង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120901,Trapeang Krasang,ត្រពាំងក្រសាំង
+86,9112,Lucky Supermarket Sihanoukville,ផ្សារឡាក់គី ព្រះសីហនុ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+87,9113,Phsar Samaki Siem Reap,ផ្សារសាមគ្គី សៀមរាប,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+88,9114,Phsar Phnea Chey Siem Reap,ផ្សារភ្ញារជ័យ សៀមរាប,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+89,9115,Phsar Bek Chan,ផ្សារបែកចាន,08,Kandal,កណ្តាល,0808,Angk Snuol,អង្គស្នួល,0808,080809,Mkak,ម្កាក់
+90,9116,Phsar Ang Snuol,ផ្សារអង្គស្នួល,08,Kandal,កណ្តាល,0808,Angk Snuol,អង្គស្នួល,0808,080809,Mkak,ម្កាក់
+91,9117,Phsar Udong,ផ្សារឧដុង្គ,05,Kampong Speu,កំពង់ស្ពឺ,0509,Odongk Maechay,ឧដុង្គម៉ែជ័យ,0509,050903,Trach Tong,ត្រាចទង
+92,9118,Phsar Skun,ផ្សារស្កុន,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030308,Soutib,សូទិព្វ
+93,9119,Phsar Suong,ផ្សារសួង,25,Tboung Khmum,ត្បូងឃ្មុំ,2506,Suong,សួង,2506,250601,Suong,សួង
+94,9120,Phsar Neak Loeung,ផ្សារអ្នកលឿង,14,Prey Veng,ព្រៃវែង,1407,Peam Ro,ពាមរក៍,1407,140705,Peam Ro,ពាមរក៍
+95,9121,Sangkat Phsar Chas,សង្កាត់ផ្សារចាស់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+96,9122,Sangkat Phsar Depou Ti Muoy,សង្កាត់ផ្សារដេប៉ូទី ១,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+97,9123,Sangkat Phsar Depou Ti Pir,សង្កាត់ផ្សារដេប៉ូទី ២,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+98,9124,Sangkat Phsar Depou Ti Bei,សង្កាត់ផ្សារដេប៉ូទី ៣,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120307,Veal Vong,វាលវង់
+99,9125,Sangkat Phsar Daeum Kor,សង្កាត់ផ្សារដើមគរ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+100,9126,Phum Phsar Teuk Thla,ភូមិផ្សារទឹកថ្លា,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+101,9127,Phum Phsar Kamboul,ភូមិផ្សារកំបូល,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+102,9128,Un Vichet Market,ផ្សារអ៊ុនវិចិត្រ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+103,9129,ផ្សារទួលពង្រ ចោមចៅ,ផ្សារទួលពង្រ ចោមចៅ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120901,Trapeang Krasang,ត្រពាំងក្រសាំង
+104,9130,Orng Market,ផ្សារអោង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+105,9131,ផ្សារអូរបែកក្អម,ផ្សារអូរបែកក្អម,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+106,9132,ផ្សារដីហុយ,ផ្សារដីហុយ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+107,9134,ផ្សារទួលពង្រ,ផ្សារទួលពង្រ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+108,9137,Bayon Supermarket,ផ្សារទំនើបបាយ័ណ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+109,9138,West Samhan Market,ខាងលិចផ្សារសាំហាន់,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120714,Tuol Sangkae 2,ទួលសង្កែទី២
+110,9139,ផ្សារបឹងសាឡាង,ផ្សារបឹងសាឡាង,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+111,9140,Phsar Dey Hoy,ស្តុបផ្សារដីហុយ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+112,9141,Piphop Thmey Market,ផ្សារពិភពថ្មី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120901,Trapeang Krasang,ត្រពាំងក្រសាំង
+113,9142,Phsar Tapang Pharmacy,ឱសថស្ថាន ផ្សារតាប៉ាងថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+114,9143,Saen Sok Green Market,ផ្សារ​បៃតង​សែនសុខ​,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+115,9144,Sereya Village Mart,ផ្សារភូមិសិរីយា,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+116,9145,New Boeung Salang Market,ផ្សារបឹងសាឡាងថ្មី,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+117,9146,Phsar Tapang Pteah Leik M'Pei (20),ផ្សារតាប៉ាងផ្ទះលេខ 20,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+118,9147,Lucky Supermarket,ផ្សារទំនើបឡាក់គី,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120809,Kouk Khleang,គោកឃ្លាង
+119,9148,Pothingean Market,ផ្សារពោធិ៍ចិនតុង,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120611,Boeng Tumpun 1,បឹងទំពុនទី១
+120,9152,fruit market,ផ្សារផ្លែឈើ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+121,9155,乌雅西市场,ផ្សារអ៊ុយស៊ី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+122,9164,Karot Market,ផ្សារការ៉ុត,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+123,9174,Sangkat Phsar Daeum Thkov,សង្កាត់ផ្សារដើមថ្កូវ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+124,9180,ផ្សារ​សុភមង្គល​,ផ្សារ​សុភមង្គល​,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+125,9188,Lucky Supermarket,ផ្សារទំនើបឡាក់គី,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+126,9200,KM Supermarket,ផ្សារទំនើបខេអឹម,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+127,9201,Mr. Market,ផ្សារមីស្ទ័រម៉ាឃីត,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+128,9203,Chip Mong Supermarket,ផ្សារទំនើបជីបម៉ុង,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+129,9204,Lantian Fresh Supermarket,ផ្សារទំនើបឡានធាន,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+130,9221,Kambol Rainbow Night Market,ផ្សាររាត្រីឥន្ធនូកំបូល,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+131,9222,Phsar Dek (Street 88),វិថី ផ្សារដែក (៨៨),12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+132,9223,Phsar Reatrey Night Market,ផ្សារ​រាត្រី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+133,9224,Phsar Moan Ang,ផ្សារមាន់អាំង,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+134,9225,Phsar Deoum Kor,ផ្សារដើមគរ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+135,9226,Phsar Toul Kork,ផ្សារ​ទួលគោក,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+136,9227,Phsar Neak Meas,ផ្សារនាគមាស,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+137,9228,Phsar Samaki,ផ្សារសាមគ្គី,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+138,9229,Phsar Deum Thkov High School,វិទ្យាល័យ​ផ្សារដើមថ្កូវ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+139,9230,Phsar Pochentong,ផ្សារ​ពោធិ៍ចិនតុង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+140,9231,Phsar Chom Chao,ផ្សារចោមចៅ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+141,9232,Phsar Thom Toul Sangke,ផ្សារធំ​ទួលសង្កែ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+142,9233,Phsar Chom Chao,ផ្សារចោមចៅ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+143,9234,Phsar Kandal,ផ្សារកណ្ដាល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+144,9235,Phsar Tuek L'ak,ផ្សារ​ទឹកល្អក់,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+145,9236,Phsar Prek Phnov,ផ្សារ​ព្រែកព្នៅ,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121101,Preaek Phnov,ព្រែកព្នៅ
+146,9237,Cambodia Securities Exchange,ផ្សារមូលបត្រ​កម្ពុជា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+147,9238,Phsar Kapko,ផ្សារកាប់គោ,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120101,Tonle Basak,ទន្លេបាសាក់
+148,9239,Phsar Heng Ly,ផ្សារហេងលី,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+149,9240,Phsar Chbar Ampov,ផ្សារ​ច្បារ​អំពៅ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121202,Chbar Ampov Ti Pir,ច្បារអំពៅទី ២
+150,9241,Phsar Stung Mean Chey,ផ្សារស្ទឹងមានជ័យ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+151,9243,Phsar Sola,ផ្សារ​សឡា,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+152,9244,Phsar Canadia,ផ្សារកាណាឌីយ៉ា,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+153,9245,Phsar Ekreach III,ផ្សារឯករាជ្យ ៣,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+154,9246,Phsar Trapeang Thleng,ផ្សារត្រពាំងថ្លឹង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120901,Trapeang Krasang,ត្រពាំងក្រសាំង
+155,9247,Phsar Chak Angrae,ផ្សារចាក់អង្រែ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120607,Chak Angrae Kraom,ចាក់អង្រែក្រោម
+156,9249,Phsar Toul Tom Poung,ផ្សារទួលទំពូង,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120111,Boeng Trabaek,បឹងត្របែក
+157,9250,Phsar Chas,ផ្សារចាស់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+158,9251,Tomnop Market,ផ្សារ​ទំនប់,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120714,Tuol Sangkae 2,ទួលសង្កែទី២
+159,9252,Phsar Ekreach I,ផ្សារឯករាជ្យ ១,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+160,9253,Phsar Depot,ផ្សារដេប៉ូ,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120307,Veal Vong,វាលវង់
+161,9254,Sorya Mall,ផ្សារទំនើប​សុរិយា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+162,9255,Sovanna Shopping Center (shut down),ផ្សារទំនើប​សុវណ្ណា,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120611,Boeng Tumpun 1,បឹងទំពុនទី១
+163,9256,Phsar Louy 5,ផ្សារលូប្រាំ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+164,9257,Boeung Trabek Plaza,ផ្សារ​បឹងត្របែក​ផ្លាហ្សា,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120111,Boeng Trabaek,បឹងត្របែក
+165,9258,Phsar Samnang 12,ផ្សារ​​សំណង់១២,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120406,Tuek L'ak Ti Bei,ទឹកល្អក់ទី ៣
+166,9259,Phsar Ta Khmao,ផ្សារតាខ្មៅ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+167,9260,City Mall Shopping Center,ផ្សារទំនើប ស៊ីធីម៉ល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+168,9261,New Steung Meanchey Market,ផ្សារស្ទឹងមានជ័យថ្មី,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+169,9262,Phsar Borey Tuek L'ak,ផ្សារ​បូរីទឹកថ្លា,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+170,9263,Ta Khmao Phsar Thmei,ផ្សារថ្មី​តាខ្មៅ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+171,9264,Phsar Toch,ផ្សារតូច,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+172,9266,Phsar Prey Tea,ផ្សារព្រៃទា,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+173,9267,Phsar PC,ផ្សារប៉េសេ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+174,9268,Phsar Tuol Ampil,ផ្សារ​ទួលអំពិល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+175,9269,Phsar O Bei Kahorm,ផ្សារ​​អូរបែកក្អម,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+176,9270,Phsar Dey Hoy,ផ្សារ​ដីហុយ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+177,9271,Phsar Chhouk Meas,ផ្សារ​ឈូកមាស,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120809,Kouk Khleang,គោកឃ្លាង
+178,9272,Phsar Dumex,ផ្សារ​ឌុយម៉ិច,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120305,Monourom,មនោរម្យ
+179,9273,Phsar Sereipheap,ផ្សារ​សេរីភាព,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120303,Ou Ruessei Ti Bei,អូរឫស្សីទី ៣
+180,9274,Phsar Kilo 4,ផ្សារ​គីឡូលេខ៤,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120405,Tuek L'ak Ti Pir,ទឹកល្អក់ទី ២
+181,9276,Phsar Trapeang Chhuk,ផ្សារ​ត្រពាំងឈូក,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+182,9277,Trapeang Pring Market,ផ្សារត្រពាំងព្រីង,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121102,Ponhea Pon,ពញាពន់
+183,9278,Chab Market,ផ្សារចាប,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+184,9279,Phsar Tapang Thmey Pharmacy,ឱសថស្ថាន ផ្សារតាប៉ាងថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+185,9280,New Preaek Pnov Market,ផ្សារថ្មី ព្រែកព្នៅ,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121101,Preaek Phnov,ព្រែកព្នៅ
+186,9281,Kach Chrung Market,ផ្សារកាចជ្រុង,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+187,9282,Phsar,ផ្សារ,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121001,Chrouy Changvar,ជ្រោយចង្វារ
+188,9285,Chrang Chamreh Market,ផ្សារច្រាំងចំរេះ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120704,Kilomaetr Lekh Prammuoy,គីឡូម៉ែត្រលេខ៦
+189,9286,Chey Chumneah Market,ផ្សារជ័យជំនះ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120714,Tuol Sangkae 2,ទួលសង្កែទី២
+190,9287,Doeum Thkov Roundabout,រង្វង់មូល​ផ្សារដើមថ្កូវ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+191,9288,DIFA International Decoration & Building Materials Market,ផ្សារឌីហ្វាលក់សំភារៈសំណង់ និងសំភារៈតុបតែងអន្តរជាតិ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+192,9289,Phsar Silep,ផ្សារស៊ីលីប,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+193,9291,Lucky,ផ្សារទំនើប ឡាក់គី,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+194,9292,Tang Krosang Market,ផ្សារតាំងក្រសាំង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+195,9293,Phsar Plaecher,ផ្សារផ្លែឈើ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+196,9295,Borey New World Chhuk Va 2 Market,ផ្សារបុរីពិភពថ្មីឈូកវ៉ា២,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120906,Samraong Kraom,សំរោងក្រោម
+197,9297,Phsar Boeung Salang Thmei,ផ្សារបឹងសាឡាងថ្មី,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+198,9298,FairPlus Supermarket,ផ្សារទំនើបហ្វែរផ្លាស,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+199,9300,Phsar Orussey,ផ្សារ​អូរឫស្សី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+200,9301,Live Animal Market,ផ្សារលក់សត្វរស់,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120303,Ou Ruessei Ti Bei,អូរឫស្សីទី ៣
+201,9302,Beltei International School 21 (Chhuk Meas Market Campus),សាលាប៊ែលធីអន្តរជាតិ ទី២១ (សាខាផ្សារឈូកមាស),12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120809,Kouk Khleang,គោកឃ្លាង
+202,9304,Phsar Rong Roeung,ផ្សារបុរីរុងរឿង,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121002,Preaek Lieb,ព្រែកលៀប
+203,9305,New Hope Market,ផ្សារសង្ឃឹមថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+204,9306,New World Market (Kambol I),ផ្សារពិភពថ្មី (កំបូល ១),12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+205,9307,Ekareach Market II,ផ្សារឯករាជ្យ ២,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+206,9308,Odem New Town Market,ផ្សារ ញូវថោន អូដឹម,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+207,9309,Romdul Market,ផ្សាររំដួល,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120906,Samraong Kraom,សំរោងក្រោម
+208,9310,Asia Supermarket,ផ្សារទំនើបអាស៊ី,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+209,9311,Sambo Market,ផ្សារសំបូរ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+210,9312,Thai Huot Market - Boeung Snor,ផ្សារថៃហួតបឹងស្នោ,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+211,9314,Ratana Plaza,ផ្សារ​រតនា​ផ្លាហ្សា,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+212,9315,ផ្សារហនុមាន,ផ្សារហនុមាន,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080611,Preaek Ruessei,ព្រែកឫស្សី
+213,9316,Khmer StrEAT Night Market,ផ្សាររាត្រីកោះនរា,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+214,9317,Chamkadoung Market,ផ្សារចម្ការដូង,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+215,9320,Phum Ahha Night Market (closed),ផ្សាររាត្រីភូមិអាហារ (បិទ),12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+216,9332,Banteay Chey Market,ផ្សារបន្ទាយជ័យ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+217,9334,Phsar Prom,ផ្សារព្រំ,24,Pailin,ប៉ៃលិន,2402,Sala Krau,សាលាក្រៅ,2402,240201,Sala Krau,សាលាក្រៅ
+218,9336,Chhuk Market,ផ្សារឈូក,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+219,9337,Old Market,ផ្សារចាស់,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+220,9338,Angkor Market,ផ្សារអង្គរ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+221,9342,Kampong Thmar Market,ផ្សារកំពង់ថ្ម,06,Kampong Thom,កំពង់ធំ,0601,Baray,បារាយណ៍,0601,060103,Baray,បារាយណ៍
+222,9346,Spider Market,ផ្សារលក់ពីងពាង,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030308,Soutib,សូទិព្វ
+223,9351,Cheung Teuk Market,ផ្សារជើងទឹក,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+224,9352,Huy leng phnom srok market,ផ្សារហ៊ុយឡេងភ្នំស្រុក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0103,Phnum Srok,ភ្នំស្រុក,0103,010306,Phnum Dei,ភ្នំដី
+225,9353,Asia Market,ទីផ្សារអាស៊ី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+226,9354,Kro Bey Wet Market,ផ្សារក្របីសើម,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+227,9355,Krobey Real Market,ផ្សារក្របីរៀល,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+228,9358,Trapeang Andaeuk Market,ផ្សារត្រពាំងអណ្ដើក,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+229,9359,Phsar Pong Teuk,ផ្សារពងទឹក,23,Kep,កែប,2301,Damnak Chang'aeur,ដំណាក់ចង្អើរ,2301,230103,Pong Tuek,ពងទឹក
+230,9360,China Wanda Supermarket,ផ្សារទំនើបចិនវ៉ាន់ដា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+231,9362,ផ្សារត្រពាំងរពៅ,ផ្សារត្រពាំងរពៅ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+232,9363,Svay Prey Market,ផ្សារស្វាយព្រៃ,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+233,9364,Phum Phsar Trach,ភូមិផ្សារត្រាច,05,Kampong Speu,កំពង់ស្ពឺ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+234,9365,Psar thom meanchey market,ផ្សារធំមានជ័យ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+235,9366,Ang Metrey Market,ផ្សារអង្គមេត្រី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+236,9367,Market,ផ្សារ,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+237,9368,ThamKah Market,ផ្សារត្រាំខ្នារ,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210211,Sour Phi,សូរភី
+238,9369,Roundabout Veal Youn Market,រង្វង់​មូល​បេនឡាន​ ផ្សារ​វាលយន្ត,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+239,9370,Phsar Khmer (Khmer Market),ផ្សារខ្មែរ,02,Battambang,Battambang,0212,Kamrieng,កំរៀង,0212,021201,Kamrieng,កំរៀង
+240,9371,Phum Phsar Kandal,ភូមិផ្សារកណ្ដាល,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011003,Phsar Kandal,ផ្សារកណ្តាល
+241,9373,Marketplace,ផ្សារ,19,Stung Treng,ស្ទឹងត្រែង,1905,Thala Barivat,ថាឡាបរិវ៉ាត់,1905,190511,Thala Barivat,ថាឡាបរិវ៉ាត់
+242,9375,Small market,ផ្សារតូច,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+243,9378,Indigenous People's Market,ផ្សារជនជាតិដើមភាគតិច,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+244,9379,Kampong Chrey Thmey Market,ផ្សារកំពង់ជ្រៃថ្មី,21,Takeo,តាកែវ,2110,Treang,ទ្រាំង,2110,211011,Smaong,ស្មោង
+245,9380,Night Market,ផ្សាររាត្រី,05,Kampong Speu,កំពង់ស្ពឺ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+246,9382,Wat Tamim Market,ផ្សារវត្តតាមិម,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+247,9383,ផ្សារអង្គស្នួល,ផ្សារអង្គស្នួល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+248,9384,ផ្សារបែកចាន,ផ្សារបែកចាន,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+249,9385,Tangkrosang Market,ផ្សារតាំងក្រសាំង,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+250,9386,Sre Ambel Market,ផ្សារស្រុកស្រែអំបិល,09,Koh Kong,កោះកុង,0906,Srae Ambel,ស្រែ អំបិល,0906,090606,Srae Ambel,ស្រែអំបិល
+251,9387,Temple Mini Mart,ផ្សារតូចរបស់ប្រាសាទ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+252,9388,Clothes Market,ផ្សារសំលៀកបំពាក់,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+253,9389,Phsar Kroum,ផ្សារក្រោម,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+254,9392,Borey Sengnam Market,ផ្សារ បុរីសៀងណាំ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+255,9393,Prey Tor Toeng Market,ផ្សារព្រៃទទឹង,03,Kampong Cham,កំពង់ចាម,0313,Prey Chhor,ព្រៃឈរ,0313,031309,Prey Chhor,ព្រៃឈរ
+256,9395,Kwaeng Market,ផ្សារខ្វែង,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+257,9396,Slor Kram Market,ផ្សារស្លក្រាម,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+258,9400,Sok San Mini Market,ផ្សារតូចសុខសាន្ត,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+259,9401,Dak Dam Market,ផ្សារដាក់ដាំ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+260,9404,Angtadom Market,ផ្សារអង់តាដោម,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210901,Angk Ta Saom,អង្គតាសោម
+261,9407,Pramoay Market,ផ្សារប្រម៉ោយ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+262,9409,Thma Koul Market,ផ្សារ​ថ្មគោល​,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+263,9412,Trapaing Chorng Market,ផ្សារ​ត្រពាំង​ជង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+264,9413,ផ្សារក្រាំងចេក,ផ្សារក្រាំងចេក,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+265,9415,Night Market,ផ្សាររាត្រី,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+266,9416,Local Market,ផ្សារក្នុងស្រុក,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130307,Sror Aem,ស្រអែម
+267,9417,Aksor Te Market,ផ្សារ​អប្សរ​តេ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+268,9418,Phum Prey Thom Market,ផ្សារ​ភូមិ​អូរធំ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+269,9419,Night Market Souvenirs,ផ្សាររាត្រីវត្ថុអនុស្សាវរីយ៍,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+270,9421,Traeng Market (Phsar Phcheav),ផ្សារ​ត្រែង​ (ផ្សារ​ភ្ជាវ)​,02,Battambang,Battambang,0207,Rotonak Mondol,រតនមណ្ឌល,0207,020704,Traeng,ត្រែង
+271,9422,Siem Reap Plaza Market,ផ្សារសៀមរាបផ្លាហ្សា,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+272,9424,Full moon night market,ផ្សាររាត្រីព្រះច័ន្ទ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+273,9426,Night market,ផ្សារ​រាត្រី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+274,9427,Phalla Ankor Night Market 5,ផ្សាររាត្រីផល្លាអង្គរ5,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+275,9441,Soeu Market,ផ្សារ​សឿ​,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+276,9445,Srae Nouy Market,ផ្សារ ស្រែណូយ,17,Siemreap,សៀមរាប,1714,Varin,វ៉ារិន,1714,171403,Srae Nouy,ស្រែណូយ
+277,9448,Angkor Duty Free Store,ផ្សាររួចពន្ធ អង្គរ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+278,9449,Nhae Market,ផ្សារ​ញ៉ែ​,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+279,9453,Setra Supermarket,ផ្សារទំនើបសេត្រា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+280,9454,ផ្សារស្រែអំបិល,ផ្សារស្រែអំបិល,09,Koh Kong,កោះកុង,0906,Srae Ambel,ស្រែ អំបិល,0906,090606,Srae Ambel,ស្រែអំបិល
+281,9456,Sankor Market,ផ្សារសែនគរ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+282,9457,Chor Market,ជោរ (ផ្សារ),12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+283,9458,Kamchaymear Market,កំចាយមារ (ផ្សារ),12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+284,9459,Tean Phlerng Market,ទៀនភ្លើង (ផ្សា),14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,140205,Seang Khveang,ស៊ាងឃ្វាង
+285,9461,Svay Ah Gnuon Market,ស្វាយអាងួន (ផ្សា),12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+286,9465,Big C Supermarket Poipet,ផ្សារទំនើបប៊ីកស៊ីប៉ោយប៉ែត,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+287,9466,Pursat Supermarket,ផ្សារ​ទំនើបពោធិ៍សាត់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+288,9472,Local supermarket,ផ្សារទំនើបក្នុងស្រុក,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+289,9473,Asia Market,ផ្សារអាស៊ី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+290,9475,Weekly market,ផ្សារប្រចាំសប្តាហ៍,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+291,9477,Night market?,ផ្សាររាត្រី,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+292,9478,Huge Market,ផ្សារធំ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+293,9480,Mum's Supermarket,ផ្សារទំនើបម៉ាក់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+294,9481,Angkor Market II,ផ្សារអង្គរ២,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+295,9483,Icon Supermarket,ផ្សារទំនើបអាយខន,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+296,9487,An Ses Marketplace,ផ្សារអានសេះ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+297,9488,វត្តគោកត្រប់ខាងកើតផ្សារសំរោងយោង,វត្តគោកត្រប់ខាងកើតផ្សារសំរោងយោង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+298,9489,Damnak Supermarket,ផ្សារទំនើបដំណាក់,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+299,9493,big supermarket,ផ្សារទំនើបធំ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+300,9495,Phsar Leu Thom Thmei Market,ផ្សារលើធំថ្មី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+301,9496,Phsar Nat,ផ្សាណាត់,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+302,9497,Stung Treng Market,ផ្សារស្ទឹងត្រែង,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+303,9498,Phsar Leur Market,ផ្សារលើ,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+304,9499,Phsar Boeung Kok,ផ្សារបឹងកក់,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+305,9500,Phsar Thmei,ផ្សារថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+306,9501,Phsar 7 Makara,ផ្សារ៧មករា,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+307,9502,Ph'av Market,ផ្សារឃុំផ្អាវ,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+308,9503,Samaki Market,ផ្សារសាមគ្គី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+309,9505,New Market,ផ្សារថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+310,9506,Moung Roessei Market,ផ្សារមោងឫស្សី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+311,9510,Pursat Market,ផ្សារថ្មីពោធិ៍សាត់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+312,9511,Phsar Prey Samdex,ផ្សារព្រៃសម្តេច,14,Prey Veng,ព្រៃវែង,1412,Sithor Kandal,ស៊ីធរកណ្ដាល,1412,141209,Prey Tueng,ព្រៃទឹង
+313,9512,Puok Market,ផ្សារពួក,17,Siemreap,សៀមរាប,1707,Puok,ពួក,1707,170710,Puok,ពួក
+314,9513,Phsar Boeung Chhouk,ផ្សារបឹងឈូក,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+315,9514,Phsar Street 60,ផ្សារផ្លូវ៦០,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+316,9515,Veal Youn Market,ផ្សារវាលយន្ត,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+317,9516,Psar Chomka Kor (Psar Thmey),ផ្សារចំការគរ (ផ្សារថ្មី),01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+318,9517,Phsar Veal Renh,ផ្សារវាលរេញ,18,Preah Sihanouk,ព្រះសីហនុ,1802,Prey Nob,ព្រៃនប់,1802,180214,Veal Renh,វាលរេញ
+319,9518,Angkor Market III,ឡាក់គី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+320,9522,Bek Anlong Market (Sen Monorom Market),ផ្សារ​ បែកអន្លូង (ផ្សារ សែនមនោរម្យ),03,Kampong Cham,កំពង់ចាម,0315,Stueng Trang,ស្ទឹងត្រង់,0315,031508,Preah Andoung,ព្រះអណ្ដូង
+321,9524,Phsar Trach Primary School,សាលាបឋមសិក្សា ផ្សារត្រាច,05,Kampong Speu,កំពង់ស្ពឺ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+322,9525,Phsar Trach Secondary School,អនុវិទ្យាល័យ ផ្សារត្រាច,05,Kampong Speu,កំពង់ស្ពឺ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+323,9526,Phsar Benetchekam,ផ្សារ​ពាណិជ្ជកម្ម,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+324,9528,TM Night Market,ផ្សាររាត្រីធីអឹម,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+325,9530,Phsar Kratie,ផ្សារក្រចេះ,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+326,9532,Phsar Deum Kralanh,ផ្សារ​ដើម​ក្រឡាញ់,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+327,9533,ផ្សារព្រៃល្វា,ផ្សារព្រៃល្វា,21,Takeo,តាកែវ,2106,Prey Kabbas,ព្រៃកប្បាស,2106,210610,Prey Lvea,ព្រៃល្វា
+328,9534,Food Market,ផ្សារម្ហូបអាហារ,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+329,9535,Phsar Thom,ផ្សារធំ,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+330,9536,Phsar Samrong,ផ្សារសំរោង,05,Kampong Speu,កំពង់ស្ពឺ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+331,9541,Phsar Sen Sok,ផ្សារសែនសុខ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+332,9543,Psar Serey Sophon,ផ្សារសិរីសោភ័ណ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+333,9544,Angroka Market,ផ្សារអង្គរការ,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+334,9545,Phsar Kraoum,ផ្សារក្រោម,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+335,9546,Phsar Kraoum Thmei,ផ្សារក្រោមថ្មី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+336,9547,Kampong Thom Central Market,ផ្សារធំកំពង់ធំ,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+337,9550,Phsar Samraong,ផ្សារសំរោង,22,Oddar Meanchey,ឧត្តរមានជ័យ,2204,Samraong,សំរោង,2204,220404,Samraong,សំរោង
+338,9555,Phsar Leu,ផ្សារលើ,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020302,Prek Preah Sdach,ព្រែកព្រះស្ដេច
+339,9557,Phsar Gne,ផ្សារជីណេ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+340,9558,Victoria Supermarket,ផ្សារទំនើបវិកតូរីយ៉ា,24,Pailin,ប៉ៃលិន,2402,Sala Krau,សាលាក្រៅ,2402,240201,Sala Krau,សាលាក្រៅ
+341,9561,Tro Peang Plong Market,ផ្សារត្រពាំងផ្លុង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+342,9562,Phsar Prey Veng,ផ្សារព្រៃវែង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+343,9563,Khnar Market,ផ្សារខ្នារ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+344,9564,Phsar Tangkok,ផ្សារតាំងគោក,06,Kampong Thom,កំពង់ធំ,0602,Kampong Svay,កំពង់ស្វាយ,0602,060203,Kampong Kou,កំពង់គោ
+345,9565,Bavet Market,ផ្សារអន្តរជាតិ បាវិត,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+346,9566,Angkor Market,ផ្សារទំនើប អង្គរ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+347,9567,Phsar Neak Loeung,ផ្សារអ្នកលឿង,14,Prey Veng,ព្រៃវែង,1407,Peam Ro,ពាមរក៍,1407,140703,Neak Loeang,អ្នកលឿង
+348,9568,Phsar Kampong Kdei,ផ្សារកំពង់ក្តី,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170402,Chi Kraeng,ជីក្រែង
+349,9569,Phsar Kraoum Road,ផ្លូវ ផ្សារក្រោម,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+350,9570,ផ្សារមេសរជ្រៃ,ផ្សារមេសរជ្រៃ,03,Kampong Cham,កំពង់ចាម,0315,Stueng Trang,ស្ទឹងត្រង់,0315,031505,Me Sar Chrey,មេសរជ្រៃ
+351,9571,Phsar Kep,ផ្សារកែប,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+352,9572,Phsar Leur,ផ្សារលើ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+353,9573,Sesor Market,ផ្សារសេសរ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+354,9574,Phsar K'Dam,ផ្សារក្តាម,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+355,9575,ចំណត​រថយន្ត​ ផ្សារ​ចាស់​ ក្រុង​ពោធិ៍សាត់​,ចំណត​រថយន្ត​ ផ្សារ​ចាស់​ ក្រុង​ពោធិ៍សាត់​,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+356,9576,Prek Dambouk Market,ផ្សារព្រែកដំបូក,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+357,9577,Moan Dop Market,ផ្សារមាន់ដប់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+358,9578,Preah Prasop Thmey Market,ផ្សារព្រះប្រសប់ថ្មី,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080314,Sithor,ស៊ីធរ
+359,9579,Khsach Poun Market,ផ្សារខ្សាច់ពូន,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+360,9580,Central Market Street,ផ្លូវ ផ្សារកណ្តាល,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+361,9585,Kampong Pranak Market,ផ្សារកំពង់ប្រណាក,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+362,9586,Krouch Chhmar Market,ផ្សារក្រូចឆ្មារ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+363,9587,market n3,ផ្សារលេខ៣,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+364,9588,ផ្សារបុរីរស្មី,ផ្សារបុរីរស្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+365,9589,BoreyRaksmey's Night Market,ផ្សាររាត្រីបុរីរស្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+366,9590,Pou Poui Market,ផ្សារពោធិ៍ពុយ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+367,9591,Kandieang Market,ផ្សារកណ្តៀង,15,Pursat,ពោធិ៍សាត់,1502,Kandieng,កណ្ដៀង,1502,150203,Kandieng,កណ្ដៀង
+368,9592,Lucky Market,ផ្សារឡាក់គី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+369,9593,Kra Varnh Market,ផ្សារក្រវាញ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+370,9594,Krakor Market,ផ្សារក្រគរ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+371,9595,Beong Khnar Market,ផ្សារបឹងខ្នារ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+372,9596,Bam Nak Market,ផ្សារបំណាក់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+373,9597,Bokor Night Market,ផ្សាររាត្រីបូកគោ,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+374,9598,Khsach Kandal Market,ផ្សារខ្សាច់កណ្ដាល,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080314,Sithor,ស៊ីធរ
+375,10008,Phsar Dei Thmei Veng Sreng,ផ្សារដីថ្មី វេងស្រេង,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+376,11053,Phnom Penh Sorya Transport Terminal,បេនឡាន សូរិយា ផ្សារធំថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120211,Voat Phnum,វត្ដភ្នំ
+377,11077,Battambang Phsar Nat,ផ្សារណាត់ បាត់ដំបង,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+378,11078,Sihanoukville Phsar Leu,ផ្សារលើ ព្រះសីហនុ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+379,11103,TK Avenue Tuol Kouk,ផ្សារទំនើប ធីខេ អេវេនញូ ទួលគោក,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120404,Tuek L'ak Ti Muoy,ទឹកល្អក់ទី ១
+380,11104,Chip Mong Noro Mall,ផ្សារទំនើប ជីប ម៉ុង នរោ ម៉ល,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+381,11105,Chip Mong Sen Sok Mall,ផ្សារទំនើប ជីប ម៉ុង សែនសុខ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+382,11106,Midtown Mall Street 2004,ផ្សារទំនើប មីដថោន ផ្លូវ២០០៤,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+383,11116,Phsar Takhmao Kandal,ផ្សារតាខ្មៅ កណ្តាល,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+384,11117,Phsar Kampong Chhnang,ផ្សារលើ កំពង់ឆ្នាំង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+385,11118,Phsar Kampong Speu,ផ្សារកំពង់ស្ពឺ,05,Kampong Speu,កំពង់ស្ពឺ,0502,Chbar Mon,ច្បារមន,0502,050201,Chbar Mon,ច្បារមន
+386,11120,Phsar Kampot Crab Market (Kep),ផ្សារក្តាម កែប,23,Kep,កែប,2302,Kaeb,កែប,2302,230201,Kaeb,កែប
+387,11306,Phsar Prey Tea (ផ្សារព្រៃទា),ផ្សារព្រៃទា ពោធិ៍សែនជ័យ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+388,MKT_1616,Kaev Seima Market,ផ្សារកែវសីមា,11,Mondul Kiri,មណ្ឌលគិរី,1101,Kaev Seima,កែវសីមា,1101,110103,Srae Chhuk,ស្រែឈូក
+389,MKT_1617,Kaoh Nheaek Market,ផ្សារកោះញែក,11,Mondul Kiri,មណ្ឌលគិរី,1102,Kaoh Nheaek,កោះញែក,1102,110206,Srae Sangkum,ស្រែសង្គម
+390,MKT_1618,Tani Market,ផ្សារតានី,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+391,MKT_1619,Sambour Market,ផ្សារសំបូរ,10,Kratie,ក្រចេះ,1004,Sambour,សំបូរ,1004,100407,Sambour,សំបូរ
+392,MKT_1620,Kratie Market,ផ្សារក្រចេះ,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+393,MKT_1621,Ka3 Market,ផ្សារកាបី,10,Kratie,ក្រចេះ,1005,Snuol,ស្នួល,1005,100503,Snuol,ស្នួល
+394,MKT_1622,Snuol Market,ផ្សារស្នួល,10,Kratie,ក្រចេះ,1005,Snuol,ស្នួល,1005,100503,Snuol,ស្នួល
+395,MKT_1623,115 Market,ផ្សារ១១៥,10,Kratie,ក្រចេះ,1005,Snuol,ស្នួល,1005,100503,Snuol,ស្នួល
+396,MKT_1624,Kampong Pranak,ផ្សារកំពង់ប្រណាក,13,Preah Vihear,ព្រះវិហារ,1308,Preah Vihear,ព្រះវិហារ,1308,120209,Phsar Chas,ផ្សារចាស់
+397,MKT_1625,Pou Chrey Market,ផ្សារពោធិ៍ជ្រៃ,11,Mondul Kiri,មណ្ឌលគិរី,1104,Pech Chreada,ពេជ្រាដា,1104,110402,Pu Chrey,ពូជ្រៃ
+398,MKT_1626,Phnom Prich Market,ផ្សារផនូម ព្រីច,10,Kratie,ក្រចេះ,1005,Snuol,ស្នួល,1005,100501,Khsuem,ឃ្សឹម
+399,MKT_1627,Chher Teal Plos Market,ផ្សារឈើទាល ព្លួស,10,Kratie,ក្រចេះ,1001,Chhloung,ឆ្លូង,1001,100101,Chhloung,ឆ្លូង
+400,MKT_1628,Choam Ksan,ផ្សារចាម កសាន,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+401,MKT_1629,Rokakandal Market,ផ្សាររូកាកណ្ដាល,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+402,MKT_1630,Tuol Sangke Market,ផ្សារទួលសង្កែ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+403,MKT_1631,Tonhon Markit,ផ្សារតូញូន,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+404,MKT_1632,Kampong Trabek Market,ផ្សារកំពង់ត្របែក,14,Prey Veng,ព្រៃវែង,1403,Kampong Trabaek,កំពង់ត្របែក,1403,140307,Kampong Trabaek,កំពង់ត្របែក
+405,MKT_1633,Thnol Beak Markit,ផ្សារថ្នល់បែក,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+406,MKT_1634,Kanacity Market,ផ្សារកាណាស៊ីធី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120915,Chaom Chau 2,ចោមចៅទី២
+407,MKT_1635,Phav Market,ផ្សារផាវ,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+408,MKT_1636,Peam Market,ផ្សារពាម,14,Prey Veng,ព្រៃវែង,1407,Peam Ro,ពាមរក៍,1407,140705,Peam Ro,ពាមរក៍
+409,MKT_1637,Tropang Thlong Market (ផ្សារត្រពាំងថ្លឹង),ផ្សារត្រពាំងថ្លឹង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120901,Trapeang Krasang,ត្រពាំងក្រសាំង
+410,MKT_1638,Snay Pul Maket,ផ្សារស្នាយពុល,14,Prey Veng,ព្រៃវែង,1408,Pea Reang,ពារាំង,1408,140807,Prey Pnov,ព្រៃព្នៅ
+411,MKT_1639,Chhueteal Market,ផ្សារឈើទាល,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+412,MKT_1640,Eark Reach 1 Market,ផ្សា,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+413,MKT_1641,Toul Karket,ផ្សារទួល ការកេត,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+414,MKT_1642,Dey Huy,ផ្សារដីហ៊ុយ,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+415,MKT_1643,Kandal Market,ផ្សារកណ្ដាល,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011003,Phsar Kandal,ផ្សារកណ្តាល
+416,MKT_1644,Prek Touch,ផ្សារព្រែកតូច,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+417,MKT_1645,K Mall Market,ផ្សារK មាលល,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+418,MKT_1646,Kilo4 Market,ផ្សារគីឡូ៤,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120405,Tuek L'ak Ti Pir,ទឹកល្អក់ទី ២
+419,MKT_1647,Russey Srok Markit,ផ្សារឫស្សីស្រុក,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+420,MKT_1648,Ou Reang Ov Market,ផ្សារអូររាំងឪ,25,Tboung Khmum,ត្បូងឃ្មុំ,2504,Ou Reang Ov,អូររាំងឪ,2504,250403,Damril,ដំរិល
+421,MKT_1649,Chambot Market,ផ្សារចាមបូត,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+422,MKT_1650,Khlaing Romsev Market,ផ្សារឃ្លាំងរំសេវ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+423,MKT_1651,Sai Va Market,ផ្សារសៃ វា,21,Takeo,តាកែវ,2106,Prey Kabbas,ព្រៃកប្បាស,2106,210609,Prey Kabbas,ព្រៃកប្បាស
+424,MKT_1652,Serey Sophan Market,ផ្សារសិរីសោភ័ណ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+425,MKT_1653,Suong Market,ផ្សារសុូង,25,Tboung Khmum,ត្បូងឃ្មុំ,2506,Suong,សួង,2506,250601,Suong,សួង
+426,MKT_1654,Kampnog Trach,ផ្សារកំពង់ ត្រាច,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+427,MKT_1655,Psar Thom Tmey,ផ្សារធំថ្មី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120201,Phsar Thmei Ti Muoy,ផ្សារថ្មីទី ១
+428,MKT_1656,Kampong Ruessei Market,ផ្សារកំពង់ រុេសសី,14,Prey Veng,ព្រៃវែង,1411,Pur Rieng,ពោធិ៍រៀង,1411,141101,Pou Rieng,ពោធិ៍រៀង
+429,MKT_1657,Chouk Meas Market,ផ្សារឈូក មេាស,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120809,Kouk Khleang,គោកឃ្លាង
+430,MKT_1658,Neak Meas Market,ផ្សារនេាក មេាស,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+431,MKT_1659,Phalitphal Khmer,ផ្សារផាលីតផាល ខមេរ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+432,MKT_1660,Rum Chek Market,ផ្សាររុម ចេក,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140905,Kampong Soeng,កំពង់សឹង
+433,MKT_1661,Akak Market,ផ្សារាកាក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+434,MKT_1662,Lim Chheang Hak,ផ្សារលីម ឆេាង ហាក,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+435,MKT_1663,Ou Snguot Tmey,ផ្សារអូរស្ងួតថ្មី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010206,Ou Prasat,អូរប្រាសាទ
+436,MKT_1664,Ou Orndounh,ផ្សារអូ ូរនដអូញ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010204,Kouk Ballangk,គោកបល្ល័ង្គ
+437,MKT_1665,Thom Mean Chey Market,ផ្សារធំ មានជ័យ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+438,MKT_1666,Qmi Market,ផ្សារQMI,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+439,MKT_1667,Trey Market,ផ្សារត្រេយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+440,MKT_1668,Touk Meas,ផ្សារទូកមាស,07,Kampot,កំពត,0702,Banteay Meas,បន្ទាយមាស,0702,070202,Banteay Meas Khang lech,បន្ទាយមាសខាងលិច
+441,MKT_1669,Brotulden Oreussei Martket,ផ្សារប្រូតុលដេន អូរឫស្សី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+442,MKT_1670,Phsar Kach Chrong,ផ្សារ កាច ចរូង,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+443,MKT_1671,Kompong Chhnang Market,ផ្សារកំពង់ឆ្នាំង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+444,MKT_1672,Rolous Market,ផ្សាររូលអូស,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+445,MKT_1673,Chan La Market,ផ្សារចាន លា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+446,MKT_1674,Odongk,ផ្សារូដូងក,05,Kampong Speu,កំពង់ស្ពឺ,0509,Odongk Maechay,ឧដុង្គម៉ែជ័យ,0509,050903,Trach Tong,ត្រាចទង
+447,MKT_1675,Neak Loeung Market,ផ្សារអ្នកលឿង,14,Prey Veng,ព្រៃវែង,1407,Peam Ro,ពាមរក៍,1407,140703,Neak Loeang,អ្នកលឿង
+448,MKT_1676,Derm Kor Market,ផ្សារដើមគរ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120409,Phsar Daeum Kor,ផ្សារដើមគរ
+449,MKT_1677,Ekreach 2 Market,ផ្សារេក្រេាច 2,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+450,MKT_1678,Tom Nubthmey,ផ្សារតូម នុបថមេយ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+451,MKT_1679,Svay Antor Market,ផ្សារស្វាយអន្ទរ,14,Prey Veng,ព្រៃវែង,1413,Svay Antor,ស្វាយអន្ទរ,1413,141310,Svay Antor,ស្វាយអន្ទរ
+452,MKT_1680,Derm Puthrea Market,ផ្សារដេរម ពុថរេា,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+453,MKT_1681,Prey Phet Market,ផ្សារព្រៃភេត,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050704,Krang Ampil,ក្រាំងអំពិល
+454,MKT_1682,Pong Toek,ផ្សារពងទឹក,23,Kep,កែប,2301,Damnak Chang'aeur,ដំណាក់ចង្អើរ,2301,230103,Pong Tuek,ពងទឹក
+455,MKT_1683,Tum Nob Market,ផ្សារទំនប់,03,Kampong Cham,កំពង់ចាម,0301,Batheay,បាធាយ,0301,030101,Batheay,បាធាយ
+456,MKT_1684,Thma Koul Markat,ផ្សារថ្មគោល,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020209,Bansay Traeng,បន្សាយត្រែង
+457,MKT_1685,Som Bou Meas,ផ្សារសូម បអូ មេាស,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+458,MKT_1686,Psar Ler Market,ផ្សារ លើ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+459,MKT_1687,Reatrey Market Banteay Meanchey,ផ្សាររេាត្រេយ បន្ទាយមានជ័យ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+460,MKT_1688,7 Makara,ផ្សារ៧មករា,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+461,MKT_1689,Dermpor Market,ផ្សារដេរមពូរ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+462,MKT_1690,Phsa Nat Market,ផ្សារ នាត,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,120209,Phsar Chas,ផ្សារចាស់
+463,MKT_1691,Baphnom Market,ផ្សារបាភ្នំ,14,Prey Veng,ព្រៃវែង,1401,Ba Phnum,បាភ្នំ,1401,140102,Cheung Phnum,ជើងភ្នំ
+464,MKT_1692,O’Neang Market,ផ្សារូ’នេាង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+465,MKT_1693,Big C Market,ផ្សារ Big C,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+466,MKT_1694,Phsar Ta Pang,ផ្សារ តា ពាង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+467,MKT_1695,Dar Market,ផ្សារដារ,25,Tboung Khmum,ត្បូងឃ្មុំ,2503,Memot,មេមត់,2503,250309,Memot,មេមត់
+468,MKT_1696,Psar Khrom Market,ផ្សារក្រោម,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+469,MKT_1697,Heng Phea Sream,ផ្សារហេង ផេា ស្រេាម,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130307,Sror Aem,ស្រអែម
+470,MKT_1698,Prekho Market,ផ្សារព្រេខូ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+471,MKT_1699,Trapeang Kong Market,ផ្សារត្រពាំងគង,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+472,MKT_1700,Prey Khmer Market,ផ្សារព្រៃខ្មែរ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0406,Rolea B'ier,រលាប្អៀរ,0406,040609,Prey Mul,ព្រៃមូល
+473,MKT_1701,Samrong Yaong Market,ផ្សារសំរោងយ៉ោង,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210201,Chambak,ចំបក់
+474,MKT_1702,Svay Rolum Market,ផ្សារស្វាយរលំ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+475,MKT_1703,Prey Lvea Market,ផ្សារព្រៃល្វា,21,Takeo,តាកែវ,2106,Prey Kabbas,ព្រៃកប្បាស,2106,210610,Prey Lvea,ព្រៃល្វា
+476,MKT_1704,Somrong Market,ផ្សារសំរោង,22,Oddar Meanchey,ឧត្តរមានជ័យ,2204,Samraong,សំរោង,2204,220404,Samraong,សំរោង
+477,MKT_1705,Chi Her,ផ្សារចី ហេរ,03,Kampong Cham,កំពង់ចាម,0308,Kaoh Soutin,កោះសូទិន,0308,030802,Kaoh Sotin,កោះសូទិន
+478,MKT_1706,2002 Market,ផ្សារ២០០២,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+479,MKT_1707,Donnakchongeir Market,ផ្សារដូននាកចូងីរ,23,Kep,កែប,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+480,MKT_1708,Samakum Kbalspen 24 Market,ផ្សារសមាគម កបាលសពេន 24,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+481,MKT_1709,Ouchra Market,ផ្សារអូរជ្រា,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+482,MKT_1710,Peukanseong Kampong,ផ្សារពេុកានសេូង កំពង់,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140905,Kampong Soeng,កំពង់សឹង
+483,MKT_1711,Preksandeak,ផ្សារព្រេកសានដេាក,14,Prey Veng,ព្រៃវែង,1412,Sithor Kandal,ស៊ីធរកណ្ដាល,1412,141209,Prey Tueng,ព្រៃទឹង
+484,MKT_1712,Kok Khmum Market,ផ្សារកុក ខមុម,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020209,Bansay Traeng,បន្សាយត្រែង
+485,MKT_1713,Reatrey Thida Sour Siem Pang Market,ផ្សាររេាត្រេយ ថីដា សអូរ សីេម ពាង,19,Stung Treng,ស្ទឹងត្រែង,1903,Siem Pang,សៀមប៉ាង,1903,190304,Srae Sambour,ស្រែសំបូរ
+486,MKT_1714,Piphub Tmey Chomkadong1,ផ្សារពិភពថ្មី ចំការដូង១,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+487,MKT_1715,Ang Phnomtouch Market,ផ្សារាង ភ្នំតូច,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+488,MKT_1716,Chom Po Von Market,ផ្សារចោមពៅវ័ន,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+489,MKT_1717,Khar Market,ផ្សារខារ,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250712,Sralab,ស្រឡប់
+490,MKT_1718,Pholpongro Market,ផ្សារផូលពូងរូ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+491,MKT_1719,Lorn City Chom Chao Market,ផ្សារលូរន កីតយ ចោមចៅ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+492,MKT_1720,Ra Market,ផ្សាររា,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+493,MKT_1721,Nha,ផ្សារញា,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+494,MKT_1722,Samrong Market,ផ្សារសំរោង,25,Tboung Khmum,ត្បូងឃ្មុំ,2503,Memot,មេមត់,2503,250309,Memot,មេមត់
+495,MKT_1723,Sen Metrey Market,ផ្សារសែនមេត្រី,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+496,MKT_1724,Winner Factory Market,ផ្សារវីននេរ Factory,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+497,MKT_1725,Rong Lkorn Market,ផ្សាររូង លកូរន,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+498,MKT_1726,Andoung 3 Market,ផ្សារានដអូង 3,22,Oddar Meanchey,ឧត្តរមានជ័យ,2201,Anlong Veaeng,អន្លង់វែង,2201,220101,Anlong Veaeng,អន្លង់វែង
+499,MKT_1727,Phnomsampov,ផ្សារភ្នំសំពៅ,02,Battambang,Battambang,0201,Banan,បាណន់,0201,020106,Phnum Sampov,ភ្នំសំពៅ
+500,MKT_1728,Takhmao New Market,ផ្សារតាខ្មៅថ្មី,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+501,MKT_1729,Srong Market,ផ្សារស្រូង,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+502,MKT_1730,Sam Han Market,ផ្សារសាម ហាន,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+503,MKT_1731,Kamchay Mear Market,ផ្សារកាមចាយ មេារ,14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,120209,Phsar Chas,ផ្សារចាស់
+504,MKT_1732,Talat Market,ផ្សារតាលាត,05,Kampong Speu,កំពង់ស្ពឺ,0506,Phnum Sruoch,ភ្នំស្រួច,0506,050601,Chambak,ចំបក់
+505,MKT_1733,Takao Market,ផ្សារតាកែវ,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,120209,Phsar Chas,ផ្សារចាស់
+506,MKT_1734,Tom Noup,ផ្សារទំនប់,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120714,Tuol Sangkae 2,ទួលសង្កែទី២
+507,MKT_1735,Kansom Ak Market,ផ្សារកានសូម ាក,07,Kampot,កំពត,0702,Banteay Meas,បន្ទាយមាស,0702,070202,Banteay Meas Khang lech,បន្ទាយមាសខាងលិច
+508,MKT_1736,Thom Thmey Siem Pang Market,ផ្សារធំថ្មី សីេម ពាង,19,Stung Treng,ស្ទឹងត្រែង,1903,Siem Pang,សៀមប៉ាង,1903,190304,Srae Sambour,ស្រែសំបូរ
+509,MKT_1737,Ou Snguot Chas,ផ្សារអូរស្ងួតចាស់,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+510,MKT_1738,Phar Tom Tmey Pursat,ផ្សារផារ តូម ថ្មី ពោធិ៍សាត់,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+511,MKT_1739,Somroung Market,ផ្សារសំរោង,20,Svay Rieng,ស្វាយរៀង,2004,Romeas Haek,រមាសហែក,2004,200404,Angk Prasrae,អង្គប្រស្រែ
+512,MKT_1740,Roka Kaong,ផ្សាររូកា កៅង,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080708,Roka Kong Ti Pir,រកាកោង ទី ២
+513,MKT_1741,Piphub Tmey Chomkadong2,ផ្សារពិភពថ្មី ចំការដូង២,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+514,MKT_1742,Pou Puy Market,ផ្សារពោធិ៍ពុយ,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+515,MKT_1743,Thnal Bombek Market,ផ្សារថ្នល់បំបែក,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130401,Kuleaen Tboung,គូលែនត្បូង
+516,MKT_1744,Siem Bouk,ផ្សារសីេម បអូក,19,Stung Treng,ស្ទឹងត្រែង,1902,Siem Bouk,សៀមបូក,1902,190206,Siem Bouk,សៀមបូក
+517,MKT_1745,Boeng Khna Market,ផ្សារបឹង ខនា,15,Pursat,ពោធិ៍សាត់,1501,Bakan,បាកាន,1501,150103,Khnar Totueng,ខ្នារទទឹង
+518,MKT_1746,Thnol Chin Market,ផ្សារថ្នល់ចិន,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+519,MKT_1747,Trapeang Chorng,ផ្សារត្រពាំងច្រុង,15,Pursat,ពោធិ៍សាត់,1501,Bakan,បាកាន,1501,150103,Khnar Totueng,ខ្នារទទឹង
+520,MKT_1748,Old Market,ផ្សារចាស់,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+521,MKT_1749,New Stung Mean Chey Market,ផ្សារស្ទឹងមានជ័យថ្មី,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+522,MKT_1750,Prey Kub Market,ផ្សារព្រេយ កុប,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+523,MKT_1751,Derm Ompil,ផ្សារដើមអំពិល,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+524,MKT_1752,Chamka Tmor Market,ផ្សារចំការថ្ម,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250712,Sralab,ស្រឡប់
+525,MKT_1753,Chak Angre,ផ្សារចាក ាងរេ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120607,Chak Angrae Kraom,ចាក់អង្រែក្រោម
+526,MKT_1754,Unai Market,ផ្សារុនៃ,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120406,Tuek L'ak Ti Bei,ទឹកល្អក់ទី ៣
+527,MKT_1755,Chomkadong,ផ្សារចំការដូង,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+528,MKT_1756,Bat Rom Duol Market,ផ្សារបាត រូម ដុូល,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+529,MKT_1757,Ponley Market,ផ្សារពូនលេយ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0401,Baribour,បរិបូណ៌,0401,040111,Trapeang Chan,ត្រពាំងចាន់
+530,MKT_1758,Brosre Mok Market,ផ្សារប្រូស្រេ មូក,14,Prey Veng,ព្រៃវែង,1404,Kanhchriech,កញ្ជ្រៀច,1404,140402,Kanhchriech,កញ្ជ្រៀច
+531,MKT_1759,Chuk Market,ផ្សារឈូក,22,Oddar Meanchey,ឧត្តរមានជ័យ,2204,Samraong,សំរោង,2204,220404,Samraong,សំរោង
+532,MKT_1760,Kandieng Market,ផ្សារកណ្ដៀង,15,Pursat,ពោធិ៍សាត់,1502,Kandieng,កណ្ដៀង,1502,150203,Kandieng,កណ្ដៀង
+533,MKT_1761,Samaki Krokou Market,ផ្សារសាមគ្គី ក្រូកអូ,15,Pursat,ពោធិ៍សាត់,1503,Krakor,ក្រគរ,1503,150302,Ansa Chambak,អន្សាចំបក់
+534,MKT_1762,Srae Seam Market,ផ្សារស្រែសៀម,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+535,MKT_1763,Tuek Phos Market,ផ្សារទឹកផុស,04,Kampong Chhnang,កំពង់ឆ្នាំង,0408,Tuek Phos,ទឹកផុស,0408,040808,Tuol Khpos,ទួលខ្ពស់
+536,MKT_1764,Dey Huy Market,ផ្សារដីហ៊ុយ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+537,MKT_1765,Tra Market,ផ្សារត្រា,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140907,Lvea,ល្វា
+538,MKT_1766,Chakrey Market,ផ្សារចាក្រេយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010406,Rohal,រហាល
+539,MKT_1767,Kompongtrach Market,ផ្សារកំពង់ត្រាច,20,Svay Rieng,ស្វាយរៀង,2004,Romeas Haek,រមាសហែក,2004,200408,Kampong Trach,កំពង់ត្រាច
+540,MKT_1768,Depo Market,ផ្សារដេប៉ូ,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120307,Veal Vong,វាលវង់
+541,MKT_1769,Pou Ta Hao Market,ផ្សារពោធិ៍តាហោ,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200604,Pou Ta Hao,ពោធិ៍តាហោ
+542,MKT_1770,Srae Ambel,ផ្សារស្រែអំបិល,09,Koh Kong,កោះកុង,0906,Srae Ambel,ស្រែ អំបិល,0906,090606,Srae Ambel,ស្រែអំបិល
+543,MKT_1771,Trapheang Anh Chanh,ផ្សារត្រាផេាង ាញ ចាញ,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121104,Kouk Roka,គោករកា
+544,MKT_1772,Pipop Thmey 2 Market,ផ្សារពិភពថ្មី 2,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+545,MKT_1773,Kromoun Market Pnhom Penh Thmeii,ផ្សារក្រូមអូន ពញូម ពេញ ថមីី,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+546,MKT_1774,Setbo Market,ផ្សារសេតបូ,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+547,MKT_1775,Biek Chan Market,ផ្សារបែក ចាន,08,Kandal,កណ្តាល,0808,Angk Snuol,អង្គស្នួល,0808,080814,Samraong Leu,សំរោងលើ
+548,MKT_1776,Kanhchrech'S Market,ផ្សារកាញចរេច'ស,14,Prey Veng,ព្រៃវែង,1404,Kanhchriech,កញ្ជ្រៀច,1404,140402,Kanhchriech,កញ្ជ្រៀច
+549,MKT_1777,Thala Borivath Market,ផ្សារថាលា បូរីវាថ,19,Stung Treng,ស្ទឹងត្រែង,1905,Thala Barivat,ថាឡាបរិវ៉ាត់,1905,190511,Thala Barivat,ថាឡាបរិវ៉ាត់
+550,MKT_1778,Mran Teak Market,ផ្សារមរាន តេាក,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+551,MKT_1779,O2 Market,ផ្សារO២,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+552,MKT_1780,Moi'S Original Market,ផ្សារមូី'ស Original,14,Prey Veng,ព្រៃវែង,1405,Me Sang,មេសាង,1405,140506,Prey Totueng,ព្រៃទទឹង
+553,MKT_1781,Phsar Kassephal Chhroy Chongva,ផ្សារ កាសសេផាល ជ្រោយចង្វារ,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121001,Chrouy Changvar,ជ្រោយចង្វារ
+554,MKT_1782,Kor Krous,ផ្សារកូរ ក្រអូស,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+555,MKT_1783,Psar Ongrong,ផ្សារ ូងរូង,17,Siemreap,សៀមរាប,1709,Prasat Bakong,ប្រាសាទបាគង,1709,170902,Bakong,បាគង
+556,MKT_1784,Trapeang Kin Market,ផ្សារត្រពាំងគិន,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+557,MKT_1785,Russey Keo Thmei Market,ផ្សារឫស្សីកែវ ថមី,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+558,MKT_1786,Bung Toek Market,ផ្សារបឹង តូេក,14,Prey Veng,ព្រៃវែង,1401,Ba Phnum,បាភ្នំ,1401,140102,Cheung Phnum,ជើងភ្នំ
+559,MKT_1787,Prek Chun,ផ្សារព្រេក ចុន,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081007,Preaek Ambel,ព្រែកអំបិល
+560,MKT_1788,Cheayden Market,ផ្សារចេាយដេន,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+561,MKT_1789,Chip Mong Market,ផ្សារ Chip Mong,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120406,Tuek L'ak Ti Bei,ទឹកល្អក់ទី ៣
+562,MKT_1790,Piphup Thmey Kour Srov Market,ផ្សារពិភពថ្មី កអូរ ស្រូវ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120517,Preaek Kampues,ព្រែកកំពឹស
+563,MKT_1791,Porchentong Market,ផ្សារពោធិ៍ចិនតុង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+564,MKT_1792,Prey Pnov Market,ផ្សារព្រែកព្នៅ,14,Prey Veng,ព្រៃវែង,1408,Pea Reang,ពារាំង,1408,140807,Prey Pnov,ព្រៃព្នៅ
+565,MKT_1793,Salakrao Market,ផ្សារសាលាក្រៅ,24,Pailin,ប៉ៃលិន,2402,Sala Krau,សាលាក្រៅ,2402,240201,Sala Krau,សាលាក្រៅ
+566,MKT_1794,Polnhean Market,ផ្សារពូលញេាន,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120611,Boeng Tumpun 1,បឹងទំពុនទី១
+567,MKT_1795,Tramkna,ផ្សារត្រាមកនា,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210211,Sour Phi,សូរភី
+568,MKT_1796,Boss Khnor Market,ផ្សារបូសស ខនូរ,03,Kampong Cham,កំពង់ចាម,0302,Chamkar Leu,ចំការលើ,0302,030202,Chamkar Andoung,ចំការអណ្ដូង
+569,MKT_1797,Thnalttung Market,ផ្សារថនាលតតុង,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+570,MKT_1798,Kamboul 3,ផ្សារកំបូល៣,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+571,MKT_1799,Krang Lvear Marke,ផ្សារក្រាំងល្វា មារកេ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0407,Sameakki Mean Chey,សាមគ្គីមានជ័យ,0407,040708,Tbaeng Khpos,ត្បែងខ្ពស់
+572,MKT_1800,Psar Silerb,ផ្សារ សីលេរប,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+573,MKT_1801,Superstore,ផ្សារ Superstore,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+574,MKT_1802,Chip Mong,ផ្សារចីព មូង,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+575,MKT_1803,Baniev Market,ផ្សារបានីេវ,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+576,MKT_1804,Phsar Santipheap Kampong Boeng,ផ្សារ សានតីផេាព កំពង់ បឹង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0404,Kampong Leaeng,កំពង់លែង,0404,040403,Kampong Hau,កំពង់ហៅ
+577,MKT_1805,Piphup Thmey Market,ផ្សារពិភពថ្មី,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120517,Preaek Kampues,ព្រែកកំពឹស
+578,MKT_1806,Malai Market,ផ្សារម៉ាឡៃ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0109,Malai,ម៉ាឡៃ,0109,010902,Malai,ម៉ាឡៃ
+579,MKT_1807,Khlang Ronsev Market,ផ្សារខលាង រូនសេវ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+580,MKT_1808,Heng Ly Market,ផ្សារហេង លយ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+581,MKT_1809,Prektameak Market,ផ្សារព្រេកតាមេាក,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080314,Sithor,ស៊ីធរ
+582,MKT_1810,Dom Deak Market,ផ្សារដូម ដេាក,17,Siemreap,សៀមរាប,1711,Soutr Nikom,សូទ្រនិគម,1711,171102,Dam Daek,ដំដែក
+583,MKT_1811,Eoeng Bon Peng,ផ្សារេូេង បូន ពេង,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+584,MKT_1812,Chhnok Tru Market,ផ្សារឆនូក ត្រុ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+585,MKT_1813,Peak Chak Markit,ផ្សារពាក់ចាក់,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+586,MKT_1814,Pc Market,ផ្សារPC,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+587,MKT_1815,Kamboul 2,ផ្សារកំបូល២,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+588,MKT_1816,Prek Leab Market,ផ្សារព្រែកលៀប,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121002,Preaek Lieb,ព្រែកលៀប
+589,MKT_1817,Slap Leng Market,ផ្សារសលាព លេង,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050305,Preah Nipean,ព្រះនិព្វាន
+590,MKT_1818,93 Market,ផ្សារ៩៣,01,Banteay Meanchey,បន្ទាយមានជ័យ,0109,Malai,ម៉ាឡៃ,0109,010902,Malai,ម៉ាឡៃ
+591,MKT_1819,Phsar Ang Eng,ផ្សារ ាង េង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+592,MKT_1820,Go Mon,ផ្សារហ្គូ មូន,25,Tboung Khmum,ត្បូងឃ្មុំ,2505,Ponhea Kraek,ពញាក្រែក,2505,250505,Kraek,ក្រែក
+593,MKT_1821,Huy Leng 1 Market,ផ្សារហុយ លេង 1,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+594,MKT_1822,Kbal Tumnob Dach Market,ផ្សារក្បាលទំនប់ដាច់,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+595,MKT_1823,Mms Market,ផ្សារMMS,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+596,MKT_1824,Phou Pouy,ផ្សារផអូ ពអូយ,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+597,MKT_1825,Thmey Market,ផ្សារថ្មី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+598,MKT_1826,Sandan Market,ផ្សារសណ្ដាន់,10,Kratie,ក្រចេះ,1004,Sambour,សំបូរ,1004,100407,Sambour,សំបូរ
+599,MKT_1827,Chhlounh Leap Market,ផ្សារឆ្លូញ លេាព,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+600,MKT_1828,Dambae Market,ផ្សារដាមបែ,25,Tboung Khmum,ត្បូងឃ្មុំ,2501,Dambae,តំបែរ,2501,250102,Dambae,តំបែរ
+601,MKT_1829,Traeng Trayueng Market,ផ្សារត្រែង ត្រាយុេង,05,Kampong Speu,កំពង់ស្ពឺ,0506,Phnum Sruoch,ភ្នំស្រួច,0506,050613,Traeng Trayueng,ត្រែងត្រយឹង
+602,MKT_1830,Prakbek Market,ផ្សារប្រក់បែក,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+603,MKT_1831,Boeung Keng Kang Market,ផ្សារបឹងកេងកង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+604,MKT_1832,Rolous Market Sie,ផ្សាររូលអូស សីេ,17,Siemreap,សៀមរាប,1709,Prasat Bakong,ប្រាសាទបាគង,1709,170902,Bakong,បាគង
+605,MKT_1833,Ya Kab Market,ផ្សារយា កាប,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+606,MKT_1834,Boeng Baitong Market,ផ្សារបឹង បៃតូង,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+607,MKT_1835,Kamboul Market,ផ្សារកំបូល,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+608,MKT_1836,Kolan Market,ផ្សារកូលាន,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130401,Kuleaen Tboung,គូលែនត្បូង
+609,MKT_1837,Bek Kheng Market,ផ្សារបែក ខេង,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121005,Bak Kaeng,បាក់ខែង
+610,MKT_1838,Prek Pok,ផ្សារព្រេក ពូក,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+611,MKT_1839,Thom Cheath,ផ្សារធំ ចេាថ,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+612,MKT_1840,Prek Long Market,ផ្សារព្រេក លូង,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+613,MKT_1841,Trapang Chouk Market,ផ្សារត្រពាំងឈូក,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+614,MKT_1842,Nakta Steng Market,ផ្សារនាកតា សតេង,03,Kampong Cham,កំពង់ចាម,0313,Prey Chhor,ព្រៃឈរ,0313,031309,Prey Chhor,ព្រៃឈរ
+615,MKT_1843,Psar Raksmey Heng Makara (Svayleu Thmey),ផ្សារ រាកសមេយ ហេង មាការា ស្វាយលេុ ថ្មី),17,Siemreap,សៀមរាប,1713,Svay Leu,ស្វាយលើ,1713,171304,Svay Leu,ស្វាយលើ
+616,MKT_1844,Kilo 2 Market,ផ្សារគីឡូ២,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+617,MKT_1845,Vata Merm Market,ផ្សារវាតា មេរម,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+618,MKT_1846,Chung Prek Market,ផ្សារចុង ព្រេក,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080708,Roka Kong Ti Pir,រកាកោង ទី ២
+619,MKT_1847,Chour Market,ផ្សារចអូរ,14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,120209,Phsar Chas,ផ្សារចាស់
+620,MKT_1848,Kantuy Vay Market,ផ្សារកានតុយ វាយ,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200605,Chek,ចេក
+621,MKT_1849,Samaky,ផ្សារសាមាកយ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+622,MKT_1850,Saroeun Yanny,ផ្សារសារូេុន យាននយ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+623,MKT_1851,Stueng Mean Chey,ផ្សារស្ទឹងមានជ័យ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+624,MKT_1852,Ou Chrov Market,ផ្សារអូរជ្រៅ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010509,Ou Beichoan,អូរបីជាន់
+625,MKT_1853,Hal Leas market,ផ្សារហាល លេាស,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120410,Boeng Salang,បឹងសាឡាង
+626,MKT_1854,Century Plaza,ផ្សារ Century Plaza,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+627,MKT_1855,Orussey,ផ្សារអូរឫស្សី,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+628,MKT_1856,Sopheakmith Iii,ផ្សារសូផេាកមីថ ីីី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+629,MKT_1857,Touh Market,ផ្សារតអូហ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+630,MKT_1858,Boeng Raing Market,ផ្សារបឹង រៃង,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+631,MKT_1859,Brobos Roluoy Market,ផ្សារប្រូបូស រូលុូយ,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140907,Lvea,ល្វា
+632,MKT_1860,Chhaeb Market,ផ្សារឆែប,19,Stung Treng,ស្ទឹងត្រែង,1905,Thala Barivat,ថាឡាបរិវ៉ាត់,1905,190511,Thala Barivat,ថាឡាបរិវ៉ាត់
+633,MKT_1861,Chin Nan Market,ផ្សារចីន នាន,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+634,MKT_1862,Romdeng,ផ្សាររូមដេង,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+635,MKT_1863,Busra,ផ្សារបុស្រា,11,Mondul Kiri,មណ្ឌលគិរី,1104,Pech Chreada,ពេជ្រាដា,1104,110402,Pu Chrey,ពូជ្រៃ
+636,MKT_1864,Kompongchok Market,ផ្សារកូមពូងចូក,20,Svay Rieng,ស្វាយរៀង,2003,Rumduol,រំដួល,2003,200303,Kampong Chak,កំពង់ចក
+637,MKT_1865,Phsaktam Keb,ផ្សារផសាកតាម កេប,23,Kep,កែប,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+638,MKT_1866,Chas Thma Pouk Market,ផ្សារចាស់ ថ្មពួក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+639,MKT_1867,Chamka Chek Market,ផ្សារចំការចេក,10,Kratie,ក្រចេះ,1005,Snuol,ស្នួល,1005,100503,Snuol,ស្នួល
+640,MKT_1868,Pongro Market,ផ្សារពង្រ,10,Kratie,ក្រចេះ,1001,Chhloung,ឆ្លូង,1001,100101,Chhloung,ឆ្លូង
+641,MKT_1869,Tuol Tompoung,ផ្សារទួលទំពូង,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120111,Boeng Trabaek,បឹងត្របែក
+642,MKT_1870,Damnak Smack,ផ្សារដាមនាក សមាកក,05,Kampong Speu,កំពង់ស្ពឺ,0508,Thpong,ថ្ពង,0508,120209,Phsar Chas,ផ្សារចាស់
+643,MKT_1871,Preak Kvet Small Market,ផ្សារព្រេាក កវេត សមាលល,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121002,Preaek Lieb,ព្រែកលៀប
+644,MKT_1872,Stueng Trang Market,ផ្សារសតុេង ត្រាង,03,Kampong Cham,កំពង់ចាម,0315,Stueng Trang,ស្ទឹងត្រង់,0315,031512,Soupheas,សូភាស
+645,MKT_1873,Bon Teiy Khmer,ផ្សារបូន តីយ ខមេរ,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+646,MKT_1874,Monorom,ផ្សារមនោរម្យ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+647,MKT_1875,Ombok Grass Market,ផ្សារូមបូក ហ្គរាសស,07,Kampot,កំពត,0702,Banteay Meas,បន្ទាយមាស,0702,070202,Banteay Meas Khang lech,បន្ទាយមាសខាងលិច
+648,MKT_1876,Market Place,ផ្សារ Market Place,14,Prey Veng,ព្រៃវែង,1405,Me Sang,មេសាង,1405,140506,Prey Totueng,ព្រៃទទឹង
+649,MKT_1877,Ang Ta Saom Market,ផ្សារអង្គតាសោម,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210901,Angk Ta Saom,អង្គតាសោម
+650,MKT_1878,Neak Loeung,ផ្សារអ្នកលឿង,08,Kandal,កណ្តាល,0805,Leuk Daek,លើកដែក,0805,080507,Sandar,សណ្ដារ
+651,MKT_1879,Kabko Market,ផ្សារកាបកូ,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120101,Tonle Basak,ទន្លេបាសាក់
+652,MKT_1880,Kvang Market,ផ្សារកវាង,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+653,MKT_1881,Boeng Tumpun Market,ផ្សារបឹងទំពុន,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+654,MKT_1882,Kos Raes,ផ្សារកូស រែស,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080606,Lvea Sar,ល្វាសរ
+655,MKT_1883,Ta Chhe Market,ផ្សារតាជេ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+656,MKT_1884,Chamka Ko Market,ផ្សារចំការគោ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+657,MKT_1885,Psar Lu Market,ផ្សារ លុ,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+658,MKT_1886,Prum Market,ផ្សារព្រំ,24,Pailin,ប៉ៃលិន,2402,Sala Krau,សាលាក្រៅ,2402,240201,Sala Krau,សាលាក្រៅ
+659,MKT_1887,Tbang Market,ផ្សារតបាង,13,Preah Vihear,ព្រះវិហារ,1306,Sangkum Thmei,សង្គមថ្មី,1306,130605,Ronak Ser,រណសិរ្ស
+660,MKT_1888,Char Market,ផ្សារចារ,21,Takeo,តាកែវ,2106,Prey Kabbas,ព្រៃកប្បាស,2106,210609,Prey Kabbas,ព្រៃកប្បាស
+661,MKT_1889,Cohng​ Kal Market,ផ្សារកូហង​ កាល,22,Oddar Meanchey,ឧត្តរមានជ័យ,2203,Chong Kal,ចុងកាល់,2203,220302,Chong Kal,ចុងកាល់
+662,MKT_1890,Ta Ngean Market,ផ្សារតាង៉ែន,02,Battambang,Battambang,0201,Banan,បាណន់,0201,020106,Phnum Sampov,ភ្នំសំពៅ
+663,MKT_1891,Beungkouk,ផ្សារបឹងកុក,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+664,MKT_1892,Ta Mok Market,ផ្សារតាម៉ុក,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081004,Kaoh Khsach Tonlea,កោះខ្សាច់ទន្លា
+665,MKT_1893,Praktadoul,ផ្សារប្រក្តាដួល,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+666,MKT_1894,Pich Nill Market,ផ្សារពីច នីលល,05,Kampong Speu,កំពង់ស្ពឺ,0506,Phnum Sruoch,ភ្នំស្រួច,0506,050613,Traeng Trayueng,ត្រែងត្រយឹង
+667,MKT_1895,Boeung Trabek,ផ្សារបឹងត្របែក,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120111,Boeng Trabaek,បឹងត្របែក
+668,MKT_1896,Krang Chek,ផ្សារក្រាំងចេក,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+669,MKT_1897,Korm Phong Chamlorg,ផ្សារកូរម ផូង ចាមលូរហ្គ,08,Kandal,កណ្តាល,0805,Leuk Daek,លើកដែក,0805,080507,Sandar,សណ្ដារ
+670,MKT_1898,Tean Phleung Market,ផ្សារតេាន ផលេុង,14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,140205,Seang Khveang,ស៊ាងឃ្វាង
+671,MKT_1899,Apsara Phsar Leu,ផ្សារាពសារា ផ្សារ លើ,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020302,Prek Preah Sdach,ព្រែកព្រះស្ដេច
+672,MKT_1900,Trapeang Prat,ផ្សារត្រពាំងប្រិត,22,Oddar Meanchey,ឧត្តរមានជ័យ,2205,Trapeang Prasat,ត្រពាំងប្រាសាទ,2205,220506,Trapeang Prasat,ត្រពាំងប្រាសាទ
+673,MKT_1901,Chhouk Market,ផ្សារឈូក,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+674,MKT_1902,Chom Chao Market,ផ្សារចោមចៅ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+675,MKT_1903,Jon Klong Market,ផ្សារជូន កលូង,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+676,MKT_1904,Svayromeit Market,ផ្សារស្វាយរមៀត,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080709,Ruessei Chrouy,ឫស្សីជ្រោយ
+677,MKT_1905,Tuol Kork Market,ផ្សារទួលគោក,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+678,MKT_1906,Phnom Dek,ផ្សារភ្នំដែក,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+679,MKT_1907,Prek Korng Market,ផ្សារព្រេក កូរង,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080304,Kaoh Chouram,កោះចូរ៉ាម
+680,MKT_1908,Slorkram Market,ផ្សារសលូរក្រាម,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020810,Vaot Ta Muem,វត្ដតាមិម
+681,MKT_1909,Chomrka Luang Market,ផ្សារចូមរកា លុាង,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+682,MKT_1910,Deom Apil Market,ផ្សារដើមអំពិល,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081104,Ta Khmao,តាខ្មៅ
+683,MKT_1911,Phsar Keb,ផ្សារកែប,23,Kep,កែប,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+684,MKT_1912,Pangrolem Markets,ផ្សារពាងរូលេម,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+685,MKT_1913,Dey Tmey,ផ្សារដេយ ថ្មី,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+686,MKT_1914,Kouk Mon Market,ផ្សារគោកមន,22,Oddar Meanchey,ឧត្តរមានជ័យ,2202,Banteay Ampil,បន្ទាយអំពិល,2202,220204,Kouk Mon,គោកមន
+687,MKT_1915,7 Makara Market,ផ្សារ៧មករា,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+688,MKT_1916,Po Tivong Market,ផ្សារពូ តីវូង,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+689,MKT_1917,Romdoul Market,ផ្សាររូមដអូល,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120906,Samraong Kraom,សំរោងក្រោម
+690,MKT_1918,Market Prey Nob,ផ្សារព្រៃនប់,18,Preah Sihanouk,ព្រះសីហនុ,1802,Prey Nob,ព្រៃនប់,1802,180207,Prey Nob,ព្រៃនប់
+691,MKT_1919,Teok Vel Market,ផ្សារទឹកវេល,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081016,Tuek Vil,ទឹកវិល
+692,MKT_1920,Phsar Leu,ផ្សារលើ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+693,MKT_1921,Trapeang Kraleoung Markit,ផ្សារត្រពាំងក្រឡឹង,05,Kampong Speu,កំពង់ស្ពឺ,0506,Phnum Sruoch,ភ្នំស្រួច,0506,050610,Tang Samraong,តាំងសំរោង
+694,MKT_1922,Krava,ផ្សារក្រវ៉ា,06,Kampong Thom,កំពង់ធំ,0601,Baray,បារាយណ៍,0601,060103,Baray,បារាយណ៍
+695,MKT_1923,Phsar Tang Kor Sang Thmey,ផ្សារ តាង កូរ សាង ថ្មី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+696,MKT_1924,Chrey Phsar,ផ្សារជ្រៃ ផ្សារ,14,Prey Veng,ព្រៃវែង,1413,Svay Antor,ស្វាយអន្ទរ,1413,141310,Svay Antor,ស្វាយអន្ទរ
+697,MKT_1925,Angmetrey,ផ្សារាងមេត្រេយ,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+698,MKT_1926,Runteas Banh Market,ផ្សាររុនតេាស បាញ,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+699,MKT_1927,Ekreach 3,ផ្សារេក្រេាច 3,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+700,MKT_1928,Peaksbaek,ផ្សារពាក់ស្បែក,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+701,MKT_1929,Baribo Market,ផ្សារបរិបូណ៌,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+702,MKT_1930,Big Market Kampong Cham,ផ្សារធំកំពង់ចាម,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+703,MKT_1931,Beng Chuk Market,ផ្សារបឹង ឈូក,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+704,MKT_1932,Sensok Market,ផ្សារសែនសុខ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120803,Khmuonh,ឃ្មួញ
+705,MKT_1933,Prek Russey Market,ផ្សារព្រែកឫស្សី,08,Kandal,កណ្តាល,0811,Ta Khmau,តាខ្មៅ,0811,081102,Prek Ruessey,ព្រែកឫស្សី
+706,MKT_1934,Phnomdel Market,ផ្សារភ្នំដេល,03,Kampong Cham,កំពង់ចាម,0301,Batheay,បាធាយ,0301,030101,Batheay,បាធាយ
+707,MKT_1935,Mesor Chrey Market,ផ្សារមេសូរ ជ្រៃ,03,Kampong Cham,កំពង់ចាម,0315,Stueng Trang,ស្ទឹងត្រង់,0315,031505,Me Sar Chrey,មេសរជ្រៃ
+708,MKT_1936,China Market,ផ្សារចីនា,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+709,MKT_1937,Koh Khel Market,ផ្សារកោះខែល,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+710,MKT_1938,07 Market,ផ្សារ០៧,15,Pursat,ពោធិ៍សាត់,1506,Veal Veaeng,វាលវែង,1506,150603,Anlong Reab,អន្លង់រាប
+711,MKT_1939,Kon Moum,ផ្សារកូន មអូម,16,Ratanak Kiri,រតនគិរី,1604,Koun Mom,កូនមុំ,1604,160405,Trapeang Chres,ត្រពាំងច្រេស
+712,MKT_1940,Veal Renh Market,ផ្សារវាលរេញ,18,Preah Sihanouk,ព្រះសីហនុ,1802,Prey Nob,ព្រៃនប់,1802,180214,Veal Renh,វាលរេញ
+713,MKT_1941,Trapeang Kouw Market,ផ្សារត្រពាំងគោ,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+714,MKT_1942,Prakkuol Market,ផ្សារប្រកួល,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+715,MKT_1943,Nart Market,ផ្សារនារត,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+716,MKT_1944,Huy Leng 909Market ( Small Market In Province),ផ្សារហុយ លេង ៩០៩Market,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+717,MKT_1945,Srei Snam,ផ្សារស្រីស្នំ,17,Siemreap,សៀមរាប,1712,Srei Snam,ស្រីស្នំ,1712,171203,Tram Sasar,ត្រាំសសរ
+718,MKT_1946,Phum Tmey Market,ផ្សារផុម ថ្មី,09,Koh Kong,កោះកុង,0905,Mondol Seima,មណ្ឌលសីមា,0905,090502,Peam Krasaob,ពាមក្រសោប
+719,MKT_1947,Phsar Phnom Thom,ផ្សារ ផនូម ធំ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010206,Ou Prasat,អូរប្រាសាទ
+720,MKT_1948,New Town Odem Market,ផ្សារនេវ តូវន ូដេម,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+721,MKT_1949,Prahprosob Market,ផ្សារព្រះប្រសប់,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080314,Sithor,ស៊ីធរ
+722,MKT_1950,Meanchey Market,ផ្សារមានជ័យ,02,Battambang,Battambang,0209,Samlout,សំឡូត,0209,020905,Samlout,សំឡូត
+723,MKT_1951,Prek Ambel Market,ផ្សារព្រែកអំបិល,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081007,Preaek Ambel,ព្រែកអំបិល
+724,MKT_1952,Chip Mong Super Market,ផ្សារ Chip Mong,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+725,MKT_1953,Krang Sramor Market,ផ្សារក្រាំងស្រមរ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0407,Sameakki Mean Chey,សាមគ្គីមានជ័យ,0407,040708,Tbaeng Khpos,ត្បែងខ្ពស់
+726,MKT_1954,Banan Market,ផ្សារបាណន់,02,Battambang,Battambang,0201,Banan,បាណន់,0201,020102,Kantueu Pir,កន្ទឺ ២
+727,MKT_1955,Roka Koh,ផ្សាររូកា កូហ,05,Kampong Speu,កំពង់ស្ពឺ,0503,Kong Pisei,គងពិសី,0503,050303,Moha Ruessei,មហាឫស្សី
+728,MKT_1956,Phsa Thmey Phnom Toch,ផ្សារ ថ្មី ផនូម តូច,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010207,Phnum Touch,ភ្នំតូច
+729,MKT_1957,Psar Phoum Chas Market,ផ្សារ ផអូម ចាស់,04,Kampong Chhnang,កំពង់ឆ្នាំង,0408,Tuek Phos,ទឹកផុស,0408,040806,Krang Skear,ក្រាំងស្គារ
+730,MKT_1958,Thnol Tortoeng Market,ផ្សារថ្នល់ តូរតូេង,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+731,MKT_1959,Dong Tong Market,ផ្សារដូង តូង,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+732,MKT_1960,Korm Phong Phnom,ផ្សារកូរម ផូង ផនូម,08,Kandal,កណ្តាល,0805,Leuk Daek,លើកដែក,0805,080507,Sandar,សណ្ដារ
+733,MKT_1961,Try Pheap,ផ្សារត្រយ ផេាព,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+734,MKT_1962,Ruseydach Market,ផ្សាររុសេយដាច,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081007,Preaek Ambel,ព្រែកអំបិល
+735,MKT_1963,Prek Khlouk Market,ផ្សារព្រែកខ្លូក,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081004,Kaoh Khsach Tonlea,កោះខ្សាច់ទន្លា
+736,MKT_1964,Trear,ផ្សារត្រេារ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+737,MKT_1965,O Ambel,ផ្សារអូរអំបិល,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+738,MKT_1966,Phsaar Ang,ផ្សារផសាារ ាង,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120916,Chaom Chau 3,ចោមចៅទី៣
+739,MKT_1967,Chen La Market,ផ្សារចេន លា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120204,Boeng Reang,បឹងរាំង
+740,MKT_1968,Sweet Tamarind Market,ផ្សារអម្ពិលផ្អែម,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+741,MKT_1969,Phoum Thmey,ផ្សារផអូម ថ្មី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0109,Malai,ម៉ាឡៃ,0109,010902,Malai,ម៉ាឡៃ
+742,MKT_1970,Treng Market,ផ្សារត្រេង,02,Battambang,Battambang,0207,Rotonak Mondol,រតនមណ្ឌល,0207,020704,Traeng,ត្រែង
+743,MKT_1971,Kro Moun Market,ផ្សារក្រូ មអូន,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120410,Boeng Salang,បឹងសាឡាង
+744,MKT_1972,Prek Soeng Market,ផ្សារព្រែកសឹង,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080302,Chey Thum,ជ័យធំ
+745,MKT_1973,Sam Ky Pailin Markets,ផ្សារសាម កយ ពៃលីន,24,Pailin,ប៉ៃលិន,2401,Pailin,ប៉ៃលិន,2401,240101,Pailin,ប៉ៃលិន
+746,MKT_1974,Prey Totueng,ផ្សារព្រេយ តូតុេង,03,Kampong Cham,កំពង់ចាម,0313,Prey Chhor,ព្រៃឈរ,0313,031309,Prey Chhor,ព្រៃឈរ
+747,MKT_1975,Kralanh Market,ផ្សារក្រឡាញ់,17,Siemreap,សៀមរាប,1706,Kralanh,ក្រឡាញ់,1706,170603,Kralanh,ក្រឡាញ់
+748,MKT_1976,Thnal Bak Market,ផ្សារថ្នល់បាក់,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060309,Achar Leak,អាចារ្យលាក់
+749,MKT_1977,Spar Wat Laok,ផ្សារសពារ វាត លៅក,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+750,MKT_1978,Stuong,ផ្សារសតុូង,06,Kampong Thom,កំពង់ធំ,0608,Stoung,ស្ទោង,0608,060801,Banteay Stoung,បន្ទាយស្ទោង
+751,MKT_1979,Boeng Pring Market,ផ្សារបឹង ព្រីង,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020209,Bansay Traeng,បន្សាយត្រែង
+752,MKT_1980,New Village Market,ផ្សារនេវ វីលលាហ្គេ,05,Kampong Speu,កំពង់ស្ពឺ,0508,Thpong,ថ្ពង,0508,120209,Phsar Chas,ផ្សារចាស់
+753,MKT_1981,Phsa Kampongkantout Market,ផ្សារ កាមពូងកានតអូត,08,Kandal,កណ្តាល,0801,Kandal Stueng,កណ្ដាលស្ទឹង,0801,080125,Tbaeng,ត្បែង
+754,MKT_1982,Kampong Prasat Market,ផ្សារកំពង់ ប្រាសាទ,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080708,Roka Kong Ti Pir,រកាកោង ទី ២
+755,MKT_1983,Psa Chas Phnom Tooch,ផ្សារចាស់ ផនូម តូច,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010207,Phnum Touch,ភ្នំតូច
+756,MKT_1984,Peam Brojom Market,ផ្សារពាមប្រជុំ,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081007,Preaek Ambel,ព្រែកអំបិល
+757,MKT_1985,Samaki Village Market,ផ្សារសាមគ្គី វីលលាហ្គេ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+758,MKT_1986,Kompongkung Market,ផ្សារកូមពូងកុង,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+759,MKT_1987,Banteay Chakrei,ផ្សារបន្ទាយចក្រី,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140908,Preah Sdach,ព្រះស្ដេច
+760,MKT_1988,Chrop Market,ផ្សារចរូព,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+761,MKT_1989,Samaki Krakor,ផ្សារសាមគ្គី ក្រាកូរ,15,Pursat,ពោធិ៍សាត់,1503,Krakor,ក្រគរ,1503,150302,Ansa Chambak,អន្សាចំបក់
+762,MKT_1990,Pra Saut Market,ផ្សារប្រសូត្រ,20,Svay Rieng,ស្វាយរៀង,2007,Svay Teab,ស្វាយទាប,2007,200707,Prasoutr,ប្រសូត្រ
+763,MKT_1991,Thol Bott Market,ផ្សារថូល បូតត,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+764,MKT_1992,Prek Ang Market,ផ្សារព្រេក ាង,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121202,Chbar Ampov Ti Pir,ច្បារអំពៅទី ២
+765,MKT_1993,Sor La,ផ្សារសូរ លា,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+766,MKT_1994,Vihearsour Market,ផ្សារវីហេារសអូរ,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080313,Sanlung,សន្លុង
+767,MKT_1995,Prasat,ផ្សារប្រាសាទ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+768,MKT_1996,Ta Noung Market,ផ្សារតានូង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011001,Nimitt,និមិត្ដ
+769,MKT_1997,Phsa Samdech Hun Sen Derm Kralanh,ផ្សារ សាមដេច ហុន សេន ដេរម ក្រឡាញ់,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+770,MKT_1998,Kork Veng Market,ផ្សារគោកវែង,07,Kampot,កំពត,0702,Banteay Meas,បន្ទាយមាស,0702,070202,Banteay Meas Khang lech,បន្ទាយមាសខាងលិច
+771,MKT_1999,Sammaki Market,ផ្សារសាមគ្គី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+772,MKT_2000,Hmor Seth,ផ្សារហមូរ សេថ,13,Preah Vihear,ព្រះវិហារ,1308,Preah Vihear,ព្រះវិហារ,1308,120209,Phsar Chas,ផ្សារចាស់
+773,MKT_2001,New Market,ផ្សារថ្មី,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020302,Prek Preah Sdach,ព្រែកព្រះស្ដេច
+774,MKT_2002,Ou Pong Moan Market,ផ្សារអូរពងមាន់,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+775,MKT_2003,Market Skun,ផ្សារសកុន,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030308,Soutib,សូទិព្វ
+776,MKT_2004,Prek Pan Market,ផ្សារព្រេក ពាន,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081004,Kaoh Khsach Tonlea,កោះខ្សាច់ទន្លា
+777,MKT_2005,Reu Sei Srok Market,ផ្សារឫស្សីស្រុក,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+778,MKT_2006,Kong Pol Lek8,ផ្សារកូង ពូល Lek៨,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+779,MKT_2007,Chamreoun Phal Market,ផ្សារចាមរេអូន ផាល,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120611,Boeng Tumpun 1,បឹងទំពុនទី១
+780,MKT_2008,Market Kilo6,ផ្សារគីឡូ៦,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120704,Kilomaetr Lekh Prammuoy,គីឡូម៉ែត្រលេខ៦
+781,MKT_2009,Sopheakmongkol Market,ផ្សារសូផេាកមូងកូល,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+782,MKT_2010,Reak Chey Market,ផ្សាររាជជ័យ,14,Prey Veng,ព្រៃវែង,1401,Ba Phnum,បាភ្នំ,1401,140102,Cheung Phnum,ជើងភ្នំ
+783,MKT_2011,Andongmeas,ផ្សារានដូងមេាស,16,Ratanak Kiri,រតនគិរី,1601,Andoung Meas,អណ្ដូងមាស,1601,160104,Ta Lav,តាឡាវ
+784,MKT_2012,Phsar Nat,ផ្សារណាត់,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,120209,Phsar Chas,ផ្សារចាស់
+785,MKT_2013,Kondomrey Market,ផ្សារកូនដូមរេយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+786,MKT_2014,Tram Kak Market,ផ្សារត្រាំកក់,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+787,MKT_2015,Kork Thlok Market ( Small Market In Province),ផ្សារគោកធ្លក,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+788,MKT_2016,Plum Por Market,ផ្សារពលុម ពូរ,15,Pursat,ពោធិ៍សាត់,1502,Kandieng,កណ្ដៀង,1502,150203,Kandieng,កណ្ដៀង
+789,MKT_2017,Bakchenhchien Market,ផ្សារបាក់ចេញជៀន,15,Pursat,ពោធិ៍សាត់,1504,Phnum Kravanh,ភ្នំក្រវ៉ាញ,1504,150407,Samraong,សំរោង
+790,MKT_2018,100 Borey Market,ផ្សារ១០០ បុរី,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+791,MKT_2019,Prek Dach Market,ផ្សារព្រេក ដាច,08,Kandal,កណ្តាល,0805,Leuk Daek,លើកដែក,0805,080507,Sandar,សណ្ដារ
+792,MKT_2020,Romeas Market,ផ្សាររូមេាស,04,Kampong Chhnang,កំពង់ឆ្នាំង,0408,Tuek Phos,ទឹកផុស,0408,040808,Tuol Khpos,ទួលខ្ពស់
+793,MKT_2021,Anlong Chre Market,ផ្សារានលូង ចរេ,05,Kampong Speu,កំពង់ស្ពឺ,0508,Thpong,ថ្ពង,0508,120209,Phsar Chas,ផ្សារចាស់
+794,MKT_2022,Speun Dert,ផ្សារស្ពាន ដេរត,05,Kampong Speu,កំពង់ស្ពឺ,0504,Aoral,ឱរ៉ាល់,0504,050404,Sangkae Satob,សង្កែសាទប
+795,MKT_2023,Chong Cheach,ផ្សារចូង ចេាច,25,Tboung Khmum,ត្បូងឃ្មុំ,2501,Dambae,តំបែរ,2501,250102,Dambae,តំបែរ
+796,MKT_2024,Big Tree Market,ផ្សារបីហ្គ ត្រេេ,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120704,Kilomaetr Lekh Prammuoy,គីឡូម៉ែត្រលេខ៦
+797,MKT_2025,Krang Daung,ផ្សារក្រាំងដូង,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+798,MKT_2026,Psar Tbaeng Khpos Market,ផ្សារ តបែង ខពូស,04,Kampong Chhnang,កំពង់ឆ្នាំង,0407,Sameakki Mean Chey,សាមគ្គីមានជ័យ,0407,040708,Tbaeng Khpos,ត្បែងខ្ពស់
+799,MKT_2027,Preah Dak Market,ផ្សារព្រះដាក់,17,Siemreap,សៀមរាប,1703,Banteay Srei,បន្ទាយស្រី,1703,170304,Rumchek,រំចេក
+800,MKT_2028,Stueng Hav Market,ផ្សារសតុេង ហាវ,18,Preah Sihanouk,ព្រះសីហនុ,1803,Stueng Hav,ស្ទឹងហាវ,1803,180303,Tumnob Rolok,ទំនប់រលក
+801,MKT_2029,Tek Khang,ផ្សារតេក ខាង,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080615,Tuek Khleang,ទឹកឃ្លាំង
+802,MKT_2030,Chum Kiri Market,ផ្សារចុម គិរី,07,Kampot,កំពត,0704,Chum Kiri,ជុំគិរី,0704,070404,Srae Chaeng,ស្រែចែង
+803,MKT_2031,Ta Huy Maret,ផ្សារតា ហុយ,14,Prey Veng,ព្រៃវែង,1406,Peam Chor,ពាមជរ,1406,140609,Ruessei Srok,ឫស្សីស្រុក
+804,MKT_2032,Taran,ផ្សារតារាន,06,Kampong Thom,កំពង់ធំ,0604,Prasat Ballangk,ប្រាសាទបល្ល័ង្គ,0604,060403,Phan Nheum,ផាន់ញើម
+805,MKT_2033,Psar Pongror,ផ្សារ ពូងរូរ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0406,Rolea B'ier,រលាប្អៀរ,0406,040610,Rolea B'ier,រលាប្អៀរ
+806,MKT_2034,Tang Krasang,ផ្សារតាង ក្រាសាង,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+807,MKT_2035,Thou Mak Market,ផ្សារថអូ មាក,20,Svay Rieng,ស្វាយរៀង,2008,Bavet,បាវិត,2008,200805,Prey Angkunh,ព្រៃអង្គុញ
+808,MKT_2036,Lerkdeak Market,ផ្សារលេរកដេាក,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+809,MKT_2037,Crang Chan Market,ផ្សារករាង ចាន,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120704,Kilomaetr Lekh Prammuoy,គីឡូម៉ែត្រលេខ៦
+810,MKT_2038,Salalek5 Market,ផ្សារSalalek៥,04,Kampong Chhnang,កំពង់ឆ្នាំង,0405,Kampong Tralach,កំពង់ត្រឡាច,0405,040504,Kampong Tralach,កំពង់ត្រឡាច
+811,MKT_2039,Market Dear Dong,ផ្សារដេារ ដូង,08,Kandal,កណ្តាល,0805,Leuk Daek,លើកដែក,0805,080507,Sandar,សណ្ដារ
+812,MKT_2040,Ta Huy Market,ផ្សារតា ហុយ,14,Prey Veng,ព្រៃវែង,1406,Peam Chor,ពាមជរ,1406,140609,Ruessei Srok,ឫស្សីស្រុក
+813,MKT_2041,Decho Akphivoadth,ផ្សារដេចូ ាកផីវូាដថ,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+814,MKT_2042,Sne Market,ផ្សារសនេ,14,Prey Veng,ព្រៃវែង,1401,Ba Phnum,បាភ្នំ,1401,140102,Cheung Phnum,ជើងភ្នំ
+815,MKT_2043,Thnal Bambaek Market,ផ្សារថ្នល់បំបែក,05,Kampong Speu,កំពង់ស្ពឺ,0508,Thpong,ថ្ពង,0508,120209,Phsar Chas,ផ្សារចាស់
+816,MKT_2044,Krd,ផ្សារក្រដ,02,Battambang,Battambang,0212,Kamrieng,កំរៀង,0212,021201,Kamrieng,កំរៀង
+817,MKT_2045,Sdao Market,ផ្សារស្តៅ,02,Battambang,Battambang,0207,Rotonak Mondol,រតនមណ្ឌល,0207,020703,Phlov Meas,ផ្លូវមាស
+818,MKT_2046,Psar Smart,ផ្សារ សមារត,04,Kampong Chhnang,កំពង់ឆ្នាំង,0403,Kampong Chhnang,កំពង់ឆ្នាំង,0403,040302,Kampong Chhnang,កំពង់ឆ្នាំង
+819,MKT_2047,Market Kilo9,ផ្សារគីឡូ៩,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120711,Chrang Chamreh Ti Muoy,ច្រាំងចំរេះទី ១
+820,MKT_2048,Stung Chai Makert,ផ្សារសតុង ចៃ មាកេរត,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+821,MKT_2049,Bamnak Market,ផ្សារបាមនាក,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+822,MKT_2050,Baknak. Market,ផ្សារបាក់ណាក់.,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+823,MKT_2051,Tipadei Market,ផ្សារតីពាដី,02,Battambang,Battambang,0213,Koas Krala,គាស់ក្រឡ,0213,021302,Kaos Krala,គាស់ក្រឡ
+824,MKT_2052,Dong Kralor Market,ផ្សារដូង ក្រាលូរ,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+825,MKT_2053,Svay Pat,ផ្សារស្វាយ ពាត,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+826,MKT_2054,Chroytakeav Market,ផ្សារចរូយតាកេាវ,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+827,MKT_2055,Khos Thom Market,ផ្សារខូស ធំ,08,Kandal,កណ្តាល,0804,Kaoh Thum,កោះធំ,0804,080404,Kaoh Thum Ka,កោះធំ ‹ក›
+828,MKT_2056,Bengburi Market,ផ្សារបេងបុរី,14,Prey Veng,ព្រៃវែង,1403,Kampong Trabaek,កំពង់ត្របែក,1403,140307,Kampong Trabaek,កំពង់ត្របែក
+829,MKT_2057,Sela Khmer Market,ផ្សារសេលា ខមេរ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+830,MKT_2058,Huyleng Soer,ផ្សារហុយលេង សូេរ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+831,MKT_2059,Rongvong Mol Market,ផ្សាររូងវូង មូល,22,Oddar Meanchey,ឧត្តរមានជ័យ,2201,Anlong Veaeng,អន្លង់វែង,2201,220101,Anlong Veaeng,អន្លង់វែង
+832,MKT_2060,Phum Thom Market,ផ្សារផុម ធំ,14,Prey Veng,ព្រៃវែង,1403,Kampong Trabaek,កំពង់ត្របែក,1403,140307,Kampong Trabaek,កំពង់ត្របែក
+833,MKT_2061,Preychas Market,ផ្សារព្រេយចាស,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080313,Sanlung,សន្លុង
+834,MKT_2062,New Boeng Salaang Market,ផ្សារនេវ បឹង សាលាាង,12,Phnom Penh,ភ្នំពេញ,1207,Russey Keo,ឫស្សីកែវ,1207,120713,Tuol Sangkae 1,ទួលសង្កែទី១
+835,MKT_2063,Teuk Thla Market,ផ្សារទឹកថ្លា,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120802,Tuek Thla,ទឹកថ្លា
+836,MKT_2064,Rusey Chroy,ផ្សារឫស្សី ចរូយ,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080709,Ruessei Chrouy,ឫស្សីជ្រោយ
+837,MKT_2065,Oyadav Market,ផ្សារូយាដាវ,16,Ratanak Kiri,រតនគិរី,1607,Ou Ya Dav,អូរយ៉ាដាវ,1607,160702,Lum Choar,លំជ័រ
+838,MKT_2066,Trapeang Chhouk Market,ផ្សារត្រពាំងឈូក,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120808,Ou Baek K'am,អូរបែកក្អម
+839,MKT_2067,Preak Anchanh,ផ្សារព្រេាក ានចាញ,08,Kandal,កណ្តាល,0807,Mukh Kampul,មុខកំពូល,0807,080703,Preaek Anhchanh,ព្រែកអញ្ចាញ
+840,MKT_2068,Peam Chi Kang,ផ្សារពាមជីកង,03,Kampong Cham,កំពង់ចាម,0307,Kang Meas,កងមាស,0307,030704,Peam Chi Kang,ពាមជីកង
+841,MKT_2069,Potkhao Market,ផ្សារពូតខៅ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+842,MKT_2070,Prame,ផ្សារព្រាមេ,13,Preah Vihear,ព្រះវិហារ,1307,Tbaeng Mean Chey,ត្បែងមានជ័យ,1307,130706,Preah Khleang,ព្រះឃ្លាំង
+843,MKT_2071,Phnom Penh Market,ផ្សារភ្នំពេញ,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130401,Kuleaen Tboung,គូលែនត្បូង
+844,MKT_2072,Pou,ផ្សារពអូ,13,Preah Vihear,ព្រះវិហារ,1307,Tbaeng Mean Chey,ត្បែងមានជ័យ,1307,130706,Preah Khleang,ព្រះឃ្លាំង
+845,MKT_2073,Srayov Market,ផ្សារស្រាយូវ,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+846,MKT_2074,Kamkong Luong,ផ្សារកាមកូង លុូង,08,Kandal,កណ្តាល,0809,Ponhea Lueu,ពញាឮ,0809,080907,Ponhea Lueu,ពញាឮ
+847,MKT_2075,Somrorng Knong,ផ្សារសំរោង កនូង,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+848,MKT_2076,Tuol Sangkae Market,ផ្សារទួលសង្កែ,14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,120209,Phsar Chas,ផ្សារចាស់
+849,MKT_2077,Chorm,ផ្សារចូរម,05,Kampong Speu,កំពង់ស្ពឺ,0504,Aoral,ឱរ៉ាល់,0504,050404,Sangkae Satob,សង្កែសាទប
+850,MKT_2078,Banteaychhma,ផ្សារបន្ទាយឆ្មារ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010701,Banteay Chhmar,បន្ទាយឆ្មារ
+851,MKT_2079,Kulen Market,ផ្សារគូលែន,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130401,Kuleaen Tboung,គូលែនត្បូង
+852,MKT_2080,Market Banlung,ផ្សារបានលុង,16,Ratanak Kiri,រតនគិរី,1602,Ban Lung,បានលុង,1602,160201,Kachanh,កាចាញ
+853,MKT_2081,Sa Arng,ផ្សារសា ារង,13,Preah Vihear,ព្រះវិហារ,1301,Chey Saen,ជ័យសែន,1301,130101,S'ang,ស្អាង
+854,MKT_2082,Rong Veng Market,ផ្សាររូង វេង,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+855,MKT_2083,Dom Bol Kheav,ផ្សារដូម បូល ខេាវ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+856,MKT_2084,Market Setra,ផ្សារសេត្រា,16,Ratanak Kiri,រតនគិរី,1602,Ban Lung,បានលុង,1602,160201,Kachanh,កាចាញ
+857,MKT_2085,Sandi Pheap2 Market,ផ្សារសានដី Pheap២,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+858,MKT_2086,Phum 4 Market,ផ្សារផុម 4,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+859,MKT_2087,Preak Chrey,ផ្សារព្រេាក ជ្រៃ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120517,Preaek Kampues,ព្រែកកំពឹស
+860,MKT_2088,Tbeng,ផ្សារតបេង,13,Preah Vihear,ព្រះវិហារ,1306,Sangkum Thmei,សង្គមថ្មី,1306,130605,Ronak Ser,រណសិរ្ស
+861,MKT_2089,San Chov,ផ្សារសាន ចូវ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120914,Chaom Chau 1,ចោមចៅទី១
+862,MKT_2090,Prek Khut Market,ផ្សារព្រេក ខុត,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+863,MKT_2091,Kbal Khoch Market,ផ្សារក្បាលខូច,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+864,MKT_2092,Piphustmey2 Market,ផ្សារពិភពថ្មី២,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+865,MKT_2093,Cha Chouk Market,ផ្សារចា ឈូក,17,Siemreap,សៀមរាប,1701,Angkor Chum,អង្គរជុំ,1701,170106,Srae Khvav,ស្រែខ្វាវ
+866,MKT_2094,Chamka Rompov Market,ផ្សារចំការរម្ពៅ,05,Kampong Speu,កំពង់ស្ពឺ,0508,Thpong,ថ្ពង,0508,120209,Phsar Chas,ផ្សារចាស់
+867,MKT_2095,Pouk Market,ផ្សារពអូក,17,Siemreap,សៀមរាប,1707,Puok,ពួក,1707,170710,Puok,ពួក
+868,MKT_2096,Dom Bol Krohorm,ផ្សារដូម បូល ក្រូហូរម,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120610,Stueng Mean chey 3,ស្ទឹងមានជ័យទី៣
+869,MKT_2097,Chhloung Market,ផ្សារឆ្លូង,10,Kratie,ក្រចេះ,1001,Chhloung,ឆ្លូង,1001,100101,Chhloung,ឆ្លូង
+870,MKT_2098,Ou Bey Chean Market,ផ្សារអូរបីជាន់,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010509,Ou Beichoan,អូរបីជាន់
+871,MKT_2099,Boueng Kchong Market,ផ្សារបអូេង កចូង,17,Siemreap,សៀមរាប,1711,Soutr Nikom,សូទ្រនិគម,1711,171102,Dam Daek,ដំដែក
+872,MKT_2100,Chen Khmaw,ផ្សារចេន ខមាវ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+873,MKT_2101,Ban Phvang Market,ផ្សារបាន ផវាង,16,Ratanak Kiri,រតនគិរី,1609,Veun Sai,វើនសៃ,1609,160910,Veun Sai,វើនសៃ
+874,MKT_2102,Bokeo,ផ្សារបូកេូ,16,Ratanak Kiri,រតនគិរី,1603,Bar Kaev,បរកែវ,1603,160302,Keh Chong,កិះចុង
+875,MKT_2103,Chambok Market,ផ្សារចាមបូក,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210201,Chambak,ចំបក់
+876,MKT_2104,Ou Daunta Market,ផ្សារអូរដូនតា,02,Battambang,Battambang,0207,Rotonak Mondol,រតនមណ្ឌល,0207,020703,Phlov Meas,ផ្លូវមាស
+877,MKT_2105,Trapeang Moul,ផ្សារត្រាពេាង មអូល,18,Preah Sihanouk,ព្រះសីហនុ,1802,Prey Nob,ព្រៃនប់,1802,180214,Veal Renh,វាលរេញ
+878,MKT_2106,Tumnob Rolork Market,ផ្សារទំនប់ រូលូរក,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+879,MKT_2107,Reing Kesei,ផ្សាររីង កេសី,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020807,Reang Kesei,រាំងកេសី
+880,MKT_2108,Trapeang Cho Market,ផ្សារត្រពាំងជោ,05,Kampong Speu,កំពង់ស្ពឺ,0504,Aoral,ឱរ៉ាល់,0504,050404,Sangkae Satob,សង្កែសាទប
+881,MKT_2109,O. Chamna,ផ្សារO. ចាមនា,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+882,MKT_2110,Baksna,ផ្សារបាកសនា,06,Kampong Thom,កំពង់ធំ,0601,Baray,បារាយណ៍,0601,060103,Baray,បារាយណ៍
+883,MKT_2111,Pang Sey Market,ផ្សារពាង សេយ,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+884,MKT_2112,Deikrohorm,ផ្សារដីក្រូហូរម,22,Oddar Meanchey,ឧត្តរមានជ័យ,2205,Trapeang Prasat,ត្រពាំងប្រាសាទ,2205,220506,Trapeang Prasat,ត្រពាំងប្រាសាទ
+885,MKT_2113,Ang Rorka Market,ផ្សារាង រូរកា,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+886,MKT_2114,Chhertenlkorng,ផ្សារឆេរតេនលកូរង,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+887,MKT_2115,Botrorka Market,ផ្សារបូត្រូរកា,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+888,MKT_2116,Piphustmey1 Market,ផ្សារពិភពថ្មី១,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120501,Dangkao,ដង្កោ
+889,MKT_2117,Boeng Taprum,ផ្សារបឹង តាព្រុម,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+890,MKT_2118,Vatanak2 Market,ផ្សារVatanak២,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120512,Krang Pongro,ក្រាំងពង្រ
+891,MKT_2119,Ta Seng,ផ្សារតាសេង,13,Preah Vihear,ព្រះវិហារ,1306,Sangkum Thmei,សង្គមថ្មី,1306,130605,Ronak Ser,រណសិរ្ស
+892,MKT_2120,Phsa Kompong Prasat,ផ្សារ កំពង់ ប្រាសាទ,04,Kampong Chhnang,កំពង់ឆ្នាំង,0405,Kampong Tralach,កំពង់ត្រឡាច,0405,040504,Kampong Tralach,កំពង់ត្រឡាច
+893,MKT_2121,Tropheang Ompov,ផ្សារត្រូផេាង ូមពូវ,07,Kampot,កំពត,0708,Kampot,កំពត,0708,120209,Phsar Chas,ផ្សារចាស់
+894,MKT_2122,Changha Market,ផ្សារចាងហា,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010501,Changha,ចង្ហា
+895,MKT_2123,Prek Kok Market,ផ្សារព្រេក កុក,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+896,MKT_2124,Banana Plantation Market,ផ្សារបានានា ពលានតាតីូន,22,Oddar Meanchey,ឧត្តរមានជ័យ,2204,Samraong,សំរោង,2204,220404,Samraong,សំរោង
+897,MKT_2125,Svay Cheat,ផ្សារស្វាយ ចេាត,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020807,Reang Kesei,រាំងកេសី
+898,MKT_2126,Peanichkam Market,ផ្សារពេានីចកាម,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+899,MKT_2127,Trach Market,ផ្សារត្រាច,05,Kampong Speu,កំពង់ស្ពឺ,0407,Sameakki Mean Chey,សាមគ្គីមានជ័យ,0407,040708,Tbaeng Khpos,ត្បែងខ្ពស់
+900,MKT_2128,"Me Toek, Market","ផ្សារមេ តូេក,",15,Pursat,ពោធិ៍សាត់,1501,Bakan,បាកាន,1501,150103,Khnar Totueng,ខ្នារទទឹង
+901,MKT_2129,Kakaoh,ផ្សារកាកៅហ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060704,Kakaoh,កកោះ
+902,MKT_2130,Prek Touch Old Market,ផ្សារព្រែកតូច ូលដ,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+903,MKT_2131,Koh Khorng,ផ្សារកោះខ្យង,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+904,MKT_2132,Koh Andeth Market,ផ្សារកោះអណ្តែត,21,Takeo,តាកែវ,2105,Kaoh Andaet,កោះអណ្ដែត,2105,210502,Pech Sar,ពេជសារ
+905,MKT_2133,Krang Pongro Markets,ផ្សារក្រាំងពង្រ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120512,Krang Pongro,ក្រាំងពង្រ
+906,MKT_2134,Toul Svay,ផ្សារទួលស្វាយ,22,Oddar Meanchey,ឧត្តរមានជ័យ,2201,Anlong Veaeng,អន្លង់វែង,2201,220101,Anlong Veaeng,អន្លង់វែង
+907,MKT_2135,Pamchor Maret,ផ្សារពាមចូរ,14,Prey Veng,ព្រៃវែង,1406,Peam Chor,ពាមជរ,1406,140609,Ruessei Srok,ឫស្សីស្រុក
+908,MKT_2136,Kdat,ផ្សារកដាត,07,Kampot,កំពត,0708,Kampot,កំពត,0708,120209,Phsar Chas,ផ្សារចាស់
+909,MKT_2137,Prei Chrouk Market,ផ្សារព្រី ចរអូក,17,Siemreap,សៀមរាប,1707,Puok,ពួក,1707,170710,Puok,ពួក
+910,MKT_2138,Ostress Market,ផ្សារូសត្រេសស,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+911,MKT_2139,Puk Reussei,ផ្សារពុក រេុសសី,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121004,Kaoh Dach,កោះដាច់
+912,MKT_2140,Khnun Thurt,ផ្សារខនុន ថុរត,05,Kampong Speu,កំពង់ស្ពឺ,0504,Aoral,ឱរ៉ាល់,0504,050404,Sangkae Satob,សង្កែសាទប
+913,MKT_2141,Prek Khmer Market,ផ្សារព្រែកខ្មែរ,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+914,MKT_2142,Svay Chrum Market,ផ្សារស្វាយជ្រំ,20,Svay Rieng,ស្វាយរៀង,2005,Svay Chrum,ស្វាយជ្រំ,2005,200505,Ta Suos,តាសួស
+915,MKT_2143,Tapov Market,ផ្សារតាពូវ,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+916,MKT_2144,Toulsombo Markets,ផ្សារតអូលសូមបូ,12,Phnom Penh,ភ្នំពេញ,1205,Dangkao,ដង្កោ,1205,120508,Prey Veaeng,ព្រៃវែង
+917,MKT_2145,Ou Svay Market,ផ្សារអូ ស្វាយ,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+918,MKT_2146,Srayang Market,ផ្សារស្រាយាង,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130406,Srayang,ស្រយង់
+919,MKT_2147,Phsar Leu Thom Tmey,ផ្សារលើធំថ្មី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+920,MKT_2148,Spean Dek Market,ផ្សារស្ពាន ដេក,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+921,MKT_2149,Kampong Rou Market,ផ្សារកំពង់ រអូ,20,Svay Rieng,ស្វាយរៀង,2002,Kampong Rou,កំពង់រោទិ៍,2002,200211,Thmei,ថ្មី
+922,MKT_2150,Svay Prey,ផ្សារស្វាយព្រៃ,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+923,MKT_2151,Krabau Market,ផ្សារក្រាបាុ,14,Prey Veng,ព្រៃវែង,1402,Kamchay Mear,កំចាយមារ,1402,120209,Phsar Chas,ផ្សារចាស់
+924,MKT_2152,Komgpong Market,ផ្សារកូមហ្គពូង,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170403,Kampong Kdei,កំពង់ក្ដី
+925,MKT_2153,Daemrka,ផ្សារដែមរកា,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210211,Sour Phi,សូរភី
+926,MKT_2154,KokSnuol Market,ផ្សារកូកសនអូល,17,Siemreap,សៀមរាប,1707,Puok,ពួក,1707,170710,Puok,ពួក
+927,MKT_2155,Phum Trang Market,ផ្សារផុម ត្រាង,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+928,MKT_2156,Tarom Yeaytoch New Star Market,ផ្សារតារូម យេាយតូច នេវ សតារ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+929,MKT_2157,Vatchumna,ផ្សារវាតចុមនា,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+930,MKT_2158,Huyleng Market Phnum Srok,ផ្សារហុយលេង ផនុម ស្រូក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0103,Phnum Srok,ភ្នំស្រុក,0103,010306,Phnum Dei,ភ្នំដី
+931,MKT_2159,Kraing Yov Market,ផ្សារក្រៃង យូវ,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+932,MKT_2160,Preak Pov,ផ្សារព្រេាក ពូវ,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121101,Preaek Phnov,ព្រែកព្នៅ
+933,MKT_2161,Preyvor Market,ផ្សារព្រេយវូរ,20,Svay Rieng,ស្វាយរៀង,2002,Kampong Rou,កំពង់រោទិ៍,2002,200211,Thmei,ថ្មី
+934,MKT_2162,Sasar Sdam Market,ផ្សារសាសារ សដាម,17,Siemreap,សៀមរាប,1707,Puok,ពួក,1707,170710,Puok,ពួក
+935,MKT_2163,Preak Krabao,ផ្សារព្រេាក ក្រាបៅ,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121004,Kaoh Dach,កោះដាច់
+936,MKT_2164,Phneat Market,ផ្សារផនេាត,08,Kandal,កណ្តាល,0810,S'ang,ស្អាង,0810,081010,S'ang Phnum,ស្អាងភ្នំ
+937,MKT_2165,Brmaoy Market,ផ្សារប្រមៅយ,15,Pursat,ពោធិ៍សាត់,1506,Veal Veaeng,វាលវែង,1506,150603,Anlong Reab,អន្លង់រាប
+938,MKT_2166,Veal Denh Market,ផ្សារវេាល ដេញ,19,Stung Treng,ស្ទឹងត្រែង,1905,Thala Barivat,ថាឡាបរិវ៉ាត់,1905,190511,Thala Barivat,ថាឡាបរិវ៉ាត់
+939,MKT_2167,Korng Keng,ផ្សារកូរង កេង,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+940,MKT_2168,Stung Sen Marked,ផ្សារសតុង សេន,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+941,MKT_2169,Tram Nak,ផ្សារត្រាម នាក,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+942,MKT_2170,Ponhea Pon,ផ្សារពូញេា ពូន,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121102,Ponhea Pon,ពញាពន់
+943,MKT_2171,Ou Chunh,ផ្សារអូ ចុញ,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+944,MKT_2172,Dong Tong Thmey Market,ផ្សារដូង តូង ថ្មី,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+945,MKT_2173,Bakan.Ortaporng.Market,ផ្សារបាកាន.ូរតាពូរង,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+946,MKT_2174,Vealyon Market,ផ្សារវេាលយូន,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+947,MKT_2175,Chrey Market,ផ្សារជ្រៃ,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020309,Ou Char,អូរចារ
+948,MKT_2176,Chhvang Market,ផ្សារឆវាង,19,Stung Treng,ស្ទឹងត្រែង,1905,Thala Barivat,ថាឡាបរិវ៉ាត់,1905,190511,Thala Barivat,ថាឡាបរិវ៉ាត់
+949,MKT_2177,Suvan Kiry Bet Trang,ផ្សារសុវាន កីរយ បេត ត្រាង,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+950,MKT_2178,Chreyn Lors,ផ្សារចរេយន លូរស,08,Kandal,កណ្តាល,0809,Ponhea Lueu,ពញាឮ,0809,080902,Chrey Loas,ជ្រៃលាស់
+951,MKT_2179,Samraong,ផ្សារសំរោង,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121103,Samraong,សំរោង
+952,MKT_2180,Kompong Preang,ផ្សារកំពង់ ព្រេាង,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,120209,Phsar Chas,ផ្សារចាស់
+953,MKT_2181,Tropeng Prey,ផ្សារត្រូពេង ព្រេយ,13,Preah Vihear,ព្រះវិហារ,1303,Choam Ksant,ជាំក្សាន្ដ,1303,130301,Choam Ksant,ជាំក្សាន្ដ
+954,MKT_2182,Prey Tea Market,ផ្សារព្រៃទា,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+955,MKT_2183,Rovieng,ផ្សាររូវីេង,13,Preah Vihear,ព្រះវិហារ,1305,Rovieng,រវៀង,1305,130501,Robieb,របៀប
+956,MKT_2184,Chheuteal Market,ផ្សារឈើទាល,06,Kampong Thom,កំពង់ធំ,0605,Prasat Sambour,ប្រាសាទសំបូរ,0605,060503,Sambour,សំបូរណ៍
+957,MKT_2185,Sankrkh,ផ្សារសានក្រខ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+958,MKT_2186,Pralay,ផ្សារប្រឡាយ,06,Kampong Thom,កំពង់ធំ,0602,Kampong Svay,កំពង់ស្វាយ,0602,060203,Kampong Kou,កំពង់គោ
+959,MKT_2187,Borseth Market,ផ្សារបូរសេថ,05,Kampong Speu,កំពង់ស្ពឺ,0501,Basedth,បរសេដ្ឋ,0501,050101,Basedth,បរសេដ្ឋ
+960,MKT_2188,Don Sar Market,ផ្សារដូន សារ,20,Svay Rieng,ស្វាយរៀង,2005,Svay Chrum,ស្វាយជ្រំ,2005,200508,Doun Sa,ដូនស
+961,MKT_2189,Ou Chum Market,ផ្សារអូរជុំ,16,Ratanak Kiri,រតនគិរី,1606,Ou Chum,អូរជុំ,1606,160605,Ou Chum,អូរជុំ
+962,MKT_2190,Domrey Chlorng,ផ្សារដូមរេយ ចលូរង,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170402,Chi Kraeng,ជីក្រែង
+963,MKT_2191,Trapeang Phong,ផ្សារត្រាពេាង ផូង,05,Kampong Speu,កំពង់ស្ពឺ,0501,Basedth,បរសេដ្ឋ,0501,050101,Basedth,បរសេដ្ឋ
+964,MKT_2192,Tuk Pout,ផ្សារទឹកពុះ,02,Battambang,Battambang,0212,Kamrieng,កំរៀង,0212,021201,Kamrieng,កំរៀង
+965,MKT_2193,Talor Market,ផ្សារតាលូរ,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+966,MKT_2194,Balaing Market,ផ្សារបាលៃង,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+967,MKT_2195,Thorl Baek Kulen Market,ផ្សារថូរល បែក គូលែន,13,Preah Vihear,ព្រះវិហារ,1304,Kuleaen,គូលែន,1304,130401,Kuleaen Tboung,គូលែនត្បូង
+968,MKT_2196,Trapeang Veng Market,ផ្សារត្រពាំងវែង,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+969,MKT_2197,Phum Ou,ផ្សារផុម អូ,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170402,Chi Kraeng,ជីក្រែង
+970,MKT_2198,Kor Market,ផ្សារកូរ,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030304,Prey Char,ព្រៃចារ
+971,MKT_2199,Chi Phou Market,ផ្សារចី ផអូ,20,Svay Rieng,ស្វាយរៀង,2002,Kampong Rou,កំពង់រោទិ៍,2002,200209,Svay Ta Yean,ស្វាយតាយាន
+972,MKT_2200,Pu Thoeurng,ផ្សារពុ ថូេុរង,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+973,MKT_2201,Maot Kro Sas,ផ្សារមៅត ក្រូ សាស,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080606,Lvea Sar,ល្វាសរ
+974,MKT_2202,Market Angserye,ផ្សារាងសេរយេ,05,Kampong Speu,កំពង់ស្ពឺ,0502,Chbar Mon,ច្បារមន,0502,050201,Chbar Mon,ច្បារមន
+975,MKT_2203,Sankr,ផ្សារសង្ក្រ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+976,MKT_2204,Arey Ksath,ផ្សារារេយ កសាថ,08,Kandal,កណ្តាល,0806,Lvea Aem,ល្វាឯម,0806,080611,Preaek Ruessei,ព្រែកឫស្សី
+977,MKT_2205,Salakokos,ផ្សារសាលាកូកូស,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170402,Chi Kraeng,ជីក្រែង
+978,MKT_2206,Khlang Leu Market,ផ្សារខលាង លើ,18,Preah Sihanouk,ព្រះសីហនុ,1801,Preah Sihanouk,ព្រះសីហនុ,1801,120209,Phsar Chas,ផ្សារចាស់
+979,MKT_2207,Kantuot Market,ផ្សារកានតុូត,10,Kratie,ក្រចេះ,1006,Chetr Borei,ចិត្របុរី,1006,100606,Kaoh Chraeng,កោះច្រែង
+980,MKT_2208,Beng Prolert,ផ្សារបឹង ព្រូលេរត,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120308,Boeng Proluet,បឹងព្រលឹត
+981,MKT_2209,Trapeang Russei,ផ្សារត្រាពេាង រុសសី,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+982,MKT_2210,Kralaom Pluk,ផ្សារក្រាលៅម ពលុក,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+983,MKT_2211,Tabep Market,ផ្សារតាបេព,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+984,MKT_2212,Kbal Damrey Market,ផ្សារក្បាលដំរី,04,Kampong Chhnang,កំពង់ឆ្នាំង,0405,Kampong Tralach,កំពង់ត្រឡាច,0405,040504,Kampong Tralach,កំពង់ត្រឡាច
+985,MKT_2213,Kom Nob,ផ្សារកូម នូប,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020809,Ou Dambang Pir,អូរដំបង ២
+986,MKT_2214,Kam Pongkor Market,ផ្សារកាម ពូងកូរ,10,Kratie,ក្រចេះ,1003,Prek Prasab,ព្រែកប្រសព្វ,1003,100305,Preaek Prasab,ព្រែកប្រសព្វ
+987,MKT_2215,Prey Svay,ផ្សារព្រៃស្វាយ,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+988,MKT_2216,Sangkae Market,ផ្សារសង្កែ,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020801,Anlong Vil,អន្លង់វិល
+989,MKT_2217,Mien Market,ផ្សារមីេន,03,Kampong Cham,កំពង់ចាម,0313,Prey Chhor,ព្រៃឈរ,0313,031309,Prey Chhor,ព្រៃឈរ
+990,MKT_2218,International Market,ផ្សារអន្តរជាតិ,20,Svay Rieng,ស្វាយរៀង,2006,Svay Rieng,ស្វាយរៀង,2006,200601,Svay Rieng,ស្វាយរៀង
+991,MKT_2219,Krao Kol Market,ផ្សារក្រៅ កូល,20,Svay Rieng,ស្វាយរៀង,2005,Svay Chrum,ស្វាយជ្រំ,2005,200510,Kraol Kou,ក្រោលគោ
+992,MKT_2220,Sre Ronoung Market,ផ្សារស្រែរនោង,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+993,MKT_2221,Phsa Thnoal Totueng,ផ្សារ ថនូាល តូតុេង,04,Kampong Chhnang,កំពង់ឆ្នាំង,0405,Kampong Tralach,កំពង់ត្រឡាច,0405,040504,Kampong Tralach,កំពង់ត្រឡាច
+994,MKT_2222,Prek Ta Chraeng,ផ្សារព្រេក តា ចរែង,02,Battambang,Battambang,0205,Aek Phnum,ឯកភ្នំ,0205,020506,Prey Chas,ព្រៃចាស់
+995,MKT_2223,Preak Prasab Market,ផ្សារព្រេាក ព្រាសាប,10,Kratie,ក្រចេះ,1003,Prek Prasab,ព្រែកប្រសព្វ,1003,100305,Preaek Prasab,ព្រែកប្រសព្វ
+996,MKT_2224,Ta Khun,ផ្សារតាខុន,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+997,MKT_2225,Phsa Taches,ផ្សារ តាចេស,04,Kampong Chhnang,កំពង់ឆ្នាំង,0405,Kampong Tralach,កំពង់ត្រឡាច,0405,040504,Kampong Tralach,កំពង់ត្រឡាច
+998,MKT_2226,Aon1 Market,ផ្សារAon១,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120101,Tonle Basak,ទន្លេបាសាក់
+999,MKT_2227,Trawi,ផ្សារត្រាវី,02,Battambang,Battambang,0212,Kamrieng,កំរៀង,0212,021201,Kamrieng,កំរៀង
+1000,MKT_2228,Phum Kdei Market,ផ្សារផុម កដី,06,Kampong Thom,កំពង់ធំ,0603,Stueng Saen,ស្ទឹងសែន,0603,060302,Kampong Thum,កំពង់ធំ
+1001,MKT_2229,Krovanh Market,ផ្សារក្រវាញ,15,Pursat,ពោធិ៍សាត់,1504,Phnum Kravanh,ភ្នំក្រវ៉ាញ,1504,150407,Samraong,សំរោង
+1002,MKT_2230,Bat Doeng,ផ្សារបាត ដូេង,08,Kandal,កណ្តាល,0808,Angk Snuol,អង្គស្នួល,0808,080809,Mkak,ម្កាក់
+1003,MKT_2231,Toul Tadok Market,ផ្សារទួល តាដូក,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020203,Ou Ta Ki,អូរតាគី
+1004,MKT_2232,Au Samdey Market,ផ្សារាុ សាមដេយ,20,Svay Rieng,ស្វាយរៀង,2005,Svay Chrum,ស្វាយជ្រំ,2005,200512,Pouthi Reach,ពោធិរាជ
+1005,MKT_2233,Choumkriel Market,ផ្សារចអូមក្រីេល,07,Kampot,កំពត,0708,Kampot,កំពត,0708,070805,Traeuy Kaoh,ត្រើយកោះ
+1006,MKT_2234,Kbalormas Market,ផ្សារក្បាលអូរមាស,07,Kampot,កំពត,0707,Tuek Chhou,ទឹកឈូ,0707,070704,Kampong Samraong,កំពង់សំរោង
+1007,MKT_2235,Ansa Chambak Market,ផ្សារានសា ចាមបាក,15,Pursat,ពោធិ៍សាត់,1505,Pursat,ពោធិ៍សាត់,1505,150504,Phteah Prey,ផ្ទះព្រៃ
+1008,MKT_2236,Rong Market,ផ្សាររូង,07,Kampot,កំពត,0707,Tuek Chhou,ទឹកឈូ,0707,070704,Kampong Samraong,កំពង់សំរោង
+1009,MKT_2237,Kdouch Market,ផ្សារកដអូច,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+1010,MKT_2238,Forest Market,ផ្សារព្រៃ,14,Prey Veng,ព្រៃវែង,1405,Me Sang,មេសាង,1405,140506,Prey Totueng,ព្រៃទទឹង
+1011,MKT_2239,Chamkar Leu Market,ផ្សារចំការលើ,03,Kampong Cham,កំពង់ចាម,0302,Chamkar Leu,ចំការលើ,0302,030202,Chamkar Andoung,ចំការអណ្ដូង
+1012,MKT_2240,Bavel,ផ្សារបវេល,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1013,MKT_2241,Champey Market,ផ្សារចាមពេយ,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+1014,MKT_2242,Sre Sranok,ផ្សារស្រេ ស្រានូក,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+1015,MKT_2243,Our Sleng Market,ផ្សារអូរ សលេង,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+1016,MKT_2244,Koh Kong Tmey Market,ផ្សារកោះកុង ថ្មី,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+1017,MKT_2245,Baray Market,ផ្សារបារាយណ៍,06,Kampong Thom,កំពង់ធំ,0601,Baray,បារាយណ៍,0601,060103,Baray,បារាយណ៍
+1018,MKT_2246,Korkkachern Market,ផ្សារកូរកកាចេរន,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120915,Chaom Chau 2,ចោមចៅទី២
+1019,MKT_2247,Thmosor,ផ្សារថ្មសរ,09,Koh Kong,កោះកុង,0903,Kaoh Kong,កោះកុង,0903,090301,Chrouy Pras,ជ្រោយប្រស់
+1020,MKT_2248,Plouv Bram Market,ផ្សារពលអូវ ប្រាម,02,Battambang,Battambang,0211,Phnum Proek,ភ្នំព្រឹក,0211,021101,Phnum Proek,ភ្នំព្រឹក
+1021,MKT_2249,Rai Nhean Market,ផ្សាររៃ ញេាន,07,Kampot,កំពត,0707,Tuek Chhou,ទឹកឈូ,0707,070704,Kampong Samraong,កំពង់សំរោង
+1022,MKT_2250,Preak Romdeng,ផ្សារព្រេាក រូមដេង,03,Kampong Cham,កំពង់ចាម,0307,Kang Meas,កងមាស,0307,030704,Peam Chi Kang,ពាមជីកង
+1023,MKT_2251,Sdok Market,ផ្សារស្តុក,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+1024,MKT_2252,Samoki Market,ផ្សារសាមូកី,19,Stung Treng,ស្ទឹងត្រែង,1904,Stueng Traeng,ស្ទឹងត្រែង,1904,190401,Stueng Traeng,ស្ទឹងត្រែង
+1025,MKT_2253,Kouk Am Pov,ផ្សារគោក ាម ពូវ,21,Takeo,តាកែវ,2110,Treang,ទ្រាំង,2110,211012,Srangae,ស្រង៉ែ
+1026,MKT_2254,Yai Trub Market,ផ្សារយៃ ត្រុប,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+1027,MKT_2255,Veanmeah Market,ផ្សារវេានមេាហ,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120917,Kakab 1,កាកាបទី១
+1028,MKT_2256,Rohal Market,ផ្សាររូហាល,17,Siemreap,សៀមរាប,1703,Banteay Srei,បន្ទាយស្រី,1703,170304,Rumchek,រំចេក
+1029,MKT_2257,Tapang Deythmey Market,ផ្សារតាពាង ដេយថមេយ,03,Kampong Cham,កំពង់ចាម,0302,Chamkar Leu,ចំការលើ,0302,030202,Chamkar Andoung,ចំការអណ្ដូង
+1030,MKT_2258,Chan Nimet Market,ផ្សារចាន នីមេត,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+1031,MKT_2259,Bonrruay Market,ផ្សារបូនររុាយ,09,Koh Kong,កោះកុង,0905,Mondol Seima,មណ្ឌលសីមា,0905,090502,Peam Krasaob,ពាមក្រសោប
+1032,MKT_2260,Piphopthmey Chhukvaii,ផ្សារពិភពថ្មី ឆុកវៃី,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120906,Samraong Kraom,សំរោងក្រោម
+1033,MKT_2261,Ang Seong Market,ផ្សារាង សេូង,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210201,Chambak,ចំបក់
+1034,MKT_2262,Tram Sar Sar Market,ផ្សារត្រាម សារ សារ,07,Kampot,កំពត,0702,Banteay Meas,បន្ទាយមាស,0702,070202,Banteay Meas Khang lech,បន្ទាយមាសខាងលិច
+1035,MKT_2263,Khnach Romeas,ផ្សារខនាច រូមេាស,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1036,MKT_2264,Chantrey Market,ផ្សារចានត្រេយ,20,Svay Rieng,ស្វាយរៀង,2004,Romeas Haek,រមាសហែក,2004,200405,Chantrei,ចន្ដ្រី
+1037,MKT_2265,Chomkabey Market,ផ្សារចូមកាបេយ,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+1038,MKT_2266,Phnom Leap Market,ផ្សារភ្នំលាប,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010403,Phnum Lieb,ភ្នំលៀប
+1039,MKT_2267,Pong Terk Market,ផ្សារពងទឹក,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+1040,MKT_2268,Thnol Chek Market,ផ្សារថ្នល់ចេក,17,Siemreap,សៀមរាប,1711,Soutr Nikom,សូទ្រនិគម,1711,171102,Dam Daek,ដំដែក
+1041,MKT_2269,Psa Angkor Tmey,ផ្សារ ាងកូរ ថ្មី,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+1042,MKT_2270,Bridge Market,ផ្សារស្ពាន,14,Prey Veng,ព្រៃវែង,1405,Me Sang,មេសាង,1405,140506,Prey Totueng,ព្រៃទទឹង
+1043,MKT_2271,Psa Phumpheak,ផ្សារ ផុមផេាក,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+1044,MKT_2272,Sereypheab,ផ្សារសិរីភាព,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120303,Ou Ruessei Ti Bei,អូរឫស្សីទី ៣
+1045,MKT_2273,Ang Snuol Market,ផ្សារាង ស្នួល,08,Kandal,កណ្តាល,0808,Angk Snuol,អង្គស្នួល,0808,080814,Samraong Leu,សំរោងលើ
+1046,MKT_2274,Pou Chen Market,ផ្សារពោធិ៍ចិន,07,Kampot,កំពត,0706,Kampong Trach,កំពង់ត្រាច,0706,070606,Kampong Trach Khang Lech,កំពង់ត្រាចខាងលិច
+1047,MKT_2275,New Farm,ផ្សារនេវ ហ្វារម,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+1048,MKT_2276,Tropeang Andeuk Market,ផ្សារត្រពាំងអណ្តើក,21,Takeo,តាកែវ,2109,Tram Kak,ត្រាំកក់,2109,210913,Tram Kak,ត្រាំកក់
+1049,MKT_2277,Taben Market,ផ្សារតាបេន,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010805,Ta Baen,តាបែន
+1050,MKT_2278,Duy Mix,ផ្សារដុយ មីក្ស,12,Phnom Penh,ភ្នំពេញ,1203,Prampir Meakkakra,៧មករា,1203,120305,Monourom,មនោរម្យ
+1051,MKT_2279,Wat Chak Market,ផ្សារវាត ចាក,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210213,Tnaot,ត្នោត
+1052,MKT_2280,Rohat Toek Market,ផ្សាររូហាត តូេក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+1053,MKT_2281,Wat Thmei Market,ផ្សារវាត ថមី,03,Kampong Cham,កំពង់ចាម,0313,Prey Chhor,ព្រៃឈរ,0313,031312,Sragnae,ស្រង៉ែ
+1054,MKT_2282,Svay Sor Market,ផ្សារស្វាយស,17,Siemreap,សៀមរាប,1714,Varin,វ៉ារិន,1714,171405,Varin,វ៉ារិន
+1055,MKT_2283,Thnol Bot Market,ផ្សារថ្នល់ បូត,21,Takeo,តាកែវ,2107,Samraong,សំរោង,2107,210708,Samraong,សំរោង
+1056,MKT_2284,Koh Sdach,ផ្សារកោះស្តេច,09,Koh Kong,កោះកុង,0902,Kiri Sakor,គិរីសាគរ,0902,090201,Kaoh Sdach,កោះស្ដេច
+1057,MKT_2285,Ba Srae,ផ្សារបា ស្រែ,21,Takeo,តាកែវ,2101,Angkor Borei,អង្គរបូរី,2101,210101,Angkor Borei,អង្គរបូរី
+1058,MKT_2286,Oun Santhuch Market,ផ្សារអូន សានថុច,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+1059,MKT_2287,Romlong,ផ្សាររូមលូង,06,Kampong Thom,កំពង់ធំ,0602,Kampong Svay,កំពង់ស្វាយ,0602,060203,Kampong Kou,កំពង់គោ
+1060,MKT_2288,Piphopthmey Chhukva I,ផ្សារពិភពថ្មី ឆុកវា I,12,Phnom Penh,ភ្នំពេញ,1211,Praek Pnov,ព្រែកព្នៅ,1211,121104,Kouk Roka,គោករកា
+1061,MKT_2289,Rokarkombot Market,ផ្សាររូការកូមបូត,17,Siemreap,សៀមរាប,1709,Prasat Bakong,ប្រាសាទបាគង,1709,170902,Bakong,បាគង
+1062,MKT_2290,Korkhak Market,ផ្សារកូរខាក,14,Prey Veng,ព្រៃវែង,1403,Kampong Trabaek,កំពង់ត្របែក,1403,140306,Kou Khchak,គោខ្ចក
+1063,MKT_2291,99 Markek,ផ្សារ៩៩ មារកេក,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+1064,MKT_2292,Preysondek,ផ្សារព្រេយសូនដេក,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,120209,Phsar Chas,ផ្សារចាស់
+1065,MKT_2293,Pheas Market,ផ្សារផេាស,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010802,Sarongk,សារង្គ
+1066,MKT_2294,Phsar Rungchak,ផ្សារ រុងចាក,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+1067,MKT_2295,Pheak Sneng,ផ្សារផេាក សនេង,17,Siemreap,សៀមរាប,1702,Angkor Thum,អង្គរធំ,1702,170204,Svay Chek,ស្វាយចេក
+1068,MKT_2296,Meanang Market,ផ្សារមាណង,12,Phnom Penh,ភ្នំពេញ,1204,Tuol Kouk,ទួលគោក,1204,120408,Boeng Kak Ti Pir,បឹងកក់ទី ២
+1069,MKT_2297,Samrong Yaong,ផ្សារសំរោងយ៉ោង,21,Takeo,តាកែវ,2102,Bati,បាទី,2102,210201,Chambak,ចំបក់
+1070,MKT_2298,Kaoh Sla Market,ផ្សារកោះស្លា,07,Kampot,កំពត,0703,Chhuk,ឈូក,0703,070304,Chhuk,ឈូក
+1071,MKT_2299,Snoeng Market,ផ្សារសនូេង,02,Battambang,Battambang,0201,Banan,បាណន់,0201,020108,Ta Kream,តាគ្រាម
+1072,MKT_2300,Chrae Market,ផ្សារចរែ,21,Takeo,តាកែវ,2106,Prey Kabbas,ព្រៃកប្បាស,2106,210609,Prey Kabbas,ព្រៃកប្បាស
+1073,MKT_2301,Phsar Preakdeamchan,ផ្សារ ព្រេាកដេាមចាន,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+1074,MKT_2302,Prek Chor Market,ផ្សារព្រេក ចូរ,25,Tboung Khmum,ត្បូងឃ្មុំ,2501,Dambae,តំបែរ,2501,250102,Dambae,តំបែរ
+1075,MKT_2303,Phsaar Thmei Market,ផ្សារផសាារ ថមី,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+1076,MKT_2304,Heng Theng Pechanda Market,ផ្សារហេង ថេង ពេចានដា,12,Phnom Penh,ភ្នំពេញ,1202,Doun Penh,ដូនពេញ,1202,120209,Phsar Chas,ផ្សារចាស់
+1077,MKT_2305,Komru Market,ផ្សារកូមរុ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1078,MKT_2306,Chherng Tek Market,ផ្សារឆេរង តេក,14,Prey Veng,ព្រៃវែង,1410,Prey Veng,ព្រៃវែង,1410,120209,Phsar Chas,ផ្សារចាស់
+1079,MKT_2307,Dey Krohorm,ផ្សារដេយ ក្រូហូរម,14,Prey Veng,ព្រៃវែង,1409,Preah Sdach,ព្រះស្ដេច,1409,140908,Preah Sdach,ព្រះស្ដេច
+1080,MKT_2308,Kuttasat Khnong Market,ផ្សារកុតតាសាត ខនូង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010509,Ou Beichoan,អូរបីជាន់
+1081,MKT_2309,Siem Bouk Market,ផ្សារសីេម បអូក,10,Kratie,ក្រចេះ,1002,Kracheh,ក្រចេះ,1002,100209,Kracheh,ក្រចេះ
+1082,MKT_2310,Chrey Thom Market,ផ្សារជ្រៃធំ,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080302,Chey Thum,ជ័យធំ
+1083,MKT_2311,Banteay Market,ផ្សារបានតេាយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1084,MKT_2312,Preak Dobuk,ផ្សារព្រេាក ដូបុក,03,Kampong Cham,កំពង់ចាម,0314,Srei Santhor,ស្រីសន្ធរ,0314,031403,Khnar Sa,ខ្នារស
+1085,MKT_2313,Tangkork Market,ផ្សារតាងកូរក,06,Kampong Thom,កំពង់ធំ,0602,Kampong Svay,កំពង់ស្វាយ,0602,060203,Kampong Kou,កំពង់គោ
+1086,MKT_2314,Banteayneang,ផ្សារបានតេាយនេាង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+1087,MKT_2315,Phsar Chamkartadourk,ផ្សារ ចាមការតាដអូរក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+1088,MKT_2316,Phsar Mongkolborey Thmey,ផ្សារ មូងកូលបូរេយ ថ្មី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010209,Ruessei Kraok,ឫស្សីក្រោក
+1089,MKT_2317,Kampong Tkov,ផ្សារកំពង់ តកូវ,17,Siemreap,សៀមរាប,1706,Kralanh,ក្រឡាញ់,1706,170603,Kralanh,ក្រឡាញ់
+1090,MKT_2318,Lvea,ផ្សារលវេា,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020403,Lvea,ល្វា
+1091,MKT_2319,Tonlop Market,ផ្សារតូនលូព,21,Takeo,តាកែវ,2104,Kiri Vong,គីរីវង់,2104,210405,Kiri Chong Kaoh,គីរីចុងកោះ
+1092,MKT_2320,Khnol Kheng,ផ្សារខនូល ខេង,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+1093,MKT_2321,Boeng Beng Market,ផ្សារបឹង បឹង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0109,Malai,ម៉ាឡៃ,0109,010902,Malai,ម៉ាឡៃ
+1094,MKT_2322,Kom Pong Kdei Market,ផ្សារកំពង់ កដី,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170402,Chi Kraeng,ជីក្រែង
+1095,MKT_2323,Kampongsralau Market,ផ្សារកាមពូងស្រាលាុ,13,Preah Vihear,ព្រះវិហារ,1302,Chhaeb,ឆែប,1302,130202,Chhaeb Pir,ឆែបពីរ
+1096,MKT_2324,Daem Tnaot,ផ្សារដែម តនៅត,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+1097,MKT_2325,Prek Chik Market,ផ្សារព្រេក ចីក,02,Battambang,Battambang,0214,Rukh Kiri,រុក្ខគិរី,0214,021405,Basak,បាសាក់
+1098,MKT_2326,Dambouk Rung,ផ្សារដាមបអូក រុង,05,Kampong Speu,កំពង់ស្ពឺ,0506,Phnum Sruoch,ភ្នំស្រួច,0506,050601,Chambak,ចំបក់
+1099,MKT_2327,Banteay Srei Market,ផ្សារបន្ទាយស្រី,17,Siemreap,សៀមរាប,1703,Banteay Srei,បន្ទាយស្រី,1703,170304,Rumchek,រំចេក
+1100,MKT_2328,Market Koke,ផ្សារកូកេ,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080206,Kokir,គគីរ
+1101,MKT_2329,Tomnobknor,ផ្សារតូមនូបកនូរ,22,Oddar Meanchey,ឧត្តរមានជ័យ,2205,Trapeang Prasat,ត្រពាំងប្រាសាទ,2205,220506,Trapeang Prasat,ត្រពាំងប្រាសាទ
+1102,MKT_2330,Learn Market,ផ្សារលេារន,21,Takeo,តាកែវ,2108,Doun Kaev,ដូនកែវ,2108,120209,Phsar Chas,ផ្សារចាស់
+1103,MKT_2331,Torpeng Rusey,ផ្សារតូរពេង ឫស្សី,25,Tboung Khmum,ត្បូងឃ្មុំ,2507,Tboung Khmum,ត្បូងឃ្មុំ,2507,250702,Boeng Pruol,បឹងព្រួល
+1104,MKT_2332,Chong Prek Market,ផ្សារចូង ព្រេក,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121206,Preaek Aeng,ព្រែកឯង
+1105,MKT_2333,Market Srae Ampil,ផ្សារស្រែ ាមពីល,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080204,Kampong Svay,កំពង់ស្វាយ
+1106,MKT_2334,Balang Market,ផ្សារបាលាង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0109,Malai,ម៉ាឡៃ,0109,010906,Ta Kong,តាគង់
+1107,MKT_2335,7Makara Market,ផ្សារ៧Makara,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+1108,MKT_2336,Angkor Borei Market,ផ្សារាងកូរ បុរី,21,Takeo,តាកែវ,2101,Angkor Borei,អង្គរបូរី,2101,210101,Angkor Borei,អង្គរបូរី
+1109,MKT_2337,Kampong Thmar,ផ្សារកំពង់ ថមារ,06,Kampong Thom,កំពង់ធំ,0601,Baray,បារាយណ៍,0601,060103,Baray,បារាយណ៍
+1110,MKT_2338,Boeng Trakoun Market,ផ្សារបឹង ត្រាកអូន,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+1111,MKT_2339,Chamnoam Market,ផ្សារចាមនូាម,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010201,Banteay Neang,បន្ទាយនាង
+1112,MKT_2340,Tumring Market,ផ្សារតុមរីង,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+1113,MKT_2341,Prek Khpob,ផ្សារព្រែកខ្ពប,02,Battambang,Battambang,0205,Aek Phnum,ឯកភ្នំ,0205,020506,Prey Chas,ព្រៃចាស់
+1114,MKT_2342,Sok Leap Market,ផ្សារសូក លេាព,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010403,Phnum Lieb,ភ្នំលៀប
+1115,MKT_2343,Boeng Trakounlech M,ផ្សារបឹង ត្រាកអូនលេច M,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1116,MKT_2344,Ampilpramdaeum,ផ្សារាមពីលព្រាមដែុម,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1117,MKT_2345,Chhun Chhat Market,ផ្សារឆុន ឆាត,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+1118,MKT_2346,Mondulkiri Market,ផ្សារមណ្ឌលគិរី,11,Mondul Kiri,មណ្ឌលគិរី,1105,Saen Monourom,សែនមនោរម្យ,1105,110501,Monourom,មនោរម្យ
+1119,MKT_2347,Market Sdov Korlong,ផ្សារសដូវ កូរលូង,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080204,Kampong Svay,កំពង់ស្វាយ
+1120,MKT_2348,Muy Sokhom Market,ផ្សារមុយ សូខូម,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010405,Preak Netr Preah,ព្រះនេត្រព្រះ
+1121,MKT_2349,Svay Teab Martket,ផ្សារស្វាយទាប,03,Kampong Cham,កំពង់ចាម,0302,Chamkar Leu,ចំការលើ,0302,030202,Chamkar Andoung,ចំការអណ្ដូង
+1122,MKT_2350,Kbal Kork Market,ផ្សារក្បាលគោក,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121004,Kaoh Dach,កោះដាច់
+1123,MKT_2351,Prek Horm Market,ផ្សារព្រេក ហូរម,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080302,Chey Thum,ជ័យធំ
+1124,MKT_2352,Khav Lech Market,ផ្សារខាវ លេច,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+1125,MKT_2353,Speu Market,ផ្សារសពេុ,03,Kampong Cham,កំពង់ចាម,0302,Chamkar Leu,ចំការលើ,0302,030202,Chamkar Andoung,ចំការអណ្ដូង
+1126,MKT_2354,Boeung Sangker,ផ្សារបឹង សាងកេរ,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1127,MKT_2355,Market Sorm Rong Thorm,ផ្សារសូរម រូង ថូរម,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080204,Kampong Svay,កំពង់ស្វាយ
+1128,MKT_2356,Market Prek Thmey,ផ្សារព្រេក ថ្មី,08,Kandal,កណ្តាល,0802,Kien Svay,កៀនស្វាយ,0802,080204,Kampong Svay,កំពង់ស្វាយ
+1129,MKT_2357,Lumphart,ផ្សារលុមផារត,16,Ratanak Kiri,រតនគិរី,1604,Koun Mom,កូនមុំ,1604,160405,Trapeang Chres,ត្រពាំងច្រេស
+1130,MKT_2358,Phat Chum Market,ផ្សារផាត ចុម,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030307,Sdaeung Chey,ស្ដើងជ័យ
+1131,MKT_2359,Chher Khmao Market,ផ្សារឈើ ខមៅ,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080304,Kaoh Chouram,កោះចូរ៉ាម
+1132,MKT_2360,Koukromeat,ផ្សារកអូក្រូមេាត,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1133,MKT_2361,Samlout Market,ផ្សារសាមលអូត,02,Battambang,Battambang,0209,Samlout,សំឡូត,0209,020905,Samlout,សំឡូត
+1134,MKT_2362,Phsa Prey Kri,ផ្សារ ព្រេយ ក្រី,04,Kampong Chhnang,កំពង់ឆ្នាំង,0402,Chol Kiri,ជលគីរី,0402,040201,Chol Sar,ជលសា
+1135,MKT_2363,Dam Sroll Market,ផ្សារដាម ស្រូលល,12,Phnom Penh,ភ្នំពេញ,1210,Chrouy Changvar,ជ្រោយចង្វារ,1210,121001,Chrouy Changvar,ជ្រោយចង្វារ
+1136,MKT_2364,Srekor Chas Market,ផ្សារស្រេកូរ ចាស់,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+1137,MKT_2365,Bek Anlong Market,ផ្សារបែកអន្លង់,03,Kampong Cham,កំពង់ចាម,0315,Stueng Trang,ស្ទឹងត្រង់,0315,031508,Preah Andoung,ព្រះអណ្ដូង
+1138,MKT_2366,Thma Dechkes,ផ្សារថ្មដាច់កេស,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1139,MKT_2367,Rong Pi,ផ្សាររូង ពី,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+1140,MKT_2368,Than Chey Market,ផ្សារថាន ចេយ,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030307,Sdaeung Chey,ស្ដើងជ័យ
+1141,MKT_2369,Tavorng Market,ផ្សារតាវូរង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0103,Phnum Srok,ភ្នំស្រុក,0103,010303,Ponley,ពន្លៃ
+1142,MKT_2370,Preak Loung Market,ផ្សារព្រេាក លអូង,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080304,Kaoh Chouram,កោះចូរ៉ាម
+1143,MKT_2371,Samakum Market,ផ្សារសមាគម,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+1144,MKT_2372,Ruessey Market,ផ្សារឫស្សី,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010401,Chnuor Mean Chey,ឈ្នួរមានជ័យ
+1145,MKT_2373,Mundul4,ផ្សារMundul៤,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011002,Paoy Paet,ប៉ោយប៉ែត
+1146,MKT_2374,Chhnuo Mean Cheay Big Market,ផ្សារឆនុូ មេាន ចេាយ បីហ្គ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010401,Chnuor Mean Chey,ឈ្នួរមានជ័យ
+1147,MKT_2375,Sank Market,ផ្សារសានក,01,Banteay Meanchey,បន្ទាយមានជ័យ,0110,Paoy Paet,ប៉ោយប៉ែត,0110,011003,Phsar Kandal,ផ្សារកណ្តាល
+1148,MKT_2376,Barkhorm Market,ផ្សារបារខូរម,03,Kampong Cham,កំពង់ចាម,0303,Cheung Prey,ជើងព្រៃ,0303,030307,Sdaeung Chey,ស្ដើងជ័យ
+1149,MKT_2377,Lucas Koet,ផ្សារលុកាស កូេត,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+1150,MKT_2378,Sophy Market,ផ្សារសូផយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010506,Souphi,សូភី
+1151,MKT_2379,Chi Phat Market,ផ្សារចី ផាត,09,Koh Kong,កោះកុង,0907,Thma Bang,ថ្មបាំង,0907,090705,Chi Phat,ជីផាត
+1152,MKT_2380,Chamka Ko,ផ្សារចំការគោ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0108,Svay Chek,ស្វាយចេក,0108,010804,Svay Chek,ស្វាយចេក
+1153,MKT_2381,Somang Reak Reay,ផ្សារសូមាង រេាក រេាយ,06,Kampong Thom,កំពង់ធំ,0607,Santuk,សន្ទុក,0607,060703,Kampong Thma,កំពង់ថ្ម
+1154,MKT_2382,Soeng Market,ផ្សារសូេង,01,Banteay Meanchey,បន្ទាយមានជ័យ,0105,Ou Chrov,អូរជ្រៅ,0105,010507,Soengh,សឹង្ហ
+1155,MKT_2383,Kror Muon Market,ផ្សារក្រូរ មុូន,01,Banteay Meanchey,បន្ទាយមានជ័យ,0104,Preah Netr Preah,ព្រះនេត្រព្រះ,0104,010405,Preak Netr Preah,ព្រះនេត្រព្រះ
+1156,MKT_2384,Taveng,ផ្សារតាវេង,16,Ratanak Kiri,រតនគិរី,1608,Ta Veaeng,តាវែង,1608,160801,Ta Veaeng Leu,តាវែងលើ
+1157,MKT_2385,Ondong Bey Market,ផ្សារូនដូង បេយ,22,Oddar Meanchey,ឧត្តរមានជ័យ,2201,Anlong Veaeng,អន្លង់វែង,2201,220101,Anlong Veaeng,អន្លង់វែង
+1158,MKT_2386,Chrouy Sadi Market,ផ្សារចរអូយ សាដី,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020209,Bansay Traeng,បន្សាយត្រែង
+1159,MKT_2387,Roka Market,ផ្សាររូកា,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020802,Norea,នរា
+1160,MKT_2388,Reaksmeisangha Market,ផ្សាររេាកសមីសាងហា,02,Battambang,Battambang,0207,Rotonak Mondol,រតនមណ្ឌល,0207,020703,Phlov Meas,ផ្លូវមាស
+1161,MKT_2389,Phnom Den,ផ្សារភ្នំដិន,21,Takeo,តាកែវ,2104,Kiri Vong,គីរីវង់,2104,210405,Kiri Chong Kaoh,គីរីចុងកោះ
+1162,MKT_2390,Sung Market,ផ្សារសុង,02,Battambang,Battambang,0209,Samlout,សំឡូត,0209,020905,Samlout,សំឡូត
+1163,MKT_2391,Thnal Toteung,ផ្សារថ្នល់ តូតេុង,05,Kampong Speu,កំពង់ស្ពឺ,0507,Samraong Tong,សំរោងទង,0507,050707,Samrong Tong,សំរោងទង
+1164,MKT_2392,Badak Market,ផ្សារបាដាក,02,Battambang,Battambang,0201,Banan,បាណន់,0201,020108,Ta Kream,តាគ្រាម
+1165,MKT_2393,Cham Market,ផ្សារចាម,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121204,Preaek Pra,ព្រែកប្រា
+1166,MKT_2394,Sombou,ផ្សារសូមបអូ,06,Kampong Thom,កំពង់ធំ,0602,Kampong Svay,កំពង់ស្វាយ,0602,060203,Kampong Kou,កំពង់គោ
+1167,MKT_2395,Chreav Market,ផ្សារចរេាវ,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+1168,MKT_2396,Bak Klong Market,ផ្សារបាក់ខ្លង,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+1169,MKT_2397,Bored Ram Chek Market,ផ្សារបូរេដ រាម ចេក,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+1170,MKT_2398,Ba Saet Market,ផ្សារបា សែត,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020802,Norea,នរា
+1171,MKT_2399,Phalla Market,ផ្សារផាលលា,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120609,Stueng Mean chey 2,ស្ទឹងមានជ័យទី២
+1172,MKT_2400,Phum Thmei Market,ផ្សារផុម ថមី,02,Battambang,Battambang,0202,Thma Koul,ថ្មគោល,0202,020209,Bansay Traeng,បន្សាយត្រែង
+1173,MKT_2401,Borei Sopheakmongkol Market,ផ្សារបុរី សូផេាកមូងកូល,02,Battambang,Battambang,0210,Sampov Lun,សំពៅលូន,0210,021001,Sampov Lun,សំពៅលូន
+1174,MKT_2402,Thlok Crov Market,ផ្សារថលូក ករូវ,03,Kampong Cham,កំពង់ចាម,0307,Kang Meas,កងមាស,0307,030711,Sour Kong,សូរគង
+1175,MKT_2403,Wat Leab Market,ផ្សារវាត លេាប,02,Battambang,Battambang,0203,Battambang,បាត់ដំបង,0203,020303,Rottanak,រតនៈ
+1176,MKT_2404,Tro Peang Thmor Market,ផ្សារត្រូ ពេាង ថមូរ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0103,Phnum Srok,ភ្នំស្រុក,0103,010306,Phnum Dei,ភ្នំដី
+1177,MKT_2405,Prek Liv,ផ្សារព្រេក លីវ,03,Kampong Cham,កំពង់ចាម,0307,Kang Meas,កងមាស,0307,030711,Sour Kong,សូរគង
+1178,MKT_2406,Ta Pon Market,ផ្សារតាពន់,02,Battambang,Battambang,0208,Sangkae,សង្កែ,0208,020802,Norea,នរា
+1179,MKT_2407,Ta Lorn Market,ផ្សារតាឡន,02,Battambang,Battambang,0210,Sampov Lun,សំពៅលូន,0210,021001,Sampov Lun,សំពៅលូន
+1180,MKT_2408,Bei Sae Market,ផ្សារបី សែ,02,Battambang,Battambang,0210,Sampov Lun,សំពៅលូន,0210,021001,Sampov Lun,សំពៅលូន
+1181,MKT_2409,Kang Ta Noeng,ផ្សារកាង តា នូេង,03,Kampong Cham,កំពង់ចាម,0307,Kang Meas,កងមាស,0307,030711,Sour Kong,សូរគង
+1182,MKT_2410,Kamphun Market,ផ្សារកាមផុន,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+1183,MKT_2411,Koaskralar Market,ផ្សារកូាសក្រាលារ,02,Battambang,Battambang,0213,Koas Krala,គាស់ក្រឡ,0213,021302,Kaos Krala,គាស់ក្រឡ
+1184,MKT_2412,Kakoash Market,ផ្សារកាកូាសហ,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+1185,MKT_2413,Prey Touch Market,ផ្សារព្រេយ តូច,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+1186,MKT_2414,Bo Market,ផ្សារបូ,02,Battambang,Battambang,0211,Phnum Proek,ភ្នំព្រឹក,0211,021101,Phnum Proek,ភ្នំព្រឹក
+1187,MKT_2415,Talaos Market,ផ្សារតាលៅស,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+1188,MKT_2416,Kaoh Chanloh Market,ផ្សារកោះចន្លោះ,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+1189,MKT_2417,Aundoung Tuet Market,ផ្សារាុនដអូង តុេត,09,Koh Kong,កោះកុង,0901,Botum Sakor,បុទុមសាគរ,0901,120209,Phsar Chas,ផ្សារចាស់
+1190,MKT_2418,Borey Yin Mann,ផ្សារបុរី យីន មានន,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1191,MKT_2419,Preak Po,ផ្សារព្រេាក ពូ,03,Kampong Cham,កំពង់ចាម,0314,Srei Santhor,ស្រីសន្ធរ,0314,031403,Khnar Sa,ខ្នារស
+1192,MKT_2420,Moung Russey Matket,ផ្សារមអូង ឫស្សី មាតកេត,02,Battambang,Battambang,0206,Moung Ruessei,មោងឫស្សី,0206,020604,Ruessei Krang,ឫស្សីក្រាំង
+1193,MKT_2421,Trav Chu Market,ផ្សារត្រាវ ចុ,02,Battambang,Battambang,0210,Sampov Lun,សំពៅលូន,0210,021001,Sampov Lun,សំពៅលូន
+1194,MKT_2422,Phom Krom Market,ផ្សារផូម ក្រោម,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+1195,MKT_2423,Pumthmey Market,ផ្សារពុមថមេយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1196,MKT_2424,Thmal Kol Market,ផ្សារថមាល កូល,03,Kampong Cham,កំពង់ចាម,0305,Kampong Cham,កំពង់ចាម,0305,030502,Kampong Cham,កំពង់ចាម
+1197,MKT_2425,Khlaeng Meas,ផ្សារខលែង មេាស,02,Battambang,Battambang,0204,Bavel,បវេល,0204,020401,Bavel,បវេល
+1198,MKT_2426,Treas Market,ផ្សារត្រេាស,01,Banteay Meanchey,បន្ទាយមានជ័យ,0107,Thma Puok,ថ្មពួក,0107,010704,Thma Puok,ថ្មពួក
+1199,MKT_2427,Kompong Seila Market,ផ្សារកំពង់ សីលា,18,Preah Sihanouk,ព្រះសីហនុ,1804,Kampong Seila,កំពង់សីលា,1804,180402,Kampong Seila,កំពង់សីលា
+1200,MKT_2428,Psa Kdam Market,ផ្សារក្តាម,09,Koh Kong,កោះកុង,0904,Khemara Phoumin,ខេមរភូមិន្ទ,0904,090403,Stueng Veaeng,ស្ទឹងវែង
+1201,MKT_2429,Mesor Thngok Market,ផ្សារមេសូរ ថងូក,20,Svay Rieng,ស្វាយរៀង,2001,Chantrea,ចន្ទ្រា,2001,200103,Chantrea,ចន្ទ្រា
+1202,MKT_2430,Kirivong Market,ផ្សារគីរីវង់,21,Takeo,តាកែវ,2104,Kiri Vong,គីរីវង់,2104,210405,Kiri Chong Kaoh,គីរីចុងកោះ
+1203,MKT_2431,The Market Is Bustling.,ផ្សារថេ ីស បុសតលីង,21,Takeo,តាកែវ,2110,Treang,ទ្រាំង,2110,211011,Smaong,ស្មោង
+1204,MKT_2432,Stockpray,ផ្សារស្តុកព្រៃ,02,Battambang,Battambang,0214,Rukh Kiri,រុក្ខគិរី,0214,021405,Basak,បាសាក់
+1205,MKT_2433,Chek Market,ផ្សារចេក,20,Svay Rieng,ស្វាយរៀង,2001,Chantrea,ចន្ទ្រា,2001,200109,Samraong,សំរោង
+1206,MKT_2434,Psar Rolus,ផ្សារ រូលុស,17,Siemreap,សៀមរាប,1709,Prasat Bakong,ប្រាសាទបាគង,1709,170902,Bakong,បាគង
+1207,MKT_2435,Srekor Thmey Market,ផ្សារស្រេកូរ ថ្មី,19,Stung Treng,ស្ទឹងត្រែង,1901,Sesan,សេសាន,1901,190102,Kbal Romeas,ក្បាលរមាស
+1208,MKT_2436,Kampeng Market,ផ្សារកាមពេង,10,Kratie,ក្រចេះ,1003,Prek Prasab,ព្រែកប្រសព្វ,1003,100305,Preaek Prasab,ព្រែកប្រសព្វ
+1209,MKT_2437,Khvav Market,ផ្សារខវាវ,17,Siemreap,សៀមរាប,1704,Chi Kraeng,ជីក្រែង,1704,170404,Khvav,ខ្វាវ
+1210,MKT_2438,Turkish,ផ្សារTurkish,02,Battambang,Battambang,0214,Rukh Kiri,រុក្ខគិរី,0214,021405,Basak,បាសាក់
+1211,MKT_2439,Daemon Angkrong,ផ្សារដែមូន ាងក្រូង,08,Kandal,កណ្តាល,0801,Kandal Stueng,កណ្ដាលស្ទឹង,0801,080107,Kandaok,កណ្ដោក
+1212,MKT_2440,Prey Toteung,ផ្សារព្រេយ តូតេុង,08,Kandal,កណ្តាល,0801,Kandal Stueng,កណ្ដាលស្ទឹង,0801,080107,Kandaok,កណ្ដោក
+1213,MKT_2441,Kc Market,ផ្សារកក,12,Phnom Penh,ភ្នំពេញ,1209,Pur SenChey,ពោធិ៍សែនជ័យ,1209,120918,Kakab 2,កាកាបទី២
+1214,MKT_2442,Psar Srie Noy,ផ្សារ ស្រីេ នូយ,17,Siemreap,សៀមរាប,1714,Varin,វ៉ារិន,1714,171403,Srae Nouy,ស្រែណូយ
+1215,MKT_2443,Russey Krang,ផ្សារឫស្សី ក្រាង,02,Battambang,Battambang,0214,Rukh Kiri,រុក្ខគិរី,0214,021405,Basak,បាសាក់
+1216,MKT_2444,"Samakki Market, Andaek","ផ្សារសាមាកកី , ានដែក",14,Prey Veng,ព្រៃវែង,1403,Kampong Trabaek,កំពង់ត្របែក,1403,140307,Kampong Trabaek,កំពង់ត្របែក
+1217,MKT_2445,Stang,ផ្សារសតាង,25,Tboung Khmum,ត្បូងឃ្មុំ,2505,Ponhea Kraek,ពញាក្រែក,2505,250505,Kraek,ក្រែក
+1218,MKT_2446,Kompong Popil Market ផ្សារ​កំពង់​ពពិល,ផ្សារកំពង់ពពិល,14,Prey Veng,ព្រៃវែង,1408,Pea Reang,ពារាំង,1408,140807,Prey Pnov,ព្រៃព្នៅ
+1219,MKT_2447,Teoukvil Market,ផ្សារតេអូកវីល,17,Siemreap,សៀមរាប,1710,Siem Reap,សៀមរាប,1710,171009,Siem Reab,សៀមរាប
+1220,MKT_2448,Preak Bongkong Market,ផ្សារព្រេាក បូងកូង,08,Kandal,កណ្តាល,0803,Khsach Kandal,ខ្សាច់កណ្ដាល,0803,080304,Kaoh Chouram,កោះចូរ៉ាម
+1221,MKT_2449,Ampil Marke,ផ្សារាមពីល មារកេ,22,Oddar Meanchey,ឧត្តរមានជ័យ,2202,Banteay Ampil,បន្ទាយអំពិល,2202,120209,Phsar Chas,ផ្សារចាស់
+1222,MKT_2450,Dan Koum,ផ្សារដាន កអូម,07,Kampot,កំពត,0701,Angkor Chey,អង្គរជ័យ,0701,070102,Ankor Chey,អង្គរជ័យ
+1223,MKT_2451,Phsar Mongkolborey,ផ្សារ មូងកូលបូរេយ,01,Banteay Meanchey,បន្ទាយមានជ័យ,0102,Mongkol Borei,មង្គលបូរី,0102,010209,Ruessei Kraok,ឫស្សីក្រោក
+1224,MKT_2452,Tuk Thla,ផ្សារទឹកថ្លា,01,Banteay Meanchey,បន្ទាយមានជ័យ,0106,Serei Saophoan,សិរីសោភ័ណ,0106,010607,Preah Ponlea,ព្រះពន្លា
+1225,MKT_2453,Tropeang Om Pov,ផ្សារត្រពាំងអំពៅ,07,Kampot,កំពត,0708,Kampot,កំពត,0708,120209,Phsar Chas,ផ្សារចាស់
+1226,MKT_2454,Dong Tong Tmey Market,ផ្សារដូង តូង ថ្មី,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+1227,MKT_2455,Daniev Market,ផ្សារដានីេវ,07,Kampot,កំពត,0705,Dang Tong,ដងទង់,0705,070502,Dang Tong,ដងទង់
+1228,MKT_2456,Community Market,ផ្សារសហគមន៍,12,Phnom Penh,ភ្នំពេញ,1212,Chbar Ampov,ច្បារអំពៅ,1212,121203,Nirouth,និរោធ
+1229,11019,Aeon Mall Phnom Penh,ផ្សារទំនើបអ៉ីអន ភ្នំពេញ,12,Phnom Penh,ភ្នំពេញ,1201,Chamkar Mon,ចំការមន,1201,120101,Tonle Basak,ទន្លេបាសាក់
+1230,11020,Aeon Mall Sen Sok City,ផ្សារទំនើបអ៉ីអន សែនសុខ,12,Phnom Penh,ភ្នំពេញ,1208,Saensokh,សែនសុខ,1208,120801,Phnom Penh Thmei,ភ្នំពេញថ្មី
+1231,11021,Aeon Mall Meanchey,ផ្សារទំនើបអ៉ីអន មានជ័យ,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១
+1232,11022,Chip Mong 271 Mega Mall,ផ្សារទំនើប ជីប ម៉ុង ២៧១,12,Phnom Penh,ភ្នំពេញ,1206,Mean Chey,មានជ័យ,1206,120608,Stueng Mean chey 1,ស្ទឹងមានជ័យទី១

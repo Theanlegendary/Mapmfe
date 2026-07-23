@@ -1,0 +1,297 @@
+const fs = require('fs');
+const path = './data/famous_markets.json';
+const markets = JSON.parse(fs.readFileSync(path, 'utf8'));
+
+const extraMarkets = [
+  {
+    id: 9101,
+    market: 'Borey Peng Huoth Boeung Snor',
+    market_kh: 'បុរីប៉េងហួត បឹងស្នោ',
+    aliases: ['Peng Huoth Boeung Snor', 'បុរីប៉េងហួត', 'Borey Peng Huoth Grand Star Platinum'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Chbar Ampov',
+    district_kh: 'ច្បារអំពៅ',
+    latitude: 11.5367,
+    longitude: 104.9654,
+    search_keywords: ['borey peng huoth', 'boeung snor', 'បុរីប៉េងហួត', 'បឹងស្នោ'],
+    priority_score: 95
+  },
+  {
+    id: 9102,
+    market: 'Borey Piphup Thmey Chom Chao',
+    market_kh: 'បុរីពិភពថ្មី ចោមចៅ',
+    aliases: ['បុរីពិភពថ្មី ចោមចៅ', 'Borey New World Chom Chao'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Pur SenChey',
+    district_kh: 'ពោធិ៍សែនជ័យ',
+    latitude: 11.5215,
+    longitude: 104.8152,
+    search_keywords: ['borey piphup thmey', 'chom chao', 'បុរីពិភពថ្មី'],
+    priority_score: 90
+  },
+  {
+    id: 9103,
+    market: 'Borey Chip Mong Land 271',
+    market_kh: 'បុរីជីបម៉ុង ២៧១',
+    aliases: ['Chip Mong Land 271', 'បុរីជីបម៉ុង', 'Chip Mong 271 Estate'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Mean Chey',
+    district_kh: 'មានជ័យ',
+    latitude: 11.5350,
+    longitude: 104.9190,
+    search_keywords: ['borey chip mong', 'chip mong 271', 'បុរីជីបម៉ុង'],
+    priority_score: 90
+  },
+  {
+    id: 9104,
+    market: 'Phsar Chhbar Ampov',
+    market_kh: 'ផ្សារច្បារអំពៅ',
+    aliases: ['Phsar Chbar Ampov', 'Psar Chbar Ampov', 'Chbar Ampov Market'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Chbar Ampov',
+    district_kh: 'ច្បារអំពៅ',
+    latitude: 11.5392,
+    longitude: 104.9458,
+    search_keywords: ['phsar chbar ampov', 'psar chbar ampov', 'ផ្សារច្បារអំពៅ'],
+    priority_score: 90
+  },
+  {
+    id: 9105,
+    market: 'Phsar Boeung Keng Kang',
+    market_kh: 'ផ្សារបឹងកេងកង',
+    aliases: ['Phsar BKK1', 'Psar Boeung Keng Kang', 'BKK Market'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Boeng Keng Kang',
+    district_kh: 'បឹងកេងកង',
+    latitude: 11.5492,
+    longitude: 104.9247,
+    search_keywords: ['phsar boeung keng kang', 'psar bkk', 'ផ្សារបឹងកេងកង'],
+    priority_score: 90
+  },
+  {
+    id: 9106,
+    market: 'Phsar Depo',
+    market_kh: 'ផ្សារដេប៉ូ',
+    aliases: ['Phsar Depo', 'Psar Depo', 'Depo Market'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Tuol Kouk',
+    district_kh: 'ទួលគោក',
+    latitude: 11.5668,
+    longitude: 104.9103,
+    search_keywords: ['phsar depo', 'psar depo', 'ផ្សារដេប៉ូ'],
+    priority_score: 90
+  },
+  {
+    id: 9107,
+    market: 'Phsar Kandal',
+    market_kh: 'ផ្សារកណ្តាល',
+    aliases: ['Phsar Kandal', 'Psar Kandal', 'Kandal Market Phnom Penh'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Daun Penh',
+    district_kh: 'ដូនពេញ',
+    latitude: 11.5714,
+    longitude: 104.9286,
+    search_keywords: ['phsar kandal', 'psar kandal', 'ផ្សារកណ្តាល'],
+    priority_score: 90
+  },
+  {
+    id: 9108,
+    market: 'Phsar Century Plaza',
+    market_kh: 'ផ្សារសិនធូរីផ្លាហ្សា',
+    aliases: ['Century Plaza Market', 'Phsar Century', 'Pochentong Century Plaza'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Pur SenChey',
+    district_kh: 'ពោធិ៍សែនជ័យ',
+    latitude: 11.5521,
+    longitude: 104.8512,
+    search_keywords: ['century plaza', 'phsar century plaza', 'ផ្សារសិនធូរីផ្លាហ្សា'],
+    priority_score: 90
+  },
+  {
+    id: 9109,
+    market: 'Makro Sen Sok',
+    market_kh: 'ផ្សារម៉ាក្រូ សែនសុខ',
+    aliases: ['Makro Phnom Penh', 'Makro Wholesale', 'ផ្សារម៉ាក្រូ'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Sen Sok',
+    district_kh: 'សែនសុខ',
+    latitude: 11.5975,
+    longitude: 104.8860,
+    search_keywords: ['makro sen sok', 'makro phnom penh', 'ផ្សារម៉ាក្រូ'],
+    priority_score: 90
+  },
+  {
+    id: 9110,
+    market: 'Global House Phnom Penh',
+    market_kh: 'ផ្សារហ្គ្លូប៊ល ហៅស៍',
+    aliases: ['Global House Sen Sok', 'Global House Cambodia'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Sen Sok',
+    district_kh: 'សែនសុខ',
+    latitude: 11.5992,
+    longitude: 104.8845,
+    search_keywords: ['global house', 'global house sen sok', 'ហ្គ្លូប៊ល ហៅស៍'],
+    priority_score: 85
+  },
+  {
+    id: 9111,
+    market: 'K-Mall Veng Sreng',
+    market_kh: 'ផ្សារ K-Mall វេងស្រេង',
+    aliases: ['K-Mall', 'KMall Veng Sreng', 'ផ្សារខេម៉ល'],
+    province: 'Phnom Penh',
+    province_kh: 'ភ្នំពេញ',
+    district: 'Pur SenChey',
+    district_kh: 'ពោធិ៍សែនជ័យ',
+    latitude: 11.5310,
+    longitude: 104.8525,
+    search_keywords: ['k-mall', 'kmall veng sreng', 'ផ្សារខេម៉ល'],
+    priority_score: 85
+  },
+  {
+    id: 9112,
+    market: 'Lucky Supermarket Sihanoukville',
+    market_kh: 'ផ្សារឡាក់គី ព្រះសីហនុ',
+    aliases: ['Lucky Mall Sihanoukville', 'Lucky Supermarket Kampong Som'],
+    province: 'Preah Sihanouk',
+    province_kh: 'ព្រះសីហនុ',
+    district: 'Preah Sihanouk Municipality',
+    district_kh: 'ក្រុងព្រះសីហនុ',
+    latitude: 10.6252,
+    longitude: 103.5285,
+    search_keywords: ['lucky supermarket sihanoukville', 'lucky mall kampong som'],
+    priority_score: 85
+  },
+  {
+    id: 9113,
+    market: 'Phsar Samaki Siem Reap',
+    market_kh: 'ផ្សារសាមគ្គី សៀមរាប',
+    aliases: ['Phsar Samaki', 'Psar Samaki Siem Reap', 'Samaki Market'],
+    province: 'Siem Reap',
+    province_kh: 'សៀមរាប',
+    district: 'Siem Reap Municipality',
+    district_kh: 'ក្រុងសៀមរាប',
+    latitude: 13.3610,
+    longitude: 103.8642,
+    search_keywords: ['phsar samaki', 'samaki market siem reap', 'ផ្សារសាមគ្គី'],
+    priority_score: 90
+  },
+  {
+    id: 9114,
+    market: 'Phsar Phnea Chey Siem Reap',
+    market_kh: 'ផ្សារភ្ញារជ័យ សៀមរាប',
+    aliases: ['Phsar Phnea Chey', 'Psar Phnea Chey'],
+    province: 'Siem Reap',
+    province_kh: 'សៀមរាប',
+    district: 'Siem Reap Municipality',
+    district_kh: 'ក្រុងសៀមរាប',
+    latitude: 13.3425,
+    longitude: 103.8420,
+    search_keywords: ['phsar phnea chey', 'psar phnea chey', 'ផ្សារភ្ញារជ័យ'],
+    priority_score: 85
+  },
+  {
+    id: 9115,
+    market: 'Phsar Bek Chan',
+    market_kh: 'ផ្សារបែកចាន',
+    aliases: ['Phsar Bek Chan Kandal', 'Psar Bek Chan', 'Bek Chan Market'],
+    province: 'Kandal',
+    province_kh: 'កណ្តាល',
+    district: 'Angk Snuol',
+    district_kh: 'អង្គស្នួល',
+    latitude: 11.5125,
+    longitude: 104.7214,
+    search_keywords: ['phsar bek chan', 'bek chan market', 'ផ្សារបែកចាន'],
+    priority_score: 90
+  },
+  {
+    id: 9116,
+    market: 'Phsar Ang Snuol',
+    market_kh: 'ផ្សារអង្គស្នួល',
+    aliases: ['Phsar Angk Snuol', 'Ang Snuol Market'],
+    province: 'Kandal',
+    province_kh: 'កណ្តាល',
+    district: 'Angk Snuol',
+    district_kh: 'អង្គស្នួល',
+    latitude: 11.4980,
+    longitude: 104.6610,
+    search_keywords: ['phsar ang snuol', 'ang snuol market', 'ផ្សារអង្គស្នួល'],
+    priority_score: 90
+  },
+  {
+    id: 9117,
+    market: 'Phsar Udong',
+    market_kh: 'ផ្សារឧដុង្គ',
+    aliases: ['Oudong Market', 'Phsar Oudong Kampong Speu', 'Psar Udong'],
+    province: 'Kampong Speu',
+    province_kh: 'កំពង់ស្ពឺ',
+    district: 'Oudong',
+    district_kh: 'ឧដុង្គ',
+    latitude: 11.8152,
+    longitude: 104.7521,
+    search_keywords: ['phsar udong', 'oudong market', 'ផ្សារឧដុង្គ'],
+    priority_score: 90
+  },
+  {
+    id: 9118,
+    market: 'Phsar Skun',
+    market_kh: 'ផ្សារស្កុន',
+    aliases: ['Skun Spider Market', 'Phsar Skoun Kampong Cham', 'Psar Skun'],
+    province: 'Kampong Cham',
+    province_kh: 'កំពង់ចាម',
+    district: 'Cheung Prey',
+    district_kh: 'ជើងព្រៃ',
+    latitude: 12.0498,
+    longitude: 105.0682,
+    search_keywords: ['phsar skun', 'skun market', 'spider market', 'ផ្សារស្កុន'],
+    priority_score: 95
+  },
+  {
+    id: 9119,
+    market: 'Phsar Suong',
+    market_kh: 'ផ្សារសួង',
+    aliases: ['Suong Market Tboung Khmum', 'Phsar Suong City', 'Psar Suong'],
+    province: 'Tboung Khmum',
+    province_kh: 'ត្បូងឃ្មុំ',
+    district: 'Suong Municipality',
+    district_kh: 'ក្រុងសួង',
+    latitude: 11.9168,
+    longitude: 105.6542,
+    search_keywords: ['phsar suong', 'suong market', 'ផ្សារសួង'],
+    priority_score: 95
+  },
+  {
+    id: 9120,
+    market: 'Phsar Neak Loeung',
+    market_kh: 'ផ្សារអ្នកលឿង',
+    aliases: ['Neak Loeung Market Prey Veng', 'Psar Neak Leung', 'Phsar Neak Leung'],
+    province: 'Prey Veng',
+    province_kh: 'ព្រៃវែង',
+    district: 'Peam Ro',
+    district_kh: 'ពាមរក៍',
+    latitude: 11.2562,
+    longitude: 105.2845,
+    search_keywords: ['phsar neak loeung', 'neak leung market', 'ផ្សារអ្នកលឿង'],
+    priority_score: 95
+  }
+];
+
+const mapById = new Map();
+markets.forEach(m => mapById.set(m.id, m));
+extraMarkets.forEach(m => {
+  m.google_maps_url = `https://www.google.com/maps?q=${m.latitude},${m.longitude}`;
+  mapById.set(m.id, m);
+});
+
+const updated = Array.from(mapById.values());
+fs.writeFileSync(path, JSON.stringify(updated, null, 2), 'utf8');
+console.log('Successfully added new markets to famous_markets.json! Total:', updated.length);
