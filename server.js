@@ -6,6 +6,9 @@ const Fuse    = require('fuse.js');
 const fetch   = require('node-fetch'); // Import node-fetch for API/Geocoding proxying
 const fuzz    = require('fuzzball');
 
+// Auto-Pick Engine — 6 accuracy improvements
+const autoPick = require('./lib/auto_pick_engine');
+
 const app  = express();
 const PORT = process.env.PORT || 3000;
 
@@ -305,6 +308,9 @@ try {
     ncddHierarchy = JSON.parse(fs.readFileSync(NCDD_PATH, 'utf-8'));
     console.log(`✅ Loaded NCDD Hierarchy Database (${ncddHierarchy.length} provinces)`);
     initializeNcddFlatList();
+    // Improvement #5: Give the auto-pick engine access to NCDD flat list
+    autoPick.init({ flatNcddList, stripAdministrativePrefixes });
+    console.log('✅ Auto-Pick Engine initialized with NCDD data');
   } else {
     console.warn('⚠️ NCDD Hierarchy database file (ncdd_hierarchy.json) not found.');
   }
@@ -736,7 +742,7 @@ function normalizeKhmer(str) {
   normalized = normalized.replace(/\u178E\u17D2\u178F/g, "\u178E\u17D2\u178A"); // ណ + ្ត -> ណ + ្ដ
   normalized = normalized.replace(/\u17C1\u17B8/g, "\u17BE"); // decomposed vowel OE (េី -> ើ)
   normalized = normalized.replace(/\u17C1\u17B6/g, "\u17C4"); // decomposed vowel OO (េា -> ោ)
-  normalized = normalized.replace(/\u200B/g, "");             // zero-width space
+  normalized = normalized.replace(/\u200B|\u200C|\u200D|\uFEFF/g, ""); // Improvement #2: strip all zero-width chars
   // Normalize Khmer numerals to Arabic numerals (០-៩ -> 0-9)
   normalized = convertKhmerToArabicDigits(normalized);
   return normalized;
@@ -859,14 +865,16 @@ function findLevenshteinMatches(query, dataset, maxMatches = 5) {
 app.get('/api/search', (req, res) => {
   const { q = '', branch_id, province, district, limit = 20, page = 1, type } = req.query;
 
-  const processedQ = preprocessSpelling(q);
+  // Improvement #4: Try phonetic romanization index first
+  const phoneticKhmer = autoPick.lookupPhoneticIndex(q);
+  const processedQ = preprocessSpelling(phoneticKhmer || q);
   let results = [];
+  let fuseScoreMap = {};
   const isMarket = (type === 'market');
 
   if (isMarket) {
+    // Improvement #3: Province-scoped early filter — scope dataset immediately
     let dataset = routes;
-    
-    // Apply province filter first!
     if (province) {
       const normProv = normalizeKhmer(province);
       dataset = dataset.filter(r =>
@@ -893,7 +901,7 @@ app.get('/api/search', (req, res) => {
       // Substring/Prefix matches first (high priority)
       const exactMatches = dataset.filter(r => matchesQuery(r, processedQ));
       
-      // Fuzzy matches as fallback
+      // Fuzzy matches as fallback — capture fuse scores for confidence computation
       let fuzzyMatches = [];
       if (exactMatches.length < 15) {
         const tempFuse = new Fuse(dataset, {
@@ -901,9 +909,16 @@ app.get('/api/search', (req, res) => {
             { name: 'market', weight: 0.5 },
             { name: 'market_kh', weight: 0.5 }
           ],
-          threshold: 0.5
+          threshold: 0.5,
+          includeScore: true
         });
-        fuzzyMatches = tempFuse.search(processedQ).map(res => res.item);
+        const fuseResults = tempFuse.search(processedQ);
+        fuzzyMatches = fuseResults.map(res => {
+          // Store fuse score keyed by market names for confidence lookup
+          const key = `${res.item.market || ''}||${res.item.market_kh || ''}`;
+          fuseScoreMap[key] = res.score;
+          return res.item;
+        });
       }
       
       // Combine and remove duplicates
@@ -1008,6 +1023,19 @@ app.get('/api/search', (req, res) => {
   }
 
 
+  // Improvement #1: Confidence scoring + auto-pick
+  let auto_pick = false;
+  let auto_pick_result = null;
+  if (isMarket && processedQ && results.length > 0) {
+    const scored = autoPick.scoreAndAutoPick(results, processedQ, province || '', fuseScoreMap);
+    results = scored.results_with_confidence;
+    auto_pick = scored.auto_pick;
+    auto_pick_result = scored.auto_pick_result;
+  } else if (isMarket && results.length > 0) {
+    // No query — enrich with NCDD codes only (Improvement #5)
+    results = results.map(r => autoPick.enrichWithNcddCodes(r));
+  }
+
   // Pagination
   const total      = results.length;
   const pageNum    = Math.max(1, parseInt(page));
@@ -1020,7 +1048,86 @@ app.get('/api/search', (req, res) => {
     page: pageNum,
     limit: limitNum,
     pages: Math.ceil(total / limitNum),
+    auto_pick,
+    auto_pick_result,
     results: paginated
+  });
+});
+
+/**
+ * GET /api/auto-pick
+ * Dedicated auto-pick endpoint: returns the single best result with confidence score.
+ * If confidence >= 85, auto_pick = true and auto_pick_result = the best match.
+ * Otherwise, returns ranked candidates for the UI dropdown.
+ *
+ * Query params: q, province, district, limit (default 5)
+ */
+app.get('/api/auto-pick', (req, res) => {
+  const { q = '', province = '', district = '', limit = 5 } = req.query;
+
+  if (!q.trim()) {
+    return res.status(400).json({ error: 'Query parameter q is required' });
+  }
+
+  // Improvement #4: Phonetic romanization lookup
+  const phoneticKhmer = autoPick.lookupPhoneticIndex(q);
+  const processedQ    = preprocessSpelling(phoneticKhmer || q);
+
+  // Improvement #3: Province-scoped early filter
+  let dataset = routes;
+  if (province) {
+    const normProv = normalizeKhmer(province);
+    dataset = dataset.filter(r =>
+      normalizeKhmer(r.province).includes(normProv) ||
+      normalizeKhmer(r.province_kh).includes(normProv)
+    );
+  }
+  if (district) {
+    const normDist = normalizeKhmer(district);
+    dataset = dataset.filter(r =>
+      normalizeKhmer(r.district).includes(normDist) ||
+      normalizeKhmer(r.district_kh).includes(normDist)
+    );
+  }
+
+  // Substring exact matches first
+  let results = dataset.filter(r => matchesQuery(r, processedQ));
+
+  // Fuzzy fallback with score capture
+  const fuseScoreMap = {};
+  if (results.length < 10) {
+    const tempFuse = new Fuse(dataset, {
+      keys: [
+        { name: 'market', weight: 0.5 },
+        { name: 'market_kh', weight: 0.5 },
+        { name: 'aliases', weight: 0.3 }
+      ],
+      threshold: 0.5,
+      includeScore: true
+    });
+    const fuseResults = tempFuse.search(processedQ);
+    for (const fr of fuseResults) {
+      const key = `${fr.item.market || ''}||${fr.item.market_kh || ''}`;
+      fuseScoreMap[key] = fr.score;
+      if (!results.includes(fr.item)) results.push(fr.item);
+    }
+  }
+
+  // Levenshtein last resort
+  if (results.length === 0) {
+    results = findLevenshteinMatches(processedQ, dataset, parseInt(limit));
+  }
+
+  // Improvement #1: Confidence scoring + auto-pick
+  const scored = autoPick.scoreAndAutoPick(results, processedQ, province, fuseScoreMap);
+
+  res.json({
+    query: q,
+    phonetic_match: phoneticKhmer || null,
+    auto_pick: scored.auto_pick,
+    auto_pick_result: scored.auto_pick_result,
+    confidence_threshold: autoPick.AUTO_PICK_THRESHOLD,
+    candidates: scored.results_with_confidence.slice(0, parseInt(limit))
   });
 });
 
@@ -3132,9 +3239,24 @@ app.get('/api/smart-find', async (req, res) => {
     }
   }
 
+  // Improvement #5: Enrich resolved market with NCDD codes
+  if (resolvedMarket) {
+    resolvedMarket = autoPick.enrichWithNcddCodes(resolvedMarket);
+  }
+
+  // Improvement #1: Compute confidence for the resolved market
+  const smartFindConfidence = resolvedMarket
+    ? autoPick.computeConfidence(resolvedMarket, q, province || '', null)
+    : 0;
+
+  // Improvement #6: Auto-learn this resolved location for future lookups
+  autoPick.autoLearnLocation(q, resolvedMarket, coords, source);
+
   res.json({
     query: q,
     resolved_market: resolvedMarket,
+    confidence: smartFindConfidence,
+    auto_pick: smartFindConfidence >= autoPick.AUTO_PICK_THRESHOLD,
     found_coords: coords,
     coords_source: source,
     default_assigned_post_office: defaultAssignedPO,
