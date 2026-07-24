@@ -2,5575 +2,5223 @@
 Code      : BANA001
 Name      : Chamnaom
 Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : ចំណោម
+District  : Mongkol Borei (Mongkol Borei)
+Commune   : Chamnaom
 Location  : 13.437565, 102.934632
 
 [BRANCH BANA002]
 Code      : BANA002
 Name      : Paoy Paet
 Province  : បន្ទាយមានជ័យ
-District  : Paoy Paet (ប៉ោយប៉ែត)
-Commune   : និមិត្ដ
+District  : Paoy Paet (Paoy Paet)
+Commune   : Paoy Paet
 Location  : 13.682498, 102.564968
 
 [BRANCH BANA003]
 Code      : BANA003
 Name      : Preah Punlea
 Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : ព្រះពន្លា
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Preah Punlea
 Location  : 13.59106, 102.973797
 
 [BRANCH BANA004]
 Code      : BANA004
 Name      : Phsar Kandal
 Province  : បន្ទាយមានជ័យ
-District  : Paoy Paet (ប៉ោយប៉ែត)
-Commune   : ផ្សារកណ្តាល
+District  : Paoy Paet (Paoy Paet)
+Commune   : Phsar Kandal
 Location  : 13.646559, 102.590885
 
 [BRANCH BANA005]
 Code      : BANA005
 Name      : Ou Ruessei
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : អូរឫស្សី
+Province  : បន្ទាយមានជ័យ
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Ou Ruessei
 Location  : 13.69538, 102.651888
 
 [BRANCH BANA006]
 Code      : BANA006
 Name      : Roluos
 Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : រលួស
+District  : Svay Chek (Svay Chek)
+Commune   : Roluos
 Location  : 13.80385, 102.96445
 
 [BRANCH BANA007]
 Code      : BANA007
 Name      : Phnum Touch
 Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : ភ្នំតូច
+District  : Mongkol Borei (Mongkol Borei)
+Commune   : Phnum Touch
 Location  : 13.410764, 103.017448
 
 [BRANCH BANA008]
 Code      : BANA008
 Name      : Paoy Char
 Province  : បន្ទាយមានជ័យ
-District  : Phnum Srok (ភ្នំស្រុក)
-Commune   : ប៉ោយចារ
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Paoy Char
 Location  : 13.774137, 103.313281
 
 [BRANCH BANA009]
 Code      : BANA009
 Name      : Chub Vari
 Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ជប់វារី
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Chub Vari
 Location  : 13.623668, 103.182027
 
 [BRANCH BANA010]
 Code      : BANA010
 Name      : Banteay Chhmar
 Province  : បន្ទាយមានជ័យ
-District  : Thma Puok (ថ្មពួក)
-Commune   : បន្ទាយឆ្មារ
+District  : Thma Puok (Thma Puok)
+Commune   : Banteay Chhmar
 Location  : 12.252597, 105.977067
 
 [BRANCH BANA011]
 Code      : BANA011
 Name      : Kampong Svay
 Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : កំពង់ស្វាយ
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Kampong Svay
 Location  : 13.600802, 102.967587
 
 [BRANCH BANA012]
 Code      : BANA012
 Name      : Malai
 Province  : បន្ទាយមានជ័យ
-District  : Malai (ម៉ាឡៃ)
-Commune   : បឹងបេង
+District  : Malai (Malai)
+Commune   : Malai
 Location  : 13.566301, 102.364078
 
 [BRANCH BANA013]
 Code      : BANA013
 Name      : Thma Puok
 Province  : បន្ទាយមានជ័យ
-District  : Thma Puok (ថ្មពួក)
-Commune   : បន្ទាយឆ្មារ
+District  : Thma Puok (Thma Puok)
+Commune   : Thma Puok
 Location  : 13.941231, 103.049339
 
 [BRANCH BANA014]
 Code      : BANA014
 Name      : Koub
 Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : កូប
+District  : Ou Chrov (Ou Chrov)
+Commune   : Koub
 Location  : 13.608353, 102.764872
 
 [BRANCH BANA015]
 Code      : BANA015
 Name      : Changha
 Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : ចង្ហា
+District  : Ou Chrov (Ou Chrov)
+Commune   : Changha
 Location  : 13.647113, 102.886313
 
 [BRANCH BANA016]
 Code      : BANA016
 Name      : Phnum Lieb
 Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ភ្នំលៀប
+District  : Preah Netr Preah (Preah Netr Preah)
+Commune   : Phnum Lieb
 Location  : 13.605432, 103.312393
 
 [BRANCH BANA017]
 Code      : BANA017
 Name      : Punley
 Province  : បន្ទាយមានជ័យ
-District  : Phnum Srok (ភ្នំស្រុក)
-Commune   : ពន្លៃ
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Punley
 Location  : 13.76928, 103.22615
 
 [BRANCH BANA018]
 Code      : BANA018
 Name      : Sla Kram
 Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : ស្លក្រាម
+District  : Svay Chek (Svay Chek)
+Commune   : Sla Kram
 Location  : 13.832156, 102.833294
 
 [BRANCH BANA020]
 Code      : BANA020
 Name      : Banteay Neang
 Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : បន្ទាយនាង
+District  : Mongkol Borei (Mongkol Borei)
+Commune   : Banteay Neang
 Location  : 13.515097, 103.017095
 
 [BRANCH BANP001]
 Code      : BANP001
 Name      : Serei Saophoan
 Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : កំពង់ស្វាយ
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Serei Saophoan
 Location  : 13.59572, 102.97069
 
 [BRANCH BANS001]
 Code      : BANS001
 Name      : Ou Ambel
 Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : អូរអំបិល
+District  : Serei Saophoan (Serei Saophoan)
+Commune   : Ou Ambel
 Location  : 13.5852101, 102.9724208
 
 [BRANCH BANS002]
 Code      : BANS002
 Name      : Paoy Paet
 Province  : បន្ទាយមានជ័យ
-District  : Paoy Paet (ប៉ោយប៉ែត)
-Commune   : និមិត្ដ
+District  : Paoy Paet (Paoy Paet)
+Commune   : Paoy Paet
 Location  : 13.65887, 102.554344
 
 [BRANCH BANS003]
 Code      : BANS003
 Name      : Thma Puok
 Province  : បន្ទាយមានជ័យ
-District  : Thma Puok (ថ្មពួក)
-Commune   : បន្ទាយឆ្មារ
+District  : Thma Puok (Thma Puok)
+Commune   : Thma Puok
 Location  : 13.9413014, 103.049302
 
 [BRANCH BANS004]
 Code      : BANS004
 Name      : Srah Chik
 Province  : បន្ទាយមានជ័យ
-District  : Phnum Srok (ភ្នំស្រុក)
-Commune   : ស្រះជីក
+District  : Phnum Srok (Phnum Srok)
+Commune   : Srah Chik
 Location  : 13.74387, 103.33588
-
-[BRANCH BCTEST6]
-Code      : BCTEST6
-Name      : BCTEST6
-Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : ទ្រាស
-Location  : , 
-
-[BRANCH HZ4P01]
-Code      : HZ4P01
-Name      : Head Office Z4
-Province  : banteay meanchey
-District  : Head Office Z4 (head office z4)
-Commune   : head office z4
-Location  : , 
 
 [BRANCH BATA001]
 Code      : BATA001
 Name      : Chomkar Somraong
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ចំការសំរោង
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Chomkar Somraong
 Location  : 13.129832, 103.198146
 
 [BRANCH BATA002]
 Code      : BATA002
 Name      : Kampong Prieng
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : កំពង់ព្រៀង
+Province  : បាត់ដំបង
+District  : Sangkae (Sangkae)
+Commune   : Kampong Prieng
 Location  : 12.9489, 103.3383
 
 [BRANCH BATA003]
 Code      : BATA003
 Name      : Phnum Sampov
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ភ្នំសំពៅ
+Province  : បាត់ដំបង
+District  : Banan (Banan)
+Commune   : Phnum Sampov
 Location  : 13.0296, 103.1009
 
 [BRANCH BATA004]
 Code      : BATA004
 Name      : Vaot Ta Muem 01
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : វត្ដតាមិម
+Province  : បាត់ដំបង
+District  : Sangkae (Sangkae)
+Commune   : Vaot Ta Muem 01
 Location  : 13.0627, 103.2032
 
 [BRANCH BATA005]
 Code      : BATA005
 Name      : Tuol Ta Ek
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ទួលតាឯក
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Tuol Ta Ek
 Location  : 13.09573, 103.190527
 
 [BRANCH BATA006]
 Code      : BATA006
 Name      : Moung
-Province  : Battambang
-District  : Moung Ruessei (មោងឫស្សី)
-Commune   : មោង
+Province  : បាត់ដំបង
+District  : Moung Ruessei (Moung Ruessei)
+Commune   : Moung
 Location  : 12.775837, 103.448387
 
 [BRANCH BATA007]
 Code      : BATA007
 Name      : Snoeng
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ស្នឹង
+Province  : បាត់ដំបង
+District  : Banan (Banan)
+Commune   : Snoeng
 Location  : 12.9784, 103.0544
 
 [BRANCH BATA008]
 Code      : BATA008
 Name      : Vaot Ta Muem 02
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : វត្ដតាមិម
+Province  : បាត់ដំបង
+District  : Sangkae (Sangkae)
+Commune   : Vaot Ta Muem 02
 Location  : 13.03679, 103.20173
 
 [BRANCH BATA009]
 Code      : BATA009
 Name      : REM SOCHEA
-Province  : Battambang
-District  : Rotonak Mondol (រតនមណ្ឌល)
-Commune   : រស្មីសង្ហារ
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : REM SOCHEA
 Location  : 13.265685, 102.945134
 
 [BRANCH BATA010]
 Code      : BATA010
 Name      : Santepheap
-Province  : Battambang
-District  : Sampov Lun (សំពៅលូន)
-Commune   : សន្ដិភាព
+Province  : បាត់ដំបង
+District  : Sampov Lun (Sampov Lun)
+Commune   : Santepheap
 Location  : 13.432283, 102.366176
 
 [BRANCH BATA011]
 Code      : BATA011
 Name      : Boeng Reang
-Province  : Battambang
-District  : Kamrieng (កំរៀង)
-Commune   : បឹងរាំង
+Province  : បាត់ដំបង
+District  : Kamrieng (Kamrieng)
+Commune   : Boeng Reang
 Location  : 13.087139, 102.446107
 
 [BRANCH BATA012]
 Code      : BATA012
 Name      : Bour
-Province  : Battambang
-District  : Phnum Proek (ភ្នំព្រឹក)
-Commune   : បួរ
+Province  : បាត់ដំបង
+District  : Phnum Proek (Phnum Proek)
+Commune   : Bour
 Location  : 13.283736, 102.615651
 
 [BRANCH BATA013]
 Code      : BATA013
 Name      : Pech Chenda 01
-Province  : Battambang
-District  : Phnum Proek (ភ្នំព្រឹក)
-Commune   : ពេជ្រចិន្ដា
+Province  : បាត់ដំបង
+District  : Phnum Proek (Phnum Proek)
+Commune   : Pech Chenda 01
 Location  : 13.222725, 102.391644
 
 [BRANCH BATA014]
 Code      : BATA014
 Name      : Pech Chenda 02
-Province  : Battambang
-District  : Phnum Proek (ភ្នំព្រឹក)
-Commune   : ពេជ្រចិន្ដា
+Province  : បាត់ដំបង
+District  : Phnum Proek (Phnum Proek)
+Commune   : Pech Chenda 02
 Location  : 13.2117, 102.532803
 
 [BRANCH BATA015]
 Code      : BATA015
 Name      : Sdok Pravoek
-Province  : Battambang
-District  : Rukh Kiri (រុក្ខគិរី)
-Commune   : ស្តុកប្រវឹក
+Province  : បាត់ដំបង
+District  : Rukh Kiri (Rukh Kiri)
+Commune   : Sdok Pravoek
 Location  : 12.603483, 103.490935
 
 [BRANCH BATA016]
 Code      : BATA016
 Name      : Ta Kream
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : តាគ្រាម
+Province  : បាត់ដំបង
+District  : Banan (Banan)
+Commune   : Ta Kream
 Location  : 13.090324, 103.023334
 
 [BRANCH BATA017]
 Code      : BATA017
 Name      : Ta Sanh
-Province  : Battambang
-District  : Samlout (សំឡូត)
-Commune   : តាសាញ
+Province  : បាត់ដំបង
+District  : Samlout (Samlout)
+Commune   : Ta Sanh
 Location  : 12.616636, 102.858967
 
 [BRANCH BATA018]
 Code      : BATA018
 Name      : Kampong Lpov
-Province  : Battambang
-District  : Samlout (សំឡូត)
-Commune   : កំពង់ល្ពៅ
+Province  : បាត់ដំបង
+District  : Samlout (Samlout)
+Commune   : Kampong Lpov
 Location  : 12.543875, 102.865274
 
 [BRANCH BATA019]
 Code      : BATA019
 Name      : Traeng
-Province  : Battambang
-District  : Rotonak Mondol (រតនមណ្ឌល)
-Commune   : ត្រែង
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Traeng
 Location  : 12.832975, 102.894727
 
 [BRANCH BATA021]
 Code      : BATA021
 Name      : Preaek Chik
-Province  : Battambang
-District  : Rukh Kiri (រុក្ខគិរី)
-Commune   : ព្រែកជីក
+Province  : បាត់ដំបង
+District  : Rukh Kiri (Rukh Kiri)
+Commune   : Preaek Chik
 Location  : 12.651708, 103.396619
 
 [BRANCH BATA022]
 Code      : BATA022
 Name      : Bavel
-Province  : Battambang
-District  : Bavel (បវេល)
-Commune   : បវេល
+Province  : បាត់ដំបង
+District  : Bavel (Bavel)
+Commune   : Bavel
 Location  : 13.256093, 102.875914
 
 [BRANCH BATA023]
 Code      : BATA023
 Name      : Chrey
-Province  : Battambang
-District  : Thma Koul (ថ្មគោល)
-Commune   : ជ្រៃ
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Chrey
 Location  : 13.112873, 103.136953
 
 [BRANCH BATA024]
 Code      : BATA024
 Name      : Boeng Pring
-Province  : Battambang
-District  : Thma Koul (ថ្មគោល)
-Commune   : បឹងព្រីង
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Boeng Pring
 Location  : 13.366959, 103.034112
 
 [BRANCH BATA025]
 Code      : BATA025
 Name      : Ta Pung
-Province  : Battambang
-District  : Thma Koul (ថ្មគោល)
-Commune   : តាពូង
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Ta Pung
 Location  : 13.264179, 103.089398
 
 [BRANCH BATA026]
 Code      : BATA026
 Name      : Svay Por
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ស្វាយប៉ោ
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Svay Por
 Location  : 13.0859, 103.1988
 
 [BRANCH BATA027]
 Code      : BATA027
 Name      : Ou Ta Ki
-Province  : Battambang
-District  : Thma Koul (ថ្មគោល)
-Commune   : អូរតាគី
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Ou Ta Ki
 Location  : 13.167237, 103.112915
 
 [BRANCH BATA028]
 Code      : BATA028
 Name      : Ta Sda
-Province  : Battambang
-District  : Sampov Lun (សំពៅលូន)
-Commune   : តាស្ដា
+Province  : បាត់ដំបង
+District  : Sampov Lun (Sampov Lun)
+Commune   : Ta Sda
 Location  : 13.404488, 102.455575
 
 [BRANCH BATA029]
 Code      : BATA029
 Name      : Thipakdei
-Province  : Battambang
-District  : Koas Krala (គាស់ក្រឡ)
-Commune   : ធិបតី
+Province  : បាត់ដំបង
+District  : Koas Krala (Koas Krala)
+Commune   : Thipakdei
 Location  : 12.856523, 103.26872
 
 [BRANCH BATA030]
 Code      : BATA030
 Name      : Prey Svay
-Province  : Battambang
-District  : Moung Ruessei (មោងឫស្សី)
-Commune   : ព្រៃស្វាយ
+Province  : បាត់ដំបង
+District  : Moung Ruessei (Moung Ruessei)
+Commune   : Prey Svay
 Location  : 12.713477, 103.544657
 
 [BRANCH BATA032]
 Code      : BATA032
 Name      : Sdau
-Province  : Battambang
-District  : Rotonak Mondol (រតនមណ្ឌល)
-Commune   : ស្ដៅ
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Sdau
 Location  : 12.891503, 102.973863
 
 [BRANCH BATA033]
 Code      : BATA033
 Name      : Ampil Pram Daeum
-Province  : Battambang
-District  : Bavel (បវេល)
-Commune   : អំពិលប្រាំដើម
+Province  : បាត់ដំបង
+District  : Bavel (Bavel)
+Commune   : Ampil Pram Daeum
 Location  : 13.260059, 102.767866
 
 [BRANCH BATA034]
 Code      : BATA034
 Name      : Ou Char
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : អូរចារ
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Ou Char
 Location  : 13.1076, 103.1755
 
 [BRANCH BATA035]
 Code      : BATA035
 Name      : Anlung Vil
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : អន្លង់វិល
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Anlung Vil
 Location  : 13.0624, 103.2563
 
 [BRANCH BATA036]
 Code      : BATA036
 Name      : Vaot Ta Muem
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : វត្ដតាមិម
+Province  : បាត់ដំបង
+District  : Sangkae (Sangkae)
+Commune   : Vaot Ta Muem
 Location  : 13.01234, 103.187065
 
 [BRANCH BATA037]
 Code      : BATA037
 Name      : Peam Aek
-Province  : Battambang
-District  : Aek Phnum (ឯកភ្នំ)
-Commune   : ពាមឯក
+Province  : បាត់ដំបង
+District  : Aek Phnum (Aek Phnum)
+Commune   : Peam Aek
 Location  : 13.161, 103.2086
 
 [BRANCH BATA038]
 Code      : BATA038
 Name      : Prey Khpos
-Province  : Battambang
-District  : Bavel (បវេល)
-Commune   : ព្រៃខ្ពស់
+Province  : បាត់ដំបង
+District  : Bavel (Bavel)
+Commune   : Prey Khpos
 Location  : 13.347834, 102.905611
 
 [BRANCH BATA039]
 Code      : BATA039
 Name      : Mukh Rea
-Province  : Battambang
-District  : Rukh Kiri (រុក្ខគិរី)
-Commune   : មុខរាហ៍
+Province  : បាត់ដំបង
+District  : Rukh Kiri (Rukh Kiri)
+Commune   : Mukh Rea
 Location  : 12.77559, 103.448243
 
 [BRANCH BATA040]
 Code      : BATA040
 Name      : Prek Preah Sdach
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ព្រែកព្រះស្ដេច
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Prek Preah Sdach
 Location  : 13.0887, 103.2127
 
 [BRANCH BATA041]
 Code      : BATA041
 Name      : Moung Ruessei
-Province  : Battambang
-District  : Moung Ruessei (មោងឫស្សី)
-Commune   : មោង
+Province  : បាត់ដំបង
+District  : Moung Ruessei (Moung Ruessei)
+Commune   : Moung Ruessei
 Location  : 12.903065, 103.3680416
 
 [BRANCH BATP001]
 Code      : BATP001
 Name      : Battambang
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ទួលតាឯក
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Battambang
 Location  : 13.106159, 103.195737
 
 [BRANCH BATS001]
 Code      : BATS001
 Name      : Tuol Ta Ek
-Province  : Battambang
-District  : Battambang (បាត់ដំបង)
-Commune   : ទួលតាឯក
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Tuol Ta Ek
 Location  : 13.095671, 103.190739
 
 [BRANCH BATS002]
 Code      : BATS002
 Name      : Ta Pung
-Province  : Battambang
-District  : Thma Koul (ថ្មគោល)
-Commune   : តាពូង
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Ta Pung
 Location  : 13.269928, 103.089933
 
 [BRANCH BATS003]
 Code      : BATS003
 Name      : Boeng Reang
-Province  : Battambang
-District  : Kamrieng (កំរៀង)
-Commune   : បឹងរាំង
+Province  : បាត់ដំបង
+District  : Kamrieng (Kamrieng)
+Commune   : Boeng Reang
 Location  : 13.088761, 102.445678
 
 [BRANCH BATS004]
 Code      : BATS004
 Name      : Santepheap
-Province  : Battambang
-District  : Sampov Lun (សំពៅលូន)
-Commune   : សន្ដិភាព
+Province  : បាត់ដំបង
+District  : Sampov Lun (Sampov Lun)
+Commune   : Santepheap
 Location  : 13.431886, 102.376649
 
 [BRANCH BATS005]
 Code      : BATS005
 Name      : Sdau
-Province  : Battambang
-District  : Rotonak Mondol (រតនមណ្ឌល)
-Commune   : ស្ដៅ
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Sdau
 Location  : 12.892662, 102.97397
 
 [BRANCH BATS006]
 Code      : BATS006
 Name      : Bavel
-Province  : Battambang
-District  : Bavel (បវេល)
-Commune   : បវេល
+Province  : បាត់ដំបង
+District  : Bavel (Bavel)
+Commune   : Bavel
 Location  : 13.25407, 102.873046
 
 [BRANCH BATS007]
 Code      : BATS007
 Name      : Moung
-Province  : Battambang
-District  : Moung Ruessei (មោងឫស្សី)
-Commune   : មោង
+Province  : បាត់ដំបង
+District  : Moung Ruessei (Moung Ruessei)
+Commune   : Moung
 Location  : 12.775514, 103.447784
 
 [BRANCH BATS008]
 Code      : BATS008
 Name      : Sdau
-Province  : Battambang
-District  : Rotonak Mondol (រតនមណ្ឌល)
-Commune   : ស្ដៅ
+Province  : បាត់ដំបង
+District  : Thma Koul (Thma Koul)
+Commune   : Sdau
 Location  : 12.5333, 102.5826
-
-[BRANCH DVCZ2]
-Code      : DVCZ2
-Name      : Vehicle Team Z2
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ឈើទាល
-Location  : , 
 
 [BRANCH HUBBAT01]
 Code      : HUBBAT01
 Name      : Hub vùng HUBBAT01
-Province  : battambang
-District  : Hub vùng HUBBAT01 (hub vùng hubbat01)
-Commune   : hub vùng hubbat01
-Location  : 13.338261812530442, 103.08321449677263
-
-[BRANCH HZ3P01]
-Code      : HZ3P01
-Name      : Head Office Z3
-Province  : battambang
-District  : Head Office Z3 (head office z3)
-Commune   : head office z3
-Location  : , 
-
-[BRANCH KVBAT01]
-Code      : KVBAT01
-Name      : Kho vùng BAT
-Province  : Battambang
-District  : Koas Krala (គាស់ក្រឡ)
-Commune   : ដូនបា
-Location  : , 
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : Hub vùng HUBBAT01
+Location  : 13.33826181253044, 103.0832144967726
 
 [BRANCH CHAA001]
 Code      : CHAA001
 Name      : Peam Prathnuoh
 Province  : កំពង់ចាម
-District  : Kaoh Soutin (កោះសូទិន)
-Commune   : ពាមប្រធ្នោះ
+District  : Kaoh Soutin (Kaoh Soutin)
+Commune   : Peam Prathnuoh
 Location  : 11.892662, 105.428499
 
 [BRANCH CHAA002]
 Code      : CHAA002
 Name      : Chrey Vien
 Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : ជ្រៃវៀន
+District  : Prey Chhor (Prey Chhor)
+Commune   : Chrey Vien
 Location  : 12.058398, 105.257688
 
 [BRANCH CHAA003]
 Code      : CHAA003
 Name      : Kor
 Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : គរ
+District  : Cheung Prey (Cheung Prey)
+Commune   : Kor
 Location  : 12.11317, 105.21706
 
 [BRANCH CHAA004]
 Code      : CHAA004
 Name      : Sandaek
 Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : សណ្ដែក
+District  : Batheay (Batheay)
+Commune   : Sandaek
 Location  : 12.123065, 104.970836
 
 [BRANCH CHAA005]
 Code      : CHAA005
 Name      : Me Sar Chrey
 Province  : កំពង់ចាម
-District  : Stueng Trang (ស្ទឹងត្រង់)
-Commune   : មេសរជ្រៃ
+District  : Stueng Trang (Stueng Trang)
+Commune   : Me Sar Chrey
 Location  : 12.29968, 105.419272
 
 [BRANCH CHAA006]
 Code      : CHAA006
 Name      : Peam Chi Kang
 Province  : កំពង់ចាម
-District  : Kang Meas (កងមាស)
-Commune   : ពាមជីកង
+District  : Kang Meas (Kang Meas)
+Commune   : Peam Chi Kang
 Location  : 11.946622, 105.247515
 
 [BRANCH CHAA007]
 Code      : CHAA007
 Name      : Ta Prok
 Province  : កំពង់ចាម
-District  : Chamkar Leu (ចំការលើ)
-Commune   : តាប្រុក
+District  : Chamkar Leu (Chamkar Leu)
+Commune   : Ta Prok
 Location  : 12.376818, 105.222342
 
 [BRANCH CHAA008]
 Code      : CHAA008
 Name      : Thma Pun
 Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : ថ្មពូន
+District  : Prey Chhor (Prey Chhor)
+Commune   : Thma Pun
 Location  : 12.162685, 105.246162
 
 [BRANCH CHAA009]
 Code      : CHAA009
 Name      : Tang Krang
 Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : តាំងក្រាំង
+District  : Batheay (Batheay)
+Commune   : Tang Krang
 Location  : 11.885387, 104.935627
 
 [BRANCH CHAA010]
 Code      : CHAA010
 Name      : Bos Khnor
 Province  : កំពង់ចាម
-District  : Chamkar Leu (ចំការលើ)
-Commune   : បុសខ្នុរ
+District  : Chamkar Leu (Chamkar Leu)
+Commune   : Bos Khnor
 Location  : 12.180892, 105.322863
 
 [BRANCH CHAA011]
 Code      : CHAA011
 Name      : Lvea
-Province  : Battambang
-District  : Bavel (បវេល)
-Commune   : ល្វា
+Province  : កំពង់ចាម
+District  : Chamkar Leu (Chamkar Leu)
+Commune   : Lvea
 Location  : 12.057856, 105.181435
 
 [BRANCH CHAA012]
 Code      : CHAA012
 Name      : Khvet Thum
 Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : ខ្វិតធំ
+District  : Prey Chhor (Prey Chhor)
+Commune   : Khvet Thum
 Location  : 12.059258, 105.211236
 
 [BRANCH CHAA013]
 Code      : CHAA013
 Name      : Chealea
 Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : ជាលា
+District  : Batheay (Batheay)
+Commune   : Chealea
 Location  : 11.9945, 104.9433
 
 [BRANCH CHAA014]
 Code      : CHAA014
 Name      : Batheay
 Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : បាធាយ
+District  : Batheay (Batheay)
+Commune   : Batheay
 Location  : 12.027384, 104.962943
 
 [BRANCH CHAA015]
 Code      : CHAA015
 Name      : Soutib
 Province  : កំពង់ចាម
-District  : Cheung Prey (ជើងព្រៃ)
-Commune   : សូទិព្វ
+District  : Cheung Prey (Cheung Prey)
+Commune   : Soutib
 Location  : 12.05615, 105.074797
 
 [BRANCH CHAA016]
 Code      : CHAA016
 Name      : Veal Vung
 Province  : កំពង់ចាម
-District  : Kampong Cham (កំពង់ចាម)
-Commune   : វាលវង់
+District  : Kampong Cham (Kampong Cham)
+Commune   : Veal Vung
 Location  : 11.979458, 105.458557
 
 [BRANCH CHAA017]
 Code      : CHAA017
 Name      : Areak Tnaot
 Province  : កំពង់ចាម
-District  : Stueng Trang (ស្ទឹងត្រង់)
-Commune   : អារក្សត្នោត
+District  : Kampong Cham (Kampong Cham)
+Commune   : Areak Tnaot
 Location  : 12.362246, 105.587401
 
 [BRANCH CHAA018]
 Code      : CHAA018
 Name      : Kampong Cham
 Province  : កំពង់ចាម
-District  : Kampong Cham (កំពង់ចាម)
-Commune   : បឹងកុក
+District  : Kampong Cham (Kampong Cham)
+Commune   : Kampong Cham
 Location  : 11.991004, 105.466677
 
 [BRANCH CHAA019]
 Code      : CHAA019
 Name      : Roka Koy
 Province  : កំពង់ចាម
-District  : Kang Meas (កងមាស)
-Commune   : រកាគយ
+District  : Kang Meas (Kang Meas)
+Commune   : Roka Koy
 Location  : 11.9412, 105.3009
 
 [BRANCH CHAA020]
 Code      : CHAA020
 Name      : Hanchey
 Province  : កំពង់ចាម
-District  : Kampong Siem (កំពង់សៀម)
-Commune   : ហាន់ជ័យ
+District  : Kampong Siem (Kampong Siem)
+Commune   : Hanchey
 Location  : 12.1363, 105.5264
 
 [BRANCH CHAA021]
 Code      : CHAA021
 Name      : Svay Pou
 Province  : កំពង់ចាម
-District  : Srei Santhor (ស្រីសន្ធរ)
-Commune   : ស្វាយពោធិ
+District  : Srei Santhor (Srei Santhor)
+Commune   : Svay Pou
 Location  : 11.780832, 105.081073
 
 [BRANCH CHAA022]
 Code      : CHAA022
 Name      : Preak Kak
 Province  : កំពង់ចាម
-District  : Stueng Trang (ស្ទឹងត្រង់)
-Commune   : ព្រែកកក់
+District  : Stueng Trang (Stueng Trang)
+Commune   : Preak Kak
 Location  : 12.258039, 105.533665
 
 [BRANCH CHAA023]
 Code      : CHAA023
 Name      : Preak Rumdeng
 Province  : កំពង់ចាម
-District  : Srei Santhor (ស្រីសន្ធរ)
-Commune   : ព្រែករំដេង
+District  : Kampong Cham (Kampong Cham)
+Commune   : Preak Rumdeng
 Location  : 11.9178, 105.23044
 
 [BRANCH CHAA024]
 Code      : CHAA024
 Name      : Tumnob
 Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : ទំនប់
+District  : Batheay (Batheay)
+Commune   : Tumnob
 Location  : 12.080426, 104.975446
 
 [BRANCH CHAA025]
 Code      : CHAA025
 Name      : Lom Hae
-Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : អំពិល
+Province  : កំពង់ចាម
+District  : Kampong Cham (Kampong Cham)
+Commune   : Lom Hae
 Location  : 11.992734, 105.451041
 
 [BRANCH CHAP001]
 Code      : CHAP001
 Name      : Kampong Cham
 Province  : កំពង់ចាម
-District  : Kampong Cham (កំពង់ចាម)
-Commune   : បឹងកុក
+District  : Kampong Cham (Kampong Cham)
+Commune   : Kampong Cham
 Location  : 11.989084, 105.462284
 
 [BRANCH CHAS001]
 Code      : CHAS001
 Name      : Veal Vung
 Province  : កំពង់ចាម
-District  : Kampong Cham (កំពង់ចាម)
-Commune   : វាលវង់
+District  : Kampong Cham (Kampong Cham)
+Commune   : Veal Vung
 Location  : 11.989346, 105.458567
 
 [BRANCH CHAS002]
 Code      : CHAS002
 Name      : Preak Kak
 Province  : កំពង់ចាម
-District  : Stueng Trang (ស្ទឹងត្រង់)
-Commune   : ព្រែកកក់
+District  : Stueng Trang (Stueng Trang)
+Commune   : Preak Kak
 Location  : 12.255298, 105.539182
 
 [BRANCH CHAS003]
 Code      : CHAS003
 Name      : Soutib
 Province  : កំពង់ចាម
-District  : Cheung Prey (ជើងព្រៃ)
-Commune   : សូទិព្វ
+District  : Cheung Prey (Cheung Prey)
+Commune   : Soutib
 Location  : 12.053318, 105.056898
 
 [BRANCH CHAS004]
 Code      : CHAS004
 Name      : Chrey Vien
 Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : ជ្រៃវៀន
+District  : Prey Chhor (Prey Chhor)
+Commune   : Chrey Vien
 Location  : 12.057873, 105.247003
 
 [BRANCH CHAS005]
 Code      : CHAS005
 Name      : Svay Teab
 Province  : កំពង់ចាម
-District  : Chamkar Leu (ចំការលើ)
-Commune   : ស្វាយទាប
+District  : Chamkar Leu (Chamkar Leu)
+Commune   : Svay Teab
 Location  : 12.3140397, 105.2777613
 
 [BRANCH CHHA001]
 Code      : CHHA001
 Name      : Ou Ruessei 01
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : អូរឫស្សី
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Ou Ruessei 01
 Location  : 11.939555, 104.714322
 
 [BRANCH CHHA002]
 Code      : CHHA002
 Name      : Pongro
-Province  : កំពង់ចាម
-District  : Kaoh Soutin (កោះសូទិន)
-Commune   : ពង្រ
+Province  : កំពង់ឆ្នាំង
+District  : Rolea B'ier (Rolea B'ier)
+Commune   : Pongro
 Location  : 12.257837, 104.660942
 
 [BRANCH CHHA003]
 Code      : CHHA003
 Name      : Ou Ruessei 02
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : អូរឫស្សី
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Ou Ruessei 02
 Location  : 11.9517, 104.7185
 
 [BRANCH CHHA004]
 Code      : CHHA004
 Name      : Saeb
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : សែប
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Saeb
 Location  : 12.0705, 104.773
 
 [BRANCH CHHA005]
 Code      : CHHA005
 Name      : Peani
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : ពានី
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Peani
 Location  : 11.9234, 104.7013
 
 [BRANCH CHHA006]
 Code      : CHHA006
 Name      : Ta Ches
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : តាជេស
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Ta Ches
 Location  : 12.236991, 104.669291
 
 [BRANCH CHHA007]
 Code      : CHHA007
 Name      : Prey Kri 01
 Province  : កំពង់ឆ្នាំង
-District  : Chol Kiri (ជលគីរី)
-Commune   : ព្រៃគ្រី
+District  : Chol Kiri (Chol Kiri)
+Commune   : Prey Kri 01
 Location  : 12.164788, 104.881038
 
 [BRANCH CHHA008]
 Code      : CHHA008
 Name      : Peam Chhkaok
 Province  : កំពង់ឆ្នាំង
-District  : Chol Kiri (ជលគីរី)
-Commune   : ពាមឆ្កោក
+District  : Chol Kiri (Chol Kiri)
+Commune   : Peam Chhkaok
 Location  : 12.207648, 104.816967
 
 [BRANCH CHHA009]
 Code      : CHHA009
 Name      : Krang Skear
 Province  : កំពង់ឆ្នាំង
-District  : Tuek Phos (ទឹកផុស)
-Commune   : ក្រាំងស្គារ
+District  : Tuek Phos (Tuek Phos)
+Commune   : Krang Skear
 Location  : 12.238376, 104.278047
 
 [BRANCH CHHA010]
 Code      : CHHA010
 Name      : Chhnok Tru
 Province  : កំពង់ឆ្នាំង
-District  : Baribour (បរិបូណ៌)
-Commune   : ឆ្នុកទ្រូ
+District  : Baribour (Baribour)
+Commune   : Chhnok Tru
 Location  : 12.50071, 104.4547
 
 [BRANCH CHHA011]
 Code      : CHHA011
 Name      : Svay Chrum
 Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : ស្វាយជ្រុំ
+District  : Rolea B'ier (Rolea B'ier)
+Commune   : Svay Chrum
 Location  : 12.279551, 104.591655
 
 [BRANCH CHHA012]
 Code      : CHHA012
 Name      : Trangel
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Leaeng (កំពង់លែង)
-Commune   : ត្រងិល
+District  : Kampong Leaeng (Kampong Leaeng)
+Commune   : Trangel
 Location  : 12.2854, 104.729588
 
 [BRANCH CHHA013]
 Code      : CHHA013
 Name      : Phsar
 Province  : កំពង់ឆ្នាំង
-District  : Baribour (បរិបូណ៌)
-Commune   : ផ្សារ
+District  : Baribour (Baribour)
+Commune   : Phsar
 Location  : 12.381489, 104.487486
 
 [BRANCH CHHA014]
 Code      : CHHA014
 Name      : Krang Leav
 Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : ក្រាំងលាវ
+District  : Rolea B'ier (Rolea B'ier)
+Commune   : Krang Leav
 Location  : 12.26828, 104.610975
 
 [BRANCH CHHA015]
 Code      : CHHA015
 Name      : Chrey Bak
 Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : ជ្រៃបាក់
+District  : Rolea B'ier (Rolea B'ier)
+Commune   : Chrey Bak
 Location  : 12.198668, 104.653831
 
 [BRANCH CHHA016]
 Code      : CHHA016
 Name      : Chieb
 Province  : កំពង់ឆ្នាំង
-District  : Tuek Phos (ទឹកផុស)
-Commune   : ជៀប
+District  : Tuek Phos (Tuek Phos)
+Commune   : Chieb
 Location  : 12.257837, 104.660942
 
 [BRANCH CHHA017]
 Code      : CHHA017
 Name      : Prey Kri 02
 Province  : កំពង់ឆ្នាំង
-District  : Chol Kiri (ជលគីរី)
-Commune   : ព្រៃគ្រី
+District  : Chol Kiri (Chol Kiri)
+Commune   : Prey Kri 02
 Location  : 12.257837, 104.660942
 
 [BRANCH CHHA018]
 Code      : CHHA018
 Name      : Rolea B'ier
 Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : អណ្ដូងស្នាយ
+District  : Rolea B'ier (Rolea B'ier)
+Commune   : Rolea B'ier
 Location  : 12.236872, 104.669272
 
 [BRANCH CHHA019]
 Code      : CHHA019
 Name      : Kampong Chhnang
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Chhnang (កំពង់ឆ្នាំង)
-Commune   : ផ្សារឆ្នាំង
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : Kampong Chhnang
 Location  : 12.246661, 104.671258
 
 [BRANCH CHHA020]
 Code      : CHHA020
 Name      : Krang Lvea
 Province  : កំពង់ឆ្នាំង
-District  : Sameakki Mean Chey (សាមគ្គីមានជ័យ)
-Commune   : ក្រាំងល្វា
+District  : Sameakki Mean Chey (Sameakki Mean Chey)
+Commune   : Krang Lvea
 Location  : 11.973961, 104.561273
 
 [BRANCH CHHA021]
 Code      : CHHA021
 Name      : Lungveaek
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : លង្វែក
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : Lungveaek
 Location  : 11.889892, 104.708955
 
 [BRANCH CHHA022]
 Code      : CHHA022
 Name      : B'er
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Chhnang (កំពង់ឆ្នាំង)
-Commune   : ប្អេរ
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : B'er
 Location  : 12.257863, 104.660945
 
 [BRANCH CHHA023]
 Code      : CHHA023
 Name      : Rolea Bier
 Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : អណ្ដូងស្នាយ
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : Rolea Bier
 Location  : 12.166712, 104.66471
 
 [BRANCH CHHA024]
 Code      : CHHA024
 Name      : Phsar Trach
-Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារចាស់
+Province  : កំពង់ឆ្នាំង
+District  : Baribour (Baribour)
+Commune   : Phsar Trach
 Location  : 11.840042, 104.716812
 
 [BRANCH CHHP001]
 Code      : CHHP001
 Name      : Kampong Chhnang
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Chhnang (កំពង់ឆ្នាំង)
-Commune   : ផ្សារឆ្នាំង
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : Kampong Chhnang
 Location  : 12.259851, 104.67255
 
 [BRANCH CHHS001]
 Code      : CHHS001
 Name      : Kampong Chhnang
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Chhnang (កំពង់ឆ្នាំង)
-Commune   : ផ្សារឆ្នាំង
+District  : Kampong Chhnang (Kampong Chhnang)
+Commune   : Kampong Chhnang
 Location  : 12.2529466, 104.6681428
 
 [BRANCH CHHS002]
 Code      : CHHS002
 Name      : Peani
 Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : ពានី
+District  : Kampong Tralach (Kampong Tralach)
+Commune   : Peani
 Location  : 11.9371944, 104.7135
-
-[BRANCH OU RUESSEI 02]
-Code      : OU RUESSEI 02
-Name      : Ou Ruessei 02
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : អូរឫស្សី
-Location  : , 
-
-[BRANCH KAMTEST01]
-Code      : KAMTEST01
-Name      : Ankor Chey
-Province  : កំពត
-District  : Angkor Chey (អង្គរជ័យ)
-Commune   : អង្គរជ័យ
-Location  : , 
-
-[BRANCH THUBPNP]
-Code      : THUBPNP
-Name      : Training Hub - PNP
-Province  : កំពង់ឆ្នាំង
-District  : Baribour (បរិបូណ៌)
-Commune   : ត្រពាំងចាន់
-Location  : , 
-
-[BRANCH TRAINING01]
-Code      : TRAINING01
-Name      : MF Training 01 - PNP
-Province  : កំពត
-District  : Tuek Chhou (ទឹកឈូ)
-Commune   : ត្រពាំងព្រីង
-Location  : , 
-
-[BRANCH TRAINING02]
-Code      : TRAINING02
-Name      : MF Training 02 - BAT
-Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : ភ្នំក្រាំងដីមាស
-Location  : , 
-
-[BRANCH TRAINING03]
-Code      : TRAINING03
-Name      : MF Training 03 - PNP
-Province  : កំពត
-District  : Tuek Chhou (ទឹកឈូ)
-Commune   : ត្រពាំងព្រីង
-Location  : , 
-
-[BRANCH DVCZ3]
-Code      : DVCZ3
-Name      : Vehicle Team Z3
-Province  : kampot
-District  : Vehicle Team Z3 (vehicle team z3)
-Commune   : vehicle team z3
-Location  : , 
 
 [BRANCH KAMA001]
 Code      : KAMA001
 Name      : Banteay Meas Khang Kaeut
 Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : បន្ទាយមាសខាងកើត
+District  : Banteay Meas (Banteay Meas)
+Commune   : Banteay Meas Khang Kaeut
 Location  : 10.646252, 104.655786
 
 [BRANCH KAMA002]
 Code      : KAMA002
 Name      : Tnoat Chong Srang
 Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : ត្នោតចុងស្រង់
+District  : Banteay Meas (Banteay Meas)
+Commune   : Tnoat Chong Srang
 Location  : 10.590003, 104.690418
 
 [BRANCH KAMA003]
 Code      : KAMA003
 Name      : Preaek Kroes
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : ព្រែកក្រឹស
+District  : Kampong Trach (Kampong Trach)
+Commune   : Preaek Kroes
 Location  : 10.540408, 104.580345
 
 [BRANCH KAMA005]
 Code      : KAMA005
 Name      : Chhuk 01
-Province  : កំពង់ធំ
-District  : Prasat Sambour (ប្រាសាទសំបូរ)
-Commune   : ឈូក
+Province  : កំពត
+District  : Chhuk (Chhuk)
+Commune   : Chhuk 01
 Location  : 10.766813, 104.495433
-
-[BRANCH KAMA006]
-Code      : KAMA006
-Name      : KEP
-Province  : kampot
-District  : KEP (kep)
-Commune   : kep
-Location  : 105.59244, 104.3895
 
 [BRANCH KAMA007]
 Code      : KAMA007
 Name      : Phnum Kong
 Province  : កំពត
-District  : Angkor Chey (អង្គរជ័យ)
-Commune   : ភ្នំកុង
+District  : Angkor Chey (Angkor Chey)
+Commune   : Phnum Kong
 Location  : 10.774704, 104.663157
 
 [BRANCH KAMA008]
 Code      : KAMA008
 Name      : Lbaeuk
 Province  : កំពត
-District  : Chhuk (ឈូក)
-Commune   : ល្បើក
+District  : Chhuk (Chhuk)
+Commune   : Lbaeuk
 Location  : 10.826849, 104.372241
 
 [BRANCH KAMA009]
 Code      : KAMA009
 Name      : Dang Tung 01
 Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ដំណាក់សុក្រំ
+District  : Kampot (Kampot)
+Commune   : Dang Tung 01
 Location  : 10.769814, 104.373538
 
 [BRANCH KAMA010]
 Code      : KAMA010
 Name      : Koun Sat
 Province  : កំពត
-District  : Tuek Chhou (ទឹកឈូ)
-Commune   : កូនសត្វ
+District  : Tuek Chhou (Tuek Chhou)
+Commune   : Koun Sat
 Location  : 10.601968, 104.279321
 
 [BRANCH KAMA011]
 Code      : KAMA011
 Name      : Chhuk 02
-Province  : កំពង់ធំ
-District  : Prasat Sambour (ប្រាសាទសំបូរ)
-Commune   : ឈូក
+Province  : កំពត
+District  : Chhuk (Chhuk)
+Commune   : Chhuk 02
 Location  : 10.833158, 104.450881
 
 [BRANCH KAMA012]
 Code      : KAMA012
 Name      : Kaoh Touch
 Province  : កំពត
-District  : Bokor (បូកគោ)
-Commune   : កោះតូច
+District  : Bokor (Bokor)
+Commune   : Kaoh Touch
 Location  : 10.559037, 104.083316
 
 [BRANCH KAMA013]
 Code      : KAMA013
 Name      : Trapeang Reang
 Province  : កំពត
-District  : Chum Kiri (ជុំគិរី)
-Commune   : ត្រពាំងរាំង
+District  : Chum Kiri (Chum Kiri)
+Commune   : Trapeang Reang
 Location  : 10.922155, 104.423925
 
 [BRANCH KAMA014]
 Code      : KAMA014
 Name      : Dang Tung 02
 Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ដំណាក់សុក្រំ
+District  : Kampot (Kampot)
+Commune   : Dang Tung 02
 Location  : 10.70057, 104.44922
 
 [BRANCH KAMA015]
 Code      : KAMA015
 Name      : Preaek Tnaot 01
 Province  : កំពត
-District  : Bokor (បូកគោ)
-Commune   : ព្រែកត្នោត
+District  : Kampot (Kampot)
+Commune   : Preaek Tnaot 01
 Location  : 10.578851, 103.993994
 
 [BRANCH KAMA016]
 Code      : KAMA016
 Name      : Prey Thnang
 Province  : កំពត
-District  : Tuek Chhou (ទឹកឈូ)
-Commune   : ព្រៃថ្នង
+District  : Tuek Chhou (Tuek Chhou)
+Commune   : Prey Thnang
 Location  : 10.69138, 104.253991
 
 [BRANCH KAMA017]
 Code      : KAMA017
 Name      : Trapeang Sangkae
 Province  : កំពត
-District  : Tuek Chhou (ទឹកឈូ)
-Commune   : ត្រពាំងសង្កែ
+District  : Tuek Chhou (Tuek Chhou)
+Commune   : Trapeang Sangkae
 Location  : 10.592727, 104.247785
 
 [BRANCH KAMA018]
 Code      : KAMA018
 Name      : Kampong Kandal
 Province  : កំពត
-District  : Kampot (កំពត)
-Commune   : កំពង់កណ្ដាល
+District  : Kampot (Kampot)
+Commune   : Kampong Kandal
 Location  : 10.603561, 104.186762
 
 [BRANCH KAMA019]
 Code      : KAMA019
 Name      : Ruessei Srok Khang Lech 01
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : ឫស្សីស្រុកខាងលិច
+District  : Kampong Trach (Kampong Trach)
+Commune   : Ruessei Srok Khang Lech 01
 Location  : 10.432794, 104.448912
 
 [BRANCH KAMA020]
 Code      : KAMA020
 Name      : Kampong Trach Khang Kaeut
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : កំពង់ត្រាចខាងកើត
+District  : Kampong Trach (Kampong Trach)
+Commune   : Kampong Trach Khang Kaeut
 Location  : 10.558688, 104.467121
 
 [BRANCH KAMA021]
 Code      : KAMA021
 Name      : Trapeang Sala Khang Kaeut
 Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : ត្រពាំងសាលាខាងកើត
+District  : Banteay Meas (Banteay Meas)
+Commune   : Trapeang Sala Khang Kaeut
 Location  : 10.705028, 104.620335
 
 [BRANCH KAMA022]
 Code      : KAMA022
 Name      : Praphnum
 Province  : កំពត
-District  : Angkor Chey (អង្គរជ័យ)
-Commune   : ប្រភ្នំ
+District  : Angkor Chey (Angkor Chey)
+Commune   : Praphnum
 Location  : 10.839616, 104.650137
 
 [BRANCH KAMA023]
 Code      : KAMA023
 Name      : Ruessei Srok Khang Lech 02
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : ឫស្សីស្រុកខាងលិច
+District  : Kampong Trach (Kampong Trach)
+Commune   : Ruessei Srok Khang Lech 02
 Location  : 10.491692, 104.457715
 
 [BRANCH KAMA024]
 Code      : KAMA024
 Name      : Ang Sophi
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : អង្គសុរភី
+District  : Kampot (Kampot)
+Commune   : Ang Sophi
 Location  : 10.55492, 104.499998
 
 [BRANCH KAMA025]
 Code      : KAMA025
 Name      : Damnak Kantuot Khang Cheung
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : ដំណាក់កន្ទួតខាងជើង
+District  : Kampong Trach (Kampong Trach)
+Commune   : Damnak Kantuot Khang Cheung
 Location  : 10.616107, 104.451051
 
 [BRANCH KAMA026]
 Code      : KAMA026
 Name      : L ang
 Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ល្អាង
+District  : Kampot (Kampot)
+Commune   : L ang
 Location  : 10.741902, 104.341575
 
 [BRANCH KAMA027]
 Code      : KAMA027
 Name      : Tuk Meas Khang Lech
 Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : ទូកមាសខាងលិច
+District  : Banteay Meas (Banteay Meas)
+Commune   : Tuk Meas Khang Lech
 Location  : 10.666234, 104.560236
 
 [BRANCH KAMA028]
 Code      : KAMA028
 Name      : Preaek Tnaot 02
 Province  : កំពត
-District  : Bokor (បូកគោ)
-Commune   : ព្រែកត្នោត
+District  : Kampot (Kampot)
+Commune   : Preaek Tnaot 02
 Location  : 10.612442, 103.931604
 
 [BRANCH KAMA029]
 Code      : KAMA029
 Name      : Dambouk Khpuos
 Province  : កំពត
-District  : Angkor Chey (អង្គរជ័យ)
-Commune   : ដំបូកខ្ពស់
+District  : Kampot (Kampot)
+Commune   : Dambouk Khpuos
 Location  : 10.776852, 104.568238
 
 [BRANCH KAMA030]
 Code      : KAMA030
 Name      : Dong Tong
 Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ដំណាក់សុក្រំ
+District  : Kampot (Kampot)
+Commune   : Dong Tong
 Location  : 10.62885, 104.47109
 
 [BRANCH KAMA031]
 Code      : KAMA031
 Name      : KampongTrach
 Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : បឹងសាលាខាងជើង
+District  : Kampong Trach (Kampong Trach)
+Commune   : KampongTrach
 Location  : 10.447786, 104.437666
 
 [BRANCH KAMP001]
 Code      : KAMP001
 Name      : Kampot
 Province  : កំពត
-District  : Kampot (កំពត)
-Commune   : កំពង់កណ្ដាល
+District  : Kampot (Kampot)
+Commune   : Kampot
 Location  : 10.619812, 104.182473
 
 [BRANCH KAMS001]
 Code      : KAMS001
 Name      : Krang Ampil
-Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : ក្រាំងអំពិល
+Province  : កំពត
+District  : Kampot (Kampot)
+Commune   : Krang Ampil
 Location  : 10.6143893, 104.1821269
 
 [BRANCH KAMS002]
 Code      : KAMS002
 Name      : Tuk Meas Khang Lech
 Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : ទូកមាសខាងលិច
+District  : Banteay Meas (Banteay Meas)
+Commune   : Tuk Meas Khang Lech
 Location  : 10.667472, 104.560635
 
 [BRANCH KAMS003]
 Code      : KAMS003
 Name      : Satv Pong
 Province  : កំពត
-District  : Chhuk (ឈូក)
-Commune   : សត្វពង
+District  : Chhuk (Chhuk)
+Commune   : Satv Pong
 Location  : 10.835357, 104.454835
 
 [BRANCH SPEA006]
 Code      : SPEA006
 Name      : Chhuk
-Province  : កំពង់ធំ
-District  : Prasat Sambour (ប្រាសាទសំបូរ)
-Commune   : ឈូក
+Province  : កំពត
+District  : Chhuk (Chhuk)
+Commune   : Chhuk
 Location  : 11.131556, 104.151154
 
 [BRANCH KANA001]
 Code      : KANA001
 Name      : Preaek Chrey
 Province  : កណ្តាល
-District  : Sampeou Poun (សំពៅពូន)
-Commune   : ព្រែកជ្រៃ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Preaek Chrey
 Location  : 10.96737, 105.10423
 
 [BRANCH KANA002]
 Code      : KANA002
 Name      : Sampov Pun 01
-Province  : Battambang
-District  : Sampov Lun (សំពៅលូន)
-Commune   : សំពៅលូន
+Province  : កណ្តាល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Sampov Pun 01
 Location  : 11.027526, 105.05863
 
 [BRANCH KANA003]
 Code      : KANA003
 Name      : Pou Ban 01
 Province  : កណ្តាល
-District  : Kaoh Thum (កោះធំ)
-Commune   : ពោធិ៍បាន
+District  : Ta Khmau (Ta Khmau)
+Commune   : Pou Ban 01
 Location  : 11.195817, 105.061087
 
 [BRANCH KANA004]
 Code      : KANA004
 Name      : Settak bou
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : សិត្បូ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Settak bou
 Location  : 11.455657, 105.029998
 
 [BRANCH KANA005]
 Code      : KANA005
 Name      : Svay Rolum
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : ស្វាយរលំ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Svay Rolum
 Location  : 11.455178, 104.999608
 
 [BRANCH KANA006]
 Code      : KANA006
 Name      : Krang Youv
 Province  : កណ្តាល
-District  : S'ang (ស្អាង)
-Commune   : ក្រាំងយ៉ូវ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Krang Youv
 Location  : 11.292181, 104.947988
 
 [BRANCH KANA007]
 Code      : KANA007
 Name      : Khpob
 Province  : កណ្តាល
-District  : S'ang (ស្អាង)
-Commune   : ខ្ពប
+District  : Leuk Daek (Leuk Daek)
+Commune   : Khpob
 Location  : 11.265877, 105.033555
 
 [BRANCH KANA008]
 Code      : KANA008
 Name      : Khpob Ateav
 Province  : កណ្តាល
-District  : Leuk Daek (លើកដែក)
-Commune   : ខ្ពបអាទាវ
+District  : Leuk Daek (Leuk Daek)
+Commune   : Khpob Ateav
 Location  : 11.058028, 105.191104
 
 [BRANCH KANA009]
 Code      : KANA009
 Name      : Kokir Thum
-Province  : កំពង់ធំ
-District  : Baray (បារាយណ៍)
-Commune   : គគីធំ
+Province  : កណ្តាល
+District  : Kien Svay (Kien Svay)
+Commune   : Kokir Thum
 Location  : 11.3343, 105.241244
 
 [BRANCH KANA010]
 Code      : KANA010
 Name      : Samraong Thum
 Province  : កណ្តាល
-District  : Kien Svay (កៀនស្វាយ)
-Commune   : សំរោងធំ
+District  : Kien Svay (Kien Svay)
+Commune   : Samraong Thum
 Location  : 11.398369, 105.236634
 
 [BRANCH KANA011]
 Code      : KANA011
 Name      : Cheung Kaeub
 Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : ជើងកើប
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Cheung Kaeub
 Location  : 11.42506, 104.875069
 
 [BRANCH KANA012]
 Code      : KANA012
 Name      : Dei Ed
 Province  : កណ្តាល
-District  : Kien Svay (កៀនស្វាយ)
-Commune   : ដីឥដ្ឋ
+District  : Kien Svay (Kien Svay)
+Commune   : Dei Ed
 Location  : 11.493478, 105.097377
 
 [BRANCH KANA013]
 Code      : KANA013
 Name      : Chheu Teal 01
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ឈើទាល
+Province  : កណ្តាល
+District  : Kien Svay (Kien Svay)
+Commune   : Chheu Teal 01
 Location  : 11.464371, 104.977234
 
 [BRANCH KANA014]
 Code      : KANA014
 Name      : Chheu Teal 02
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ឈើទាល
+Province  : កណ្តាល
+District  : Kien Svay (Kien Svay)
+Commune   : Chheu Teal 02
 Location  : 11.468815, 105.025253
 
 [BRANCH KANA017]
 Code      : KANA017
 Name      : Preaek Anhchanh
 Province  : កណ្តាល
-District  : Mukh Kampul (មុខកំពូល)
-Commune   : ព្រែកអញ្ចាញ
+District  : Mukh Kampul (Mukh Kampul)
+Commune   : Preaek Anhchanh
 Location  : 11.741298, 104.98207
 
 [BRANCH KANA018]
 Code      : KANA018
 Name      : Roka Kaong Ti Muoy
 Province  : កណ្តាល
-District  : Mukh Kampul (មុខកំពូល)
-Commune   : រកាកោង ទី ១
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Roka Kaong Ti Muoy
 Location  : 11.848625, 104.994513
 
 [BRANCH KANA019]
 Code      : KANA019
 Name      : Kampong Luong
 Province  : កណ្តាល
-District  : Ponhea Lueu (ពញាឮ)
-Commune   : កំពង់ហ្លួង
+District  : Ponhea Lueu (Ponhea Lueu)
+Commune   : Kampong Luong
 Location  : 11.819205, 104.802207
 
 [BRANCH KANA020]
 Code      : KANA020
 Name      : Preaek Koy
-Province  : កំពង់ចាម
-District  : Kang Meas (កងមាស)
-Commune   : ព្រែកកុយ
+Province  : កណ្តាល
+District  : S'ang (S'ang)
+Commune   : Preaek Koy
 Location  : 11.367409, 105.004007
 
 [BRANCH KANA021]
 Code      : KANA021
 Name      : Preaek Hour 01
-Province  : កំពង់ចាម
-District  : Srei Santhor (ស្រីសន្ធរ)
-Commune   : ព្រែកពោធិ
+Province  : កណ្តាល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Preaek Hour 01
 Location  : 11.456473, 104.932033
 
 [BRANCH KANA022]
 Code      : KANA022
 Name      : Cheung Kaeub
 Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : ជើងកើប
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Cheung Kaeub
 Location  : 11.439455, 104.892452
 
 [BRANCH KANA023]
 Code      : KANA023
 Name      : Preaek Hour 02
-Province  : កំពង់ចាម
-District  : Srei Santhor (ស្រីសន្ធរ)
-Commune   : ព្រែកពោធិ
+Province  : កណ្តាល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Preaek Hour 02
 Location  : 11.4466, 104.88001
 
 [BRANCH KANA024]
 Code      : KANA024
 Name      : Daeum Rues
 Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : ដើមឫស
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Daeum Rues
 Location  : 11.418343, 104.791698
 
 [BRANCH KANA026]
 Code      : KANA026
 Name      : Traeuy Sla
 Province  : កណ្តាល
-District  : S'ang (ស្អាង)
-Commune   : ត្រើយស្លា
+District  : S'ang (S'ang)
+Commune   : Traeuy Sla
 Location  : 11.319958, 105.067528
 
 [BRANCH KANA027]
 Code      : KANA027
 Name      : Preaek Ruessei
 Province  : កណ្តាល
-District  : Lvea Aem (ល្វាឯម)
-Commune   : ព្រែកឫស្សី
+District  : Lvea Aem (Lvea Aem)
+Commune   : Preaek Ruessei
 Location  : 11.470329, 104.936806
 
 [BRANCH KANA028]
 Code      : KANA028
 Name      : Siem Reab
 Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : សៀមរាប
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Siem Reab
 Location  : 11.389382, 104.863461
 
 [BRANCH KANA029]
 Code      : KANA029
 Name      : Kampong Samnanh
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : កំពង់សំណាញ់
+District  : Ta Khmau (Ta Khmau)
+Commune   : Kampong Samnanh
 Location  : 11.460466, 104.942209
 
 [BRANCH KANA031]
 Code      : KANA031
 Name      : Preaek Ta Meak
 Province  : កណ្តាល
-District  : Khsach Kandal (ខ្សាច់កណ្ដាល)
-Commune   : ព្រែកតាមាក់
+District  : Khsach Kandal (Khsach Kandal)
+Commune   : Preaek Ta Meak
 Location  : 11.749088, 105.011697
 
 [BRANCH KANA033]
 Code      : KANA033
 Name      : Preaek Rey
 Province  : កណ្តាល
-District  : Lvea Aem (ល្វាឯម)
-Commune   : ព្រែករៃ
+District  : Lvea Aem (Lvea Aem)
+Commune   : Preaek Rey
 Location  : 11.528229, 105.14387
 
 [BRANCH KANA034]
 Code      : KANA034
 Name      : Roka Khpuos
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : រកាខ្ពស់
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Roka Khpuos
 Location  : 11.420457, 104.983317
 
 [BRANCH KANA036]
 Code      : KANA036
 Name      : Sambuor Meas
-Province  : កំពង់ចាម
-District  : Kampong Cham (កំពង់ចាម)
-Commune   : សំបួរមាស
+Province  : កណ្តាល
+District  : Lvea Aem (Lvea Aem)
+Commune   : Sambuor Meas
 Location  : 11.667183, 104.866842
 
 [BRANCH KANA037]
 Code      : KANA037
 Name      : Sambuor
-Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : សំបួរ
+Province  : កណ្តាល
+District  : Lvea Aem (Lvea Aem)
+Commune   : Sambuor
 Location  : 11.47773, 105.162037
 
 [BRANCH KANA038]
 Code      : KANA038
 Name      : Preaek Ruessei
 Province  : កណ្តាល
-District  : Lvea Aem (ល្វាឯម)
-Commune   : ព្រែកឫស្សី
+District  : Lvea Aem (Lvea Aem)
+Commune   : Preaek Ruessei
 Location  : 11.4686, 105.209882
 
 [BRANCH KANA039]
 Code      : KANA039
 Name      : Chheu Khmau
 Province  : កណ្តាល
-District  : Sampeou Poun (សំពៅពូន)
-Commune   : ឈើខ្មៅ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Chheu Khmau
 Location  : 11.048601, 105.077687
 
 [BRANCH KANA040]
 Code      : KANA040
 Name      : Sampov Pun 02
-Province  : Battambang
-District  : Sampov Lun (សំពៅលូន)
-Commune   : សំពៅលូន
+Province  : កណ្តាល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Sampov Pun 02
 Location  : 10.954919, 105.07873
 
 [BRANCH KANA041]
 Code      : KANA041
 Name      : Leuk Daek
 Province  : កណ្តាល
-District  : Kaoh Thum (កោះធំ)
-Commune   : លើកដែក
+District  : Kaoh Thum (Kaoh Thum)
+Commune   : Leuk Daek
 Location  : 11.130317, 105.130143
 
 [BRANCH KANA042]
 Code      : KANA042
 Name      : Pou Ban 02
 Province  : កណ្តាល
-District  : Kaoh Thum (កោះធំ)
-Commune   : ពោធិ៍បាន
+District  : Ta Khmau (Ta Khmau)
+Commune   : Pou Ban 02
 Location  : 11.182247, 104.074302
 
 [BRANCH KANA043]
 Code      : KANA043
 Name      : Puk Ruessei
 Province  : កណ្តាល
-District  : Khsach Kandal (ខ្សាច់កណ្ដាល)
-Commune   : ពុកឫស្សី
+District  : Khsach Kandal (Khsach Kandal)
+Commune   : Puk Ruessei
 Location  : 11.684915, 104.968129
 
 [BRANCH KANA044]
 Code      : KANA044
 Name      : Svay Romiet 01
 Province  : កណ្តាល
-District  : Khsach Kandal (ខ្សាច់កណ្ដាល)
-Commune   : ស្វាយរមៀត
+District  : Khsach Kandal (Khsach Kandal)
+Commune   : Svay Romiet 01
 Location  : 11.795103, 105.015382
 
 [BRANCH KANA045]
 Code      : KANA045
 Name      : Svay Romiet 02
 Province  : កណ្តាល
-District  : Khsach Kandal (ខ្សាច់កណ្ដាល)
-Commune   : ស្វាយរមៀត
+District  : Khsach Kandal (Khsach Kandal)
+Commune   : Svay Romiet 02
 Location  : 11.8122, 105.038624
 
 [BRANCH KANA046]
 Code      : KANA046
 Name      : Prek Krabao Ti 2
-Province  : កំពង់ចាម
-District  : Kang Meas (កងមាស)
-Commune   : ព្រែកក្របៅ
+Province  : កណ្តាល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Prek Krabao Ti 2
 Location  : 11.6601777, 104.96405
 
 [BRANCH KANA049]
 Code      : KANA049
 Name      : Roka
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : រកា
+Province  : កណ្តាល
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Roka
 Location  : 11.451665, 104.720281
 
 [BRANCH KANA066]
 Code      : KANA066
 Name      : Wat Prek Ampil
 Province  : កណ្តាល
-District  : Akreiy Ksatr (អរិយក្សត្រ)
-Commune   : ព្រែកអំពិល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Wat Prek Ampil
 Location  : 11.647094, 104.957062
 
 [BRANCH KANP001]
 Code      : KANP001
 Name      : Ta Khmau
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : តាក្ដុល
+District  : Ta Khmau (Ta Khmau)
+Commune   : Ta Khmau
 Location  : 11.4777335, 104.9487032
 
 [BRANCH KANS001]
 Code      : KANS001
 Name      : Ta Khmao
 Province  : កណ្តាល
-District  : Ta Khmau (តាខ្មៅ)
-Commune   : តាខ្មៅ
+District  : Ta Khmau (Ta Khmau)
+Commune   : Ta Khmao
 Location  : 11.473225, 104.94918
 
 [BRANCH KANS002]
 Code      : KANS002
 Name      : Kokir
 Province  : កណ្តាល
-District  : Kien Svay (កៀនស្វាយ)
-Commune   : គគីរ
+District  : Kien Svay (Kien Svay)
+Commune   : Kokir
 Location  : 11.511094, 105.048311
 
 [BRANCH KANS003]
 Code      : KANS003
 Name      : Preaek Thmei
 Province  : កណ្តាល
-District  : Kaoh Thum (កោះធំ)
-Commune   : ព្រែកថ្មី
+District  : Kandal Stueng (Kandal Stueng)
+Commune   : Preaek Thmei
 Location  : 11.133705, 105.057119
 
 [BRANCH KANS004]
 Code      : KANS004
 Name      : Preaek Anhchanh
 Province  : កណ្តាល
-District  : Mukh Kampul (មុខកំពូល)
-Commune   : ព្រែកអញ្ចាញ
+District  : Mukh Kampul (Mukh Kampul)
+Commune   : Preaek Anhchanh
 Location  : 11.738, 104.9776
 
 [BRANCH KANS005]
 Code      : KANS005
 Name      : Baek Chan
 Province  : កណ្តាល
-District  : Angk Snuol (អង្គស្នួល)
-Commune   : បែកចាន
+District  : Angk Snuol (Angk Snuol)
+Commune   : Baek Chan
 Location  : 11.509273, 104.741863
 
 [BRANCH KEPA001]
 Code      : KEPA001
 Name      : Ou Krasar
 Province  : កែប
-District  : Kaeb (កែប)
-Commune   : អូរក្រសារ
+District  : Kaeb (Kaeb)
+Commune   : Ou Krasar
 Location  : 10.55536, 104.2883
 
 [BRANCH KEPA002]
 Code      : KEPA002
 Name      : Damnak Chang Aeur
 Province  : កែប
-District  : Damnak Chang'aeur (ដំណាក់ចង្អើរ)
-Commune   : អង្កោល
+District  : Battambang (Battambang)
+Commune   : Damnak Chang Aeur
 Location  : 10.576537, 104.390497
-
-[BRANCH DVCZ5]
-Code      : DVCZ5
-Name      : Vehicle Team Z5
-Province  : koh kong
-District  : Vehicle Team Z5 (vehicle team z5)
-Commune   : vehicle team z5
-Location  : , 
 
 [BRANCH KOHA001]
 Code      : KOHA001
 Name      : Dang Tung
-Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ដំណាក់សុក្រំ
+Province  : កោះកុង
+District  : Khemarak Phoumin (Khemarak Phoumin)
+Commune   : Dang Tung
 Location  : 11.595865, 102.979171
 
 [BRANCH KOHA002]
 Code      : KOHA002
 Name      : Trapeang Rung
 Province  : កោះកុង
-District  : Kaoh Kong (កោះកុង)
-Commune   : ត្រពាំងរូង
+District  : Kaoh Kong (Kaoh Kong)
+Commune   : Trapeang Rung
 Location  : 11.379754, 103.257654
 
 [BRANCH KOHA003]
 Code      : KOHA003
 Name      : Andoung Tuek
 Province  : កោះកុង
-District  : Botum Sakor (បុទុមសាគរ)
-Commune   : អណ្ដូងទឹក
+District  : Botum Sakor (Botum Sakor)
+Commune   : Andoung Tuek
 Location  : 11.18609, 103.468786
 
 [BRANCH KOHA004]
 Code      : KOHA004
 Name      : Dang Tung 02
-Province  : កំពត
-District  : Dang Tong (ដងទង់)
-Commune   : ដំណាក់សុក្រំ
+Province  : កោះកុង
+District  : Khemarak Phoumin (Khemarak Phoumin)
+Commune   : Dang Tung 02
 Location  : 11.608304, 102.982362
 
 [BRANCH KOHA005]
 Code      : KOHA005
 Name      : Srae Ambel
 Province  : កោះកុង
-District  : Srae Ambel (ស្រែ អំបិល)
-Commune   : បឹងព្រាវ
+District  : Srae Ambel (Srae Ambel)
+Commune   : Srae Ambel
 Location  : 11.1860333, 103.4687297
 
 [BRANCH KOHA006]
 Code      : KOHA006
 Name      : Srae Ambel
 Province  : កោះកុង
-District  : Srae Ambel (ស្រែ អំបិល)
-Commune   : បឹងព្រាវ
+District  : Srae Ambel (Srae Ambel)
+Commune   : Srae Ambel
 Location  : 11.122887, 103.745922
 
 [BRANCH KOHA007]
 Code      : KOHA007
 Name      : Phnhi Meas
 Province  : កោះកុង
-District  : Kiri Sakor (គិរីសាគរ)
-Commune   : ភ្ញីមាស
+District  : Kiri Sakor (Kiri Sakor)
+Commune   : Phnhi Meas
 Location  : 10.990343, 103.2221
 
 [BRANCH KOHA008]
 Code      : KOHA008
 Name      : Pak Khlang
 Province  : កោះកុង
-District  : Mondol Seima (មណ្ឌលសីមា)
-Commune   : ប៉ាក់ខ្លង
+District  : Mondol Seima (Mondol Seima)
+Commune   : Pak Khlang
 Location  : 11.642346, 102.922879
 
 [BRANCH KOHA009]
 Code      : KOHA009
 Name      : Ruessei Chrum
 Province  : កោះកុង
-District  : Thma Bang (ថ្មបាំង)
-Commune   : ឫស្សីជ្រុំ
+District  : Thma Bang (Thma Bang)
+Commune   : Ruessei Chrum
 Location  : 11.683293, 103.44224
 
 [BRANCH KOHA010]
 Code      : KOHA010
 Name      : Smach Mean Chey
 Province  : កោះកុង
-District  : Khemara Phoumin (ខេមរភូមិន្ទ)
-Commune   : ស្មាច់មានជ័យ
+District  : Khemara Phoumin (Khemara Phoumin)
+Commune   : Smach Mean Chey
 Location  : 11.61593, 102.98466
-
-[BRANCH KOHA011]
-Code      : KOHA011
-Name      : Kong deab
-Province  : កំពង់ចាម
-District  : Kaoh Soutin (កោះសូទិន)
-Commune   : កំពង់រាប
-Location  : , 
 
 [BRANCH KOHA012]
 Code      : KOHA012
 Name      : Cham Yeam
-Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : ចំណោម
+Province  : កោះកុង
+District  : Khemarak Phoumin (Khemarak Phoumin)
+Commune   : Cham Yeam
 Location  : 11.383526, 102.5550684
 
 [BRANCH KOHP001]
 Code      : KOHP001
 Name      : Khemmeakrakphumin
 Province  : កោះកុង
-District  : Khemara Phoumin (ខេមរភូមិន្ទ)
-Commune   : ស្មាច់មានជ័យ
+District  : Khemarak Phoumin (Khemarak Phoumin)
+Commune   : Khemmeakrakphumin
 Location  : 11.61075, 102.978804
 
 [BRANCH KOHS001]
 Code      : KOHS001
 Name      : Smach Mean Chey
 Province  : កោះកុង
-District  : Khemara Phoumin (ខេមរភូមិន្ទ)
-Commune   : ស្មាច់មានជ័យ
+District  : Khemara Phoumin (Khemara Phoumin)
+Commune   : Smach Mean Chey
 Location  : 11.6154, 102.98474
 
 [BRANCH HUBKRA01]
 Code      : HUBKRA01
 Name      : Hub vùng HUBKRA01
-Province  : kratie
-District  : Hub vùng HUBKRA01 (hub vùng hubkra01)
-Commune   : hub vùng hubkra01
-Location  : 11.600572823206011, 105.70856773843626
-
-[BRANCH HZ5P01]
-Code      : HZ5P01
-Name      : Head office Z5
-Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ភក្ដី
-Location  : , 
+Province  : ក្រចេះ
+District  : Kratie (Kratie)
+Commune   : Hub vùng HUBKRA01
+Location  : 11.60057282320601, 105.7085677384363
 
 [BRANCH KRAA001]
 Code      : KRAA001
 Name      : Sambok
 Province  : ក្រចេះ
-District  : Chetr Borei (ចិត្របុរី)
-Commune   : សំបុក
+District  : Chetr Borei (Chetr Borei)
+Commune   : Sambok
 Location  : 12.5903, 106.0265
 
 [BRANCH KRAA003]
 Code      : KRAA003
 Name      : Chhloung
 Province  : ក្រចេះ
-District  : Chhloung (ឆ្លូង)
-Commune   : ឆ្លូង
+District  : Chhloung (Chhloung)
+Commune   : Chhloung
 Location  : 12.252597, 105.977067
 
 [BRANCH KRAA004]
 Code      : KRAA004
 Name      : Kbal Damrei
 Province  : ក្រចេះ
-District  : Ou Krieng Saenchey (អូរគ្រៀងសែនជ័យ)
-Commune   : ក្បាលដំរី
+District  : Or Krieng Saenchay (Or Krieng Saenchay)
+Commune   : Kbal Damrei
 Location  : 12.86919, 106.198153
 
 [BRANCH KRAA005]
 Code      : KRAA005
 Name      : Svay Chreah
 Province  : ក្រចេះ
-District  : Snuol (ស្នួល)
-Commune   : ស្វាយជ្រះ
+District  : Snuol (Snuol)
+Commune   : Svay Chreah
 Location  : 12.320298, 106.324222
 
 [BRANCH KRAA006]
 Code      : KRAA006
 Name      : Kranhung Saen Chey
 Province  : ក្រចេះ
-District  : Snuol (ស្នួល)
-Commune   : គ្រញូងសែនជ័យ
+District  : Kratie (Kratie)
+Commune   : Kranhung Saen Chey
 Location  : 12.129537, 106.653759
 
 [BRANCH KRAA007]
 Code      : KRAA007
 Name      : Ou Krieng
 Province  : ក្រចេះ
-District  : Ou Krieng Saenchey (អូរគ្រៀងសែនជ័យ)
-Commune   : អូរគ្រៀង
+District  : Or Krieng Saenchay (Or Krieng Saenchay)
+Commune   : Ou Krieng
 Location  : 13.043829, 106.180606
 
 [BRANCH KRAA008]
 Code      : KRAA008
 Name      : Sambour
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : សំបូរ
+Province  : ក្រចេះ
+District  : Sambour (Sambour)
+Commune   : Sambour
 Location  : 12.776424, 105.964835
 
 [BRANCH KRAA009]
 Code      : KRAA009
 Name      : Sandan
-Province  : កំពង់ធំ
-District  : Sandan (សណ្ដាន់)
-Commune   : ឈើទាល
+Province  : ក្រចេះ
+District  : Sambour (Sambour)
+Commune   : Sandan
 Location  : 12.689547, 106.021083
 
 [BRANCH KRAA010]
 Code      : KRAA010
 Name      : Chambak
-Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : ចំបក់
+Province  : ក្រចេះ
+District  : Kratie (Kratie)
+Commune   : Chambak
 Location  : 12.278305, 105.801464
 
 [BRANCH KRAA012]
 Code      : KRAA012
 Name      : Kanhchor
 Province  : ក្រចេះ
-District  : Chhloung (ឆ្លូង)
-Commune   : កញ្ជរ
+District  : Chhloung (Chhloung)
+Commune   : Kanhchor
 Location  : 12.33255, 106.052751
 
 [BRANCH KRAP001]
 Code      : KRAP001
 Name      : Kracheh
 Province  : ក្រចេះ
-District  : Kracheh (ក្រចេះ)
-Commune   : កោះទ្រង់
+District  : Kracheh (Kracheh)
+Commune   : Kracheh
 Location  : 12.482385, 106.020364
 
 [BRANCH KRAS001]
 Code      : KRAS001
 Name      : Kracheh
 Province  : ក្រចេះ
-District  : Kracheh (ក្រចេះ)
-Commune   : កោះទ្រង់
+District  : Kracheh (Kracheh)
+Commune   : Kracheh
 Location  : 12.4896, 106.016
 
 [BRANCH KRAS002]
 Code      : KRAS002
 Name      : Snuol
 Province  : ក្រចេះ
-District  : Snuol (ស្នួល)
-Commune   : ឃ្សឹម
+District  : Snuol (Snuol)
+Commune   : Snuol
 Location  : 12.0746, 106.4211
 
 [BRANCH KRAS003]
 Code      : KRAS003
 Name      : Chhloung
 Province  : ក្រចេះ
-District  : Chhloung (ឆ្លូង)
-Commune   : ឆ្លូង
+District  : Chhloung (Chhloung)
+Commune   : Chhloung
 Location  : 12.2569, 105.9602
 
 [BRANCH KRAS004]
 Code      : KRAS004
 Name      : Sambour
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : សំបូរ
+Province  : ក្រចេះ
+District  : Sambour (Sambour)
+Commune   : Sambour
 Location  : 12.774535, 105.964866
 
 [BRANCH KRAS005]
 Code      : KRAS005
 Name      : Preaek Prasab
 Province  : ក្រចេះ
-District  : Prek Prasab (ព្រែកប្រសព្វ)
-Commune   : ព្រែកប្រសព្វ
+District  : Prek Prasab (Prek Prasab)
+Commune   : Preaek Prasab
 Location  : 12.35199, 106.03661
-
-[BRANCH KVKRA01]
-Code      : KVKRA01
-Name      : Kho vùng KRATIE
-Province  : ឧត្តរមានជ័យ
-District  : Samraong (សំរោង)
-Commune   : កូនក្រៀល
-Location  : , 
 
 [BRANCH DVCMEGA1]
 Code      : DVCMEGA1
 Name      : MEGA transport team
-Province  : កណ្តាល
-District  : Ponhea Lueu (ពញាឮ)
-Commune   : ព្រែកតាទែន
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : MEGA transport team
 Location  : 11.63907, 104.85378
 
 [BRANCH MEGA1]
 Code      : MEGA1
 Name      : MEGA1
-Province  : ព្រះវិហារ
-District  : Chey Saen (ជ័យសែន)
-Commune   : ធ្មា
-Location  : 11.631082846238561, 104.85548753809898
-
-[BRANCH HEADP01]
-Code      : HEADP01
-Name      : Head Office Center
-Province  : ព្រៃវែង
-District  : Kampong Trabaek (កំពង់ត្របែក)
-Commune   : ពាមមន្ទារ
-Location  : , 
-
-[BRANCH TN3]
-Code      : TN3
-Name      : Thử nghiệm 3-TTCNTT BAT
-Province  : metfone express hq
-District  : Thử nghiệm 3-TTCNTT BAT (thử nghiệm 3-ttcntt bat)
-Commune   : thử nghiệm 3-ttcntt bat
-Location  : , 
+Province  : បាត់ដំបង
+District  : Battambang (Battambang)
+Commune   : MEGA1
+Location  : 11.63108284623856, 104.855487538099
 
 [BRANCH MONA001]
 Code      : MONA001
 Name      : Chong Phlah
 Province  : មណ្ឌលគិរី
-District  : Kaev Seima (កែវសីមា)
-Commune   : ចុងផ្លាស់
+District  : Kaev Seima (Kaev Seima)
+Commune   : Chong Phlah
 Location  : 12.614578, 106.876878
 
 [BRANCH MONA002]
 Code      : MONA002
 Name      : Dak Dam
 Province  : មណ្ឌលគិរី
-District  : Ou Reang (អូររាំង)
-Commune   : ដាក់ដាំ
+District  : Ou Reang (Ou Reang)
+Commune   : Dak Dam
 Location  : 12.423385, 107.312825
 
 [BRANCH MONA003]
 Code      : MONA003
 Name      : Srae Sangkum
 Province  : មណ្ឌលគិរី
-District  : Kaoh Nheaek (កោះញែក)
-Commune   : ស្រែសង្គម
+District  : Kaoh Nheaek (Kaoh Nheaek)
+Commune   : Srae Sangkum
 Location  : 13.075742, 107.044095
 
 [BRANCH MONA004]
 Code      : MONA004
 Name      : Bu Sra
 Province  : មណ្ឌលគិរី
-District  : Pech Chreada (ពេជ្រាដា)
-Commune   : ប៊ូស្រា
+District  : Pech Chreada (Pech Chreada)
+Commune   : Bu Sra
 Location  : 12.541149, 107.431679
 
 [BRANCH MONA005]
 Code      : MONA005
 Name      : Pu Chrey
 Province  : មណ្ឌលគិរី
-District  : Pech Chreada (ពេជ្រាដា)
-Commune   : ពូជ្រៃ
+District  : Pech Chreada (Pech Chreada)
+Commune   : Pu Chrey
 Location  : 12.684758, 107.218298
 
 [BRANCH MONA006]
 Code      : MONA006
 Name      : Srae Ampum
 Province  : មណ្ឌលគិរី
-District  : Pech Chreada (ពេជ្រាដា)
-Commune   : ស្រែអំពូម
+District  : Pech Chreada (Pech Chreada)
+Commune   : Srae Ampum
 Location  : 12.541868, 107.337129
 
 [BRANCH MONA007]
 Code      : MONA007
 Name      : Srae Khtum
 Province  : មណ្ឌលគិរី
-District  : Kaev Seima (កែវសីមា)
-Commune   : ស្រែខ្ទុម
+District  : Kaev Seima (Kaev Seima)
+Commune   : Srae Khtum
 Location  : 12.112262, 106.886145
 
 [BRANCH MONA008]
 Code      : MONA008
 Name      : Srae Chhuk
 Province  : មណ្ឌលគិរី
-District  : Kaev Seima (កែវសីមា)
-Commune   : ស្រែឈូក
+District  : Kaev Seima (Kaev Seima)
+Commune   : Srae Chhuk
 Location  : 12.139465, 106.718123
 
 [BRANCH MONP001]
 Code      : MONP001
 Name      : Mondulkiri
-Province  : កំពង់ឆ្នាំង
-District  : Chol Kiri (ជលគីរី)
-Commune   : ជលសា
+Province  : មណ្ឌលគិរី
+District  : Senmonorom (Senmonorom)
+Commune   : Mondulkiri
 Location  : 12.457818, 107.187645
 
 [BRANCH MONS001]
 Code      : MONS001
 Name      : Spean Mean Chey
 Province  : មណ្ឌលគិរី
-District  : Saen Monourom (សែនមនោរម្យ)
-Commune   : ស្ពានមានជ័យ
+District  : Saen Monourom (Saen Monourom)
+Commune   : Spean Mean Chey
 Location  : 12.454312, 107.187197
 
 [BRANCH ODDA001]
 Code      : ODDA001
 Name      : Anlung Veaeng 01
 Province  : ឧត្តរមានជ័យ
-District  : Anlong Veaeng (អន្លង់វែង)
-Commune   : អន្លង់វែង
+District  : Samraong (Samraong)
+Commune   : Anlung Veaeng 01
 Location  : 14.08214, 104.095182
 
 [BRANCH ODDA002]
 Code      : ODDA002
 Name      : Anlung Veaeng 02
 Province  : ឧត្តរមានជ័យ
-District  : Anlong Veaeng (អន្លង់វែង)
-Commune   : អន្លង់វែង
+District  : Samraong (Samraong)
+Commune   : Anlung Veaeng 02
 Location  : 14.232786, 104.080505
 
 [BRANCH ODDA003]
 Code      : ODDA003
 Name      : Trapeang Tav
 Province  : ឧត្តរមានជ័យ
-District  : Anlong Veaeng (អន្លង់វែង)
-Commune   : ត្រពាំងតាវ
+District  : Anlong Veaeng (Anlong Veaeng)
+Commune   : Trapeang Tav
 Location  : 14.22539, 103.897009
 
 [BRANCH ODDA004]
 Code      : ODDA004
 Name      : Trapeang Prasat 01
 Province  : ឧត្តរមានជ័យ
-District  : Trapeang Prasat (ត្រពាំងប្រាសាទ)
-Commune   : បាក់អន្លូង
+District  : Trapeang Prasat (Trapeang Prasat)
+Commune   : Trapeang Prasat 01
 Location  : 14.19811, 104.356795
 
 [BRANCH ODDA005]
 Code      : ODDA005
 Name      : Trapeang Prasat 02
 Province  : ឧត្តរមានជ័យ
-District  : Trapeang Prasat (ត្រពាំងប្រាសាទ)
-Commune   : បាក់អន្លូង
+District  : Trapeang Prasat (Trapeang Prasat)
+Commune   : Trapeang Prasat 02
 Location  : 14.112373, 104.342542
 
 [BRANCH ODDA006]
 Code      : ODDA006
 Name      : Samraong
-Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : សំរោង
+Province  : ឧត្តរមានជ័យ
+District  : Samraong (Samraong)
+Commune   : Samraong
 Location  : 14.177446, 103.507004
 
 [BRANCH ODDA007]
 Code      : ODDA007
 Name      : Chong Kal
 Province  : ឧត្តរមានជ័យ
-District  : Chong Kal (ចុងកាល់)
-Commune   : ជើងទៀន
+District  : Chong Kal (Chong Kal)
+Commune   : Chong Kal
 Location  : 13.961066, 103.572905
 
 [BRANCH ODDA008]
 Code      : ODDA008
 Name      : Kouk Mon
 Province  : ឧត្តរមានជ័យ
-District  : Banteay Ampil (បន្ទាយអំពិល)
-Commune   : គោកមន
+District  : Banteay Ampil (Banteay Ampil)
+Commune   : Kouk Mon
 Location  : 14.161922, 103.288798
 
 [BRANCH ODDP001]
 Code      : ODDP001
 Name      : Samraong
-Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : សំរោង
+Province  : ឧត្តរមានជ័យ
+District  : Samraong (Samraong)
+Commune   : Samraong
 Location  : 14.171544, 103.511342
 
 [BRANCH ODDS001]
 Code      : ODDS001
 Name      : Samraong
-Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : សំរោង
+Province  : ឧត្តរមានជ័យ
+District  : Samraong (Samraong)
+Commune   : Samraong
 Location  : 14.17525, 103.5071667
 
 [BRANCH ODDS002]
 Code      : ODDS002
 Name      : Anlung Veaeng
 Province  : ឧត្តរមានជ័យ
-District  : Anlong Veaeng (អន្លង់វែង)
-Commune   : អន្លង់វែង
+District  : Samraong (Samraong)
+Commune   : Anlung Veaeng
 Location  : 14.230011, 104.0781543
-
-[BRANCH ODDTEST]
-Code      : ODDTEST
-Name      : Otdar Meanchey
-Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ឈ្នួរមានជ័យ
-Location  : , 
 
 [BRANCH PAIA001]
 Code      : PAIA001
 Name      : Pailin
 Province  : ប៉ៃលិន
-District  : Pailin (ប៉ៃលិន)
-Commune   : ប៉ៃលិន
+District  : Pailin (Pailin)
+Commune   : Pailin
 Location  : 12.857257, 102.604963
 
 [BRANCH PAIA002]
 Code      : PAIA002
 Name      : Sala Krau
 Province  : ប៉ៃលិន
-District  : Sala Krau (សាលាក្រៅ)
-Commune   : សាលាក្រៅ
+District  : Sala Krau (Sala Krau)
+Commune   : Sala Krau
 Location  : 12.948435, 102.591515
 
 [BRANCH PAIA003]
 Code      : PAIA003
 Name      : Stueng Kach
 Province  : ប៉ៃលិន
-District  : Sala Krau (សាលាក្រៅ)
-Commune   : ស្ទឹងកាច់
+District  : Sala Krau (Sala Krau)
+Commune   : Stueng Kach
 Location  : 12.934088, 102.501392
 
 [BRANCH PAIS001]
 Code      : PAIS001
 Name      : Pailin
 Province  : ប៉ៃលិន
-District  : Pailin (ប៉ៃលិន)
-Commune   : ប៉ៃលិន
+District  : Pailin (Pailin)
+Commune   : Pailin
 Location  : 12.857211, 102.604989
-
-[BRANCH DVCZ1]
-Code      : DVCZ1
-Name      : Vehicle Team Z1
-Province  : phnom penh branch
-District  : Vehicle Team Z1 (vehicle team z1)
-Commune   : vehicle team z1
-Location  : , 
-
-[BRANCH HZ1P01]
-Code      : HZ1P01
-Name      : Head Office Z1
-Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
-Location  : , 
 
 [BRANCH PNPA001]
 Code      : PNPA001
 Name      : Prey Sa
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ព្រៃស
+District  : Dangkao (Dangkao)
+Commune   : Prey Sa
 Location  : 11.500609, 104.858078
 
 [BRANCH PNPA002]
 Code      : PNPA002
 Name      : Oulampik 01
-Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ទួលអំពិល
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Oulampik 01
 Location  : 11.55307, 104.91135
 
 [BRANCH PNPA003]
 Code      : PNPA003
 Name      : Tuek Thla 01
-Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : ទឹកថ្លា
+Province  : ភ្នំពេញ
+District  : Saensokh (Saensokh)
+Commune   : Tuek Thla 01
 Location  : 11.556812, 104.881281
 
 [BRANCH PNPA004]
 Code      : PNPA004
 Name      : Chaom Chau Ti Pir
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Pir
 Location  : 11.534467, 104.84961
 
 [BRANCH PNPA005]
 Code      : PNPA005
 Name      : Trapeang Thloeng 4
-Province  : ត្បូងឃ្មុំ
-District  : Ponhea Kraek (ពញាក្រែក)
-Commune   : ត្រពាំងផ្លុង
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Trapeang Thloeng 4
 Location  : 11.531301, 104.860961
 
 [BRANCH PNPA006]
 Code      : PNPA006
 Name      : Kakab Ti Pir
-Province  : កណ្តាល
-District  : Mukh Kampul (មុខកំពូល)
-Commune   : រកាកោង ទី ២
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Kakab Ti Pir
 Location  : 11.563, 104.8416
 
 [BRANCH PNPA007]
 Code      : PNPA007
 Name      : Dangkao
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ដង្កោ
+District  : Dangkao (Dangkao)
+Commune   : Dangkao
 Location  : 11.5153, 104.8856
 
 [BRANCH PNPA008]
 Code      : PNPA008
 Name      : Stueng Mean Chey Ti Bei
 Province  : ភ្នំពេញ
-District  : Mean Chey (មានជ័យ)
-Commune   : ស្ទឹងមានជ័យទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Stueng Mean Chey Ti Bei
 Location  : 11.5293, 104.8768
 
 [BRANCH PNPA013]
 Code      : PNPA013
 Name      : Kamboul
 Province  : ភ្នំពេញ
-District  : Kamboul (កំបូល)
-Commune   : កំបូល
+District  : Kamboul (Kamboul)
+Commune   : Kamboul
 Location  : 11.4411, 104.7519
 
 [BRANCH PNPA016]
 Code      : PNPA016
 Name      : Angk Snuol
-Province  : កណ្តាល
-District  : Angk Snuol (អង្គស្នួល)
-Commune   : បែកចាន
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Angk Snuol
 Location  : 11.509205, 104.750279
 
 [BRANCH PNPA017]
 Code      : PNPA017
 Name      : SOMOL MONORITH
-Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : បន្ទាយនាង
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : SOMOL MONORITH
 Location  : 11.535556, 104.761811
 
 [BRANCH PNPA019]
 Code      : PNPA019
 Name      : Ta Nuon
-Province  : កោះកុង
-District  : Botum Sakor (បុទុមសាគរ)
-Commune   : តានូន
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Ta Nuon
 Location  : 11.535552, 104.761817
 
 [BRANCH PNPA020]
 Code      : PNPA020
 Name      : Tuol Svay Prey Ti Pir
 Province  : ភ្នំពេញ
-District  : Boeng Keng Kang (បឹងកេងកង)
-Commune   : ទួលស្វាយព្រៃទី ២
+District  : Boeng Keng Kang (Boeng Keng Kang)
+Commune   : Tuol Svay Prey Ti Pir
 Location  : 11.551024, 104.904515
 
 [BRANCH PNPA022]
 Code      : PNPA022
 Name      : Tien
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ទៀន
+District  : Dangkao (Dangkao)
+Commune   : Tien
 Location  : 11.44122, 104.855906
 
 [BRANCH PNPA023]
 Code      : PNPA023
 Name      : Chaom Chau Ti Pir
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Pir
 Location  : 11.52833, 104.844216
 
 [BRANCH PNPA024]
 Code      : PNPA024
 Name      : Kakab Ti Muoy
-Province  : កណ្តាល
-District  : Mukh Kampul (មុខកំពូល)
-Commune   : រកាកោង ទី ១
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Kakab Ti Muoy
 Location  : 11.561142, 104.841369
 
 [BRANCH PNPA025]
 Code      : PNPA025
 Name      : Chaom Chau Ti Muoy 01
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Muoy 01
 Location  : 11.531051, 104.809553
 
 [BRANCH PNPA026]
 Code      : PNPA026
 Name      : Stueng Mean Chey Ti Muoy
 Province  : ភ្នំពេញ
-District  : Mean Chey (មានជ័យ)
-Commune   : ស្ទឹងមានជ័យទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Stueng Mean Chey Ti Muoy
 Location  : 11.525871, 104.875463
 
 [BRANCH PNPA027]
 Code      : PNPA027
 Name      : Boeng Tumpun Ti Pir
 Province  : ភ្នំពេញ
-District  : Chamkar Mon (ចំការមន)
-Commune   : ទួលទំពូងទី ២
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Boeng Tumpun Ti Pir
 Location  : 11.514045, 104.920608
 
 [BRANCH PNPA028]
 Code      : PNPA028
 Name      : Chaom Chau Ti Muoy 02
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី២
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Muoy 02
 Location  : 11.5215, 104.8725
 
 [BRANCH PNPA029]
 Code      : PNPA029
 Name      : Stueng Mean Chey Ti Pir
 Province  : ភ្នំពេញ
-District  : Mean Chey (មានជ័យ)
-Commune   : ស្ទឹងមានជ័យទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Stueng Mean Chey Ti Pir
 Location  : 11.524998, 104.89214
 
 [BRANCH PNPA030]
 Code      : PNPA030
 Name      : Stueng Mean Chey Ti Muoy
 Province  : ភ្នំពេញ
-District  : Mean Chey (មានជ័យ)
-Commune   : ស្ទឹងមានជ័យទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Stueng Mean Chey Ti Muoy
 Location  : 11.548701, 104.896919
 
 [BRANCH PNPA031]
 Code      : PNPA031
 Name      : Dangkao 01
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ដង្កោ
+District  : Dangkao (Dangkao)
+Commune   : Dangkao 01
 Location  : 11.5064, 104.8867
 
 [BRANCH PNPA032]
 Code      : PNPA032
 Name      : Spean Thma
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ស្ពានថ្ម
+District  : Dangkao (Dangkao)
+Commune   : Spean Thma
 Location  : 11.4607, 104.8898
 
 [BRANCH PNPA033]
 Code      : PNPA033
 Name      : Cheung Aek
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ជើងឯក
+District  : Dangkao (Dangkao)
+Commune   : Cheung Aek
 Location  : 11.495626, 104.893718
 
 [BRANCH PNPA034]
 Code      : PNPA034
 Name      : Dangkao 02
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ដង្កោ
+District  : Dangkao (Dangkao)
+Commune   : Dangkao 02
 Location  : 11.43287, 105.59722
 
 [BRANCH PNPA035]
 Code      : PNPA035
 Name      : Ruessei Kaev 01
 Province  : ភ្នំពេញ
-District  : Russey Keo (ឫស្សីកែវ)
-Commune   : ឫស្សីកែវ
+District  : Russey Keo (Russey Keo)
+Commune   : Ruessei Kaev 01
 Location  : 11.612098, 104.916483
 
 [BRANCH PNPA036]
 Code      : PNPA036
 Name      : Phsar Daeum Kor
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : ផ្សារដើមគរ
+District  : Tuol Kouk (Tuol Kouk)
+Commune   : Phsar Daeum Kor
 Location  : 11.5558, 104.903971
 
 [BRANCH PNPA037]
 Code      : PNPA037
 Name      : Ruessei Kaev 02
 Province  : ភ្នំពេញ
-District  : Russey Keo (ឫស្សីកែវ)
-Commune   : ឫស្សីកែវ
+District  : Russey Keo (Russey Keo)
+Commune   : Ruessei Kaev 02
 Location  : 11.60771, 104.910754
 
 [BRANCH PNPA038]
 Code      : PNPA038
 Name      : Kouk Khleang
 Province  : ភ្នំពេញ
-District  : Saensokh (សែនសុខ)
-Commune   : គោកឃ្លាង
+District  : Saensokh (Saensokh)
+Commune   : Kouk Khleang
 Location  : 11.597575, 104.868313
 
 [BRANCH PNPA039]
 Code      : PNPA039
 Name      : Phnum Penh Thmei
 Province  : ភ្នំពេញ
-District  : Saensokh (សែនសុខ)
-Commune   : ភ្នំពេញថ្មី
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Phnum Penh Thmei
 Location  : 11.572758, 104.871636
 
 [BRANCH PNPA040]
 Code      : PNPA040
 Name      : Tuek Thla 02
-Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : ទឹកថ្លា
+Province  : ភ្នំពេញ
+District  : Saensokh (Saensokh)
+Commune   : Tuek Thla 02
 Location  : 11.553224, 104.885042
 
 [BRANCH PNPA041]
 Code      : PNPA041
 Name      : Oulampik 02
-Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ទួលអំពិល
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Oulampik 02
 Location  : 11.554833, 104.910783
 
 [BRANCH PNPA043]
 Code      : PNPA043
 Name      : Preaek Pra
 Province  : ភ្នំពេញ
-District  : Chbar Ampov (ច្បារអំពៅ)
-Commune   : ព្រែកប្រា
+District  : Chbar Ampov (Chbar Ampov)
+Commune   : Preaek Pra
 Location  : 11.5047, 104.9453
 
 [BRANCH PNPA044]
 Code      : PNPA044
 Name      : Phsar Chas
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារចាស់
+District  : Doun Penh (Doun Penh)
+Commune   : Phsar Chas
 Location  : 11.572105, 104.924878
 
 [BRANCH PNPA045]
 Code      : PNPA045
 Name      : Boeng Proluet
 Province  : ភ្នំពេញ
-District  : Prampir Meakkakra (៧មករា)
-Commune   : បឹងព្រលឹត
+District  : Prampir Meakkakra (Prampir Meakkakra)
+Commune   : Boeng Proluet
 Location  : 11.561033, 104.91571
 
 [BRANCH PNPA046]
 Code      : PNPA046
 Name      : Chaom Chau Ti Bei 01
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Bei 01
 Location  : 11.532243, 104.832501
 
 [BRANCH PNPA047]
 Code      : PNPA047
 Name      : Phsar Thmei Ti Bei
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារថ្មីទី ៣
+District  : Doun Penh (Doun Penh)
+Commune   : Phsar Thmei Ti Bei
 Location  : 11.567417, 104.92398
 
 [BRANCH PNPA048]
 Code      : PNPA048
 Name      : Chrang Chamreh Ti Pir
 Province  : ភ្នំពេញ
-District  : Russey Keo (ឫស្សីកែវ)
-Commune   : ច្រាំងចំរេះទី ២
+District  : Russey Keo (Russey Keo)
+Commune   : Chrang Chamreh Ti Pir
 Location  : 11.630997, 104.903476
 
 [BRANCH PNPA051]
 Code      : PNPA051
 Name      : Tuek L'ak Ti Bei
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : ទឹកល្អក់ទី ៣
+District  : Tuol Kouk (Tuol Kouk)
+Commune   : Tuek L'ak Ti Bei
 Location  : 11.55678, 104.893393
 
 [BRANCH PNPA052]
 Code      : PNPA052
 Name      : Chak Angrae Kraom
 Province  : ភ្នំពេញ
-District  : Mean Chey (មានជ័យ)
-Commune   : ចាក់អង្រែក្រោម
+District  : Mean Chey (Mean Chey)
+Commune   : Chak Angrae Kraom
 Location  : 11.50926, 104.937224
 
 [BRANCH PNPA055]
 Code      : PNPA055
 Name      : Boeng Tumpun Ti Muoy
 Province  : ភ្នំពេញ
-District  : Chamkar Mon (ចំការមន)
-Commune   : ទួលទំពូងទី ១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Boeng Tumpun Ti Muoy
 Location  : 11.520161, 104.916818
 
 [BRANCH PNPA059]
 Code      : PNPA059
 Name      : Phsar Toch
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារចាស់
-Location  : 104.916787, 11.590202
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Phsar Toch
+Location  : 11.590202, 104.916787
 
 [BRANCH PNPA060]
 Code      : PNPA060
 Name      : Phsar Thmei Ti Muoy
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារថ្មីទី ១
+District  : Doun Penh (Doun Penh)
+Commune   : Phsar Thmei Ti Muoy
 Location  : 11.570329, 104.921707
 
 [BRANCH PNPA064]
 Code      : PNPA064
 Name      : Prey Pring Khang Tboung 2
-Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : ស្វាយទងខាងត្បូង
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Prey Pring Khang Tboung 2
 Location  : 11.524598, 104.826706
 
 [BRANCH PNPA069]
 Code      : PNPA069
 Name      : Ou Baek K am
 Province  : ភ្នំពេញ
-District  : Saensokh (សែនសុខ)
-Commune   : អូរបែកក្អម
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Ou Baek K am
 Location  : 11.5524, 104.8851
 
 [BRANCH PNPA070]
 Code      : PNPA070
 Name      : Nirouth
 Province  : ភ្នំពេញ
-District  : Chbar Ampov (ច្បារអំពៅ)
-Commune   : និរោធ
+District  : Chbar Ampov (Chbar Ampov)
+Commune   : Nirouth
 Location  : 11.519818, 104.945927
 
 [BRANCH PNPA071]
 Code      : PNPA071
 Name      : Chong Khsach
-Province  : ត្បូងឃ្មុំ
-District  : Dambae (តំបែរ)
-Commune   : ចុងជាច
-Location  : 104.915295, 11.588579
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chong Khsach
+Location  : 11.588579, 104.915295
 
 [BRANCH PNPA072]
 Code      : PNPA072
 Name      : Phsar Toch
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារចាស់
-Location  : 104.907171, 11.590341
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Phsar Toch
+Location  : 11.590341, 104.907171
 
 [BRANCH PNPA073]
 Code      : PNPA073
 Name      : Phsar Depou Ti Pir Phum 2
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : ផ្សារដេប៉ូទី ២
+District  : Tuol Kouk (Tuol Kouk)
+Commune   : Phsar Depou Ti Pir Phum 2
 Location  : 11.566332, 104.905016
 
 [BRANCH PNPA074]
 Code      : PNPA074
 Name      : Tuek Thla
-Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : ទឹកថ្លា
+Province  : ភ្នំពេញ
+District  : Saensokh (Saensokh)
+Commune   : Tuek Thla
 Location  : 11.5576, 104.8686
 
 [BRANCH PNPA079]
 Code      : PNPA079
 Name      : Kab Phluk
-Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : កាត់ភ្លុក
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Kab Phluk
 Location  : 11.502116, 104.806126
 
 [BRANCH PNPA080]
 Code      : PNPA080
 Name      : Phleung Chheh Roteh
 Province  : ភ្នំពេញ
-District  : Kamboul (កំបូល)
-Commune   : ភ្លើងឆេះរទេះ
+District  : Kamboul (Kamboul)
+Commune   : Phleung Chheh Roteh
 Location  : 11.491788, 104.81429
 
 [BRANCH PNPA081]
 Code      : PNPA081
 Name      : Phsar Thmei Ti Bei Phum 3
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារថ្មីទី ៣
+District  : Doun Penh (Doun Penh)
+Commune   : Phsar Thmei Ti Bei Phum 3
 Location  : 11.565271, 104.923624
 
 [BRANCH PNPA087]
 Code      : PNPA087
 Name      : Boeng Tumpun Ti Muoy
 Province  : ភ្នំពេញ
-District  : Chamkar Mon (ចំការមន)
-Commune   : ទួលទំពូងទី ១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Boeng Tumpun Ti Muoy
 Location  : 11.530862, 104.912548
 
 [BRANCH PNPA088]
 Code      : PNPA088
 Name      : Chaom Chau Ti Bei 02
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី២
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Bei 02
 Location  : 11.537322, 104.815671
 
 [BRANCH PNPA091]
 Code      : PNPA091
 Name      : Chaom Chau 2 Phum 1
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Pur SenChey (Pur SenChey)
+Commune   : Chaom Chau 2 Phum 1
 Location  : 11.52026, 104.806014
 
 [BRANCH PNPA095]
 Code      : PNPA095
 Name      : Wat Nirouth
 Province  : ភ្នំពេញ
-District  : Chbar Ampov (ច្បារអំពៅ)
-Commune   : និរោធ
+District  : Chbar Ampov (Chbar Ampov)
+Commune   : Wat Nirouth
 Location  : 11.522177, 104.9465878
 
 [BRANCH PNPA096]
 Code      : PNPA096
 Name      : Tuek L ak Ti Bei Phum 2
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : ទឹកល្អក់ទី ៣
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Tuek L ak Ti Bei Phum 2
 Location  : 11.566, 104.89096
 
 [BRANCH PNPA100]
 Code      : PNPA100
 Name      : Tuol Pongro
-Province  : បន្ទាយមានជ័យ
-District  : Malai (ម៉ាឡៃ)
-Commune   : ទួលពង្រ
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Tuol Pongro
 Location  : 11.513179, 104.858848
 
 [BRANCH PNPP001]
 Code      : PNPP001
 Name      : Chamkar Mon
 Province  : ភ្នំពេញ
-District  : Chamkar Mon (ចំការមន)
-Commune   : ទន្លេបាសាក់
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chamkar Mon
 Location  : 11.5498322, 104.9003168
 
 [BRANCH PNPP002]
 Code      : PNPP002
 Name      : Mean Chey 01
-Province  : Battambang
-District  : Samlout (សំឡូត)
-Commune   : មានជ័យ
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Mean Chey 01
 Location  : 11.5121, 104.93619
 
 [BRANCH PNPP003]
 Code      : PNPP003
 Name      : Mean Chey 02
-Province  : Battambang
-District  : Samlout (សំឡូត)
-Commune   : មានជ័យ
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Mean Chey 02
 Location  : 11.547075, 104.884
 
 [BRANCH PNPP004]
 Code      : PNPP004
 Name      : Preaek Pnov
 Province  : ភ្នំពេញ
-District  : Praek Pnov (ព្រែកព្នៅ)
-Commune   : ព្រែកព្នៅ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Preaek Pnov
 Location  : 11.6583, 104.8637
 
 [BRANCH PNPP005]
 Code      : PNPP005
 Name      : Chbar Ampov
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : ច្បារអំពៅ
+Province  : ភ្នំពេញ
+District  : Chbar Ampov (Chbar Ampov)
+Commune   : Chbar Ampov
 Location  : 11.5317, 104.9369
 
 [BRANCH PNPP006]
 Code      : PNPP006
 Name      : Tuol Kouk
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : ផ្សារដេប៉ូទី ១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Tuol Kouk
 Location  : 11.5903, 104.8974
 
 [BRANCH PNPP007]
 Code      : PNPP007
 Name      : Boeng Keng Kang
 Province  : ភ្នំពេញ
-District  : Boeng Keng Kang (បឹងកេងកង)
-Commune   : បឹងកេងកងទី ១
+District  : Boeng Keng Kang (Boeng Keng Kang)
+Commune   : Boeng Keng Kang
 Location  : 11.55514, 104.915931
 
 [BRANCH PNPP008]
 Code      : PNPP008
 Name      : Pou Saen Chey 01
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ត្រពាំងក្រសាំង
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Pou Saen Chey 01
 Location  : 11.561082, 104.853001
 
 [BRANCH PNPP009]
 Code      : PNPP009
 Name      : Pou Saen Chey 02
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ត្រពាំងក្រសាំង
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Pou Saen Chey 02
 Location  : 11.5302, 104.8521
 
 [BRANCH PNPP010]
 Code      : PNPP010
 Name      : Chraoy Chongvar
 Province  : ភ្នំពេញ
-District  : Chrouy Changvar (ជ្រោយចង្វារ)
-Commune   : ជ្រោយចង្វារ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chraoy Chongvar
 Location  : 11.6407, 104.918
 
 [BRANCH PNPP011]
 Code      : PNPP011
 Name      : Dangkao
 Province  : ភ្នំពេញ
-District  : Dangkao (ដង្កោ)
-Commune   : ដង្កោ
+District  : Dangkao (Dangkao)
+Commune   : Dangkao
 Location  : 11.50786, 104.8915
 
 [BRANCH PNPP012]
 Code      : PNPP012
 Name      : Kamboul
 Province  : ភ្នំពេញ
-District  : Kamboul (កំបូល)
-Commune   : កំបូល
+District  : Kamboul (Kamboul)
+Commune   : Kamboul
 Location  : 11.518005, 104.774501
 
 [BRANCH PNPP013]
 Code      : PNPP013
 Name      : Saen Sokh
-Province  : សៀមរាប
-District  : Kralanh (ក្រឡាញ់)
-Commune   : សែនសុខ
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Saen Sokh
 Location  : 11.590052, 104.876093
 
 [BRANCH PNPP014]
 Code      : PNPP014
 Name      : Doun Penh
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារថ្មីទី ១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Doun Penh
 Location  : 11.56927, 104.91889
 
 [BRANCH PNPS001]
 Code      : PNPS001
 Name      : Phsar Thmei Ti Muoy
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ផ្សារថ្មីទី ១
+District  : Doun Penh (Doun Penh)
+Commune   : Phsar Thmei Ti Muoy
 Location  : 11.566858, 104.920799
 
 [BRANCH PNPS002]
 Code      : PNPS002
 Name      : Boeng Kak Ti Pir
 Province  : ភ្នំពេញ
-District  : Tuol Kouk (ទួលគោក)
-Commune   : បឹងកក់ទី ២
+District  : Tuol Kouk (Tuol Kouk)
+Commune   : Boeng Kak Ti Pir
 Location  : 11.573333, 104.897194
 
 [BRANCH PNPS003]
 Code      : PNPS003
 Name      : Nirouth
 Province  : ភ្នំពេញ
-District  : Chbar Ampov (ច្បារអំពៅ)
-Commune   : និរោធ
+District  : Chbar Ampov (Chbar Ampov)
+Commune   : Nirouth
 Location  : 11.531241, 104.941846
 
 [BRANCH PNPS004]
 Code      : PNPS004
 Name      : Tuek Thla
-Province  : បន្ទាយមានជ័យ
-District  : Serei Saophoan (សិរីសោភ័ណ)
-Commune   : ទឹកថ្លា
+Province  : ភ្នំពេញ
+District  : Saensokh (Saensokh)
+Commune   : Tuek Thla
 Location  : 11.562672, 104.877815
 
 [BRANCH PNPS005]
 Code      : PNPS005
 Name      : Chaom Chau Ti Muoy 01
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី១
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Muoy 01
 Location  : 11.532352, 104.832526
 
 [BRANCH PNPS006]
 Code      : PNPS006
 Name      : Srah Chak
 Province  : ភ្នំពេញ
-District  : Doun Penh (ដូនពេញ)
-Commune   : ស្រះចក
+District  : Doun Penh (Doun Penh)
+Commune   : Srah Chak
 Location  : 11.585659, 104.915881
 
 [BRANCH PNPS007]
 Code      : PNPS007
 Name      : Tuol Svay Prey Ti Pir
 Province  : ភ្នំពេញ
-District  : Boeng Keng Kang (បឹងកេងកង)
-Commune   : ទួលស្វាយព្រៃទី ២
+District  : Boeng Keng Kang (Boeng Keng Kang)
+Commune   : Tuol Svay Prey Ti Pir
 Location  : 11.550046, 104.904741
 
 [BRANCH PNPS008]
 Code      : PNPS008
 Name      : Chaom Chau Ti Muoy 02
 Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី២
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : Chaom Chau Ti Muoy 02
 Location  : 11.532598, 104.870151
 
 [BRANCH TEST]
 Code      : TEST
 Name      : MAPBCCS
-Province  : phnom penh branch
-District  : MAPBCCS (mapbccs)
-Commune   : mapbccs
+Province  : ភ្នំពេញ
+District  : Chamkar Mon (Chamkar Mon)
+Commune   : MAPBCCS
 Location  : 11.55094, 104.93591
 
 [BRANCH PREA001]
 Code      : PREA001
 Name      : Prey Pnov 01
 Province  : ព្រៃវែង
-District  : Pea Reang (ពារាំង)
-Commune   : ព្រៃព្នៅ
+District  : Pea Reang (Pea Reang)
+Commune   : Prey Pnov 01
 Location  : 11.611617, 105.367041
 
 [BRANCH PREA002]
 Code      : PREA002
 Name      : Prey Kanlaong
 Province  : ព្រៃវែង
-District  : Pur Rieng (ពោធិ៍រៀង)
-Commune   : ព្រៃកន្លោង
+District  : Pur Rieng (Pur Rieng)
+Commune   : Prey Kanlaong
 Location  : 11.548952, 105.321298
 
 [BRANCH PREA003]
 Code      : PREA003
 Name      : Svay Antor 01
 Province  : ព្រៃវែង
-District  : Svay Antor (ស្វាយអន្ទរ)
-Commune   : អង្គរទ្រេត
+District  : Svay Antor (Svay Antor)
+Commune   : Svay Antor 01
 Location  : 11.571646, 105.420105
 
 [BRANCH PREA004]
 Code      : PREA004
 Name      : Svay Antor 02
 Province  : ព្រៃវែង
-District  : Svay Antor (ស្វាយអន្ទរ)
-Commune   : អង្គរទ្រេត
+District  : Svay Antor (Svay Antor)
+Commune   : Svay Antor 02
 Location  : 11.59789, 105.420474
 
 [BRANCH PREA005]
 Code      : PREA005
 Name      : Preaek Ta Sar
 Province  : ព្រៃវែង
-District  : Pur Rieng (ពោធិ៍រៀង)
-Commune   : ព្រែកតាសរ
+District  : Pur Rieng (Pur Rieng)
+Commune   : Preaek Ta Sar
 Location  : 11.5544, 105.127824
 
 [BRANCH PREA006]
 Code      : PREA006
 Name      : Prey Daeum Thnoeng
 Province  : ព្រៃវែង
-District  : Sithor Kandal (ស៊ីធរកណ្ដាល)
-Commune   : ព្រៃដើមថ្នឹង
+District  : Sithor Kandal (Sithor Kandal)
+Commune   : Prey Daeum Thnoeng
 Location  : 11.775516, 105.369815
 
 [BRANCH PREA007]
 Code      : PREA007
 Name      : Roka
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : រកា
+Province  : ព្រៃវែង
+District  : Peam Chor (Peam Chor)
+Commune   : Roka
 Location  : 11.664424, 105.225004
 
 [BRANCH PREA008]
 Code      : PREA008
 Name      : Prey Pnov 02
 Province  : ព្រៃវែង
-District  : Pea Reang (ពារាំង)
-Commune   : ព្រៃព្នៅ
+District  : Pea Reang (Pea Reang)
+Commune   : Prey Pnov 02
 Location  : 11.648247, 105.34067
 
 [BRANCH PREA009]
 Code      : PREA009
 Name      : Smaong Khang Cheung
 Province  : ព្រៃវែង
-District  : Kamchay Mear (កំចាយមារ)
-Commune   : ស្មោងខាងជើង
+District  : Kamchay Mear (Kamchay Mear)
+Commune   : Smaong Khang Cheung
 Location  : 11.553368, 105.600953
 
 [BRANCH PREA010]
 Code      : PREA010
 Name      : Tnaot
 Province  : ព្រៃវែង
-District  : Kanhchriech (កញ្ជ្រៀច)
-Commune   : ត្នោត
+District  : Kanhchriech (Kanhchriech)
+Commune   : Tnaot
 Location  : 11.743958, 105.530275
 
 [BRANCH PREA011]
 Code      : PREA011
 Name      : Kranhung
 Province  : ព្រៃវែង
-District  : Kamchay Mear (កំចាយមារ)
-Commune   : ក្រញូង
+District  : Kamchay Mear (Kamchay Mear)
+Commune   : Kranhung
 Location  : 11.575922, 105.662392
 
 [BRANCH PREA012]
 Code      : PREA012
 Name      : Chres 01
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : ច្រេស
+Province  : ព្រៃវែង
+District  : Me Sang (Me Sang)
+Commune   : Chres 01
 Location  : 11.342191, 105.622593
 
 [BRANCH PREA013]
 Code      : PREA013
 Name      : Prasat
-Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ប្រាសាទ
+Province  : ព្រៃវែង
+District  : Kampong Trabaek (Kampong Trabaek)
+Commune   : Prasat
 Location  : 11.147729, 105.541211
 
 [BRANCH PREA014]
 Code      : PREA014
 Name      : Angkor Sar
 Province  : ព្រៃវែង
-District  : Me Sang (មេសាង)
-Commune   : អង្គរសរ
+District  : Me Sang (Me Sang)
+Commune   : Angkor Sar
 Location  : 11.268447, 105.667765
 
 [BRANCH PREA015]
 Code      : PREA015
 Name      : Banteay Chakrei 01
 Province  : ព្រៃវែង
-District  : Preah Sdach (ព្រះស្ដេច)
-Commune   : បន្ទាយចក្រី
+District  : Preah Sdach (Preah Sdach)
+Commune   : Banteay Chakrei 01
 Location  : 11.029347, 105.378702
 
 [BRANCH PREA016]
 Code      : PREA016
 Name      : Boeng Preah
 Province  : ព្រៃវែង
-District  : Ba Phnum (បាភ្នំ)
-Commune   : បឹងព្រះ
+District  : Ba Phnum (Ba Phnum)
+Commune   : Boeng Preah
 Location  : 11.325107, 105.440185
 
 [BRANCH PREA017]
 Code      : PREA017
 Name      : Preaek Khsay Kha
 Province  : ព្រៃវែង
-District  : Peam Ro (ពាមរក៍)
-Commune   : ព្រែកខ្សាយ ខ
+District  : Peam Ro (Peam Ro)
+Commune   : Preaek Khsay Kha
 Location  : 11.263423, 105.284942
 
 [BRANCH PREA018]
 Code      : PREA018
 Name      : Prey Totueng
 Province  : ព្រៃវែង
-District  : Me Sang (មេសាង)
-Commune   : ព្រៃទទឹង
+District  : Me Sang (Me Sang)
+Commune   : Prey Totueng
 Location  : 11.39061, 105.609572
 
 [BRANCH PREA019]
 Code      : PREA019
 Name      : Kampong Trabaek
 Province  : ព្រៃវែង
-District  : Kampong Trabaek (កំពង់ត្របែក)
-Commune   : អន្សោង
+District  : Kamchay Mear (Kamchay Mear)
+Commune   : Kampong Trabaek
 Location  : 11.142464, 105.482792
 
 [BRANCH PREA020]
 Code      : PREA020
 Name      : Angkor Reach
 Province  : ព្រៃវែង
-District  : Preah Sdach (ព្រះស្ដេច)
-Commune   : អង្គររាជ្យ
+District  : Preah Sdach (Preah Sdach)
+Commune   : Angkor Reach
 Location  : 11.095309, 105.384188
 
 [BRANCH PREA021]
 Code      : PREA021
 Name      : Banteay Chakrei 02
 Province  : ព្រៃវែង
-District  : Preah Sdach (ព្រះស្ដេច)
-Commune   : បន្ទាយចក្រី
+District  : Preah Sdach (Preah Sdach)
+Commune   : Banteay Chakrei 02
 Location  : 10.966321, 105.42245
 
 [BRANCH PREA022]
 Code      : PREA022
 Name      : Chres 02
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : ច្រេស
+Province  : ព្រៃវែង
+District  : Me Sang (Me Sang)
+Commune   : Chres 02
 Location  : 11.352907, 105.646832
 
 [BRANCH PREA023]
 Code      : PREA023
 Name      : Peam Ro
 Province  : ព្រៃវែង
-District  : Peam Ro (ពាមរក៍)
-Commune   : បាបោង
+District  : Peam Ro (Peam Ro)
+Commune   : Peam Ro
 Location  : 11.32042, 105.283219
 
 [BRANCH PREA024]
 Code      : PREA024
 Name      : Chheu Kach
 Province  : ព្រៃវែង
-District  : Ba Phnum (បាភ្នំ)
-Commune   : ឈើកាច់
+District  : Ba Phnum (Ba Phnum)
+Commune   : Chheu Kach
 Location  : 11.256568, 105.400833
 
 [BRANCH PREA025]
 Code      : PREA025
 Name      : Peam Muntear
 Province  : ព្រៃវែង
-District  : Kampong Trabaek (កំពង់ត្របែក)
-Commune   : ពាមមន្ទារ
+District  : Prey Veng (Prey Veng)
+Commune   : Peam Muntear
 Location  : 11.008778, 105.464324
 
 [BRANCH PREA026]
 Code      : PREA026
 Name      : Prey Tueng
 Province  : ព្រៃវែង
-District  : Sithor Kandal (ស៊ីធរកណ្ដាល)
-Commune   : ព្រៃទឹង
+District  : Sithor Kandal (Sithor Kandal)
+Commune   : Prey Tueng
 Location  : 11.739997, 105.372161
 
 [BRANCH PREA027]
 Code      : PREA027
 Name      : CHHEANG SEANGKHIN
-Province  : កំពង់ឆ្នាំង
-District  : Sameakki Mean Chey (សាមគ្គីមានជ័យ)
-Commune   : ឈានឡើង
+Province  : ព្រៃវែង
+District  : Prey Veng (Prey Veng)
+Commune   : CHHEANG SEANGKHIN
 Location  : 11.31939, 105.399572
 
 [BRANCH PREA028]
 Code      : PREA028
 Name      : Sao Raksmey
-Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : ស្លក្រាម
+Province  : ព្រៃវែង
+District  : Prey Veng (Prey Veng)
+Commune   : Sao Raksmey
 Location  : 11.84313, 105.370159
 
 [BRANCH PREA029]
 Code      : PREA029
 Name      : Kampong Soeng
 Province  : ព្រៃវែង
-District  : Preah Sdach (ព្រះស្ដេច)
-Commune   : កំពង់សឹង
+District  : Preah Sdach (Preah Sdach)
+Commune   : Kampong Soeng
 Location  : 11.215623, 105.347501
 
 [BRANCH PREA030]
 Code      : PREA030
 Name      : Me Sang
 Province  : ព្រៃវែង
-District  : Me Sang (មេសាង)
-Commune   : អង្គរសរ
+District  : Prey Veng (Prey Veng)
+Commune   : Me Sang
 Location  : 11.327182, 105.541394
 
 [BRANCH PREA031]
 Code      : PREA031
 Name      : Kampong Trabaek
 Province  : ព្រៃវែង
-District  : Kampong Trabaek (កំពង់ត្របែក)
-Commune   : អន្សោង
+District  : Kamchay Mear (Kamchay Mear)
+Commune   : Kampong Trabaek
 Location  : 11.197135, 105.515982
 
 [BRANCH PREA032]
 Code      : PREA032
 Name      : Peam Ro
 Province  : ព្រៃវែង
-District  : Peam Ro (ពាមរក៍)
-Commune   : បាបោង
+District  : Peam Ro (Peam Ro)
+Commune   : Peam Ro
 Location  : 11.343899, 105.305749
 
 [BRANCH PREA033]
 Code      : PREA033
 Name      : Svay Antor
 Province  : ព្រៃវែង
-District  : Svay Antor (ស្វាយអន្ទរ)
-Commune   : អង្គរទ្រេត
+District  : Svay Antor (Svay Antor)
+Commune   : Svay Antor
 Location  : 11.462464, 105.498355
 
 [BRANCH PREA034]
 Code      : PREA034
 Name      : Kamchay Mear
 Province  : ព្រៃវែង
-District  : Kamchay Mear (កំចាយមារ)
-Commune   : ជាច
+District  : Prey Veng (Prey Veng)
+Commune   : Kamchay Mear
 Location  : 11.62477, 105.761708
 
 [BRANCH PREP001]
 Code      : PREP001
 Name      : Prey Veng
 Province  : ព្រៃវែង
-District  : Prey Veng (ព្រៃវែង)
-Commune   : បារាយណ៍
+District  : Prey Veng (Prey Veng)
+Commune   : Prey Veng
 Location  : 11.4895, 105.329192
 
 [BRANCH PRES001]
 Code      : PRES001
 Name      : Kampong Leav
 Province  : ព្រៃវែង
-District  : Prey Veng (ព្រៃវែង)
-Commune   : កំពង់លាវ
+District  : Prey Veng (Prey Veng)
+Commune   : Kampong Leav
 Location  : 11.486712, 105.326166
 
 [BRANCH PRES002]
 Code      : PRES002
 Name      : Preaek Khsay Kha
 Province  : ព្រៃវែង
-District  : Peam Ro (ពាមរក៍)
-Commune   : ព្រែកខ្សាយ ខ
+District  : Peam Ro (Peam Ro)
+Commune   : Preaek Khsay Kha
 Location  : 11.261454, 105.289131
 
 [BRANCH PRES003]
 Code      : PRES003
 Name      : Chheu Kach
 Province  : ព្រៃវែង
-District  : Ba Phnum (បាភ្នំ)
-Commune   : ឈើកាច់
+District  : Ba Phnum (Ba Phnum)
+Commune   : Chheu Kach
 Location  : 11.256791, 105.400789
 
 [BRANCH PRES004]
 Code      : PRES004
 Name      : Chheu Kach
 Province  : ព្រៃវែង
-District  : Ba Phnum (បាភ្នំ)
-Commune   : ឈើកាច់
+District  : Ba Phnum (Ba Phnum)
+Commune   : Chheu Kach
 Location  : 11.256732, 105.400851
 
 [BRANCH PRES005]
 Code      : PRES005
 Name      : Roka
-Province  : Battambang
-District  : Sangkae (សង្កែ)
-Commune   : រកា
+Province  : ព្រៃវែង
+District  : Peam Chor (Peam Chor)
+Commune   : Roka
 Location  : 11.663987, 105.221573
 
 [BRANCH PRHA001]
 Code      : PRHA001
 Name      : Pal Hal
 Province  : ព្រះវិហារ
-District  : Preah Vihear (ព្រះវិហារ)
-Commune   : ប៉ាលហាល
+District  : Preah Vihear (Preah Vihear)
+Commune   : Pal Hal
 Location  : 13.737871, 104.978647
 
 [BRANCH PRHA002]
 Code      : PRHA002
 Name      : Toek Kraham
 Province  : ព្រះវិហារ
-District  : Choam Ksant (ជាំក្សាន្ដ)
-Commune   : ទឹកក្រហម
+District  : Preah Vihear (Preah Vihear)
+Commune   : Toek Kraham
 Location  : 14.148894, 105.082134
 
 [BRANCH PRHA003]
 Code      : PRHA003
 Name      : Rumdaoh Srae
 Province  : ព្រះវិហារ
-District  : Choam Ksant (ជាំក្សាន្ដ)
-Commune   : រំដោះស្រែ
+District  : Choam Ksant (Choam Ksant)
+Commune   : Rumdaoh Srae
 Location  : 14.171889, 104.787173
 
 [BRANCH PRHA004]
 Code      : PRHA004
 Name      : Kantuot
-Province  : ក្រចេះ
-District  : Chetr Borei (ចិត្របុរី)
-Commune   : កន្ទួត
+Province  : ព្រះវិហារ
+District  : Choam Ksant (Choam Ksant)
+Commune   : Kantuot
 Location  : 14.238194, 104.728915
 
 [BRANCH PRHA005]
 Code      : PRHA005
 Name      : Kuleaen Tboung
 Province  : ព្រះវិហារ
-District  : Kuleaen (គូលែន)
-Commune   : គូលែនត្បូង
+District  : Kuleaen (Kuleaen)
+Commune   : Kuleaen Tboung
 Location  : 13.818537, 104.702415
 
 [BRANCH PRHA006]
 Code      : PRHA006
 Name      : Choam Khsan
 Province  : ព្រះវិហារ
-District  : Choam Ksant (ជាំក្សាន្ដ)
-Commune   : ជាំក្សាន្ដ
+District  : Preah Vihear (Preah Vihear)
+Commune   : Choam Khsan
 Location  : 14.220675, 104.943625
 
 [BRANCH PRHA007]
 Code      : PRHA007
 Name      : Kampong Sralau Pir
 Province  : ព្រះវិហារ
-District  : Chhaeb (ឆែប)
-Commune   : កំពង់ស្រឡៅពីរ
+District  : Chhaeb (Chhaeb)
+Commune   : Kampong Sralau Pir
 Location  : 13.975337, 105.848255
 
 [BRANCH PRHA008]
 Code      : PRHA008
 Name      : Chamraeun
 Province  : ព្រះវិហារ
-District  : Sangkum Thmei (សង្គមថ្មី)
-Commune   : ចំរើន
+District  : Sangkum Thmei (Sangkum Thmei)
+Commune   : Chamraeun
 Location  : 13.579335, 104.896452
 
 [BRANCH PRHA009]
 Code      : PRHA009
 Name      : S'ang
-Province  : កណ្តាល
-District  : S'ang (ស្អាង)
-Commune   : ខ្ពប
+Province  : ព្រះវិហារ
+District  : Chey Saen (Chey Saen)
+Commune   : S'ang
 Location  : 13.653966, 105.260717
 
 [BRANCH PRHA010]
 Code      : PRHA010
 Name      : Preah Khleang
 Province  : ព្រះវិហារ
-District  : Tbaeng Mean Chey (ត្បែងមានជ័យ)
-Commune   : ព្រះឃ្លាំង
+District  : Tbaeng Mean Chey (Tbaeng Mean Chey)
+Commune   : Preah Khleang
 Location  : 13.620566, 105.030259
 
 [BRANCH PRHA011]
 Code      : PRHA011
 Name      : Robieb
 Province  : ព្រះវិហារ
-District  : Rovieng (រវៀង)
-Commune   : របៀប
+District  : Rovieng (Rovieng)
+Commune   : Robieb
 Location  : 13.357681, 105.114889
 
 [BRANCH PRHA012]
 Code      : PRHA012
 Name      : Chhaeb Muoy
 Province  : ព្រះវិហារ
-District  : Chhaeb (ឆែប)
-Commune   : ឆែបមួយ
+District  : Chhaeb (Chhaeb)
+Commune   : Chhaeb Muoy
 Location  : 13.768454, 105.408876
 
 [BRANCH PRHA013]
 Code      : PRHA013
 Name      : Rummeakney
-Province  : Battambang
-District  : Samlout (សំឡូត)
-Commune   : មានជ័យ
+Province  : ព្រះវិហារ
+District  : Preah Vihear (Preah Vihear)
+Commune   : Rummeakney
 Location  : 13.304101, 105.002355
 
 [BRANCH PRHA015]
 Code      : PRHA015
 Name      : Phnum Tbaeng Pir
 Province  : ព្រះវិហារ
-District  : Kuleaen (គូលែន)
-Commune   : ភ្នំត្បែងពីរ
+District  : Kuleaen (Kuleaen)
+Commune   : Phnum Tbaeng Pir
 Location  : 13.716508, 104.77564
 
 [BRANCH PRHA016]
 Code      : PRHA016
 Name      : Srayang
 Province  : ព្រះវិហារ
-District  : Kuleaen (គូលែន)
-Commune   : ស្រយង់
+District  : Kuleaen (Kuleaen)
+Commune   : Srayang
 Location  : 13.705809, 104.545423
 
 [BRANCH PRHP001]
 Code      : PRHP001
 Name      : Preah Vihear
 Province  : ព្រះវិហារ
-District  : Preah Vihear (ព្រះវិហារ)
-Commune   : កំពង់ប្រណាក
+District  : Preah Vihear (Preah Vihear)
+Commune   : Preah Vihear
 Location  : 13.794295, 104.97836
 
 [BRANCH PRHS001]
 Code      : PRHS001
 Name      : Kampong Pranak
 Province  : ព្រះវិហារ
-District  : Preah Vihear (ព្រះវិហារ)
-Commune   : កំពង់ប្រណាក
+District  : Preah Vihear (Preah Vihear)
+Commune   : Kampong Pranak
 Location  : 13.805255, 104.97862
 
 [BRANCH PURA001]
 Code      : PURA001
 Name      : Kandieng
 Province  : ពោធិ៍សាត់
-District  : Kandieng (កណ្ដៀង)
-Commune   : អន្លង់វិល
+District  : Kandieng (Kandieng)
+Commune   : Kandieng
 Location  : 12.584246, 103.956298
 
 [BRANCH PURA002]
 Code      : PURA002
 Name      : Srae Sdok
 Province  : ពោធិ៍សាត់
-District  : Kandieng (កណ្ដៀង)
-Commune   : ស្រែស្ដុក
+District  : Kandieng (Kandieng)
+Commune   : Srae Sdok
 Location  : 12.662178, 103.94826
 
 [BRANCH PURA003]
 Code      : PURA003
 Name      : Chheu Tom
 Province  : ពោធិ៍សាត់
-District  : Krakor (ក្រគរ)
-Commune   : ឈើតុំ
+District  : Krakor (Krakor)
+Commune   : Chheu Tom
 Location  : 12.296662, 104.174028
 
 [BRANCH PURA004]
 Code      : PURA004
 Name      : Phteah Rung
 Province  : ពោធិ៍សាត់
-District  : Ta Lou Senchey (តាលោសែនជ័យ)
-Commune   : ផ្ទះរុង
+District  : Ta Lou Senchey (Ta Lou Senchey)
+Commune   : Phteah Rung
 Location  : 12.423372, 103.729909
 
 [BRANCH PURA005]
 Code      : PURA005
 Name      : Sna Ansa
 Province  : ពោធិ៍សាត់
-District  : Krakor (ក្រគរ)
-Commune   : ស្នាអន្សា
+District  : Krakor (Krakor)
+Commune   : Sna Ansa
 Location  : 12.53697, 104.145334
 
 [BRANCH PURA006]
 Code      : PURA006
 Name      : Leach
 Province  : ពោធិ៍សាត់
-District  : Phnum Kravanh (ភ្នំក្រវ៉ាញ)
-Commune   : លាច
+District  : Phnum Kravanh (Phnum Kravanh)
+Commune   : Leach
 Location  : 12.351028, 103.768345
 
 [BRANCH PURA007]
 Code      : PURA007
 Name      : Ta Lou 01
 Province  : ពោធិ៍សាត់
-District  : Ta Lou Senchey (តាលោសែនជ័យ)
-Commune   : តាលោ
+District  : Ta Lou Senchey (Ta Lou Senchey)
+Commune   : Ta Lou 01
 Location  : 12.4878, 103.5941
 
 [BRANCH PURA008]
 Code      : PURA008
 Name      : Anlung Tnaot
 Province  : ពោធិ៍សាត់
-District  : Krakor (ក្រគរ)
-Commune   : អន្លង់ត្នោត
+District  : Pursat (Pursat)
+Commune   : Anlung Tnaot
 Location  : 12.533559, 104.204472
 
 [BRANCH PURA009]
 Code      : PURA009
 Name      : Me Tuek
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : មេទឹក
+District  : Bakan (Bakan)
+Commune   : Me Tuek
 Location  : 12.69584, 103.740165
 
 [BRANCH PURA010]
 Code      : PURA010
 Name      : Pramaoy 01
 Province  : ពោធិ៍សាត់
-District  : Veal Veaeng (វាលវែង)
-Commune   : ប្រម៉ោយ
+District  : Veal Veaeng (Veal Veaeng)
+Commune   : Pramaoy 01
 Location  : 12.306994, 103.095853
 
 [BRANCH PURA011]
 Code      : PURA011
 Name      : Pramaoy 02
 Province  : ពោធិ៍សាត់
-District  : Veal Veaeng (វាលវែង)
-Commune   : ប្រម៉ោយ
+District  : Veal Veaeng (Veal Veaeng)
+Commune   : Pramaoy 02
 Location  : 12.355181, 103.469557
 
 [BRANCH PURA012]
 Code      : PURA012
 Name      : Ou Ta Paong
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : អូរតាប៉ោង
+District  : Bakan (Bakan)
+Commune   : Ou Ta Paong
 Location  : 12.660656, 103.670925
 
 [BRANCH PURA013]
 Code      : PURA013
 Name      : Ou Saom
 Province  : ពោធិ៍សាត់
-District  : Veal Veaeng (វាលវែង)
-Commune   : អូរសោម
+District  : Veal Veaeng (Veal Veaeng)
+Commune   : Ou Saom
 Location  : 12.080807, 103.205989
 
 [BRANCH PURA014]
 Code      : PURA014
 Name      : Snam Preah
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : ស្នាមព្រះ
+District  : Bakan (Bakan)
+Commune   : Snam Preah
 Location  : 12.626963, 103.836676
 
 [BRANCH PURA015]
 Code      : PURA015
 Name      : Ou Sandan
 Province  : ពោធិ៍សាត់
-District  : Krakor (ក្រគរ)
-Commune   : អូរសណ្ដាន់
+District  : Krakor (Krakor)
+Commune   : Ou Sandan
 Location  : 12.557407, 104.114851
 
 [BRANCH PURA016]
 Code      : PURA016
 Name      : Ta Lou 02
 Province  : ពោធិ៍សាត់
-District  : Ta Lou Senchey (តាលោសែនជ័យ)
-Commune   : តាលោ
+District  : Ta Lou Senchey (Ta Lou Senchey)
+Commune   : Ta Lou 02
 Location  : 12.4892, 103.6503
 
 [BRANCH PURA017]
 Code      : PURA017
 Name      : Boeng Khnar
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : បឹងខ្នារ
+District  : Bakan (Bakan)
+Commune   : Boeng Khnar
 Location  : 12.632193, 103.734616
 
 [BRANCH PURA018]
 Code      : PURA018
 Name      : Trapeang Chong
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : ត្រពាំងជង
+District  : Pursat (Pursat)
+Commune   : Trapeang Chong
 Location  : 12.580989, 103.737537
 
 [BRANCH PURP001]
 Code      : PURP001
 Name      : Pousat
 Province  : ពោធិ៍សាត់
-District  : Pursat (ពោធិ៍សាត់)
-Commune   : ចំរើនផល
+District  : Pursat (Pursat)
+Commune   : Pousat
 Location  : 12.53454, 103.91531
 
 [BRANCH PURS001]
 Code      : PURS001
 Name      : Phteah Prey
 Province  : ពោធិ៍សាត់
-District  : Pursat (ពោធិ៍សាត់)
-Commune   : ផ្ទះព្រៃ
+District  : Pursat (Pursat)
+Commune   : Phteah Prey
 Location  : 12.537229, 103.920705
 
 [BRANCH PURS002]
 Code      : PURS002
 Name      : Boeng Khnar
 Province  : ពោធិ៍សាត់
-District  : Bakan (បាកាន)
-Commune   : បឹងខ្នារ
+District  : Bakan (Bakan)
+Commune   : Boeng Khnar
 Location  : 12.635697, 103.72688
 
 [BRANCH ROTA001]
 Code      : ROTA001
 Name      : Trapeang Chres
-Province  : រតនគិរី
-District  : Koun Mom (កូនមុំ)
-Commune   : ត្រពាំងច្រេស
+Province  : Ratanak Kiri
+District  : Koun Mom (Koun Mom)
+Commune   : Trapeang Chres
 Location  : 13.57925, 106.772128
 
 [BRANCH ROTA002]
 Code      : ROTA002
 Name      : Labansiek
-Province  : រតនគិរី
-District  : Ban Lung (បានលុង)
-Commune   : ឡាបានសៀក
+Province  : Ratanak Kiri
+District  : Ban Lung (Ban Lung)
+Commune   : Labansiek
 Location  : 13.739982, 106.991325
 
 [BRANCH ROTA003]
 Code      : ROTA003
 Name      : Ta Veaeng Leu
-Province  : រតនគិរី
-District  : Ta Veaeng (តាវែង)
-Commune   : តាវែងលើ
+Province  : Ratanak Kiri
+District  : Ta Veaeng (Ta Veaeng)
+Commune   : Ta Veaeng Leu
 Location  : 14.045859, 107.107888
 
 [BRANCH ROTA004]
 Code      : ROTA004
 Name      : Veun Sai
-Province  : រតនគិរី
-District  : Veun Sai (វើនសៃ)
-Commune   : ប៉ុង
-Location  : 13.971663, 106.813054
+Province  : Ratanak Kiri
+District  : Veun Sai (Veun Sai)
+Commune   : Veun Sai
+Location  : 13.751117, 107.24869
 
 [BRANCH ROTA005]
 Code      : ROTA005
 Name      : Lum Choar
-Province  : រតនគិរី
-District  : Ou Ya Dav (អូរយ៉ាដាវ)
-Commune   : លំជ័រ
+Province  : Ratanak Kiri
+District  : Ou Ya Dav (Ou Ya Dav)
+Commune   : Lum Choar
 Location  : 13.670254, 107.349959
 
 [BRANCH ROTA006]
 Code      : ROTA006
 Name      : Chey Otdam 01
-Province  : រតនគិរី
-District  : Lumphat (លំផាត់)
-Commune   : ជ័យឧត្ដម
+Province  : Ratanak Kiri
+District  : Lumphat (Lumphat)
+Commune   : Chey Otdam 01
 Location  : 13.486692, 106.981576
 
 [BRANCH ROTA007]
 Code      : ROTA007
 Name      : Malik
-Province  : រតនគិរី
-District  : Andoung Meas (អណ្ដូងមាស)
-Commune   : ម៉ាលិក
+Province  : Ratanak Kiri
+District  : Andoung Meas (Andoung Meas)
+Commune   : Malik
 Location  : 13.865468, 107.305068
 
 [BRANCH ROTA008]
 Code      : ROTA008
 Name      : Kachanh 01
-Province  : រតនគិរី
-District  : Ban Lung (បានលុង)
-Commune   : កាចាញ
+Province  : Ratanak Kiri
+District  : Ban Lung (Ban Lung)
+Commune   : Kachanh 01
 Location  : 13.719616, 106.956511
 
 [BRANCH ROTA009]
 Code      : ROTA009
 Name      : Kachanh 02
-Province  : រតនគិរី
-District  : Ban Lung (បានលុង)
-Commune   : កាចាញ
-Location  : 13.717359, 106.977399
+Province  : Ratanak Kiri
+District  : Ban Lung (Ban Lung)
+Commune   : Kachanh 02
+Location  : 13.713741, 106.977345
 
 [BRANCH ROTA010]
 Code      : ROTA010
 Name      : Teun
-Province  : រតនគិរី
-District  : Koun Mom (កូនមុំ)
-Commune   : តឺន
+Province  : Ratanak Kiri
+District  : Koun Mom (Koun Mom)
+Commune   : Teun
 Location  : 13.683354, 106.88182
 
 [BRANCH ROTA011]
 Code      : ROTA011
 Name      : Chey Otdam 02
-Province  : រតនគិរី
-District  : Lumphat (លំផាត់)
-Commune   : ជ័យឧត្ដម
+Province  : Ratanak Kiri
+District  : Lumphat (Lumphat)
+Commune   : Chey Otdam 02
 Location  : 13.459472, 106.95973
 
 [BRANCH ROTA012]
 Code      : ROTA012
 Name      : Ba Tang
-Province  : រតនគិរី
-District  : Lumphat (លំផាត់)
-Commune   : បាតាង
+Province  : Ratanak Kiri
+District  : Lumphat (Lumphat)
+Commune   : Ba Tang
 Location  : 13.580911, 106.957987
 
 [BRANCH ROTA013]
 Code      : ROTA013
 Name      : Ou Chum
-Province  : រតនគិរី
-District  : Ou Chum (អូរជុំ)
-Commune   : ចាអ៊ុង
+Province  : Ratanak Kiri
+District  : Ou Chum (Ou Chum)
+Commune   : Ou Chum
 Location  : 13.796013, 106.993309
 
 [BRANCH ROTA014]
 Code      : ROTA014
 Name      : Trapeang Kraham 01
-Province  : រតនគិរី
-District  : Koun Mom (កូនមុំ)
-Commune   : ត្រពាំងក្រហម
+Province  : Ratanak Kiri
+District  : Koun Mom (Koun Mom)
+Commune   : Trapeang Kraham 01
 Location  : 13.508764, 106.654464
 
 [BRANCH ROTA015]
 Code      : ROTA015
 Name      : Veun Sai
-Province  : រតនគិរី
-District  : Veun Sai (វើនសៃ)
-Commune   : ប៉ុង
+Province  : Ratanak Kiri
+District  : Veun Sai (Veun Sai)
+Commune   : Veun Sai
 Location  : 13.9749, 106.8164
 
 [BRANCH ROTA016]
 Code      : ROTA016
 Name      : Trapeang Kraham 02
-Province  : រតនគិរី
-District  : Koun Mom (កូនមុំ)
-Commune   : ត្រពាំងក្រហម
+Province  : Ratanak Kiri
+District  : Koun Mom (Koun Mom)
+Commune   : Trapeang Kraham 02
 Location  : 13.542316, 106.686128
 
 [BRANCH ROTA017]
 Code      : ROTA017
 Name      : Srae Angkrong
-Province  : រតនគិរី
-District  : Koun Mom (កូនមុំ)
-Commune   : ស្រែអង្គ្រង
+Province  : Ratanak Kiri
+District  : Banlung (Banlung)
+Commune   : Srae Angkrong
 Location  : 13.433351, 106.61364
 
 [BRANCH ROTP001]
 Code      : ROTP001
 Name      : Ratanakiri
-Province  : ព្រះវិហារ
-District  : Rovieng (រវៀង)
-Commune   : រតនៈ
-Location  : 12.457732, 107.187718
+Province  : Ratanak Kiri
+District  : Banlung (Banlung)
+Commune   : Ratanakiri
+Location  : 13.737781, 106.987692
 
 [BRANCH ROTS001]
 Code      : ROTS001
 Name      : Labansiek
-Province  : រតនគិរី
-District  : Ban Lung (បានលុង)
-Commune   : ឡាបានសៀក
+Province  : Ratanak Kiri
+District  : Ban Lung (Ban Lung)
+Commune   : Labansiek
 Location  : 13.7367, 106.9864
 
 [BRANCH ROTS002]
 Code      : ROTS002
 Name      : La Minh
-Province  : រតនគិរី
-District  : Bar Kaev (បរកែវ)
-Commune   : ឡាមីញ
+Province  : Ratanak Kiri
+District  : Bar Kaev (Bar Kaev)
+Commune   : La Minh
 Location  : 13.686, 107.2169
 
 [BRANCH ROTS003]
 Code      : ROTS003
 Name      : Boeng Kansaeng
-Province  : រតនគិរី
-District  : Ban Lung (បានលុង)
-Commune   : បឹងកន្សែង
+Province  : Ratanak Kiri
+District  : Ban Lung (Ban Lung)
+Commune   : Boeng Kansaeng
 Location  : 13.7451, 106.9894
 
 [BRANCH HUBSIE001]
 Code      : HUBSIE001
 Name      : Hub vùng HUBSIE001
-Province  : ព្រៃវែង
-District  : Prey Veng (ព្រៃវែង)
-Commune   : ជើងទឹក
-Location  : 13.663216983310829, 104.22347632585762
-
-[BRANCH HZ2P01]
-Code      : HZ2P01
-Name      : Head Office Z2
-Province  : ភ្នំពេញ
-District  : Pur SenChey (ពោធិ៍សែនជ័យ)
-Commune   : ចោមចៅទី២
-Location  : , 
+Province  : សៀមរាប
+District  : Siem Reap (Siem Reap)
+Commune   : Hub vùng HUBSIE001
+Location  : 13.66321698331083, 104.2234763258576
 
 [BRANCH SIEA001]
 Code      : SIEA001
 Name      : Svay Leu
-Province  : សៀមរាប
-District  : Svay Leu (ស្វាយលើ)
-Commune   : បឹងមាលា
+Province  : Siemreap
+District  : Svay Leu (Svay Leu)
+Commune   : Svay Leu
 Location  : 13.551747, 104.252698
 
 [BRANCH SIEA002]
 Code      : SIEA002
 Name      : Puok 01
-Province  : សៀមរាប
-District  : Puok (ពួក)
-Commune   : សសរស្ដម្ភ
+Province  : Siemreap
+District  : Puok (Puok)
+Commune   : Puok 01
 Location  : 13.400147, 103.79594
 
 [BRANCH SIEA003]
 Code      : SIEA003
 Name      : Dam Daek
-Province  : សៀមរាប
-District  : Soutr Nikom (សូទ្រនិគម)
-Commune   : ដំដែក
+Province  : Siemreap
+District  : Soutr Nikom (Soutr Nikom)
+Commune   : Dam Daek
 Location  : 13.248097, 104.124303
 
 [BRANCH SIEA005]
 Code      : SIEA005
 Name      : Srangae
-Province  : សៀមរាប
-District  : Siem Reap (សៀមរាប)
-Commune   : ស្រង៉ែ
+Province  : Siemreap
+District  : Siem Reap (Siem Reap)
+Commune   : Srangae
 Location  : 13.365655, 103.808087
 
 [BRANCH SIEA006]
 Code      : SIEA006
 Name      : Kralanh
-Province  : សៀមរាប
-District  : Kralanh (ក្រឡាញ់)
-Commune   : ចន្លាសដៃ
+Province  : Siemreap
+District  : Kralanh (Kralanh)
+Commune   : Kralanh
 Location  : 13.588405, 103.417674
 
 [BRANCH SIEA007]
 Code      : SIEA007
 Name      : Srae Nouy
-Province  : សៀមរាប
-District  : Varin (វ៉ារិន)
-Commune   : ស្រែណូយ
+Province  : Siemreap
+District  : Varin (Varin)
+Commune   : Srae Nouy
 Location  : 13.813315, 104.046877
 
 [BRANCH SIEA008]
 Code      : SIEA008
 Name      : Kampong Kdei
-Province  : សៀមរាប
-District  : Chi Kraeng (ជីក្រែង)
-Commune   : កំពង់ក្ដី
+Province  : Siemreap
+District  : Chi Kraeng (Chi Kraeng)
+Commune   : Kampong Kdei
 Location  : 13.111871, 104.354264
 
 [BRANCH SIEA009]
 Code      : SIEA009
 Name      : Samraong
-Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : សំរោង
+Province  : Siemreap
+District  : Puok (Puok)
+Commune   : Samraong
 Location  : 13.393213, 103.867875
 
 [BRANCH SIEA010]
 Code      : SIEA010
 Name      : Kantreang
-Province  : សៀមរាប
-District  : Prasat Bakong (ប្រាសាទបាគង)
-Commune   : កន្ទ្រាំង
+Province  : Siemreap
+District  : Prasat Bakong (Prasat Bakong)
+Commune   : Kantreang
 Location  : 13.352193, 104.024788
 
 [BRANCH SIEA011]
 Code      : SIEA011
 Name      : Sala Kamraeuk
 Province  : សៀមរាប
-District  : Siem Reap (សៀមរាប)
-Commune   : សាលាកំរើក
+District  : Siem Reap (Siem Reap)
+Commune   : Sala Kamraeuk
 Location  : 13.354795, 103.869528
 
 [BRANCH SIEA012]
 Code      : SIEA012
 Name      : Ballang
-Province  : កំពង់ធំ
-District  : Baray (បារាយណ៍)
-Commune   : បល្ល័ង្គ
+Province  : Siemreap
+District  : Prasat Bakong (Prasat Bakong)
+Commune   : Ballang
 Location  : 13.475203, 104.17265
 
 [BRANCH SIEA014]
 Code      : SIEA014
 Name      : Chrouy Neang Nguon
-Province  : សៀមរាប
-District  : Srei Snam (ស្រីស្នំ)
-Commune   : ជ្រោយនាងងួន
+Province  : Siemreap
+District  : Srei Snam (Srei Snam)
+Commune   : Chrouy Neang Nguon
 Location  : 13.8277, 103.5156
 
 [BRANCH SIEA016]
 Code      : SIEA016
 Name      : Siem Reab
-Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : សៀមរាប
+Province  : Siemreap
+District  : Siem Reap (Siem Reap)
+Commune   : Siem Reab
 Location  : 13.318811, 103.851774
 
 [BRANCH SIEA017]
 Code      : SIEA017
 Name      : Kouk Chak
 Province  : សៀមរាប
-District  : Siem Reap (សៀមរាប)
-Commune   : គោកចក
+District  : Siem Reap (Siem Reap)
+Commune   : Kouk Chak
 Location  : 13.580205, 103.880291
 
 [BRANCH SIEA022]
 Code      : SIEA022
 Name      : Puok 02
-Province  : សៀមរាប
-District  : Puok (ពួក)
-Commune   : សសរស្ដម្ភ
+Province  : Siemreap
+District  : Puok (Puok)
+Commune   : Puok 02
 Location  : 13.44275, 103.727382
 
 [BRANCH SIEA030]
 Code      : SIEA030
 Name      : Char Chhuk
-Province  : សៀមរាប
-District  : Angkor Chum (អង្គរជុំ)
-Commune   : ចារឈូក
+Province  : Siemreap
+District  : Angkor Chum (Angkor Chum)
+Commune   : Char Chhuk
 Location  : 13.683854, 103.649091
 
 [BRANCH SIEA031]
 Code      : SIEA031
 Name      : Khnar Sanday
-Province  : សៀមរាប
-District  : Banteay Srei (បន្ទាយស្រី)
-Commune   : ខ្នារសណ្ដាយ
+Province  : Siemreap
+District  : Banteay Srei (Banteay Srei)
+Commune   : Khnar Sanday
 Location  : 13.586712, 103.956676
 
 [BRANCH SIEA033]
 Code      : SIEA033
 Name      : Svay Sa
-Province  : ពោធិ៍សាត់
-District  : Krakor (ក្រគរ)
-Commune   : ស្វាយស
+Province  : Siemreap
+District  : Varin (Varin)
+Commune   : Svay Sa
 Location  : 13.79006, 103.750383
 
 [BRANCH SIEA034]
 Code      : SIEA034
 Name      : Anlung Samnar
 Province  : សៀមរាប
-District  : Chi Kraeng (ជីក្រែង)
-Commune   : អន្លង់សំណរ
+District  : Siem Reap (Siem Reap)
+Commune   : Anlung Samnar
 Location  : 13.068422, 103.289207
 
 [BRANCH SIEA035]
 Code      : SIEA035
 Name      : Sla Kram
-Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : ស្លក្រាម
+Province  : Siemreap
+District  : Siem Reap (Siem Reap)
+Commune   : Sla Kram
 Location  : 13.358351, 103.893148
 
 [BRANCH SIEA036]
 Code      : SIEA036
 Name      : Kaev Poar
-Province  : សៀមរាប
-District  : Puok (ពួក)
-Commune   : កែវពណ៌
+Province  : Siemreap
+District  : Puok (Puok)
+Commune   : Kaev Poar
 Location  : 13.387312, 103.743113
 
 [BRANCH SIEA037]
 Code      : SIEA037
 Name      : Ruessei Lok
-Province  : សៀមរាប
-District  : Chi Kraeng (ជីក្រែង)
-Commune   : ឫស្សីលក
+Province  : Siemreap
+District  : Chi Kraeng (Chi Kraeng)
+Commune   : Ruessei Lok
 Location  : 13.199103, 104.214583
-
-[BRANCH SIEA038]
-Code      : SIEA038
-Name      : Peak Snaeng
-Province  : សៀមរាប
-District  : Angkor Thum (អង្គរធំ)
-Commune   : ពាក់ស្នែង
-Location  : 103.880291, 66728622
 
 [BRANCH SIEA039]
 Code      : SIEA039
 Name      : Kandaek
-Province  : សៀមរាប
-District  : Prasat Bakong (ប្រាសាទបាគង)
-Commune   : កណ្ដែក
+Province  : Siemreap
+District  : Prasat Bakong (Prasat Bakong)
+Commune   : Kandaek
 Location  : 13.356339, 103.916749
 
 [BRANCH SIEP001]
 Code      : SIEP001
 Name      : Siem Reab
-Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : សៀមរាប
+Province  : Siemreap
+District  : Siem Reap (Siem Reap)
+Commune   : Siem Reab
 Location  : 13.359287, 103.883998
 
 [BRANCH SIES001]
 Code      : SIES001
 Name      : Kouk Chak
 Province  : សៀមរាប
-District  : Siem Reap (សៀមរាប)
-Commune   : គោកចក
+District  : Siem Reap (Siem Reap)
+Commune   : Kouk Chak
 Location  : 13.381318, 103.853015
 
 [BRANCH SIES002]
 Code      : SIES002
 Name      : Siem Reab
-Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : សៀមរាប
+Province  : Siemreap
+District  : Siem Reap (Siem Reap)
+Commune   : Siem Reab
 Location  : 13.359275, 103.854515
 
 [BRANCH SIES003]
 Code      : SIES003
 Name      : Dam Daek
-Province  : សៀមរាប
-District  : Soutr Nikom (សូទ្រនិគម)
-Commune   : ដំដែក
+Province  : Siemreap
+District  : Soutr Nikom (Soutr Nikom)
+Commune   : Dam Daek
 Location  : 13.244512, 104.124204
-
-[BRANCH DVCZ4]
-Code      : DVCZ4
-Name      : Vehicle Team Z4
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ឈើទាល
-Location  : , 
 
 [BRANCH HUBSIH01]
 Code      : HUBSIH01
 Name      : Hub vùng HUBSIH01
-Province  : កណ្តាល
-District  : Kandal Stueng (កណ្ដាលស្ទឹង)
-Commune   : ជើងកើប
-Location  : 10.72425540436019, 103.81133409318521
+Province  : ព្រះសីហនុ
+District  : Preah Sihanouk (Preah Sihanouk)
+Commune   : Hub vùng HUBSIH01
+Location  : 10.72425540436019, 103.8113340931852
 
 [BRANCH SIHA001]
 Code      : SIHA001
 Name      : Tumnob Rolok
 Province  : ព្រះសីហនុ
-District  : Stueng Hav (ស្ទឹងហាវ)
-Commune   : ទំនប់រលក
+District  : Stueng Hav (Stueng Hav)
+Commune   : Tumnob Rolok
 Location  : 10.737428, 103.624233
 
 [BRANCH SIHA002]
 Code      : SIHA002
 Name      : Boeng Ta Prum
 Province  : ព្រះសីហនុ
-District  : Kampong Soam (កំពង់សោម)
-Commune   : បឹងតាព្រហ្ម
+District  : Prey Nob (Prey Nob)
+Commune   : Boeng Ta Prum
 Location  : 10.573382, 103.773205
 
 [BRANCH SIHA003]
 Code      : SIHA003
 Name      : Ou Oknha Heng
 Province  : ព្រះសីហនុ
-District  : Kampong Soam (កំពង់សោម)
-Commune   : អូរឧកញ៉ាហេង
+District  : Prey Nob (Prey Nob)
+Commune   : Ou Oknha Heng
 Location  : 10.589629, 103.763962
 
 [BRANCH SIHA004]
 Code      : SIHA004
 Name      : Prey Nob
 Province  : ព្រះសីហនុ
-District  : Prey Nob (ព្រៃនប់)
-Commune   : អណ្ដូងថ្ម
+District  : Prey Nob (Prey Nob)
+Commune   : Prey Nob
 Location  : 10.629706, 103.782186
 
 [BRANCH SIHA005]
 Code      : SIHA005
 Name      : Andoung Thma
 Province  : ព្រះសីហនុ
-District  : Prey Nob (ព្រៃនប់)
-Commune   : អណ្ដូងថ្ម
+District  : Prey Nob (Prey Nob)
+Commune   : Andoung Thma
 Location  : 10.675489, 103.800485
 
 [BRANCH SIHA006]
 Code      : SIHA006
 Name      : Cheung Kou
 Province  : ព្រះសីហនុ
-District  : Prey Nob (ព្រៃនប់)
-Commune   : ជើងគោ
+District  : Prey Nob (Prey Nob)
+Commune   : Cheung Kou
 Location  : 10.753846, 103.804156
 
 [BRANCH SIHA007]
 Code      : SIHA007
 Name      : Lekh Muoy 01
 Province  : ព្រះសីហនុ
-District  : Preah Sihanouk (ព្រះសីហនុ)
-Commune   : លេខ១
+District  : Preah Sihanouk (Preah Sihanouk)
+Commune   : Lekh Muoy 01
 Location  : 10.662359, 103.522013
 
 [BRANCH SIHA008]
 Code      : SIHA008
 Name      : Lekh Muoy 02
 Province  : ព្រះសីហនុ
-District  : Preah Sihanouk (ព្រះសីហនុ)
-Commune   : លេខ១
+District  : Preah Sihanouk (Preah Sihanouk)
+Commune   : Lekh Muoy 02
 Location  : 10.664146, 103.522118
 
 [BRANCH SIHA009]
 Code      : SIHA009
 Name      : Stueng Chhay
 Province  : ព្រះសីហនុ
-District  : Kampong Seila (កំពង់សីលា)
-Commune   : ស្ទឹងឆាយ
+District  : Kampong Seila (Kampong Seila)
+Commune   : Stueng Chhay
 Location  : 10.939812, 103.798362
 
 [BRANCH SIHP001]
 Code      : SIHP001
 Name      : Preah Sihanouk
 Province  : ព្រះសីហនុ
-District  : Preah Sihanouk (ព្រះសីហនុ)
-Commune   : លេខ១
+District  : Preah Sihanouk (Preah Sihanouk)
+Commune   : Preah Sihanouk
 Location  : 10.620638, 103.541226
 
 [BRANCH SIHS001]
 Code      : SIHS001
 Name      : Lekh Buon
 Province  : ព្រះសីហនុ
-District  : Preah Sihanouk (ព្រះសីហនុ)
-Commune   : លេខ១
+District  : Preah Sihanouk (Preah Sihanouk)
+Commune   : Lekh Buon
 Location  : 10.61986, 103.52744
 
 [BRANCH SIHS002]
 Code      : SIHS002
 Name      : Veal Renh
 Province  : ព្រះសីហនុ
-District  : Prey Nob (ព្រៃនប់)
-Commune   : វាលរេញ
+District  : Prey Nob (Prey Nob)
+Commune   : Veal Renh
 Location  : 10.709813, 103.818335
 
 [BRANCH SPEA001]
 Code      : SPEA001
 Name      : Preah Khae
 Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ព្រះខែ
+District  : Basedth (Basedth)
+Commune   : Preah Khae
 Location  : 11.174528, 104.500433
 
 [BRANCH SPEA002]
 Code      : SPEA002
 Name      : Svay Rumpear
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Leaeng (កំពង់លែង)
-Commune   : ស្វាយរំពារ
+Province  : កំពង់ស្ពឺ
+District  : Basedth (Basedth)
+Commune   : Svay Rumpear
 Location  : 11.211305, 104.583741
 
 [BRANCH SPEA003]
 Code      : SPEA003
 Name      : Krang Chek
 Province  : កំពង់ស្ពឺ
-District  : Samkkei Munichay (សាមគ្គីមុនីជ័យ)
-Commune   : ក្រាំងចេក
+District  : Samkkei Munichay (Samkkei Munichay)
+Commune   : Krang Chek
 Location  : 11.582755, 104.531477
 
 [BRANCH SPEA004]
 Code      : SPEA004
 Name      : Roka Kaoh 01
 Province  : កំពង់ស្ពឺ
-District  : Kong Pisei (គងពិសី)
-Commune   : រកាកោះ
+District  : Basedth (Basedth)
+Commune   : Roka Kaoh 01
 Location  : 11.426686, 104.661059
 
 [BRANCH SPEA005]
 Code      : SPEA005
 Name      : Sambour
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : សំបូរ
+Province  : កំពង់ស្ពឺ
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Sambour
 Location  : 11.533326, 104.618288
 
 [BRANCH SPEA007]
 Code      : SPEA007
 Name      : Samrong Tong
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : សំរោងទង
+District  : Samraong Tong (Samraong Tong)
+Commune   : Samrong Tong
 Location  : 11.54068, 104.595483
 
 [BRANCH SPEA008]
 Code      : SPEA008
 Name      : Pou Chamraeun
 Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ពោធិ៍ចំរើន
+District  : Basedth (Basedth)
+Commune   : Pou Chamraeun
 Location  : 11.105882, 104.598308
 
 [BRANCH SPEA009]
 Code      : SPEA009
 Name      : Traeng Trayueng
 Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : ត្រែងត្រយឹង
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Traeng Trayueng
 Location  : 11.277905, 104.211297
 
 [BRANCH SPEA010]
 Code      : SPEA010
 Name      : Pneay
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : ព្នាយ
+District  : Samraong Tong (Samraong Tong)
+Commune   : Pneay
 Location  : 11.517333, 104.520212
 
 [BRANCH SPEA011]
 Code      : SPEA011
 Name      : Rung Roeang
 Province  : កំពង់ស្ពឺ
-District  : Thpong (ថ្ពង)
-Commune   : រុងរឿង
+District  : Thpong (Thpong)
+Commune   : Rung Roeang
 Location  : 11.721285, 104.520246
 
 [BRANCH SPEA012]
 Code      : SPEA012
 Name      : Amleang
 Province  : កំពង់ស្ពឺ
-District  : Thpong (ថ្ពង)
-Commune   : អមលាំង
+District  : Thpong (Thpong)
+Commune   : Amleang
 Location  : 11.801009, 104.342315
 
 [BRANCH SPEA013]
 Code      : SPEA013
 Name      : Skuh
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : ស្គុះ
+District  : Samraong Tong (Samraong Tong)
+Commune   : Skuh
 Location  : 11.404436, 104.51386
 
 [BRANCH SPEA014]
 Code      : SPEA014
 Name      : Chambak
 Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : ចំបក់
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Chambak
 Location  : 11.396063, 104.111423
 
 [BRANCH SPEA015]
 Code      : SPEA015
 Name      : Roleang Kreul 01
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : រលាំងគ្រើល
+District  : Samraong Tong (Samraong Tong)
+Commune   : Roleang Kreul 01
 Location  : 11.445192, 104.62579
 
 [BRANCH SPEA016]
 Code      : SPEA016
 Name      : Roka Kaoh 02
 Province  : កំពង់ស្ពឺ
-District  : Kong Pisei (គងពិសី)
-Commune   : រកាកោះ
+District  : Basedth (Basedth)
+Commune   : Roka Kaoh 02
 Location  : 11.412777, 104.651533
 
 [BRANCH SPEA017]
 Code      : SPEA017
 Name      : Khsem Khsan
 Province  : កំពង់ស្ពឺ
-District  : Odongk Maechay (ឧដុង្គម៉ែជ័យ)
-Commune   : ក្សេមក្សាន្ដ
+District  : Odongk Maechay (Odongk Maechay)
+Commune   : Khsem Khsan
 Location  : 11.686979, 104.70185
 
 [BRANCH SPEA018]
 Code      : SPEA018
 Name      : Pheakdei
 Province  : កំពង់ស្ពឺ
-District  : Basedth (បរសេដ្ឋ)
-Commune   : ភក្ដី
+District  : Basedth (Basedth)
+Commune   : Pheakdei
 Location  : 11.177036, 104.407526
 
 [BRANCH SPEA019]
 Code      : SPEA019
 Name      : Prey Kmeng
 Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : ព្រៃក្មេង
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Prey Kmeng
 Location  : 11.308992, 104.438688
 
 [BRANCH SPEA020]
 Code      : SPEA020
 Name      : Prey Sralaeng
-Province  : ព្រៃវែង
-District  : Pea Reang (ពារាំង)
-Commune   : ព្រៃស្រឡិត
+Province  : កំពង់ស្ពឺ
+District  : Chbar Mon (Chbar Mon)
+Commune   : Prey Sralaeng
 Location  : 11.157493, 104.684507
 
 [BRANCH SPEA021]
 Code      : SPEA021
 Name      : Tang Krouch
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : តាំងក្រូច
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Tang Krouch
 Location  : 11.531039, 104.416137
 
 [BRANCH SPEA022]
 Code      : SPEA022
 Name      : Voa Sar
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : វល្លិសរ
+District  : Samraong Tong (Samraong Tong)
+Commune   : Voa Sar
 Location  : 11.475615, 104.567907
 
 [BRANCH SPEA023]
 Code      : SPEA023
 Name      : Trapeang Chou
 Province  : កំពង់ស្ពឺ
-District  : Aoral (ឱរ៉ាល់)
-Commune   : ត្រពាំងជោ
+District  : Aoral (Aoral)
+Commune   : Trapeang Chou
 Location  : 11.811444, 104.129407
 
 [BRANCH SPEA024]
 Code      : SPEA024
 Name      : Ou Ta Vam
-Province  : ប៉ៃលិន
-District  : Pailin (ប៉ៃលិន)
-Commune   : អូរតាវ៉ៅ
+Province  : កំពង់ស្ពឺ
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Ou Ta Vam
 Location  : 11.323964, 104.578105
 
 [BRANCH SPEA025]
 Code      : SPEA025
 Name      : Tang Sya
 Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : តាំងស្យា
+District  : Phnum Sruoch (Phnum Sruoch)
+Commune   : Tang Sya
 Location  : 11.38836, 104.377905
 
 [BRANCH SPEA026]
 Code      : SPEA026
 Name      : Ta Sal
 Province  : កំពង់ស្ពឺ
-District  : Aoral (ឱរ៉ាល់)
-Commune   : តាសាល
+District  : Aoral (Aoral)
+Commune   : Ta Sal
 Location  : 11.703038, 103.939144
 
 [BRANCH SPEA027]
 Code      : SPEA027
 Name      : Ou
 Province  : កំពង់ស្ពឺ
-District  : Phnum Sruoch (ភ្នំស្រួច)
-Commune   : អូរ
+District  : Basedth (Basedth)
+Commune   : Ou
 Location  : 11.342067, 104.322307
 
 [BRANCH SPEA028]
 Code      : SPEA028
 Name      : Veang Chas
 Province  : កំពង់ស្ពឺ
-District  : Odongk Maechay (ឧដុង្គម៉ែជ័យ)
-Commune   : វាំងចាស់
+District  : Odongk Maechay (Odongk Maechay)
+Commune   : Veang Chas
 Location  : 11.823481, 104.743066
 
 [BRANCH SPEA029]
 Code      : SPEA029
 Name      : Sangkae Satob
 Province  : កំពង់ស្ពឺ
-District  : Aoral (ឱរ៉ាល់)
-Commune   : សង្កែសាទប
+District  : Aoral (Aoral)
+Commune   : Sangkae Satob
 Location  : 11.680048, 104.147813
 
 [BRANCH SPEA031]
 Code      : SPEA031
 Name      : Krang Khnong
-Province  : ភ្នំពេញ
-District  : Saensokh (សែនសុខ)
-Commune   : ក្រាំងធ្នង់
+Province  : កំពង់ស្ពឺ
+District  : Chbar Mon (Chbar Mon)
+Commune   : Krang Khnong
 Location  : 11.309173, 104.631576
 
 [BRANCH SPEA032]
 Code      : SPEA032
 Name      : Roleang Kreul 02
 Province  : កំពង់ស្ពឺ
-District  : Samraong Tong (សំរោងទង)
-Commune   : រលាំងគ្រើល
+District  : Samraong Tong (Samraong Tong)
+Commune   : Roleang Kreul 02
 Location  : 11.440644, 104.639622
 
 [BRANCH SPEP001]
 Code      : SPEP001
 Name      : Chbar Mon
 Province  : កំពង់ស្ពឺ
-District  : Chbar Mon (ច្បារមន)
-Commune   : ច្បារមន
+District  : Chbar Mon (Chbar Mon)
+Commune   : Chbar Mon
 Location  : 11.465375, 104.527043
 
 [BRANCH SPES001]
 Code      : SPES001
 Name      : Rokar Thum
 Province  : កំពង់ស្ពឺ
-District  : Chbar Mon (ច្បារមន)
-Commune   : រការធំ
+District  : Chbar Mon (Chbar Mon)
+Commune   : Rokar Thum
 Location  : 11.460768, 104.514622
 
 [BRANCH SPES002]
 Code      : SPES002
 Name      : Snam Krapeu
 Province  : កំពង់ស្ពឺ
-District  : Kong Pisei (គងពិសី)
-Commune   : ស្នំក្រពើ
+District  : Kong Pisei (Kong Pisei)
+Commune   : Snam Krapeu
 Location  : 11.286801, 104.706699
 
 [BRANCH STUA001]
 Code      : STUA001
 Name      : Sekong
 Province  : ស្ទឹងត្រែង
-District  : Siem Pang (សៀមប៉ាង)
-Commune   : សេកុង
+District  : Siem Pang (Siem Pang)
+Commune   : Sekong
 Location  : 14.115063, 106.385817
 
 [BRANCH STUA002]
 Code      : STUA002
 Name      : Siem Bouk 01
 Province  : ស្ទឹងត្រែង
-District  : Siem Bouk (សៀមបូក)
-Commune   : កោះព្រះ
+District  : Siem Bouk (Siem Bouk)
+Commune   : Siem Bouk 01
 Location  : 13.334026, 106.103639
 
 [BRANCH STUA003]
 Code      : STUA003
 Name      : Ou Svay
-Province  : កំពង់ចាម
-District  : Kampong Siem (កំពង់សៀម)
-Commune   : អូរស្វាយ
+Province  : ស្ទឹងត្រែង
+District  : Borei Ou Svay Senchey (Borei Ou Svay Senchey)
+Commune   : Ou Svay
 Location  : 13.880126, 106.001924
 
 [BRANCH STUA004]
 Code      : STUA004
 Name      : Kbal Romeas 01
 Province  : ស្ទឹងត្រែង
-District  : Sesan (សេសាន)
-Commune   : ក្បាលរមាស
+District  : Sesan (Sesan)
+Commune   : Kbal Romeas 01
 Location  : 13.422893, 106.280728
 
 [BRANCH STUA006]
 Code      : STUA006
 Name      : Siem Bouk 02
 Province  : ស្ទឹងត្រែង
-District  : Siem Bouk (សៀមបូក)
-Commune   : កោះព្រះ
+District  : Siem Bouk (Siem Bouk)
+Commune   : Siem Bouk 02
 Location  : 13.360574, 105.959553
 
 [BRANCH STUA007]
 Code      : STUA007
 Name      : Phluk
 Province  : ស្ទឹងត្រែង
-District  : Sesan (សេសាន)
-Commune   : ភ្លុក
+District  : Sesan (Sesan)
+Commune   : Phluk
 Location  : 13.564517, 106.17007
 
 [BRANCH STUA008]
 Code      : STUA008
 Name      : Kbal Romeas 02
 Province  : ស្ទឹងត្រែង
-District  : Sesan (សេសាន)
-Commune   : ក្បាលរមាស
+District  : Sesan (Sesan)
+Commune   : Kbal Romeas 02
 Location  : 13.417695, 106.198157
 
 [BRANCH STUA009]
 Code      : STUA009
 Name      : Anlung Chrey
 Province  : ស្ទឹងត្រែង
-District  : Thala Barivat (ថាឡាបរិវ៉ាត់)
-Commune   : អន្លង់ជ្រៃ
+District  : Stung Treng (Stung Treng)
+Commune   : Anlung Chrey
 Location  : 13.765682, 105.671585
 
 [BRANCH STUA010]
 Code      : STUA010
 Name      : Preah Rumkel
 Province  : ស្ទឹងត្រែង
-District  : Borei Ou Svay Senchey (បុរីអូរស្វាយសែនជ័យ)
-Commune   : ព្រះរំកិល
+District  : Borei Ou Svay Senchey (Borei Ou Svay Senchey)
+Commune   : Preah Rumkel
 Location  : 13.894888, 105.964596
 
 [BRANCH STUP001]
 Code      : STUP001
 Name      : Stung Treng
 Province  : ស្ទឹងត្រែង
-District  : Stueng Traeng (ស្ទឹងត្រែង)
-Commune   : ស្ទឹងត្រែង
+District  : Stung Treng (Stung Treng)
+Commune   : Stung Treng
 Location  : 13.528625, 105.971602
 
 [BRANCH STUS001]
 Code      : STUS001
 Name      : Stueng Traeng
 Province  : ស្ទឹងត្រែង
-District  : Stueng Traeng (ស្ទឹងត្រែង)
-Commune   : ស្ទឹងត្រែង
+District  : Stueng Traeng (Stueng Traeng)
+Commune   : Stueng Traeng
 Location  : 13.5285, 105.9709
 
 [BRANCH SVAA001]
 Code      : SVAA001
 Name      : Khsaet
 Province  : ស្វាយរៀង
-District  : Kampong Rou (កំពង់រោទិ៍)
-Commune   : ខ្សែត្រ
+District  : Kampong Rou (Kampong Rou)
+Commune   : Khsaet
 Location  : 10.926719, 105.985774
 
 [BRANCH SVAA002]
 Code      : SVAA002
 Name      : Kokir
-Province  : កណ្តាល
-District  : Kien Svay (កៀនស្វាយ)
-Commune   : គគីរ
+Province  : ស្វាយរៀង
+District  : Chantrea (Chantrea)
+Commune   : Kokir
 Location  : 11.443579, 105.861148
 
 [BRANCH SVAA003]
 Code      : SVAA003
 Name      : Ang Prasrae
 Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : អង្គប្រស្រែ
+District  : Svay Rieng (Svay Rieng)
+Commune   : Ang Prasrae
 Location  : 11.323111, 105.818189
 
 [BRANCH SVAA004]
 Code      : SVAA004
 Name      : Kampong Chak
 Province  : ស្វាយរៀង
-District  : Rumduol (រំដួល)
-Commune   : កំពង់ចក
+District  : Rumduol (Rumduol)
+Commune   : Kampong Chak
 Location  : 11.171601, 105.818778
 
 [BRANCH SVAA005]
 Code      : SVAA005
 Name      : Bati
 Province  : ស្វាយរៀង
-District  : Bavet (បាវិត)
-Commune   : បាទី
+District  : Bavet (Bavet)
+Commune   : Bati
 Location  : 10.992849, 106.129186
 
 [BRANCH SVAA006]
 Code      : SVAA006
 Name      : Samraong
-Province  : បន្ទាយមានជ័យ
-District  : Ou Chrov (អូរជ្រៅ)
-Commune   : សំរោង
+Province  : ស្វាយរៀង
+District  : Chantrea (Chantrea)
+Commune   : Samraong
 Location  : 10.9291, 106.1414
 
 [BRANCH SVAA007]
 Code      : SVAA007
 Name      : Kruos
 Province  : ស្វាយរៀង
-District  : Svay Chrum (ស្វាយជ្រំ)
-Commune   : គ្រួស
+District  : Svay Chrum (Svay Chrum)
+Commune   : Kruos
 Location  : 11.061583, 105.668694
 
 [BRANCH SVAA008]
 Code      : SVAA008
 Name      : Chantrei
 Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : ចន្ដ្រី
+District  : Romeas Haek (Romeas Haek)
+Commune   : Chantrei
 Location  : 11.284448, 105.72468
 
 [BRANCH SVAA009]
 Code      : SVAA009
 Name      : Doun Sa
 Province  : ស្វាយរៀង
-District  : Svay Chrum (ស្វាយជ្រំ)
-Commune   : ដូនស
+District  : Svay Chrum (Svay Chrum)
+Commune   : Doun Sa
 Location  : 11.225428, 105.724589
 
 [BRANCH SVAA010]
 Code      : SVAA010
 Name      : Kampong Trach
-Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : បឹងសាលាខាងជើង
+Province  : ស្វាយរៀង
+District  : Romeas Haek (Romeas Haek)
+Commune   : Kampong Trach
 Location  : 11.410974, 105.784585
 
 [BRANCH SVAA011]
 Code      : SVAA011
 Name      : Sambat Mean Chey
 Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : សម្បត្ដិមានជ័យ
+District  : Svay Rieng (Svay Rieng)
+Commune   : Sambat Mean Chey
 Location  : 11.437822, 105.691046
 
 [BRANCH SVAA012]
 Code      : SVAA012
 Name      : Doung
-Province  : កំពង់ធំ
-District  : Prasat Ballangk (ប្រាសាទបល្ល័ង្គ)
-Commune   : ដូង
+Province  : ស្វាយរៀង
+District  : Romeas Haek (Romeas Haek)
+Commune   : Doung
 Location  : 11.338164, 105.862059
 
 [BRANCH SVAA013]
 Code      : SVAA013
 Name      : Chres
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Tralach (កំពង់ត្រឡាច)
-Commune   : ច្រេស
+Province  : ស្វាយរៀង
+District  : Chantrea (Chantrea)
+Commune   : Chres
 Location  : 10.935155, 106.057092
 
 [BRANCH SVAA014]
 Code      : SVAA014
 Name      : Mream
 Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : ម្រាម
+District  : Romeas Haek (Romeas Haek)
+Commune   : Mream
 Location  : 11.311113, 105.674529
 
 [BRANCH SVAA015]
 Code      : SVAA015
 Name      : Svay Thum
 Province  : ស្វាយរៀង
-District  : Svay Chrum (ស្វាយជ្រំ)
-Commune   : ស្វាយធំ
+District  : Svay Chrum (Svay Chrum)
+Commune   : Svay Thum
 Location  : 11.021884, 105.603819
 
 [BRANCH SVAA016]
 Code      : SVAA016
 Name      : Pou Reach
 Province  : ស្វាយរៀង
-District  : Svay Chrum (ស្វាយជ្រំ)
-Commune   : ពោធិរាជ
+District  : Svay Rieng (Svay Rieng)
+Commune   : Pou Reach
 Location  : 11.150287, 105.762472
 
 [BRANCH SVAA017]
 Code      : SVAA017
 Name      : Chrey Thum
 Province  : ស្វាយរៀង
-District  : Romeas Haek (រមាសហែក)
-Commune   : ជ្រៃធំ
+District  : Romeas Haek (Romeas Haek)
+Commune   : Chrey Thum
 Location  : 11.408281, 105.716263
 
 [BRANCH SVAA018]
 Code      : SVAA018
 Name      : Koki Saom
 Province  : ស្វាយរៀង
-District  : Svay Teab (ស្វាយទាប)
-Commune   : គគីសោម
+District  : Svay Teab (Svay Teab)
+Commune   : Koki Saom
 Location  : 11.159454, 105.938441
 
 [BRANCH SVAA019]
 Code      : SVAA019
 Name      : Svay Chrum
-Province  : កំពង់ឆ្នាំង
-District  : Rolea B'ier (រលាប្អៀរ)
-Commune   : ស្វាយជ្រុំ
+Province  : ស្វាយរៀង
+District  : Svay Chrum (Svay Chrum)
+Commune   : Svay Chrum
 Location  : 11.117568, 105.716027
 
 [BRANCH SVAA020]
 Code      : SVAA020
 Name      : Pouthi
-Province  : ព្រៃវែង
-District  : Sithor Kandal (ស៊ីធរកណ្ដាល)
-Commune   : ពោធិ៍ទី
+Province  : ស្វាយរៀង
+District  : Svay Chrum (Svay Chrum)
+Commune   : Pouthi
 Location  : 10.9867, 106.1258
 
 [BRANCH SVAA021]
 Code      : SVAA021
 Name      : Kampot Chroot
-Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : កំពង់រទេះ
+Province  : ស្វាយរៀង
+District  : Svay Rieng (Svay Rieng)
+Commune   : Kampot Chroot
 Location  : 11.0351, 106.0189
 
 [BRANCH SVAA022]
 Code      : SVAA022
 Name      : Bos Svay
-Province  : កំពង់ចាម
-District  : Kampong Siem (កំពង់សៀម)
-Commune   : អូរស្វាយ
+Province  : ស្វាយរៀង
+District  : Svay Rieng (Svay Rieng)
+Commune   : Bos Svay
 Location  : 11.2337, 105.8807
 
 [BRANCH SVAP001]
 Code      : SVAP001
 Name      : Svay Rieng
 Province  : ស្វាយរៀង
-District  : Svay Rieng (ស្វាយរៀង)
-Commune   : ស្វាយរៀង
+District  : Svay Rieng (Svay Rieng)
+Commune   : Svay Rieng
 Location  : 11.0914361, 105.7915562
 
 [BRANCH SVAS001]
 Code      : SVAS001
 Name      : Svay Rieng
 Province  : ស្វាយរៀង
-District  : Svay Rieng (ស្វាយរៀង)
-Commune   : ស្វាយរៀង
+District  : Svay Rieng (Svay Rieng)
+Commune   : Svay Rieng
 Location  : 11.082903, 105.7966346
 
 [BRANCH SVAS002]
 Code      : SVAS002
 Name      : Bavet
 Province  : ស្វាយរៀង
-District  : Bavet (បាវិត)
-Commune   : បាទី
+District  : Bavet (Bavet)
+Commune   : Bavet
 Location  : 11.0705, 106.1577
 
 [BRANCH SVAS003]
 Code      : SVAS003
 Name      : Chrak Mtes
 Province  : ស្វាយរៀង
-District  : Bavet (បាវិត)
-Commune   : ច្រកម្ទេស
+District  : Bavet (Bavet)
+Commune   : Chrak Mtes
 Location  : 11.0381, 106.0115
 
 [BRANCH SVAS004]
 Code      : SVAS004
 Name      : Kampong Trach
-Province  : កំពត
-District  : Kampong Trach (កំពង់ត្រាច)
-Commune   : បឹងសាលាខាងជើង
+Province  : ស្វាយរៀង
+District  : Romeas Haek (Romeas Haek)
+Commune   : Kampong Trach
 Location  : 11.412753, 105.794946
 
 [BRANCH TAKA001]
 Code      : TAKA001
 Name      : Ou Saray
 Province  : តាកែវ
-District  : Tram Kak (ត្រាំកក់)
-Commune   : អូរសារាយ
+District  : Tram Kak (Tram Kak)
+Commune   : Ou Saray
 Location  : 11.075468, 104.496893
 
 [BRANCH TAKA002]
 Code      : TAKA002
 Name      : Sun Chanchav
-Province  : ព្រះសីហនុ
-District  : Kampong Seila (កំពង់សីលា)
-Commune   : ស្ទឹងឆាយ
+Province  : តាកែវ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Sun Chanchav
 Location  : 11.034202, 104.590535
 
 [BRANCH TAKA003]
 Code      : TAKA003
 Name      : Trapeang Kranhung
 Province  : តាកែវ
-District  : Tram Kak (ត្រាំកក់)
-Commune   : ត្រពាំងក្រញូង
+District  : Doun Kaev (Doun Kaev)
+Commune   : Trapeang Kranhung
 Location  : 11.093079, 104.414537
 
 [BRANCH TAKA004]
 Code      : TAKA004
 Name      : Tram Kak
 Province  : តាកែវ
-District  : Tram Kak (ត្រាំកក់)
-Commune   : អង្គតាសោម
+District  : Tram Kak (Tram Kak)
+Commune   : Tram Kak
 Location  : 10.911496, 104.589815
 
 [BRANCH TAKA005]
 Code      : TAKA005
 Name      : Romenh 01
 Province  : តាកែវ
-District  : Kaoh Andaet (កោះអណ្ដែត)
-Commune   : រមេញ
+District  : Kaoh Andaet (Kaoh Andaet)
+Commune   : Romenh 01
 Location  : 10.7957, 104.9502
 
 [BRANCH TAKA006]
 Code      : TAKA006
 Name      : Sambuor
-Province  : បន្ទាយមានជ័យ
-District  : Mongkol Borei (មង្គលបូរី)
-Commune   : សំបួរ
+Province  : តាកែវ
+District  : Treang (Treang)
+Commune   : Sambuor
 Location  : 10.962474, 104.857369
 
 [BRANCH TAKA007]
 Code      : TAKA007
 Name      : Angkanh
 Province  : តាកែវ
-District  : Prey Kabbas (ព្រៃកប្បាស)
-Commune   : អង្កាញ់
+District  : Prey Kabbas (Prey Kabbas)
+Commune   : Angkanh
 Location  : 11.083932, 104.94629
 
 [BRANCH TAKA008]
 Code      : TAKA008
 Name      : Khvav
-Province  : សៀមរាប
-District  : Chi Kraeng (ជីក្រែង)
-Commune   : ខ្វាវ
+Province  : តាកែវ
+District  : Samraong (Samraong)
+Commune   : Khvav
 Location  : 10.92014, 104.72301
 
 [BRANCH TAKA009]
 Code      : TAKA009
 Name      : Kouk Pou
 Province  : តាកែវ
-District  : Borei Cholsar (បូរីជលសារ)
-Commune   : គោកពោធិ៍
+District  : Borei Cholsar (Borei Cholsar)
+Commune   : Kouk Pou
 Location  : 10.892675, 104.902756
 
 [BRANCH TAKA010]
 Code      : TAKA010
 Name      : Krapum Chhuk
 Province  : តាកែវ
-District  : Kaoh Andaet (កោះអណ្ដែត)
-Commune   : ក្រពុំឈូក
+District  : Kaoh Andaet (Kaoh Andaet)
+Commune   : Krapum Chhuk
 Location  : 10.706738, 104.916813
 
 [BRANCH TAKA011]
 Code      : TAKA011
 Name      : Prey Rumdeng
-Province  : ព្រៃវែង
-District  : Me Sang (មេសាង)
-Commune   : ព្រៃរំដេង
+Province  : តាកែវ
+District  : Kiri Vong (Kiri Vong)
+Commune   : Prey Rumdeng
 Location  : 10.619044, 104.767197
 
 [BRANCH TAKA012]
 Code      : TAKA012
 Name      : Prey Sloek
 Province  : តាកែវ
-District  : Treang (ទ្រាំង)
-Commune   : ព្រៃស្លឹក
+District  : Treang (Treang)
+Commune   : Prey Sloek
 Location  : 10.904813, 104.783549
 
 [BRANCH TAKA013]
 Code      : TAKA013
 Name      : Phnum Den
 Province  : តាកែវ
-District  : Kiri Vong (គីរីវង់)
-Commune   : ភ្នំដិន
+District  : Kiri Vong (Kiri Vong)
+Commune   : Phnum Den
 Location  : 10.60243, 104.906536
 
 [BRANCH TAKA014]
 Code      : TAKA014
 Name      : Prey Phdau
 Province  : តាកែវ
-District  : Prey Kabbas (ព្រៃកប្បាស)
-Commune   : ព្រៃផ្ដៅ
+District  : Prey Kabbas (Prey Kabbas)
+Commune   : Prey Phdau
 Location  : 11.165364, 104.876075
 
 [BRANCH TAKA015]
 Code      : TAKA015
 Name      : Romenh 02
 Province  : តាកែវ
-District  : Kaoh Andaet (កោះអណ្ដែត)
-Commune   : រមេញ
+District  : Kaoh Andaet (Kaoh Andaet)
+Commune   : Romenh 02
 Location  : 10.800032, 104.937742
 
 [BRANCH TAKA016]
 Code      : TAKA016
 Name      : Angkor Borei
 Province  : តាកែវ
-District  : Angkor Borei (អង្គរបូរី)
-Commune   : អង្គរបូរី
+District  : Angkor Borei (Angkor Borei)
+Commune   : Angkor Borei
 Location  : 10.997932, 104.973288
 
 [BRANCH TAKA017]
 Code      : TAKA017
 Name      : Trea
-Province  : កំពង់ធំ
-District  : Stoung (ស្ទោង)
-Commune   : ទ្រា
+Province  : តាកែវ
+District  : Samraong (Samraong)
+Commune   : Trea
 Location  : 11.103537, 104.821108
 
 [BRANCH TAKA018]
 Code      : TAKA018
 Name      : Doung Khpos
 Province  : តាកែវ
-District  : Borei Cholsar (បូរីជលសារ)
-Commune   : ដូងខ្ពស់
+District  : Bati (Bati)
+Commune   : Doung Khpos
 Location  : 10.867205, 104.86635
 
 [BRANCH TAKA019]
 Code      : TAKA019
 Name      : Lumchang
 Province  : តាកែវ
-District  : Samraong (សំរោង)
-Commune   : លំចង់
+District  : Samraong (Samraong)
+Commune   : Lumchang
 Location  : 11.073395, 104.75951
 
 [BRANCH TAKA020]
 Code      : TAKA020
 Name      : Prey Khla
-Province  : ព្រៃវែង
-District  : Svay Antor (ស្វាយអន្ទរ)
-Commune   : ព្រៃខ្លា
+Province  : តាកែវ
+District  : Kaoh Andaet (Kaoh Andaet)
+Commune   : Prey Khla
 Location  : 10.75647, 104.872143
 
 [BRANCH TAKA022]
 Code      : TAKA022
 Name      : Kandoeng
 Province  : តាកែវ
-District  : Bati (បាទី)
-Commune   : កណ្ដឹង
+District  : Bati (Bati)
+Commune   : Kandoeng
 Location  : 11.285664, 104.840462
 
 [BRANCH TAKA023]
 Code      : TAKA023
 Name      : Rovieng
-Province  : ព្រះវិហារ
-District  : Rovieng (រវៀង)
-Commune   : របៀប
+Province  : តាកែវ
+District  : Samraong (Samraong)
+Commune   : Rovieng
 Location  : 11.201191, 104.787972
 
 [BRANCH TAKA024]
 Code      : TAKA024
 Name      : Ta Ou
 Province  : តាកែវ
-District  : Kiri Vong (គីរីវង់)
-Commune   : តាអូរ
+District  : Kiri Vong (Kiri Vong)
+Commune   : Ta Ou
 Location  : 10.577666, 104.798714
 
 [BRANCH TAKA025]
 Code      : TAKA025
 Name      : Ang Ta Saom
 Province  : តាកែវ
-District  : Tram Kak (ត្រាំកក់)
-Commune   : អង្គតាសោម
+District  : Kiri Vong (Kiri Vong)
+Commune   : Ang Ta Saom
 Location  : 11.012834, 104.672232
 
 [BRANCH TAKA026]
 Code      : TAKA026
 Name      : Prey Ampok
 Province  : តាកែវ
-District  : Kiri Vong (គីរីវង់)
-Commune   : ព្រៃអំពក
+District  : Kiri Vong (Kiri Vong)
+Commune   : Prey Ampok
 Location  : 10.632234, 104.791171
 
 [BRANCH TAKA027]
 Code      : TAKA027
 Name      : Preah Bat Choan Chum
 Province  : តាកែវ
-District  : Kiri Vong (គីរីវង់)
-Commune   : ព្រះបាទជាន់ជុំ
+District  : Kiri Vong (Kiri Vong)
+Commune   : Preah Bat Choan Chum
 Location  : 10.644722, 104.874741
 
 [BRANCH TAKA028]
 Code      : TAKA028
 Name      : Borei Chulsar
 Province  : តាកែវ
-District  : Borei Cholsar (បូរីជលសារ)
-Commune   : បូរីជលសារ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Borei Chulsar
 Location  : 10.859956, 104.947543
 
 [BRANCH TAKA031]
 Code      : TAKA031
 Name      : Ba Srae
 Province  : តាកែវ
-District  : Angkor Borei (អង្គរបូរី)
-Commune   : បាស្រែ
+District  : Angkor Borei (Angkor Borei)
+Commune   : Ba Srae
 Location  : 11.056967, 104.952222
 
 [BRANCH TAKA032]
 Code      : TAKA032
 Name      : Roka Krau
 Province  : តាកែវ
-District  : Doun Kaev (ដូនកែវ)
-Commune   : រកាក្រៅ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Roka Krau
 Location  : 10.97977, 104.778003
 
 [BRANCH TAKA033]
 Code      : TAKA033
 Name      : Prey Kabbas
 Province  : តាកែវ
-District  : Prey Kabbas (ព្រៃកប្បាស)
-Commune   : អង្កាញ់
+District  : Prey Kabbas (Prey Kabbas)
+Commune   : Prey Kabbas
 Location  : 11.162099, 104.958486
 
 [BRANCH TAKA034]
 Code      : TAKA034
 Name      : Rokar Knong
 Province  : តាកែវ
-District  : Doun Kaev (ដូនកែវ)
-Commune   : រកាក្នុង
+District  : Doun Kaev (Doun Kaev)
+Commune   : Rokar Knong
 Location  : 10.981908, 104.777601
 
 [BRANCH TAKA036]
 Code      : TAKA036
 Name      : Tnolbek
-Province  : ភ្នំពេញ
-District  : Boeng Keng Kang (បឹងកេងកង)
-Commune   : ទំនប់ទឹក
+Province  : តាកែវ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Tnolbek
 Location  : 10.810856, 104.806805
 
 [BRANCH TAKP001]
 Code      : TAKP001
 Name      : Doun Kaev
-Province  : សៀមរាប
-District  : Puok (ពួក)
-Commune   : ដូនកែវ
+Province  : តាកែវ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Doun Kaev
 Location  : 10.989227, 104.773957
 
 [BRANCH TAKS001]
 Code      : TAKS001
 Name      : Roka Krau
 Province  : តាកែវ
-District  : Doun Kaev (ដូនកែវ)
-Commune   : រកាក្រៅ
+District  : Doun Kaev (Doun Kaev)
+Commune   : Roka Krau
 Location  : 10.9791, 104.7772
 
 [BRANCH TAKS002]
 Code      : TAKS002
 Name      : Ang Ta Saom
 Province  : តាកែវ
-District  : Tram Kak (ត្រាំកក់)
-Commune   : អង្គតាសោម
+District  : Kiri Vong (Kiri Vong)
+Commune   : Ang Ta Saom
 Location  : 11.0101, 104.6718
 
 [BRANCH TAKS003]
 Code      : TAKS003
 Name      : Trapeang Sab
 Province  : តាកែវ
-District  : Bati (បាទី)
-Commune   : ត្រពាំងសាប
+District  : Bati (Bati)
+Commune   : Trapeang Sab
 Location  : 11.2656982757642, 104.825915410417
 
 [BRANCH TAKS004]
 Code      : TAKS004
 Name      : Preah Bat Choan Chum
 Province  : តាកែវ
-District  : Kiri Vong (គីរីវង់)
-Commune   : ព្រះបាទជាន់ជុំ
+District  : Kiri Vong (Kiri Vong)
+Commune   : Preah Bat Choan Chum
 Location  : 10.6442, 104.875
 
 [BRANCH TBKA001]
 Code      : TBKA001
 Name      : Peus Mouy
 Province  : ត្បូងឃ្មុំ
-District  : Krouch Chhmar (ក្រូចឆ្មារ)
-Commune   : ប៉ឺស១
+District  : Suong (Suong)
+Commune   : Peus Mouy
 Location  : 12.248393, 105.717783
 
 [BRANCH TBKA002]
 Code      : TBKA002
 Name      : Tramung
 Province  : ត្បូងឃ្មុំ
-District  : Memot (មេមត់)
-Commune   : ត្រមូង
+District  : Memot (Memot)
+Commune   : Tramung
 Location  : 11.819494, 106.190896
 
 [BRANCH TBKA003]
 Code      : TBKA003
 Name      : Rokarpo Pram
 Province  : ត្បូងឃ្មុំ
-District  : Tboung Khmum (ត្បូងឃ្មុំ)
-Commune   : រកាពប្រាំ
+District  : Suong (Suong)
+Commune   : Rokarpo Pram
 Location  : 12.040843, 105.711399
 
 [BRANCH TBKA004]
 Code      : TBKA004
 Name      : Choam Kravien
 Province  : ត្បូងឃ្មុំ
-District  : Memot (មេមត់)
-Commune   : ជាំក្រវៀន
+District  : Memot (Memot)
+Commune   : Choam Kravien
 Location  : 11.770064, 106.338638
 
 [BRANCH TBKA005]
 Code      : TBKA005
 Name      : Dar
-Province  : កំពង់ឆ្នាំង
-District  : Kampong Leaeng (កំពង់លែង)
-Commune   : ដារ
+Province  : ត្បូងឃ្មុំ
+District  : Memot (Memot)
+Commune   : Dar
 Location  : 11.80188, 106.119953
 
 [BRANCH TBKA006]
 Code      : TBKA006
 Name      : Rumchek
-Province  : កំពង់ចាម
-District  : Kampong Siem (កំពង់សៀម)
-Commune   : រំចេក
+Province  : ត្បូងឃ្មុំ
+District  : Memot (Memot)
+Commune   : Rumchek
 Location  : 12.105325, 106.000691
 
 [BRANCH TBKA008]
 Code      : TBKA008
 Name      : Kaong Kang
 Province  : ត្បូងឃ្មុំ
-District  : Ponhea Kraek (ពញាក្រែក)
-Commune   : កោងកាង
+District  : Ponhea Kraek (Ponhea Kraek)
+Commune   : Kaong Kang
 Location  : 11.810423, 105.844209
 
 [BRANCH TBKA009]
 Code      : TBKA009
 Name      : Trapeang Phlong
 Province  : ត្បូងឃ្មុំ
-District  : Ponhea Kraek (ពញាក្រែក)
-Commune   : ត្រពាំងផ្លុង
+District  : Ponhea Kraek (Ponhea Kraek)
+Commune   : Trapeang Phlong
 Location  : 11.692978, 105.966143
 
 [BRANCH TBKA010]
 Code      : TBKA010
 Name      : Dambae
 Province  : ត្បូងឃ្មុំ
-District  : Dambae (តំបែរ)
-Commune   : ចុងជាច
+District  : Dambae (Dambae)
+Commune   : Dambae
 Location  : 12.017253, 105.884091
 
 [BRANCH TBKA011]
 Code      : TBKA011
 Name      : Chong Cheach
 Province  : ត្បូងឃ្មុំ
-District  : Dambae (តំបែរ)
-Commune   : ចុងជាច
+District  : Dambae (Dambae)
+Commune   : Chong Cheach
 Location  : 11.912352, 105.861044
 
 [BRANCH TBKA012]
 Code      : TBKA012
 Name      : Chhuk
-Province  : កំពង់ធំ
-District  : Prasat Sambour (ប្រាសាទសំបូរ)
-Commune   : ឈូក
+Province  : ត្បូងឃ្មុំ
+District  : Krouch Chhmar (Krouch Chhmar)
+Commune   : Chhuk
 Location  : 12.157931, 105.739451
 
 [BRANCH TBKA013]
 Code      : TBKA013
 Name      : Chumnik
 Province  : ត្បូងឃ្មុំ
-District  : Krouch Chhmar (ក្រូចឆ្មារ)
-Commune   : ជំនីក
+District  : Krouch Chhmar (Krouch Chhmar)
+Commune   : Chumnik
 Location  : 12.25263, 105.817345
 
 [BRANCH TBKA014]
 Code      : TBKA014
 Name      : Trea
-Province  : កំពង់ធំ
-District  : Stoung (ស្ទោង)
-Commune   : ទ្រា
+Province  : ត្បូងឃ្មុំ
+District  : Krouch Chhmar (Krouch Chhmar)
+Commune   : Trea
 Location  : 12.234293, 105.546472
 
 [BRANCH TBKA015]
 Code      : TBKA015
 Name      : Chak
-Province  : កំពង់ឆ្នាំង
-District  : Baribour (បរិបូណ៌)
-Commune   : ចក
+Province  : ត្បូងឃ្មុំ
+District  : Ou Reang Ov (Ou Reang Ov)
+Commune   : Chak
 Location  : 11.776389, 105.598362
 
 [BRANCH TBKA016]
 Code      : TBKA016
 Name      : Kraek
 Province  : ត្បូងឃ្មុំ
-District  : Ponhea Kraek (ពញាក្រែក)
-Commune   : ក្រែក
+District  : Ponhea Kraek (Ponhea Kraek)
+Commune   : Kraek
 Location  : 11.785283, 106.002698
 
 [BRANCH TBKA017]
 Code      : TBKA017
 Name      : Kor 01
-Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : គរ
+Province  : ត្បូងឃ្មុំ
+District  : Tboung Khmum (Tboung Khmum)
+Commune   : Kor 01
 Location  : 11.973743, 105.742968
 
 [BRANCH TBKA018]
 Code      : TBKA018
 Name      : Choam Ta Mau
 Province  : ត្បូងឃ្មុំ
-District  : Memot (មេមត់)
-Commune   : ជាំតាម៉ៅ
+District  : Memot (Memot)
+Commune   : Choam Ta Mau
 Location  : 11.886598, 106.243362
 
 [BRANCH TBKA019]
 Code      : TBKA019
 Name      : Chob
 Province  : ត្បូងឃ្មុំ
-District  : Tboung Khmum (ត្បូងឃ្មុំ)
-Commune   : ជប់
+District  : Tboung Khmum (Tboung Khmum)
+Commune   : Chob
 Location  : 11.918445, 105.603895
 
 [BRANCH TBKA020]
 Code      : TBKA020
 Name      : Peam Chileang
 Province  : ត្បូងឃ្មុំ
-District  : Tboung Khmum (ត្បូងឃ្មុំ)
-Commune   : ពាមជីលាំង
+District  : Tboung Khmum (Tboung Khmum)
+Commune   : Peam Chileang
 Location  : 12.101092, 105.547606
 
 [BRANCH TBKA021]
 Code      : TBKA021
 Name      : Sralab
 Province  : ត្បូងឃ្មុំ
-District  : Tboung Khmum (ត្បូងឃ្មុំ)
-Commune   : ស្រឡប់
+District  : Tboung Khmum (Tboung Khmum)
+Commune   : Sralab
 Location  : 11.862282, 105.738753
 
 [BRANCH TBKA022]
 Code      : TBKA022
 Name      : Kor 02
-Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : គរ
+Province  : ត្បូងឃ្មុំ
+District  : Tboung Khmum (Tboung Khmum)
+Commune   : Kor 02
 Location  : 11.976871, 105.716563
 
 [BRANCH TBKP001]
 Code      : TBKP001
 Name      : Suong
 Province  : ត្បូងឃ្មុំ
-District  : Suong (សួង)
-Commune   : សួង
+District  : Suong (Suong)
+Commune   : Suong
 Location  : 11.911554, 105.651283
 
 [BRANCH TBKS001]
 Code      : TBKS001
 Name      : Suong
 Province  : ត្បូងឃ្មុំ
-District  : Suong (សួង)
-Commune   : សួង
+District  : Suong (Suong)
+Commune   : Suong
 Location  : 11.910232, 105.653275
 
 [BRANCH TBKS002]
 Code      : TBKS002
 Name      : Kraek
 Province  : ត្បូងឃ្មុំ
-District  : Ponhea Kraek (ពញាក្រែក)
-Commune   : ក្រែក
+District  : Ponhea Kraek (Ponhea Kraek)
+Commune   : Kraek
 Location  : 11.763201, 105.940445
 
 [BRANCH TBKS003]
 Code      : TBKS003
 Name      : Memut
 Province  : ត្បូងឃ្មុំ
-District  : Memot (មេមត់)
-Commune   : ចាន់មូល
+District  : Suong (Suong)
+Commune   : Memut
 Location  : 11.828102, 106.182878
 
 [BRANCH TBKS004]
 Code      : TBKS004
 Name      : Ampil Ta Pok
 Province  : ត្បូងឃ្មុំ
-District  : Ou Reang Ov (អូររាំងឪ)
-Commune   : អំពិលតាពក
+District  : Ou Reang Ov (Ou Reang Ov)
+Commune   : Ampil Ta Pok
 Location  : 11.796341, 105.499489
 
 [BRANCH THOA001]
 Code      : THOA001
 Name      : Srayouv
 Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : ស្រយ៉ូវ
+District  : Steung Saen (Steung Saen)
+Commune   : Srayouv
 Location  : 12.657969, 104.919848
 
 [BRANCH THOA002]
 Code      : THOA002
 Name      : Sou Young
 Province  : កំពង់ធំ
-District  : Taing Kouk (តាំងគោក)
-Commune   : សូយោង
+District  : Taing Kouk (Taing Kouk)
+Commune   : Sou Young
 Location  : 12.247011, 105.123774
 
 [BRANCH THOA003]
 Code      : THOA003
 Name      : Triel
 Province  : កំពង់ធំ
-District  : Taing Kouk (តាំងគោក)
-Commune   : ទ្រៀល
+District  : Taing Kouk (Taing Kouk)
+Commune   : Triel
 Location  : 12.333434, 105.105665
 
 [BRANCH THOA004]
 Code      : THOA004
 Name      : Baray
-Province  : កំពង់ចាម
-District  : Prey Chhor (ព្រៃឈរ)
-Commune   : បារាយណ៍
+Province  : កំពង់ធំ
+District  : Baray (Baray)
+Commune   : Baray
 Location  : 12.396384, 105.083396
 
 [BRANCH THOA005]
 Code      : THOA005
 Name      : Bak Sna
 Province  : កំពង់ធំ
-District  : Baray (បារាយណ៍)
-Commune   : បាក់ស្នា
+District  : Baray (Baray)
+Commune   : Bak Sna
 Location  : 12.515992, 105.281484
 
 [BRANCH THOA006]
 Code      : THOA006
 Name      : Tbaeng
 Province  : កំពង់ធំ
-District  : Kampong Svay (កំពង់ស្វាយ)
-Commune   : ត្បែង
+District  : Kampong Svay (Kampong Svay)
+Commune   : Tbaeng
 Location  : 12.793109, 104.78912
 
 [BRANCH THOA007]
 Code      : THOA007
 Name      : Tang Krasang
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : តាំងក្រសាំង
+Province  : កំពង់ធំ
+District  : Santuk (Santuk)
+Commune   : Tang Krasang
 Location  : 12.56012, 105.04978
 
 [BRANCH THOA008]
 Code      : THOA008
 Name      : San Ko
 Province  : កំពង់ធំ
-District  : Kampong Svay (កំពង់ស្វាយ)
-Commune   : សាន់គ
+District  : Kampong Svay (Kampong Svay)
+Commune   : San Ko
 Location  : 12.80811, 104.738129
 
 [BRANCH THOA009]
 Code      : THOA009
 Name      : Tum Ring
 Province  : កំពង់ធំ
-District  : Sandan (សណ្ដាន់)
-Commune   : ទំរីង
+District  : Sandan (Sandan)
+Commune   : Tum Ring
 Location  : 12.901008, 105.424327
 
 [BRANCH THOA010]
 Code      : THOA010
 Name      : Kraya
 Province  : កំពង់ធំ
-District  : Prasat Ballangk (ប្រាសាទបល្ល័ង្គ)
-Commune   : ក្រយា
+District  : Prasat Ballangk (Prasat Ballangk)
+Commune   : Kraya
 Location  : 13.118471, 104.762385
 
 [BRANCH THOA011]
 Code      : THOA011
 Name      : Sala Visai
 Province  : កំពង់ធំ
-District  : Prasat Ballangk (ប្រាសាទបល្ល័ង្គ)
-Commune   : សាលាវិស័យ
+District  : Prasat Ballangk (Prasat Ballangk)
+Commune   : Sala Visai
 Location  : 12.948858, 104.944323
+
+[BRANCH THOA012]
+Code      : THOA012
+Name      : Steung Sean
+Province  : កំពង់ធំ
+District  : Steung Saen (Steung Saen)
+Commune   : Steung Sean
+Location  : 12.870132, 105.068985
 
 [BRANCH THOA013]
 Code      : THOA013
 Name      : Chhuk
 Province  : កំពង់ធំ
-District  : Prasat Sambour (ប្រាសាទសំបូរ)
-Commune   : ឈូក
+District  : Baray (Baray)
+Commune   : Chhuk
 Location  : 12.931402, 105.164794
 
 [BRANCH THOA014]
 Code      : THOA014
 Name      : Krava
 Province  : កំពង់ធំ
-District  : Baray (បារាយណ៍)
-Commune   : ក្រវ៉ា
+District  : Baray (Baray)
+Commune   : Krava
 Location  : 12.473985, 105.244491
 
 [BRANCH THOA015]
 Code      : THOA015
 Name      : Kampong Chen Tboung
 Province  : កំពង់ធំ
-District  : Stoung (ស្ទោង)
-Commune   : កំពង់ចិនត្បូង
+District  : Stoung (Stoung)
+Commune   : Kampong Chen Tboung
 Location  : 12.929947, 104.579938
 
 [BRANCH THOA016]
 Code      : THOA016
 Name      : Chamna Kraom
 Province  : កំពង់ធំ
-District  : Stoung (ស្ទោង)
-Commune   : ចំណាក្រោម
+District  : Stoung (Stoung)
+Commune   : Chamna Kraom
 Location  : 12.848016, 104.635693
 
 [BRANCH THOA017]
 Code      : THOA017
 Name      : Steung Sean
 Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : ដំរីជាន់ខ្លា
-Location  : 104.89055, 12.728917
+District  : Steung Saen (Steung Saen)
+Commune   : Steung Sean
+Location  : 12.728917, 104.89055
 
 [BRANCH THOA018]
 Code      : THOA018
-Name      : Sambour
-Province  : កំពង់ចាម
-District  : Batheay (បាធាយ)
-Commune   : សំបូរ
+Name      : Steung Sean
+Province  : កំពង់ធំ
+District  : Steung Saen (Steung Saen)
+Commune   : Steung Sean
 Location  : 12.87017, 105.06897
 
 [BRANCH THOP001]
 Code      : THOP001
 Name      : Stueng Saen
 Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : ដំរីជាន់ខ្លា
+District  : Steung Saen (Steung Saen)
+Commune   : Stueng Saen
 Location  : 12.718887, 104.886428
 
 [BRANCH THOP018]
 Code      : THOP018
 Name      : Steung Sean
 Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : ដំរីជាន់ខ្លា
+District  : Steung Saen (Steung Saen)
+Commune   : Steung Sean
 Location  : 12.622, 105.4718
 
 [BRANCH THOS001]
 Code      : THOS001
 Name      : Prey Ta Hu
 Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : ព្រៃតាហ៊ូ
+District  : Stueng Saen (Stueng Saen)
+Commune   : Prey Ta Hu
 Location  : 12.718984, 104.886849
 
 [BRANCH THOS002]
 Code      : THOS002
 Name      : Ballang
 Province  : កំពង់ធំ
-District  : Baray (បារាយណ៍)
-Commune   : បល្ល័ង្គ
+District  : Baray (Baray)
+Commune   : Ballang
 Location  : 12.4996, 105.125
 
 [BRANCH THOS003]
 Code      : THOS003
 Name      : Kampong Chen Cheung
 Province  : កំពង់ធំ
-District  : Stoung (ស្ទោង)
-Commune   : កំពង់ចិនជើង
+District  : Stoung (Stoung)
+Commune   : Kampong Chen Cheung
 Location  : 12.943729, 104.569481
 
 [BRANCH THOS004]
 Code      : THOS004
 Name      : Sandan
 Province  : កំពង់ធំ
-District  : Sandan (សណ្ដាន់)
-Commune   : ឈើទាល
+District  : Sandan (Sandan)
+Commune   : Sandan
 Location  : 13.102497, 105.241223
-
-[BRANCH BCTEST]
-Code      : BCTEST
-Name      : BC Thử nghiệm 5 BAN TTCNTT
-Province  : កំពត
-District  : Banteay Meas (បន្ទាយមាស)
-Commune   : ស្ដេចគង់ខាងជើង
-Location  : , 
-
-[BRANCH BCTEST06]
-Code      : BCTEST06
-Name      : BC thử nghiệm 06
-Province  : trung tâm công nghệ - vtp - test
-District  : BC thử nghiệm 06 (bc thử nghiệm 06)
-Commune   : bc thử nghiệm 06
-Location  : , 
-
-[BRANCH CAMGL]
-Code      : CAMGL
-Name      : Kho vùng Thử nghiệm
-Province  : កំពង់ធំ
-District  : Stueng Saen (ស្ទឹងសែន)
-Commune   : កំពង់ធំ
-Location  : , 
-
-[BRANCH CAMGL1]
-Code      : CAMGL1
-Name      : Thử nghiệm 1 BAN
-Province  : កោះកុង
-District  : Thma Bang (ថ្មបាំង)
-Commune   : តាទៃលើ
-Location  : , 
-
-[BRANCH CAMGL2]
-Code      : CAMGL2
-Name      : Thử nghiệm 2
-Province  : កោះកុង
-District  : Thma Bang (ថ្មបាំង)
-Commune   : តាទៃលើ
-Location  : , 
-
-[BRANCH DVCT]
-Code      : DVCT
-Name      : DVCT TEST
-Province  : ស្វាយរៀង
-District  : Bavet (បាវិត)
-Commune   : ច្រកម្ទេស
-Location  : , 
-
-[BRANCH GLOBAL0]
-Code      : GLOBAL0
-Name      : Test PNP
-Province  : កំពត
-District  : Chhuk (ឈូក)
-Commune   : សត្វពង
-Location  : , 
-
-[BRANCH GLOBAL1]
-Code      : GLOBAL1
-Name      : Test PNP
-Province  : កំពត
-District  : Chhuk (ឈូក)
-Commune   : សត្វពង
-Location  : , 
-
-[BRANCH GLOBAL2]
-Code      : GLOBAL2
-Name      : Test BAT
-Province  : ស្ទឹងត្រែង
-District  : Stueng Traeng (ស្ទឹងត្រែង)
-Commune   : ព្រះបាទ
-Location  : , 
-
-[BRANCH GLOBAL3]
-Code      : GLOBAL3
-Name      : Test KAN
-Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ទានកាំ
-Location  : , 
-
-[BRANCH GLOBAL4]
-Code      : GLOBAL4
-Name      : Test BAN
-Province  : បន្ទាយមានជ័យ
-District  : Svay Chek (ស្វាយចេក)
-Commune   : តាបែន
-Location  : , 
-
-[BRANCH GLOBAL5]
-Code      : GLOBAL5
-Name      : Test BAT
-Province  : ស្ទឹងត្រែង
-District  : Stueng Traeng (ស្ទឹងត្រែង)
-Commune   : ព្រះបាទ
-Location  : , 
-
-[BRANCH GLOBAL6]
-Code      : GLOBAL6
-Name      : Test Agent PNP
-Province  : កណ្តាល
-District  : S'ang (ស្អាង)
-Commune   : ស្អាងភ្នំ
-Location  : , 
-
-[BRANCH GLOBAL7]
-Code      : GLOBAL7
-Name      : Test Agent BAT
-Province  : បន្ទាយមានជ័យ
-District  : Preah Netr Preah (ព្រះនេត្រព្រះ)
-Commune   : ទានកាំ
-Location  : , 
-
-[BRANCH GLOBAL8]
-Code      : GLOBAL8
-Name      : BC test GLOBAL8
-Province  : Battambang
-District  : Banan (បាណន់)
-Commune   : ឈើទាល
-Location  : , 
-
-[BRANCH KVBAN]
-Code      : KVBAN
-Name      : Kho vùng BAN
-Province  : កំពង់ឆ្នាំង
-District  : Baribour (បរិបូណ៌)
-Commune   : ខុនរ៉ង
-Location  : , 
-
-[BRANCH KVPNP]
-Code      : KVPNP
-Name      : Kho vùng PNP
-Province  : កំពង់ឆ្នាំង
-District  : Tuek Phos (ទឹកផុស)
-Commune   : ខ្លុងពពក
-Location  : 1111111, 23123123
-
-[BRANCH PNPTTSST]
-Code      : PNPTTSST
-Name      : PNP TEST
-Province  : រតនគិរី
-District  : Ou Ya Dav (អូរយ៉ាដាវ)
-Commune   : ប៉ាតេ
-Location  : , 
-
-[BRANCH MFET001]
-Code      : MFET001
-Name      : GLOBAL Metfone Express Test 01
-Province  : metfone express test
-District  : GLOBAL Metfone Express Test 01 (global metfone express test 01)
-Commune   : global metfone express test 01
-Location  : , 
-
-[BRANCH MFET002]
-Code      : MFET002
-Name      : GLOBAL  Metfone Express Test 02
-Province  : metfone express test
-District  : GLOBAL  Metfone Express Test 02 (global  metfone express test 02)
-Commune   : global  metfone express test 02
-Location  : , 
 
