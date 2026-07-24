@@ -1336,109 +1336,54 @@ async function showAutocomplete(q) {
           e.stopPropagation();
         }
         searchInput.value = s.label;
-        clearBtn.style.display = 'block';
+        if (clearBtn) clearBtn.style.display = 'block';
         closeAutocomplete();
         
-        if (s.isLocal) {
-          if (s.isBranch) {
-            // Direct Post Office Branch Click
-            showState('none');
-            clearAllMapLayers();
-            activeMarkers = [];
-            const marker = L.marker([s.lat, s.lng], { icon: redIcon }).addTo(markerClusterGroup);
-            marker.bindPopup(`
-              <div class="map-popup-content">
-                <div class="popup-header">
-                  <span class="popup-badge">ID: ${s.raw.branch_id}</span>
-                  <span class="popup-coord">${s.lat.toFixed(4)}°, ${s.lng.toFixed(4)}°</span>
-                </div>
-                <h4>📮 ${escHtml(s.raw.market)}</h4>
-                <p class="popup-addr">${getPopupAddressHtml(s.raw)}</p>
+        if (s.isLocal && s.isBranch && s.lat != null && s.lng != null) {
+          // Direct Post Office Branch Click — show branch marker & zoom!
+          showState('none');
+          clearAllMapLayers();
+          activeMarkers = [];
+          const marker = L.marker([s.lat, s.lng], { icon: redIcon }).addTo(markerClusterGroup);
+          marker.bindPopup(`
+            <div class="map-popup-content">
+              <div class="popup-header">
+                <span class="popup-badge">ID: ${s.raw.branch_id}</span>
+                <span class="popup-coord">${s.lat.toFixed(4)}°, ${s.lng.toFixed(4)}°</span>
               </div>
-            `);
-            activeMarkers.push({ id: s.raw.id, marker });
-            renderResultsList([s.raw], false, null);
-            if (resultsCount) {
-              resultsCount.innerHTML = `Found Metfone Express Branch: <span>${s.raw.branch_id}</span>`;
-            }
-            map.setView([s.lat, s.lng], 17);
-            marker.openPopup(); // Auto-open branch popup
-          } else if (s.lat != null && s.lng != null) {
-            // Local Partner Market Click — coordinates already known
-            const selectedLoc = {
-              id: 'target_' + Date.now(),
-              market: s.label,
-              latitude: s.lat,
-              longitude: s.lng,
-              province: s.raw.province,
-              district: s.raw.district,
-              google_maps_url: `https://www.google.com/maps?q=${s.lat},${s.lng}`
-            };
-            selectLocationAndFindNearbyPOs(selectedLoc, [selectedLoc]);
-          } else {
-            // Local item (e.g. NCDD admin area) with no coordinates yet — geocode it
-            showState('loading');
-            try {
-              const prov = provinceSelect ? provinceSelect.value : (s.raw && s.raw.province ? s.raw.province : '');
-              const geoRes = await fetch(`${API}/api/google-geocode?q=${encodeURIComponent(s.label)}` + (prov ? `&province=${encodeURIComponent(prov)}` : ''));
-              if (!geoRes.ok) throw new Error('Geocoding failed');
-              const coords = await geoRes.json();
-
-              if (coords.type === 'multiple') {
-                presentProvinceSelection(coords.results, s.label);
-                return;
-              }
-
-              const selectedLoc = {
-                id: 'target_' + Date.now(),
-                market: s.displayLabel || s.label,
-                latitude: coords.lat,
-                longitude: coords.lng,
-                province: coords.province || (s.raw && s.raw.province) || 'Cambodia',
-                province_kh: coords.province_kh || (s.raw && s.raw.province_kh) || '',
-                district: coords.district || (s.raw && s.raw.district) || '',
-                district_kh: coords.district_kh || (s.raw && s.raw.district_kh) || '',
-                google_maps_url: `https://www.google.com/maps?q=${coords.lat},${coords.lng}`
-              };
-              selectLocationAndFindNearbyPOs(selectedLoc, [selectedLoc]);
-            } catch (err) {
-              console.error(err);
-              showState('empty');
-              if (resultsCount) resultsCount.textContent = 'Location coordinates could not be loaded.';
-            }
+              <h4>📮 ${escHtml(s.raw.market)}</h4>
+              <p class="popup-addr">${getPopupAddressHtml(s.raw)}</p>
+            </div>
+          `);
+          activeMarkers.push({ id: s.raw.id, marker });
+          renderResultsList([s.raw], false, null);
+          if (resultsCount) {
+            resultsCount.innerHTML = `Found Metfone Express Branch: <span>${s.raw.branch_id}</span>`;
           }
-        } else {
-          // Dynamically geocode the Google suggestion for FREE!
-          showState('loading');
-          try {
-            const prov = provinceSelect ? provinceSelect.value : '';
-            const geoRes = await fetch(`${API}/api/google-geocode?q=${encodeURIComponent(s.label)}` + (prov ? `&province=${encodeURIComponent(prov)}` : ''));
-            if (!geoRes.ok) throw new Error('Geocoding failed');
-            const coords = await geoRes.json();
-            
-            if (coords.type === 'multiple') {
-              presentProvinceSelection(coords.results, s.label);
-              return;
-            }
-
-            const selectedLoc = {
-              id: 'target_' + Date.now(),
-              market: s.label,
-              latitude: coords.lat,
-              longitude: coords.lng,
-              province: coords.province || 'Google Location',
-              province_kh: coords.province_kh || '',
-              district: coords.district || '',
-              district_kh: coords.district_kh || '',
-              google_maps_url: `https://www.google.com/maps?q=${coords.lat},${coords.lng}`
-            };
-            selectLocationAndFindNearbyPOs(selectedLoc, [selectedLoc]);
-          } catch (err) {
-            console.error(err);
-            showState('empty');
-            resultsCount.textContent = 'Google Maps coordinates could not be loaded.';
-          }
+          map.setView([s.lat, s.lng], 17);
+          marker.openPopup();
+          return;
         }
+
+        if (s.lat != null && s.lng != null && !isNaN(parseFloat(s.lat)) && !isNaN(parseFloat(s.lng))) {
+          // Suggestion has known coordinates — navigate & find 15km nearby POs instantly!
+          const selectedLoc = {
+            id: (s.raw && s.raw.id) ? s.raw.id : `target_${Date.now()}`,
+            market: s.displayLabel || s.label,
+            latitude: parseFloat(s.lat),
+            longitude: parseFloat(s.lng),
+            province: s.province || (s.raw && s.raw.province) || 'Cambodia',
+            province_kh: (s.raw && s.raw.province_kh) || '',
+            district: (s.raw && s.raw.district) || '',
+            district_kh: (s.raw && s.raw.district_kh) || '',
+            google_maps_url: `https://www.google.com/maps?q=${s.lat},${s.lng}`
+          };
+          selectLocationAndFindNearbyPOs(selectedLoc, [selectedLoc]);
+          return;
+        }
+
+        // Automatic fallback: execute runSmartFind() to resolve administrative address tokens
+        runSmartFind();
       };
       
       item.addEventListener('pointerdown', handleSelect);
