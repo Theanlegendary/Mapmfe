@@ -1621,22 +1621,23 @@ strong {
   /* The search grid-section is always visible (fixed at top) */
   .sidebar .grid-section,
   .grid-section,
-  .search-panel {
-    display: block !important;
+  .search-panel,
+  .search-bar-wrapper {
+    display: flex !important;
     position: relative !important;
     overflow: visible !important;
-    z-index: 99999 !important;
+    z-index: 999999 !important;
   }
 
   /* Mobile Autocomplete Suggestions Card Fix */
   .autocomplete-dropdown {
     position: absolute !important;
-    top: calc(100% + 4px) !important;
+    top: calc(100% + 6px) !important;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    max-height: 50vh !important;
-    z-index: 999999 !important;
+    max-height: 48vh !important;
+    z-index: 9999999 !important;
     background: #ffffff !important; /* PURE SOLID WHITE — NO MAP TEXT BLEED-THROUGH */
     border: 1.5px solid #cbd5e1 !important;
     border-radius: 14px !important;
