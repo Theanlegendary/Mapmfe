@@ -426,19 +426,23 @@ async function loadClientData() {
       if (!r.ok) throw new Error(`HTTP status ${r.status}`);
       return r.json();
     });
-    clientBranches = resBranches.map(b => ({
-      ...b,
-      id: b.id || `po_${b.store_code}`,
-      branch_id: b.store_code,
-      market: b.store_name,
-      province: b.province || '',
-      district: b.district_en || '',
-      commune: '',
-      commune_kh: '',
-      village: '',
-      village_kh: '',
-      google_maps_url: `https://www.google.com/maps?q=${b.latitude},${b.longitude}`
-    }));
+    clientBranches = resBranches
+      .filter(b => b && b.latitude != null && b.longitude != null && !isNaN(parseFloat(b.latitude)) && !isNaN(parseFloat(b.longitude)))
+      .map(b => ({
+        ...b,
+        latitude: parseFloat(b.latitude),
+        longitude: parseFloat(b.longitude),
+        id: b.id || `po_${b.store_code}`,
+        branch_id: b.store_code,
+        market: b.store_name,
+        province: b.province_en || b.province || '',
+        district: b.district_en || b.district || '',
+        commune: b.commune_en || '',
+        commune_kh: b.commune_kh || '',
+        village: '',
+        village_kh: '',
+        google_maps_url: `https://www.google.com/maps?q=${b.latitude},${b.longitude}`
+      }));
     console.log(`✅ Loaded ${clientBranches.length} client branches`);
   } catch (err) {
     console.error('❌ Failed to load client branches database:', err);
