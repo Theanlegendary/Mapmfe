@@ -368,21 +368,21 @@ input, button, select, textarea {
 /* ─── Autocomplete Dropdown (Organic Card) ─── */
 .autocomplete-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100% + 6px);
   left: var(--space-5);
   right: var(--space-5);
-  background: var(--white);
-  border: 1px solid var(--sage-200);
-  border-radius: var(--radius-md);
-  z-index: 1000;
-  max-height: 300px;
+  background: #ffffff !important; /* Pure solid white to prevent map text bleed-through */
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 14px !important;
+  z-index: 999999 !important;
+  max-height: 320px;
   overflow-y: auto;
   display: none;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.22) !important;
   padding: 6px;
 }
 
-.autocomplete-dropdown.open { display: block; }
+.autocomplete-dropdown.open { display: block !important; visibility: visible !important; opacity: 1 !important; }
 
 .ac-item {
   padding: 10px 12px;
@@ -1619,23 +1619,28 @@ strong {
   }
 
   /* The search grid-section is always visible (fixed at top) */
-  .sidebar .grid-section {
+  .sidebar .grid-section,
+  .grid-section,
+  .search-panel {
     display: block !important;
+    position: relative !important;
+    overflow: visible !important;
+    z-index: 99999 !important;
   }
 
-  /* Mobile Autocomplete Suggestions Overlay Fix */
+  /* Mobile Autocomplete Suggestions Card Fix */
   .autocomplete-dropdown {
-    position: fixed !important;
-    top: 68px !important;
-    left: 12px !important;
-    right: 12px !important;
-    width: calc(100vw - 24px) !important;
-    max-height: 55vh !important;
+    position: absolute !important;
+    top: calc(100% + 4px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: 50vh !important;
     z-index: 999999 !important;
-    background: #ffffff !important;
+    background: #ffffff !important; /* PURE SOLID WHITE — NO MAP TEXT BLEED-THROUGH */
     border: 1.5px solid #cbd5e1 !important;
     border-radius: 14px !important;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28) !important;
+    box-shadow: 0 16px 44px rgba(15, 23, 42, 0.28) !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     pointer-events: auto !important;
