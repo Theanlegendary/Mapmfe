@@ -337,35 +337,48 @@
             gap: 10px;
         }
 
-        /* CLEAN STICKY FOOTER NOTE UNDER TABLE (NEVER HIDES BUTTONS!) */
+        /* REDESIGNED BILINGUAL STICKER FOOTER NOTE UNDER TABLE */
         .sticky-note-under {
             background: var(--sticky-yellow);
             color: var(--sticky-text);
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.88rem;
             font-weight: 900;
             border: 2px solid #eab308;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            line-height: 1.35;
+            line-height: 1.4;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 8px;
+            gap: 12px;
             width: 100%;
+        }
+
+        .sticky-text-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .sticky-kh-text {
+            font-family: 'Angkor', serif;
+            font-size: 0.85rem;
+            line-height: 1.35;
         }
 
         /* STYLISH SMALL BADGE TAG INSIDE FOOTER NOTE */
         .badge-tag-inline {
             background: var(--brand-red);
             color: #ffffff;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.72rem;
             font-weight: 900;
             letter-spacing: 0.06em;
             text-transform: uppercase;
             white-space: nowrap;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
         }
 
         .badge-tag-inline.blue { background: #2563eb; }
@@ -373,7 +386,7 @@
         .badge-tag-inline.green { background: #059669; }
         .badge-tag-inline.purple { background: #7c3aed; }
 
-        /* GRID TAB SWITCHERS (100% UNBLOCKABLE) */
+        /* GRID TAB SWITCHERS (CLEAN TITLES, NO PARENTHESES!) */
         .tab-switcher {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -396,7 +409,7 @@
         .exhibit-tab {
             background: #f1f5f9;
             border: 2px solid var(--border-light);
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 900;
             color: var(--text-dark);
             padding: 8px 6px;
@@ -619,19 +632,24 @@
             </div>
 
             <div class="right-exhibit">
+                <!-- TAB 4 CORRECTED TO '4. Not Assign' -->
                 <div class="tab-switcher">
                     <button class="exhibit-tab active" onclick="switchExhibit('table1', this)">1. Pickup</button>
                     <button class="exhibit-tab" onclick="switchExhibit('table2', this)">2. Delivery</button>
                     <button class="exhibit-tab" onclick="switchExhibit('table3', this)">3. Transit</button>
-                    <button class="exhibit-tab" onclick="switchExhibit('table4', this)">4. Branch Audit</button>
+                    <button class="exhibit-tab" onclick="switchExhibit('table4', this)">4. Not Assign</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
                     <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup Table" class="exhibit-img">
                 </div>
 
+                <!-- BILINGUAL STICKY FOOTER NOTE UNDER TABLE -->
                 <div class="sticky-note-under">
-                    <div>📌 <b>Crisp Table View:</b> Click table to inspect full 100% size!</div>
+                    <div class="sticky-text-wrapper">
+                        <div class="en-el">📌 <b>Crisp Table View:</b> Click table to inspect full size</div>
+                        <div class="kh-el sticky-kh-text">📌 <b>ពិនិត្យតារាងច្បាស់៖</b> ចុចលើតារាងដើម្បីមើលទំហំពេញ 100%</div>
+                    </div>
                     <div class="badge-tag-inline">🏷️ VERIFIED DATA</div>
                 </div>
             </div>
@@ -683,16 +701,19 @@
 
             <div class="right-exhibit">
                 <div class="tab-switcher two-cols">
-                    <button class="exhibit-tab active" onclick="switchExhibitSlide2('table2', this)">1. Delivery Table (SVAP001)</button>
-                    <button class="exhibit-tab" onclick="switchExhibitSlide2('table4', this)">2. Not Assign Table (SVAP001)</button>
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide2('table2', this)">1. Delivery</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide2('table4', this)">2. Not Assign</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide2" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="SVAP001 Delivery Sharp Table" class="exhibit-img">
+                    <img id="exhibitImgSlide2" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="Delivery Sharp Table" class="exhibit-img">
                 </div>
 
                 <div class="sticky-note-under" style="background: #dbeafe; color: #1e40af; border-color: #3b82f6;">
-                    <div>⚡ <b>Rule 306 → 402:</b> Assign courier to start 10h SLA timer!</div>
+                    <div class="sticky-text-wrapper">
+                        <div class="en-el">⚡ <b>Rule 306 → 402:</b> Assign courier to start 10h SLA timer!</div>
+                        <div class="kh-el sticky-kh-text">⚡ <b>ច្បាប់ 306 → 402៖</b> ចាត់ចែងអ្នកដឹកដើម្បីចាប់ផ្តើមរាប់ KPI 10ម៉ោង!</div>
+                    </div>
                     <div class="badge-tag-inline blue">⚡ 10H SLA ACTIVE</div>
                 </div>
             </div>
@@ -734,8 +755,8 @@
 
             <div class="right-exhibit">
                 <div class="tab-switcher two-cols">
-                    <button class="exhibit-tab active" onclick="switchExhibitSlide3('table1', this)">1. Pickup Table (THOP001)</button>
-                    <button class="exhibit-tab" onclick="switchExhibitSlide3('table3', this)">2. Send Mega Table (SVAP001)</button>
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide3('table1', this)">1. Pickup</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide3('table3', this)">2. Send Mega</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
@@ -743,7 +764,10 @@
                 </div>
 
                 <div class="sticky-note-under" style="background: #fef3c7; color: #92400e; border-color: #f59e0b;">
-                    <div>📲 <b>Check App First:</b> Open TMS App Pickup Page to confirm requests!</div>
+                    <div class="sticky-text-wrapper">
+                        <div class="en-el">📲 <b>Check App First:</b> Open TMS App Pickup Page to confirm requests!</div>
+                        <div class="kh-el sticky-kh-text">📲 <b>ពិនិត្យ App៖</b> បើកទំព័រ Pickup ក្នុង App ដើម្បីផ្ទៀងផ្ទាត់ការចាត់ចែង!</div>
+                    </div>
                     <div class="badge-tag-inline amber">📲 APP CHECK REQUIRED</div>
                 </div>
             </div>
@@ -793,8 +817,8 @@
 
             <div class="right-exhibit">
                 <div class="tab-switcher two-cols">
-                    <button class="exhibit-tab active" onclick="switchExhibitSlide4('table2', this)">1. Delivery KPI Table (SVAP001)</button>
-                    <button class="exhibit-tab" onclick="switchExhibitSlide4('table1', this)">2. Not Assign Age Table (THOP001)</button>
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide4('table2', this)">1. Delivery KPI</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide4('table1', this)">2. Not Assign Age</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
@@ -802,7 +826,10 @@
                 </div>
 
                 <div class="sticky-note-under" style="background: #dcfce7; color: #166534; border-color: #22c55e;">
-                    <div>🎯 <b>Target SLA 10H:</b> Keep order ages green (<10h) across all shifts!</div>
+                    <div class="sticky-text-wrapper">
+                        <div class="en-el">🎯 <b>Target SLA 10H:</b> Keep order ages green (<10h) across all shifts!</div>
+                        <div class="kh-el sticky-kh-text">🎯 <b>គោលដៅ 10H៖</b> រក្សាអាយុទំនិញជាពណ៌បៃតង (<10h) គ្រប់វេន!</div>
+                    </div>
                     <div class="badge-tag-inline green">🟢 0 OVERDUE TARGET</div>
                 </div>
             </div>
@@ -855,7 +882,10 @@
                 </div>
 
                 <div class="sticky-note-under" style="background: #f3e8ff; color: #6b21a8; border-color: #a855f7;">
-                    <div>📦 <b>EOD Audit Rule:</b> Zero un-scanned packages left before closing shift!</div>
+                    <div class="sticky-text-wrapper">
+                        <div class="en-el">📦 <b>EOD Audit Rule:</b> Zero un-scanned packages left before closing shift!</div>
+                        <div class="kh-el sticky-kh-text">📦 <b>ច្បាប់បិទវេន៖</b> ស្កេនទំនិញក្នុងស្តុកឱ្យអស់ មុនពេលបិទវេន!</div>
+                    </div>
                     <div class="badge-tag-inline purple">📦 EOD AUDIT PASSED</div>
                 </div>
             </div>
@@ -907,7 +937,7 @@
             'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. អីវ៉ាន់ត្រូវយក (Pickup Table) — Report_THOP001_Branch' },
             'table2': { src: 'https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
             'table3': { src: 'https://theanlegendary.github.io/run-py/images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
-            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Branch Inventory Audit) — Report_SVAP001_Branch' },
+            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Not Assign Table) — Report_SVAP001_Branch' },
             'inv1': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png', title: '1. ត្រួតពិនិត្យស្តុក (TMS App Inventory Audit Summary)' },
             'inv2': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scan.png', title: '2. ស្កេនទំនិញចូលស្តុក (TMS App Scan Package Check)' },
             'inv3': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scanned_list.png', title: '3. បញ្ជីទំនិញដែលបានស្កេន (TMS App Scanned Inventory Items)' }
