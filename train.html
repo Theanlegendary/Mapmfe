@@ -271,78 +271,49 @@
             border-radius: 14px;
             box-shadow: 16px 16px 0px rgba(9, 13, 22, 0.1);
             position: relative;
-            padding: 20px;
+            padding: 16px 20px 16px 20px;
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            gap: 10px;
         }
 
-        /* STYLISH SMALL CORNER STICKER BADGES */
-        .exhibit-sticker {
-            position: absolute;
-            bottom: -14px;
-            left: 20px;
-            background: var(--brand-red);
-            color: #ffffff;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 900;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            box-shadow: 0 4px 12px rgba(225, 27, 34, 0.35);
-            border: 2px solid #ffffff;
-            transform: rotate(-4deg);
-            z-index: 30;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .exhibit-sticker.blue {
-            background: #2563eb;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
-            transform: rotate(3deg);
-        }
-
-        .exhibit-sticker.amber {
-            background: #d97706;
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
-            transform: rotate(-3deg);
-        }
-
-        .exhibit-sticker.green {
-            background: #059669;
-            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
-            transform: rotate(4deg);
-        }
-
-        .exhibit-sticker.purple {
-            background: #7c3aed;
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
-            transform: rotate(-5deg);
-        }
-
-        /* Yellow Sticky Note Callout */
-        .sticky-note {
-            position: absolute;
-            top: -18px;
-            right: 20px;
+        /* CLEAN STICKY FOOTER NOTE UNDER TABLE (NEVER HIDES BUTTONS!) */
+        .sticky-note-under {
             background: var(--sticky-yellow);
             color: var(--sticky-text);
-            padding: 10px 14px;
+            padding: 8px 12px;
             border-radius: 6px;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 900;
             border: 2px solid #eab308;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-            transform: rotate(2deg);
-            z-index: 20;
-            max-width: 230px;
-            line-height: 1.4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            line-height: 1.35;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            width: 100%;
         }
 
-        /* GRID TAB SWITCHERS */
+        /* STYLISH SMALL BADGE TAG INSIDE FOOTER NOTE */
+        .badge-tag-inline {
+            background: var(--brand-red);
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 900;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .badge-tag-inline.blue { background: #2563eb; }
+        .badge-tag-inline.amber { background: #d97706; }
+        .badge-tag-inline.green { background: #059669; }
+        .badge-tag-inline.purple { background: #7c3aed; }
+
+        /* GRID TAB SWITCHERS (100% UNBLOCKABLE) */
         .tab-switcher {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -350,6 +321,8 @@
             border-bottom: 3px solid var(--border-light);
             padding-bottom: 8px;
             width: 100%;
+            position: relative;
+            z-index: 50;
         }
 
         .tab-switcher.two-cols {
@@ -363,7 +336,7 @@
         .exhibit-tab {
             background: #f1f5f9;
             border: 2px solid var(--border-light);
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             font-weight: 900;
             color: var(--text-dark);
             padding: 8px 6px;
@@ -574,24 +547,22 @@
             </div>
 
             <div class="right-exhibit">
-                <div class="sticky-note">
-                    📌 <b>Crisp Table View:</b><br>Click table to inspect full 100% size!
-                </div>
-
-                <!-- STYLISH STICKER BADGE FOR SLIDE 1 -->
-                <div class="exhibit-sticker">
-                    <span>🏷️ VERIFIED DATA</span>
-                </div>
-
+                <!-- TAB 1 RENAMED TO '1. Pickup' -->
                 <div class="tab-switcher">
-                    <button class="exhibit-tab active" onclick="switchExhibit('table1', this)">1. THOP001</button>
+                    <button class="exhibit-tab active" onclick="switchExhibit('table1', this)">1. Pickup</button>
                     <button class="exhibit-tab" onclick="switchExhibit('table2', this)">2. Delivery</button>
                     <button class="exhibit-tab" onclick="switchExhibit('table3', this)">3. Transit</button>
-                    <button class="exhibit-tab" onclick="switchExhibit('table4', this)">4. SVAP001</button>
+                    <button class="exhibit-tab" onclick="switchExhibit('table4', this)">4. Branch Audit</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="THOP001 Branch Sharp Table" class="exhibit-img">
+                    <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup Table" class="exhibit-img">
+                </div>
+
+                <!-- STICKER NOTE MOVED CLEANLY UNDER TABLE (NEVER OVERLAPS BUTTONS!) -->
+                <div class="sticky-note-under">
+                    <div>📌 <b>Crisp Table View:</b> Click table to inspect full 100% size!</div>
+                    <div class="badge-tag-inline">🏷️ VERIFIED DATA</div>
                 </div>
             </div>
         </div>
@@ -630,15 +601,6 @@
             </div>
 
             <div class="right-exhibit">
-                <div class="sticky-note" style="background: #dbeafe; color: #1e40af; border-color: #3b82f6;">
-                    ⚡ <b>Rule 306 → 402:</b><br>Assigning courier triggers 10h KPI timer immediately!
-                </div>
-
-                <!-- STYLISH STICKER BADGE FOR SLIDE 2 -->
-                <div class="exhibit-sticker blue">
-                    <span>⚡ 10H SLA ACTIVE</span>
-                </div>
-
                 <div class="tab-switcher two-cols">
                     <button class="exhibit-tab active" onclick="switchExhibitSlide2('table2', this)">1. Delivery Table (SVAP001)</button>
                     <button class="exhibit-tab" onclick="switchExhibitSlide2('table4', this)">2. Not Assign Table (SVAP001)</button>
@@ -646,6 +608,11 @@
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
                     <img id="exhibitImgSlide2" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="SVAP001 Delivery Sharp Table" class="exhibit-img">
+                </div>
+
+                <div class="sticky-note-under" style="background: #dbeafe; color: #1e40af; border-color: #3b82f6;">
+                    <div>⚡ <b>Rule 306 → 402:</b> Assign courier to start 10h SLA timer!</div>
+                    <div class="badge-tag-inline blue">⚡ 10H SLA ACTIVE</div>
                 </div>
             </div>
         </div>
@@ -677,15 +644,6 @@
             </div>
 
             <div class="right-exhibit">
-                <div class="sticky-note" style="background: #fef3c7; color: #92400e; border-color: #f59e0b;">
-                    📲 <b>Check App First:</b><br>Open TMS App Pickup Page to confirm customer requests!
-                </div>
-
-                <!-- STYLISH STICKER BADGE FOR SLIDE 3 -->
-                <div class="exhibit-sticker amber">
-                    <span>📲 APP CHECK REQUIRED</span>
-                </div>
-
                 <div class="tab-switcher two-cols">
                     <button class="exhibit-tab active" onclick="switchExhibitSlide3('table1', this)">1. Pickup Table (THOP001)</button>
                     <button class="exhibit-tab" onclick="switchExhibitSlide3('table3', this)">2. Send Mega Table (SVAP001)</button>
@@ -693,6 +651,11 @@
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
                     <img id="exhibitImgSlide3" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup & Send Mega Table" class="exhibit-img">
+                </div>
+
+                <div class="sticky-note-under" style="background: #fef3c7; color: #92400e; border-color: #f59e0b;">
+                    <div>📲 <b>Check App First:</b> Open TMS App Pickup Page to confirm requests!</div>
+                    <div class="badge-tag-inline amber">📲 APP CHECK REQUIRED</div>
                 </div>
             </div>
         </div>
@@ -728,15 +691,6 @@
             </div>
 
             <div class="right-exhibit">
-                <div class="sticky-note" style="background: #dcfce7; color: #166534; border-color: #22c55e;">
-                    🎯 <b>Target SLA 10H:</b><br>Keep all order ages green (<10h) across all 3 daily shifts!
-                </div>
-
-                <!-- STYLISH STICKER BADGE FOR SLIDE 4 -->
-                <div class="exhibit-sticker green">
-                    <span>🟢 0 OVERDUE TARGET</span>
-                </div>
-
                 <div class="tab-switcher two-cols">
                     <button class="exhibit-tab active" onclick="switchExhibitSlide4('table2', this)">1. Delivery KPI Table (SVAP001)</button>
                     <button class="exhibit-tab" onclick="switchExhibitSlide4('table1', this)">2. Not Assign Age Table (THOP001)</button>
@@ -744,6 +698,11 @@
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
                     <img id="exhibitImgSlide4" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="Delivery KPI Table" class="exhibit-img">
+                </div>
+
+                <div class="sticky-note-under" style="background: #dcfce7; color: #166534; border-color: #22c55e;">
+                    <div>🎯 <b>Target SLA 10H:</b> Keep order ages green (<10h) across all shifts!</div>
+                    <div class="badge-tag-inline green">🟢 0 OVERDUE TARGET</div>
                 </div>
             </div>
         </div>
@@ -779,15 +738,6 @@
             </div>
 
             <div class="right-exhibit">
-                <div class="sticky-note" style="background: #f3e8ff; color: #6b21a8; border-color: #a855f7;">
-                    📦 <b>EOD Audit Rule:</b><br>Zero un-scanned packages left in store before closing shift!
-                </div>
-
-                <!-- STYLISH STICKER BADGE FOR SLIDE 5 -->
-                <div class="exhibit-sticker purple">
-                    <span>📦 EOD AUDIT PASSED</span>
-                </div>
-
                 <div class="tab-switcher three-cols">
                     <button class="exhibit-tab active" onclick="switchExhibitSlide5('inv1', this)">1. Audit Summary</button>
                     <button class="exhibit-tab" onclick="switchExhibitSlide5('inv2', this)">2. Scan Package</button>
@@ -796,6 +746,11 @@
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
                     <img id="exhibitImgSlide5" src="https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png" alt="TMS App Inventory Audit Summary" class="exhibit-img">
+                </div>
+
+                <div class="sticky-note-under" style="background: #f3e8ff; color: #6b21a8; border-color: #a855f7;">
+                    <div>📦 <b>EOD Audit Rule:</b> Zero un-scanned packages left before closing shift!</div>
+                    <div class="badge-tag-inline purple">📦 EOD AUDIT PASSED</div>
                 </div>
             </div>
         </div>
@@ -843,7 +798,7 @@
         let currentTabSlide5 = 'inv1';
 
         const sharpTables = {
-            'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. មិនទាន់ចាត់ចែង (Not Assign) — Report_THOP001_Branch' },
+            'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. អីវ៉ាន់ត្រូវយក (Pickup Table) — Report_THOP001_Branch' },
             'table2': { src: 'https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
             'table3': { src: 'https://theanlegendary.github.io/run-py/images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
             'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Branch Inventory Audit) — Report_SVAP001_Branch' },
