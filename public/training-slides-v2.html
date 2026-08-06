@@ -1,889 +1,919 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Metfone Express Operations & Training Deck</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Siemreap&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-dark: #090d16;
-      --bg-card: #111827;
-      --bg-card-hover: #1f293d;
-      --border-color: rgba(255, 255, 255, 0.1);
-      --metfone-red: #dc2626;
-      --metfone-red-glow: rgba(220, 38, 38, 0.35);
-      --gold-accent: #fbbf24;
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --blue-accent: #3b82f6;
-      --green-accent: #10b981;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metfone Express — 5-Slide Landscape Training Deck</title>
+    <!-- Import Telegram WebApp JS -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- Google Fonts: Angkor (Khmer Display Serif) + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&family=Inter:wght@600;700;800;900&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --brand-red: #e11b22;
+            --text-black: #090d16;
+            --text-dark: #1e293b;
+            --text-muted: #334155;
+            --border-dark: #0f172a;
+            --border-light: #94a3b8;
+            --sticky-yellow: #fef08a;
+            --sticky-text: #713f12;
+            --node-blue: #1d4ed8;
+            --node-green: #047857;
+        }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Plus Jakarta Sans', 'Siemreap', sans-serif;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-    body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      overflow-x: hidden;
-    }
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--bg-white);
+            color: var(--text-black);
+            -webkit-font-smoothing: antialiased;
+        }
 
-    /* Top Navigation Header */
-    header {
-      background: rgba(17, 24, 39, 0.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 12px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+        /* 16:9 Landscape Canvas */
+        .landscape-canvas {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            position: relative;
+            background: #ffffff;
+            overflow: hidden;
+            perspective: 1200px;
+        }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        /* Far Left Vertical Stamp Margin */
+        .side-stamp {
+            position: absolute;
+            left: 20px;
+            bottom: 120px;
+            transform: rotate(-90deg);
+            transform-origin: left bottom;
+            font-size: 0.95rem;
+            font-weight: 900;
+            letter-spacing: 0.25em;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
 
-    .brand-logo {
-      width: 38px;
-      height: 38px;
-      background: linear-gradient(135deg, var(--metfone-red), #991b1b);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 18px;
-      box-shadow: 0 4px 12px var(--metfone-red-glow);
-    }
+        /* Top Bar Layout with Official Metfone Express Brand Logo */
+        .top-nav {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
 
-    .brand-title {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
 
-    .brand-subtitle {
-      font-size: 11px;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
+        .brand-logo-img {
+            height: 52px;
+            object-fit: contain;
+            display: block;
+        }
 
-    .nav-controls {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .nav-header-text {
+            font-family: 'Angkor', serif;
+            font-size: 1.15rem;
+            color: var(--text-black);
+            letter-spacing: 0.05em;
+        }
 
-    .btn {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      color: var(--text-main);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+        .nav-right-tag {
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--text-dark);
+        }
 
-    .btn:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(255,255,255,0.2);
-    }
+        /* Slide Views Switcher with 3D Book Page Flip Animation */
+        .slide-view {
+            display: none;
+            width: 100%;
+            height: 100%;
+            transform-origin: left center;
+        }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--metfone-red), #b91c1c);
-      border: none;
-      box-shadow: 0 4px 12px var(--metfone-red-glow);
-    }
+        .slide-view.active {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr;
+            padding: 85px 30px 85px 75px;
+            gap: 30px;
+            align-items: center;
+            animation: bookPageFlip 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+        }
 
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #ef4444, var(--metfone-red));
-      transform: translateY(-1px);
-    }
+        @keyframes bookPageFlip {
+            from {
+                opacity: 0;
+                transform: rotateY(-20deg) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: rotateY(0deg) scale(1);
+            }
+        }
 
-    /* Main Slide Container */
-    main {
-      flex: 1;
-      max-width: 1300px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-    }
+        /* LEFT CONTENT COLUMN */
+        .left-content {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            max-width: 720px;
+        }
 
-    .slide {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+        .eyebrow-line {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 1.35rem;
+            font-weight: 900;
+            letter-spacing: 0.18em;
+            color: var(--brand-red);
+            text-transform: uppercase;
+        }
 
-    .slide.active {
-      display: flex;
-    }
+        .eyebrow-line::before {
+            content: '';
+            width: 48px;
+            height: 6px;
+            background: var(--brand-red);
+            border-radius: 4px;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        /* HERO TITLE WITH ANGKOR FONT */
+        .hero-title-bold {
+            font-family: 'Angkor', serif;
+            font-size: 5.2rem;
+            line-height: 1.1;
+            color: var(--text-black);
+            letter-spacing: -0.01em;
+        }
 
-    .slide-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 16px;
-    }
+        .hero-title-bold span {
+            color: var(--brand-red);
+        }
 
-    .slide-number {
-      background: rgba(220, 38, 38, 0.15);
-      color: #f87171;
-      font-weight: 800;
-      font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      border: 1px solid rgba(220, 38, 38, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+        /* ENLARGED BILINGUAL DESCRIPTION & KHMER TEXT */
+        .sub-english {
+            font-size: 1.75rem;
+            color: var(--text-black);
+            line-height: 1.45;
+            font-weight: 800;
+        }
 
-    .slide-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+        .sub-khmer {
+            font-family: 'Angkor', serif;
+            font-size: 1.6rem;
+            color: var(--brand-red);
+            line-height: 1.65;
+            background: #fff1f2;
+            padding: 16px 20px;
+            border-radius: 10px;
+            border-left: 6px solid var(--brand-red);
+            box-shadow: 0 4px 12px rgba(225, 27, 34, 0.08);
+        }
 
-    .slide-title {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
+        /* Status & Rule Cards */
+        .status-flow-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
 
-    .slide-desc {
-      font-size: 13.5px;
-      color: var(--text-muted);
-    }
+        .status-step-card {
+            background: #f8fafc;
+            border: 2px solid var(--text-black);
+            border-left: 6px solid var(--brand-red);
+            padding: 14px 18px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
 
-    /* Grid Layouts */
-    .grid-2x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+        .status-code-badge {
+            background: var(--text-black);
+            color: #ffffff;
+            font-weight: 900;
+            font-size: 1.25rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
 
-    .grid-1x3 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+        .status-desc-text {
+            font-size: 1.35rem;
+            color: var(--text-black);
+            line-height: 1.4;
+            font-weight: 800;
+        }
 
-    .grid-1x2 {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+        /* KPI Explanation Grid */
+        .kpi-explain-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
 
-    @media (max-width: 900px) {
-      .grid-2x2, .grid-1x3, .grid-1x2 {
-        grid-template-columns: 1fr;
-      }
-    }
+        .kpi-card {
+            background: #f8fafc;
+            border: 2px solid var(--text-black);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-    /* Card Aesthetics */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      transition: all 0.2s ease;
-      position: relative;
-    }
+        .kpi-badge-tag {
+            font-size: 1.1rem;
+            font-weight: 900;
+            padding: 6px 14px;
+            border-radius: 6px;
+            display: inline-block;
+            width: max-content;
+        }
 
-    .card:hover {
-      border-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-    }
+        .kpi-badge-tag.green { background: #d1fae5; color: #047857; }
+        .kpi-badge-tag.red { background: #ffe4e6; color: #b91c1c; }
 
-    .card-icon-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+        .kpi-card-text {
+            font-size: 1.3rem;
+            color: var(--text-black);
+            line-height: 1.4;
+            font-weight: 800;
+        }
 
-    .card-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
+        /* Right Visual Slide Paper Frame */
+        .right-exhibit {
+            width: 100%;
+            height: 100%;
+            max-height: 560px;
+            background: #ffffff;
+            border: 3px solid var(--text-black);
+            border-radius: 14px;
+            box-shadow: 16px 16px 0px rgba(9, 13, 22, 0.1);
+            position: relative;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
 
-    .card-title {
-      font-size: 16px;
-      font-weight: 700;
-    }
+        /* STYLISH SMALL CORNER STICKER BADGES */
+        .exhibit-sticker {
+            position: absolute;
+            bottom: -14px;
+            left: 20px;
+            background: var(--brand-red);
+            color: #ffffff;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(225, 27, 34, 0.35);
+            border: 2px solid #ffffff;
+            transform: rotate(-4deg);
+            z-index: 30;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-    .badge-onhold {
-      background: rgba(245, 158, 11, 0.15);
-      color: var(--gold-accent);
-      border: 1px solid rgba(245, 158, 11, 0.3);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-    }
+        .exhibit-sticker.blue {
+            background: #2563eb;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+            transform: rotate(3deg);
+        }
 
-    .badge-kpi {
-      background: rgba(16, 185, 129, 0.15);
-      color: var(--green-accent);
-      border: 1px solid rgba(16, 185, 129, 0.3);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-    }
+        .exhibit-sticker.amber {
+            background: #d97706;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+            transform: rotate(-3deg);
+        }
 
-    .badge-alert {
-      background: rgba(220, 38, 38, 0.15);
-      color: #f87171;
-      border: 1px solid rgba(220, 38, 38, 0.3);
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 11px;
-      font-weight: 700;
-    }
+        .exhibit-sticker.green {
+            background: #059669;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35);
+            transform: rotate(4deg);
+        }
 
-    .card-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
+        .exhibit-sticker.purple {
+            background: #7c3aed;
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+            transform: rotate(-5deg);
+        }
 
-    .card-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      line-height: 1.5;
-    }
+        /* Yellow Sticky Note Callout */
+        .sticky-note {
+            position: absolute;
+            top: -18px;
+            right: 20px;
+            background: var(--sticky-yellow);
+            color: var(--sticky-text);
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 900;
+            border: 2px solid #eab308;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+            transform: rotate(2deg);
+            z-index: 20;
+            max-width: 230px;
+            line-height: 1.4;
+        }
 
-    .card-list li::before {
-      content: "•";
-      color: var(--metfone-red);
-      font-weight: bold;
-    }
+        /* GRID TAB SWITCHERS */
+        .tab-switcher {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+            border-bottom: 3px solid var(--border-light);
+            padding-bottom: 8px;
+            width: 100%;
+        }
 
-    /* Image Upload & Folder Component */
-    .image-slot-container {
-      background: rgba(0, 0, 0, 0.3);
-      border: 2px dashed rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      min-height: 180px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      padding: 12px;
-    }
+        .tab-switcher.two-cols {
+            grid-template-columns: repeat(2, 1fr);
+        }
 
-    .image-slot-container:hover {
-      border-color: var(--metfone-red);
-      background: rgba(220, 38, 38, 0.04);
-    }
+        .exhibit-tab {
+            background: #f1f5f9;
+            border: 2px solid var(--border-light);
+            font-size: 0.82rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            padding: 8px 6px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
 
-    .image-preview {
-      width: 100%;
-      height: 100%;
-      max-height: 240px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
+        .exhibit-tab.active {
+            background: var(--text-black);
+            color: #ffffff;
+            border-color: var(--text-black);
+        }
 
-    .upload-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      text-align: center;
-    }
+        /* Display Image Container */
+        .exhibit-display-frame {
+            flex: 1;
+            width: 100%;
+            background: #ffffff;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .upload-icon {
-      font-size: 28px;
-      color: var(--text-muted);
-    }
+        .exhibit-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            image-rendering: -webkit-optimize-contrast;
+        }
 
-    .upload-text {
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--text-main);
-    }
+        /* FIXED PERMANENTLY VISIBLE BOOK FLIP NAVIGATION BAR */
+        .bottom-nav {
+            position: fixed;
+            bottom: 24px;
+            left: 75px;
+            right: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 9999;
+            pointer-events: none;
+        }
 
-    .upload-subtext {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
+        .page-mark {
+            font-size: 0.95rem;
+            font-weight: 900;
+            letter-spacing: 0.12em;
+            color: var(--text-black);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 2px solid var(--text-black);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            pointer-events: auto;
+        }
 
-    .file-input {
-      display: none;
-    }
+        /* ELEGANT BOOK PAGE TURN CONTROLLER */
+        .nav-controls-box {
+            background: var(--text-black);
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 24px rgba(9, 13, 22, 0.25);
+            border: 2px solid #ffffff;
+            pointer-events: auto;
+        }
 
-    .upload-badge {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(4px);
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-size: 10.5px;
-      font-weight: 700;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.2);
-    }
+        .book-turn-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 900;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
 
-    /* Bottom Slide Navigation Bar */
-    footer {
-      background: rgba(17, 24, 39, 0.9);
-      border-top: 1px solid var(--border-color);
-      padding: 14px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      bottom: 0;
-      z-index: 100;
-    }
+        .book-turn-btn:hover:not(:disabled) {
+            color: var(--brand-red);
+            transform: scale(1.05);
+        }
 
-    .dots-indicator {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+        .book-turn-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+        }
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
+        .slide-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
 
-    .dot.active {
-      width: 28px;
-      border-radius: 12px;
-      background: var(--metfone-red);
-      box-shadow: 0 2px 8px var(--metfone-red-glow);
-    }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
 
-    .keyboard-hint {
-      font-size: 11.5px;
-      color: var(--text-muted);
-    }
-  </style>
+        .dot.active {
+            background: var(--brand-red);
+            width: 26px;
+            border-radius: 10px;
+        }
+
+        /* Fullscreen Sharp Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(9, 13, 22, 0.95);
+            z-index: 999999;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .lightbox-modal.active {
+            display: flex;
+        }
+
+        .lightbox-box {
+            width: 95vw;
+            height: 90vh;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: relative;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 16px; right: 16px;
+            background: var(--text-black);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 900;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .lightbox-img-full {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
-  <header>
-    <div class="brand">
-      <div class="brand-logo">M</div>
-      <div>
-        <div class="brand-title">Metfone Express Operations Deck</div>
-        <div class="brand-subtitle">Standard Operating Procedures & Automated Dispatch System</div>
-      </div>
-    </div>
-    <div class="nav-controls">
-      <a href="/" class="btn">🗺️ Back to Map</a>
-      <button class="btn btn-primary" onclick="toggleFullscreen()">📺 Fullscreen Presentation</button>
-    </div>
-  </header>
-
-  <!-- Main Presentation Deck -->
-  <main>
-
-    <!-- SLIDE 1: SYSTEM OVERVIEW -->
-    <section class="slide active" id="slide-1">
-      <div class="slide-header">
-        <div class="slide-title-group">
-          <span class="slide-number">Slide 1 of 5</span>
-          <h2 class="slide-title">🚀 Metfone Express System Overview</h2>
-          <p class="slide-desc">Complete operational workflow from customer location input to smart post office branch selection</p>
-        </div>
-      </div>
-
-      <div class="grid-1x3">
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon">📍</div>
-            <div class="card-title">1. Smart Address Engine</div>
-          </div>
-          <ul class="card-list">
-            <li><b>NCDD Gazetteer Support</b>: 25 Provinces, 209 Districts, 1,652 Communes, 14,500+ Villages.</li>
-            <li><b>Comma-Address Parser</b>: Handles unstructured Khmer & English text input.</li>
-            <li><b>Instant Coordinates Parsing</b>: Long Google Maps links, short links, DMS format, and Apple Maps (<code>maps.apple.com</code>).</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon">🏬</div>
-            <div class="card-title">2. 10km Spatial Indexer</div>
-          </div>
-          <ul class="card-list">
-            <li><b>Under 10km Radius Constraint</b>: Replaces broad search with precise spatial distance calculation.</li>
-            <li><b>No Cross-Province Jump</b>: Strict boundary lock prevents 350km diagonal route bugs.</li>
-            <li><b>663 Verified Pickup Branches</b>: Instant client-side indexing with lat/lng coordinates.</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon">🏆</div>
-            <div class="card-title">3. Primary Recommendation</div>
-          </div>
-          <ul class="card-list">
-            <li><b>Prominent #1 Nearest Branch</b>: High-visibility glowing pin on map with gold badge.</li>
-            <li><b>Automated Dispatching</b>: Recommends closest service point for fastest merchant collection.</li>
-            <li><b>Offline First Engine</b>: Zero external API dependency for local branch lookup.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top: 10px;">
-        <div class="card-icon-header">
-          <div class="card-icon">📊</div>
-          <div class="card-title">Logistics Operational Overview Dashboard</div>
-        </div>
-        <div class="image-slot-container" onclick="triggerSlotUpload('slide1_overview')">
-          <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-          <img id="img_slide1_overview" src="/uploads/slides/pending_bot_grid.jpg" class="image-preview" alt="System Overview">
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 2: PENDING BOT 4 GRID -->
-    <section class="slide" id="slide-2">
-      <div class="slide-header">
-        <div class="slide-title-group">
-          <span class="slide-number">Slide 2 of 5</span>
-          <h2 class="slide-title">🤖 Pending Bot Operations (4-Grid Layout)</h2>
-          <p class="slide-desc">Handling pending pickups, delivery dispatch, unassigned reasons, and proof of attempt</p>
-        </div>
-      </div>
-
-      <div class="grid-2x2">
-        <!-- GRID 1: PICKUP PENDING -->
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(59, 130, 246, 0.15); color: var(--blue-accent);">📦</div>
-            <div>
-              <div class="card-title">1. Pickup Pending</div>
-              <div class="slide-desc">Merchant collection & bill creation</div>
-            </div>
-          </div>
-          <ul class="card-list">
-            <li>Tracks merchant pickup requests pending arrival at Service Points.</li>
-            <li>Generates bill barcodes and assigns primary PO branch.</li>
-            <li>Verifies parcel weight & dimensions before handover.</li>
-          </ul>
-        </div>
-
-        <!-- GRID 2: DELIVERY DISPATCH -->
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--green-accent);">🚚</div>
-            <div>
-              <div class="card-title">2. Delivery Dispatch</div>
-              <div class="slide-desc">Courier route optimization</div>
-            </div>
-          </div>
-          <ul class="card-list">
-            <li>Assigns couriers based on 10km spatial coverage zone.</li>
-            <li>Dispatches daily delivery runs with optimized waypoints.</li>
-            <li>Monitors real-time delivery status updates.</li>
-          </ul>
-        </div>
-
-        <!-- GRID 3: 2 ON-HOLD REASONS -->
-        <div class="card" style="border-left: 4px solid var(--gold-accent);">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--gold-accent);">⏸️</div>
-            <div>
-              <div class="card-title">3. On-Hold Reasons (Delivery Unassigned)</div>
-              <span class="badge-onhold">2 Mandatory Reasons</span>
-            </div>
-          </div>
-          <ul class="card-list">
-            <li><b>Reason 1: Customer Unreachable / Phone Off / Incorrect Phone Number</b> — Courier unable to confirm address or schedule delivery time slot.</li>
-            <li><b>Reason 2: Out of Delivery Zone Boundary / Weather Delay / Courier Capacity Exceeded</b> — Address outside 10km service perimeter requiring hub re-assignment.</li>
-          </ul>
-        </div>
-
-        <!-- GRID 4: FEEDBACK & PROOF IMAGE -->
-        <div class="card" style="border-left: 4px solid var(--metfone-red);">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(220, 38, 38, 0.15); color: var(--metfone-red);">💬</div>
-            <div>
-              <div class="card-title">4. Feedback & Proof Upload</div>
-              <span class="badge-alert">1 Image Slot</span>
-            </div>
-          </div>
-          <div class="image-slot-container" onclick="triggerSlotUpload('slide2_feedback')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide2_feedback" src="/uploads/slides/pending_bot_grid.jpg" class="image-preview" alt="Feedback Proof Image">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 3: IN-TRANSIT & PICKUP BILL HANDOVER -->
-    <section class="slide" id="slide-3">
-      <div class="slide-header">
-        <div class="slide-title-group">
-          <span class="slide-number">Slide 3 of 5</span>
-          <h2 class="slide-title">🔄 In-Transit Tracking & Pickup Bill Handover</h2>
-          <p class="slide-desc">Followup with Mega System for in-transit bills & checkup for pending handover</p>
-        </div>
-      </div>
-
-      <div class="grid-1x2">
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(59, 130, 246, 0.15); color: var(--blue-accent);">🔄</div>
-            <div>
-              <div class="card-title">Followup & Track with Mega System</div>
-              <span class="badge-onhold">Bill Pending In-Transit</span>
-            </div>
-          </div>
-          <ul class="card-list">
-            <li><b>Inter-Province Hub Transit</b>: Monitors bills currently in transit between main provincial hubs via Mega System.</li>
-            <li><b>Live Exception Tracking</b>: Identifies delayed shipments or routing bottlenecks in real time.</li>
-            <li><b>Automated Status Sync</b>: Updates arrival ETA for destination service points.</li>
-          </ul>
-          <div class="image-slot-container" style="margin-top: 10px;" onclick="triggerSlotUpload('slide3_mega')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide3_mega" src="/uploads/slides/mega_tracking_flow.jpg" class="image-preview" alt="Mega Tracking">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-icon-header">
-            <div class="card-icon" style="background: rgba(220, 38, 38, 0.15); color: var(--metfone-red);">📋</div>
-            <div>
-              <div class="card-title">Checkup with Pickup Pending</div>
-              <span class="badge-alert">Bill Not Handed Over</span>
-            </div>
-          </div>
-          <ul class="card-list">
-            <li><b>Bill Created But Not Received</b>: Audits merchant orders created in system but not yet physically handed over to express center.</li>
-            <li><b>Merchant Follow-up SLA</b>: Triggers automated pickup reminders to merchants after 2 hours.</li>
-            <li><b>Handover Verification</b>: Requires driver digital signature & physical parcel scan upon receipt.</li>
-          </ul>
-          <div class="image-slot-container" style="margin-top: 10px;" onclick="triggerSlotUpload('slide3_handover')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide3_handover" src="/uploads/slides/mega_tracking_flow.jpg" class="image-preview" alt="Pickup Handover">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 4: KPI SYSTEM WORK & REPORTING -->
-    <section class="slide" id="slide-4">
-      <div class="slide-header">
-        <div class="slide-title-group">
-          <span class="slide-number">Slide 4 of 5</span>
-          <h2 class="slide-title">📊 KPI System Work & Operational Reporting</h2>
-          <p class="slide-desc">Performance calculation rules, courier SLAs, and 2 reporting screenshot slots</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-bottom: 20px;">
-        <div class="card-icon-header">
-          <div class="card-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--green-accent);">📈</div>
-          <div class="card-title">Metfone Express Key Performance Indicators (KPI Formula)</div>
-        </div>
-        <div class="grid-1x3" style="margin-top: 10px;">
-          <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-            <div style="font-size: 11px; color: var(--text-muted); font-weight: 700;">ON-TIME DELIVERY SLA</div>
-            <div style="font-size: 22px; font-weight: 800; color: var(--green-accent); margin: 4px 0;">≥ 98.5%</div>
-            <div style="font-size: 11.5px; color: var(--text-muted);">Delivered within promised SLA window</div>
-          </div>
-          <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-            <div style="font-size: 11px; color: var(--text-muted); font-weight: 700;">BILL HANDOVER ACCURACY</div>
-            <div style="font-size: 22px; font-weight: 800; color: var(--gold-accent); margin: 4px 0;">100%</div>
-            <div style="font-size: 11.5px; color: var(--text-muted);">Zero missing bill discrepancy</div>
-          </div>
-          <div style="background: rgba(0,0,0,0.3); padding: 14px; border-radius: 10px; border: 1px solid var(--border-color);">
-            <div style="font-size: 11px; color: var(--text-muted); font-weight: 700;">PICKUP COMPLETION SLA</div>
-            <div style="font-size: 22px; font-weight: 800; color: var(--blue-accent); margin: 4px 0;">≤ 2.0 Hrs</div>
-            <div style="font-size: 11.5px; color: var(--text-muted);">Merchant collection speed</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid-1x2">
-        <div class="card">
-          <div class="card-title">1. KPI Performance Dashboard Screenshot</div>
-          <div class="image-slot-container" onclick="triggerSlotUpload('slide4_kpi1')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide4_kpi1" src="/uploads/slides/kpi_dashboard_report.jpg" class="image-preview" alt="KPI Dashboard">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">2. Operational KPI Report Proof</div>
-          <div class="image-slot-container" onclick="triggerSlotUpload('slide4_kpi2')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide4_kpi2" src="/uploads/slides/kpi_dashboard_report.jpg" class="image-preview" alt="KPI Report">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SLIDE 5: END OF THE DAY (EOD) OPERATIONS -->
-    <section class="slide" id="slide-5">
-      <div class="slide-header">
-        <div class="slide-title-group">
-          <span class="slide-number">Slide 5 of 5</span>
-          <h2 class="slide-title">🌅 End of the Day (EOD) Service Point Duties</h2>
-          <p class="slide-desc">Mandatory EOD checklist: Cash reconciliation, physical stock audit, and inventory update (2 Image Slots)</p>
-        </div>
-      </div>
-
-      <div class="card" style="margin-bottom: 20px;">
-        <div class="card-icon-header">
-          <div class="card-icon" style="background: rgba(220, 38, 38, 0.15); color: var(--metfone-red);">📦</div>
-          <div class="card-title">Mandatory EOD Service Point Checklist & Inventory Update</div>
-        </div>
-        <ul class="card-list" style="margin-top: 6px;">
-          <li><b>Cash-on-Delivery (COD) Reconciliation</b>: Audit all cash collected against completed delivery bills & deposit to central account.</li>
-          <li><b>Physical Stock Count Audit</b>: Count every remaining parcel in service point vault and match against system inventory.</li>
-          <li><b>📦 Update Inventory System</b>: Complete daily stock update in Metfone portal, scan all pending packages, and sign off EOD register.</li>
-        </ul>
-      </div>
-
-      <div class="grid-1x2">
-        <div class="card">
-          <div class="card-title">1. EOD Physical Stock Count & Register Sign-off Proof</div>
-          <div class="image-slot-container" onclick="triggerSlotUpload('slide5_eod1')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide5_eod1" src="/uploads/slides/eod_inventory_system.jpg" class="image-preview" alt="EOD Stock Sign-off">
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-title">2. Updated System Inventory Snapshot</div>
-          <div class="image-slot-container" onclick="triggerSlotUpload('slide5_eod2')">
-            <div class="upload-badge">📁 Hosting Folder: public/uploads/slides/</div>
-            <img id="img_slide5_eod2" src="/uploads/slides/eod_inventory_system.jpg" class="image-preview" alt="Updated Inventory System">
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Hidden File Input for Image Uploads -->
-  <input type="file" id="globalFileInput" class="file-input" accept="image/*" onchange="handleFileSelected(event)">
-
-  <!-- Bottom Navigation Footer -->
-  <footer>
-    <div class="keyboard-hint">💡 Tip: Use <b>← Left / Right →</b> Arrow Keys or <b>Spacebar</b> to navigate slides</div>
-    <div class="dots-indicator">
-      <div class="dot active" onclick="goToSlide(1)"></div>
-      <div class="dot" onclick="goToSlide(2)"></div>
-      <div class="dot" onclick="goToSlide(3)"></div>
-      <div class="dot" onclick="goToSlide(4)"></div>
-      <div class="dot" onclick="goToSlide(5)"></div>
-    </div>
-    <div style="display: flex; gap: 10px;">
-      <button class="btn" id="prevBtn" onclick="prevSlide()">← Previous</button>
-      <button class="btn btn-primary" id="nextBtn" onclick="nextSlide()">Next Slide →</button>
-    </div>
-  </footer>
-
-  <script>
-    let currentSlide = 1;
-    const totalSlides = 5;
-    let activeUploadSlotId = null;
-
-    function updateSlideVisibility() {
-      document.querySelectorAll('.slide').forEach((slide, idx) => {
-        if (idx + 1 === currentSlide) {
-          slide.classList.add('active');
-        } else {
-          slide.classList.remove('active');
-        }
-      });
-
-      document.querySelectorAll('.dot').forEach((dot, idx) => {
-        if (idx + 1 === currentSlide) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-
-      document.getElementById('prevBtn').disabled = (currentSlide === 1);
-      document.getElementById('nextBtn').textContent = (currentSlide === totalSlides) ? 'Finish Presentation 🏁' : 'Next Slide →';
-    }
-
-    function goToSlide(n) {
-      if (n >= 1 && n <= totalSlides) {
-        currentSlide = n;
-        updateSlideVisibility();
-      }
-    }
-
-    function nextSlide() {
-      if (currentSlide < totalSlides) {
-        currentSlide++;
-        updateSlideVisibility();
-      }
-    }
-
-    function prevSlide() {
-      if (currentSlide > 1) {
-        currentSlide--;
-        updateSlideVisibility();
-      }
-    }
-
-    // Keyboard Navigation
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight' || e.key === ' ') {
-        nextSlide();
-      } else if (e.key === 'ArrowLeft') {
-        prevSlide();
-      }
-    });
-
-    // Fullscreen Mode
-    function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
-          console.warn('Fullscreen request failed:', err.message);
-        });
-      } else {
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        }
-      }
-    }
-
-    // Image Upload & Local Folder Management
-    function triggerSlotUpload(slotId) {
-      activeUploadSlotId = slotId;
-      document.getElementById('globalFileInput').click();
-    }
-
-    async function handleFileSelected(event) {
-      const file = event.target.files[0];
-      if (!file || !activeUploadSlotId) return;
-
-      const reader = new FileReader();
-      reader.onload = async function(e) {
-        const base64Data = e.target.result;
+    <!-- 16:9 Landscape Presentation Canvas -->
+    <div class="landscape-canvas">
         
-        // Instant client-side preview
-        const targetImg = document.getElementById(`img_${activeUploadSlotId}`);
-        if (targetImg) {
-          targetImg.src = base64Data;
+        <!-- Left Margin Vertical Stamp -->
+        <div class="side-stamp">METFONE EXPRESS · INTERNAL TRAINING</div>
+
+        <!-- Top Navigation with Official Metfone Express Brand Logo -->
+        <div class="top-nav">
+            <div class="logo-box">
+                <img src="https://theanlegendary.github.io/run-py/images/metfone_express_logo.png" alt="Metfone Express Logo" class="brand-logo-img">
+                <div class="nav-header-text">DAILY DISPATCH BOT TRAINING</div>
+            </div>
+            <div class="nav-right-tag" id="slideTag">Slide 1 of 5 · Ops tms guide</div>
+        </div>
+
+        <!-- SLIDE 1 VIEW: CORE BOT OPERATIONS -->
+        <div id="slide1" class="slide-view active">
+            <div class="left-content">
+                <div class="eyebrow-line">Chapter 01 · Bot Core Operations</div>
+                
+                <h1 class="hero-title-bold">
+                    Right report.<br><span>Every shift.</span>
+                </h1>
+
+                <p class="sub-english">
+                    A practical guide for automated daily pushes, 4-stage order tracking, 3-shift clearance comparison, and status logs.
+                </p>
+
+                <p class="sub-khmer">
+                    សៀវភៅណែនាំសម្រាប់ការប្រើប្រាស់ Bot ស្វ័យប្រវត្តិនៃការទាញរបាយការណ៍ប្រចាំថ្ងៃ និងតាមដានទិន្នន័យ។
+                </p>
+            </div>
+
+            <div class="right-exhibit">
+                <div class="sticky-note">
+                    📌 <b>Crisp Table View:</b><br>Click table to inspect full 100% size!
+                </div>
+
+                <!-- STYLISH STICKER BADGE FOR SLIDE 1 -->
+                <div class="exhibit-sticker">
+                    <span>🏷️ VERIFIED DATA</span>
+                </div>
+
+                <div class="tab-switcher">
+                    <button class="exhibit-tab active" onclick="switchExhibit('table1', this)">1. THOP001</button>
+                    <button class="exhibit-tab" onclick="switchExhibit('table2', this)">2. Delivery</button>
+                    <button class="exhibit-tab" onclick="switchExhibit('table3', this)">3. Transit</button>
+                    <button class="exhibit-tab" onclick="switchExhibit('table4', this)">4. SVAP001</button>
+                </div>
+
+                <div class="exhibit-display-frame" onclick="openLightbox()">
+                    <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="THOP001 Branch Sharp Table" class="exhibit-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 VIEW: DELIVERY & NOT ASSIGN CLEARANCE -->
+        <div id="slide2" class="slide-view">
+            <div class="left-content">
+                <div class="eyebrow-line">Chapter 02 · Delivery & Not Assign Logic</div>
+                
+                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                    Clear pending.<br><span>Hit KPI 10h.</span>
+                </h1>
+
+                <div class="status-flow-container">
+                    <div class="status-step-card" style="border-left-color: #f59e0b;">
+                        <div class="status-code-badge" style="background: #f59e0b;">306</div>
+                        <div class="status-desc-text"><b>At Store / Pending:</b> Order pending at branch awaiting courier assignment.</div>
+                    </div>
+
+                    <div class="status-step-card" style="border-left-color: #2563eb;">
+                        <div class="status-code-badge" style="background: #2563eb;">402</div>
+                        <div class="status-desc-text"><b>Assign Courier (10h KPI):</b> Courier assigned — 10h SLA timer starts!</div>
+                    </div>
+
+                    <div class="status-step-card" style="border-left-color: #10b981;">
+                        <div class="status-code-badge" style="background: #10b981;">OUTCOMES</div>
+                        <div class="status-desc-text">
+                            <b>410</b> (Shipped) | <b>420</b> (Ship again) | <b>430</b> (Failed) | <b>460</b> (Return)
+                        </div>
+                    </div>
+                </div>
+
+                <p class="sub-khmer">
+                    <b>ច្បាប់ប្រតិបត្តិការ៖</b> ប្តូរទំនិញកកស្ទះ 306 ទៅ 402 (កំណត់ KPI 10h) ដើម្បីចាប់ផ្តើមរាប់ម៉ោង និងទទួលបានលទ្ធផល 410, 420, 430 ឬ 460។
+                </p>
+            </div>
+
+            <div class="right-exhibit">
+                <div class="sticky-note" style="background: #dbeafe; color: #1e40af; border-color: #3b82f6;">
+                    ⚡ <b>Rule 306 → 402:</b><br>Assigning courier triggers 10h KPI timer immediately!
+                </div>
+
+                <!-- STYLISH STICKER BADGE FOR SLIDE 2 -->
+                <div class="exhibit-sticker blue">
+                    <span>⚡ 10H SLA ACTIVE</span>
+                </div>
+
+                <div class="tab-switcher two-cols">
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide2('table2', this)">1. Delivery Table (SVAP001)</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide2('table4', this)">2. Not Assign Table (SVAP001)</button>
+                </div>
+
+                <div class="exhibit-display-frame" onclick="openLightbox()">
+                    <img id="exhibitImgSlide2" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="SVAP001 Delivery Sharp Table" class="exhibit-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 VIEW: PICKUP & MEGA TRANSIT -->
+        <div id="slide3" class="slide-view">
+            <div class="left-content">
+                <div class="eyebrow-line">Chapter 03 · Pickup & Mega Transit Action</div>
+                
+                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                    Verify pickup.<br><span>Transit fast.</span>
+                </h1>
+
+                <div class="status-flow-container">
+                    <div class="status-step-card" style="border-left-color: #e11b22;">
+                        <div class="status-code-badge" style="background: #e11b22;">PICKUP APP</div>
+                        <div class="status-desc-text">For pending pickup bills, staff <b>must check Pickup Page in TMS App</b> for customer assignments!</div>
+                    </div>
+
+                    <div class="status-step-card" style="border-left-color: #2563eb;">
+                        <div class="status-code-badge" style="background: #2563eb;">MEGA TRANSIT</div>
+                        <div class="status-desc-text">Verify <b>Send Mega Table (302/306/311)</b> to ensure packages are loaded on transit trucks.</div>
+                    </div>
+                </div>
+
+                <p class="sub-khmer">
+                    <b>ច្បាប់ប្រតិបត្តិការ៖</b> សម្រាប់អីវ៉ាន់ត្រូវយក (Pickup) ត្រូវពិនិត្យទំព័រ Pickup ក្នុង App ដើម្បីមើលការ assign ពីអតិថិជន និងរៀបចំផ្ញើបន្តតាម MEGA។
+                </p>
+            </div>
+
+            <div class="right-exhibit">
+                <div class="sticky-note" style="background: #fef3c7; color: #92400e; border-color: #f59e0b;">
+                    📲 <b>Check App First:</b><br>Open TMS App Pickup Page to confirm customer requests!
+                </div>
+
+                <!-- STYLISH STICKER BADGE FOR SLIDE 3 -->
+                <div class="exhibit-sticker amber">
+                    <span>📲 APP CHECK REQUIRED</span>
+                </div>
+
+                <div class="tab-switcher two-cols">
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide3('table1', this)">1. Pickup Table (THOP001)</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide3('table3', this)">2. Send Mega Table (SVAP001)</button>
+                </div>
+
+                <div class="exhibit-display-frame" onclick="openLightbox()">
+                    <img id="exhibitImgSlide3" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup & Send Mega Table" class="exhibit-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4 VIEW: HOW OPERATIONAL KPI & AGE SLA WORK -->
+        <div id="slide4" class="slide-view">
+            <div class="left-content">
+                <div class="eyebrow-line">Chapter 04 · Operational KPI & Age SLA</div>
+                
+                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                    Target 10h.<br><span>Zero overdue.</span>
+                </h1>
+
+                <div class="kpi-explain-box">
+                    <div class="kpi-card" style="border-left: 6px solid #10b981;">
+                        <div class="kpi-badge-tag green">🟢 GREEN (0h — 9h 59m)</div>
+                        <div class="kpi-card-text">
+                            <b>Safe SLA Zone:</b> Order age is within 10-hour target. Delivery on schedule.
+                        </div>
+                    </div>
+
+                    <div class="kpi-card" style="border-left: 6px solid #e11b22;">
+                        <div class="kpi-badge-tag red">🔴 RED (≥ 10h 00m)</div>
+                        <div class="kpi-card-text">
+                            <b>Overdue Alert:</b> Order age exceeded 10 hours! Requires immediate courier follow-up.
+                        </div>
+                    </div>
+                </div>
+
+                <p class="sub-khmer">
+                    <b>ការរាប់ KPI៖</b> រយៈពេលអាយុ (Age) ពណ៌បៃតង 🟢 គឺទាន់ពេល (<10h) | ពណ៌ក្រហម 🔴 គឺហួសកាលកំណត់ (≥10h) ត្រូវតែប្រញាប់ដោះស្រាយ!
+                </p>
+            </div>
+
+            <div class="right-exhibit">
+                <div class="sticky-note" style="background: #dcfce7; color: #166534; border-color: #22c55e;">
+                    🎯 <b>Target SLA 10H:</b><br>Keep all order ages green (<10h) across all 3 daily shifts!
+                </div>
+
+                <!-- STYLISH STICKER BADGE FOR SLIDE 4 -->
+                <div class="exhibit-sticker green">
+                    <span>🟢 0 OVERDUE TARGET</span>
+                </div>
+
+                <div class="tab-switcher two-cols">
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide4('table2', this)">1. Delivery KPI Table (SVAP001)</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide4('table1', this)">2. Not Assign Age Table (THOP001)</button>
+                </div>
+
+                <div class="exhibit-display-frame" onclick="openLightbox()">
+                    <img id="exhibitImgSlide4" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="Delivery KPI Table" class="exhibit-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5 VIEW: END OF DAY CHECK & SCAN IN INVENTORY FEATURE -->
+        <div id="slide5" class="slide-view">
+            <div class="left-content">
+                <div class="eyebrow-line">Chapter 05 · End of Day Inventory Audit</div>
+                
+                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                    Scan inventory.<br><span>Close shift clean.</span>
+                </h1>
+
+                <p class="sub-english">
+                    At the end of every operational shift, staff must perform a physical audit using the <b>Scan in Inventory feature</b> in the TMS app.
+                </p>
+
+                <div class="status-flow-container">
+                    <div class="status-step-card" style="border-left-color: #2563eb;">
+                        <div class="status-code-badge" style="background: #2563eb;">1. PHYSICAL AUDIT</div>
+                        <div class="status-desc-text">Scan all remaining store packages using <b>Scan in Inventory feature</b> to reconcile store stock.</div>
+                    </div>
+
+                    <div class="status-step-card" style="border-left-color: #10b981;">
+                        <div class="status-code-badge" style="background: #10b981;">2. MATCH BOT LOGS</div>
+                        <div class="status-desc-text">Ensure total scanned store count matches the <b>Not Assign & Branch Tables</b> in bot report.</div>
+                    </div>
+                </div>
+
+                <p class="sub-khmer">
+                    <b>គ្រប់គ្រងស្តុកចុងម៉ោង៖</b> នៅចុងបញ្ចប់នៃវេនការងារ ត្រូវតែប្រើមុខងារ Scan ចូលស្តុក ក្នុង App ដើម្បីស៊ើបអង្កេតទំនិញ និងទិន្នន័យក្នុងប្រព័ន្ធ!
+                </p>
+            </div>
+
+            <div class="right-exhibit">
+                <div class="sticky-note" style="background: #f3e8ff; color: #6b21a8; border-color: #a855f7;">
+                    📦 <b>EOD Audit Rule:</b><br>Zero un-scanned packages left in store before closing shift!
+                </div>
+
+                <!-- STYLISH STICKER BADGE FOR SLIDE 5 -->
+                <div class="exhibit-sticker purple">
+                    <span>📦 EOD AUDIT PASSED</span>
+                </div>
+
+                <div class="tab-switcher two-cols">
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide5('table4', this)">1. Branch Store Table (SVAP001)</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide5('table1', this)">2. Not Assign Table (THOP001)</button>
+                </div>
+
+                <div class="exhibit-display-frame" onclick="openLightbox()">
+                    <img id="exhibitImgSlide5" src="https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png" alt="Branch Inventory Table" class="exhibit-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- FIXED PERMANENTLY VISIBLE BOOK FLIP NAVIGATION BAR -->
+        <div class="bottom-nav">
+            <div class="page-mark" id="pageMark">PAGE 01 / 05 &nbsp;·&nbsp; METFONE EXPRESS</div>
+            
+            <div class="nav-controls-box">
+                <button class="book-turn-btn" id="prevBtn" onclick="prevSlide()" disabled>
+                    📖 <span>PREV PAGE</span>
+                </button>
+                <div class="slide-dots">
+                    <div class="dot active" id="dot1" onclick="goToSlide(1)"></div>
+                    <div class="dot" id="dot2" onclick="goToSlide(2)"></div>
+                    <div class="dot" id="dot3" onclick="goToSlide(3)"></div>
+                    <div class="dot" id="dot4" onclick="goToSlide(4)"></div>
+                    <div class="dot" id="dot5" onclick="goToSlide(5)"></div>
+                </div>
+                <button class="book-turn-btn" id="nextBtn" onclick="nextSlide()">
+                    <span>NEXT PAGE</span> 📖
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Fullscreen Sharp Lightbox Modal -->
+    <div id="lightboxModal" class="lightbox-modal" onclick="closeLightbox()">
+        <div class="lightbox-box" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">CLOSE ✕</button>
+            <div style="font-weight: 900; font-size: 1.2rem; color: #0f172a;" id="lightboxTitle">Field Report Table Preview</div>
+            <div style="flex: 1; overflow: hidden; background: #ffffff; border: 2px solid var(--border-light); border-radius: 8px; padding: 8px;">
+                <img id="lightboxFullImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" class="lightbox-img-full">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        let currentTabSlide1 = 'table1';
+        let currentTabSlide2 = 'table2';
+        let currentTabSlide3 = 'table1';
+        let currentTabSlide4 = 'table2';
+        let currentTabSlide5 = 'table4';
+
+        const sharpTables = {
+            'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. មិនទាន់ចាត់ចែង (Not Assign) — Report_THOP001_Branch' },
+            'table2': { src: 'https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
+            'table3': { src: 'https://theanlegendary.github.io/run-py/images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
+            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Branch Inventory Audit) — Report_SVAP001_Branch' }
+        };
+
+        function goToSlide(slideNum) {
+            currentSlide = slideNum;
+            document.querySelectorAll('.slide-view').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+            
+            document.getElementById('slide' + slideNum).classList.add('active');
+            document.getElementById('dot' + slideNum).classList.add('active');
+
+            document.getElementById('slideTag').innerText = `Slide ${slideNum} of 5 · Ops tms guide`;
+            document.getElementById('pageMark').innerHTML = `PAGE 0${slideNum} / 05 &nbsp;·&nbsp; METFONE EXPRESS`;
+
+            document.getElementById('prevBtn').disabled = (slideNum === 1);
+            document.getElementById('nextBtn').disabled = (slideNum === 5);
         }
 
-        // Save to localStorage fallback
-        localStorage.setItem(`slide_img_${activeUploadSlotId}`, base64Data);
-
-        // Upload to server hosting folder (/public/uploads/slides/)
-        try {
-          const res = await fetch('/api/upload-slide-image', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              slotId: activeUploadSlotId,
-              imageData: base64Data
-            })
-          });
-
-          if (res.ok) {
-            const data = await res.json();
-            console.log('✅ Image uploaded to hosting folder:', data.url);
-            if (targetImg) targetImg.src = data.url + '?t=' + Date.now();
-          }
-        } catch (err) {
-          console.warn('Server image upload failed, using local preview:', err.message);
+        function nextSlide() {
+            if (currentSlide < 5) goToSlide(currentSlide + 1);
         }
-      };
 
-      reader.readAsDataURL(file);
-      // Reset input
-      event.target.value = '';
-    }
-
-    // Load custom uploaded images on startup
-    async function loadUploadedSlideImages() {
-      try {
-        const res = await fetch('/api/slide-images');
-        if (res.ok) {
-          const manifest = await res.json();
-          Object.keys(manifest).forEach(slotId => {
-            const img = document.getElementById(`img_${slotId}`);
-            if (img && manifest[slotId]?.url) {
-              img.src = manifest[slotId].url + '?t=' + Date.now();
-            }
-          });
+        function prevSlide() {
+            if (currentSlide > 1) goToSlide(currentSlide - 1);
         }
-      } catch (err) {
-        console.warn('Could not fetch uploaded slide images:', err.message);
-      }
 
-      // Check localStorage fallback
-      const slots = ['slide1_overview', 'slide2_feedback', 'slide3_mega', 'slide3_handover', 'slide4_kpi1', 'slide4_kpi2', 'slide5_eod1', 'slide5_eod2'];
-      slots.forEach(slotId => {
-        const localData = localStorage.getItem(`slide_img_${slotId}`);
-        if (localData) {
-          const img = document.getElementById(`img_${slotId}`);
-          if (img && (!img.src || img.src.includes('pending_bot_grid') || img.src.includes('mega_tracking') || img.src.includes('kpi_dashboard') || img.src.includes('eod_inventory'))) {
-            img.src = localData;
-          }
+        function switchExhibit(tabKey, btnElement) {
+            currentTabSlide1 = tabKey;
+            document.querySelectorAll('#slide1 .exhibit-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('exhibitImg').src = sharpTables[tabKey].src;
         }
-      });
-    }
 
-    loadUploadedSlideImages();
-  </script>
+        function switchExhibitSlide2(tabKey, btnElement) {
+            currentTabSlide2 = tabKey;
+            document.querySelectorAll('#slide2 .exhibit-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('exhibitImgSlide2').src = sharpTables[tabKey].src;
+        }
+
+        function switchExhibitSlide3(tabKey, btnElement) {
+            currentTabSlide3 = tabKey;
+            document.querySelectorAll('#slide3 .exhibit-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('exhibitImgSlide3').src = sharpTables[tabKey].src;
+        }
+
+        function switchExhibitSlide4(tabKey, btnElement) {
+            currentTabSlide4 = tabKey;
+            document.querySelectorAll('#slide4 .exhibit-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('exhibitImgSlide4').src = sharpTables[tabKey].src;
+        }
+
+        function switchExhibitSlide5(tabKey, btnElement) {
+            currentTabSlide5 = tabKey;
+            document.querySelectorAll('#slide5 .exhibit-tab').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+            document.getElementById('exhibitImgSlide5').src = sharpTables[tabKey].src;
+        }
+
+        function openLightbox() {
+            let keyMap = { 1: currentTabSlide1, 2: currentTabSlide2, 3: currentTabSlide3, 4: currentTabSlide4, 5: currentTabSlide5 };
+            let key = keyMap[currentSlide] || 'table1';
+            let data = sharpTables[key];
+            document.getElementById('lightboxFullImg').src = data.src;
+            document.getElementById('lightboxTitle').innerText = data.title;
+            document.getElementById('lightboxModal').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.remove('active');
+        }
+    </script>
 </body>
 </html>

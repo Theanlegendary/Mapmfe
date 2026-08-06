@@ -28,15 +28,7 @@ app.use('/data', express.static(path.join(__dirname, 'data')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve training slides directly from project root & public directory
-app.get(['/slides', '/slides.html', '/training-slides-v2.html'], (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'training-slides-v2.html'));
-});
-
-app.get('/train.html', (req, res) => {
-  res.sendFile(path.join(__dirname, 'train.html'));
-});
-
-app.get('/training-slides.html', (req, res) => {
+app.get(['/training', '/training.html', '/trainning', '/train', '/slides', '/slides.html', '/training-slides-v2.html', '/train.html', '/training-slides.html'], (req, res) => {
   res.sendFile(path.join(__dirname, 'train.html'));
 });
 
