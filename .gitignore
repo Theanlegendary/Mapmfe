@@ -6,3 +6,4 @@ public/tunnel.txt
 .DS_Store
 
 .vercel
+.env*

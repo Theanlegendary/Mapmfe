@@ -595,7 +595,7 @@
         <!-- Top Navigation with Official Metfone Express Brand Logo & Language Switcher -->
         <div class="top-nav">
             <div class="logo-box">
-                <img src="https://theanlegendary.github.io/run-py/images/metfone_express_logo.png" alt="Metfone Express Logo" class="brand-logo-img">
+                <img src="images/metfone_express_logo.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/metfone_express_logo.png';" alt="Metfone Express Logo" class="brand-logo-img">
                 <div class="nav-header-text">DAILY DISPATCH BOT TRAINING</div>
             </div>
 
@@ -641,7 +641,7 @@
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup Table" class="exhibit-img">
+                    <img id="exhibitImg" src="images/thop001_branch_sharp.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png';" alt="Pickup Table" class="exhibit-img">
                 </div>
 
                 <!-- BILINGUAL STICKY FOOTER NOTE UNDER TABLE -->
@@ -706,7 +706,7 @@
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide2" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="Delivery Sharp Table" class="exhibit-img">
+                    <img id="exhibitImgSlide2" src="images/svap001_delivery_sharp.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png';" alt="Delivery Sharp Table" class="exhibit-img">
                 </div>
 
                 <div class="sticky-note-under" style="background: #dbeafe; color: #1e40af; border-color: #3b82f6;">
@@ -760,7 +760,7 @@
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide3" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup & Send Mega Table" class="exhibit-img">
+                    <img id="exhibitImgSlide3" src="images/thop001_branch_sharp.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png';" alt="Pickup & Send Mega Table" class="exhibit-img">
                 </div>
 
                 <div class="sticky-note-under" style="background: #fef3c7; color: #92400e; border-color: #f59e0b;">
@@ -822,7 +822,7 @@
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide4" src="https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png" alt="Delivery KPI Table" class="exhibit-img">
+                    <img id="exhibitImgSlide4" src="images/svap001_delivery_sharp.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png';" alt="Delivery KPI Table" class="exhibit-img">
                 </div>
 
                 <div class="sticky-note-under" style="background: #dcfce7; color: #166534; border-color: #22c55e;">
@@ -878,7 +878,7 @@
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide5" src="https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png" alt="TMS App Inventory Audit Summary" class="exhibit-img">
+                    <img id="exhibitImgSlide5" src="images/tms_inventory_audit.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png';" alt="TMS App Inventory Audit Summary" class="exhibit-img">
                 </div>
 
                 <div class="sticky-note-under" style="background: #f3e8ff; color: #6b21a8; border-color: #a855f7;">
@@ -920,7 +920,7 @@
             <button class="lightbox-close" onclick="closeLightbox()">CLOSE ✕</button>
             <div style="font-weight: 900; font-size: 1.2rem; color: #0f172a;" id="lightboxTitle">Field Report Table Preview</div>
             <div style="flex: 1; overflow: hidden; background: #ffffff; border: 2px solid var(--border-light); border-radius: 8px; padding: 8px;">
-                <img id="lightboxFullImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" class="lightbox-img-full">
+                <img id="lightboxFullImg" src="images/thop001_branch_sharp.png" onerror="this.onerror=null; this.src='https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png';" class="lightbox-img-full">
             </div>
         </div>
     </div>
@@ -934,13 +934,13 @@
         let currentTabSlide5 = 'inv1';
 
         const sharpTables = {
-            'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. អីវ៉ាន់ត្រូវយក (Pickup Table) — Report_THOP001_Branch' },
-            'table2': { src: 'https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
-            'table3': { src: 'https://theanlegendary.github.io/run-py/images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
-            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Not Assign Table) — Report_SVAP001_Branch' },
-            'inv1': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png', title: '1. ត្រួតពិនិត្យស្តុក (TMS App Inventory Audit Summary)' },
-            'inv2': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scan.png', title: '2. ស្កេនទំនិញចូលស្តុក (TMS App Scan Package Check)' },
-            'inv3': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scanned_list.png', title: '3. បញ្ជីទំនិញដែលបានស្កេន (TMS App Scanned Inventory Items)' }
+            'table1': { src: 'images/thop001_branch_sharp.png', title: '1. អីវ៉ាន់ត្រូវយក (Pickup Table) — Report_THOP001_Branch' },
+            'table2': { src: 'images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
+            'table3': { src: 'images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
+            'table4': { src: 'images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Not Assign Table) — Report_SVAP001_Branch' },
+            'inv1': { src: 'images/tms_inventory_audit.png', title: '1. ត្រួតពិនិត្យស្តុក (TMS App Inventory Audit Summary)' },
+            'inv2': { src: 'images/tms_inventory_scan.png', title: '2. ស្កេនទំនិញចូលស្តុក (TMS App Scan Package Check)' },
+            'inv3': { src: 'images/tms_inventory_scanned_list.png', title: '3. បញ្ជីទំនិញដែលបានស្កេន (TMS App Scanned Inventory Items)' }
         };
 
         function setLanguage(lang) {
