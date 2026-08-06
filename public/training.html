@@ -356,6 +356,10 @@
             grid-template-columns: repeat(2, 1fr);
         }
 
+        .tab-switcher.three-cols {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .exhibit-tab {
             background: #f1f5f9;
             border: 2px solid var(--border-light);
@@ -784,13 +788,14 @@
                     <span>📦 EOD AUDIT PASSED</span>
                 </div>
 
-                <div class="tab-switcher two-cols">
-                    <button class="exhibit-tab active" onclick="switchExhibitSlide5('table4', this)">1. Branch Store Table (SVAP001)</button>
-                    <button class="exhibit-tab" onclick="switchExhibitSlide5('table1', this)">2. Not Assign Table (THOP001)</button>
+                <div class="tab-switcher three-cols">
+                    <button class="exhibit-tab active" onclick="switchExhibitSlide5('inv1', this)">1. Audit Summary</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide5('inv2', this)">2. Scan Package</button>
+                    <button class="exhibit-tab" onclick="switchExhibitSlide5('inv3', this)">3. Scanned Items</button>
                 </div>
 
                 <div class="exhibit-display-frame" onclick="openLightbox()">
-                    <img id="exhibitImgSlide5" src="https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png" alt="Branch Inventory Table" class="exhibit-img">
+                    <img id="exhibitImgSlide5" src="https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png" alt="TMS App Inventory Audit Summary" class="exhibit-img">
                 </div>
             </div>
         </div>
@@ -835,13 +840,16 @@
         let currentTabSlide2 = 'table2';
         let currentTabSlide3 = 'table1';
         let currentTabSlide4 = 'table2';
-        let currentTabSlide5 = 'table4';
+        let currentTabSlide5 = 'inv1';
 
         const sharpTables = {
             'table1': { src: 'https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png', title: '1. មិនទាន់ចាត់ចែង (Not Assign) — Report_THOP001_Branch' },
             'table2': { src: 'https://theanlegendary.github.io/run-py/images/svap001_delivery_sharp.png', title: '2. អីវ៉ាន់ត្រូវចែក (Delivery 10H KPI) — Report_SVAP001_Delivery' },
             'table3': { src: 'https://theanlegendary.github.io/run-py/images/svap001_transit_sharp.png', title: '3. ដាក់ទៅ MEGA (Send Mega / Transit) — Report_SVAP001_Transit' },
-            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Branch Inventory Audit) — Report_SVAP001_Branch' }
+            'table4': { src: 'https://theanlegendary.github.io/run-py/images/svap001_branch_sharp.png', title: '4. មិនទាន់ចាត់ចែង (Branch Inventory Audit) — Report_SVAP001_Branch' },
+            'inv1': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_audit.png', title: '1. ត្រួតពិនិត្យស្តុក (TMS App Inventory Audit Summary)' },
+            'inv2': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scan.png', title: '2. ស្កេនទំនិញចូលស្តុក (TMS App Scan Package Check)' },
+            'inv3': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scanned_list.png', title: '3. បញ្ជីទំនិញដែលបានស្កេន (TMS App Scanned Inventory Items)' }
         };
 
         function goToSlide(slideNum) {
@@ -904,7 +912,7 @@
 
         function openLightbox() {
             let keyMap = { 1: currentTabSlide1, 2: currentTabSlide2, 3: currentTabSlide3, 4: currentTabSlide4, 5: currentTabSlide5 };
-            let key = keyMap[currentSlide] || 'table1';
+            let key = keyMap[currentSlide] || 'inv1';
             let data = sharpTables[key];
             document.getElementById('lightboxFullImg').src = data.src;
             document.getElementById('lightboxTitle').innerText = data.title;
