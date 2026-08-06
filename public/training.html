@@ -96,6 +96,45 @@
             letter-spacing: 0.05em;
         }
 
+        /* SLEEK LANGUAGE SWITCHER TOGGLE */
+        .nav-right-controls {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .lang-switcher-box {
+            background: #f1f5f9;
+            border: 2px solid var(--text-black);
+            padding: 4px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            padding: 6px 14px;
+            font-size: 0.88rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn.active {
+            background: var(--brand-red);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(225, 27, 34, 0.3);
+        }
+
         .nav-right-tag {
             font-size: 1rem;
             font-weight: 900;
@@ -190,6 +229,15 @@
             box-shadow: 0 4px 12px rgba(225, 27, 34, 0.08);
         }
 
+        /* LANGUAGE TOGGLE VISIBILITY CONTROL */
+        body.mode-en .kh-el { display: none !important; }
+        body.mode-kh .en-el { display: none !important; }
+
+        body.mode-kh .hero-title-bold {
+            font-size: 4.2rem;
+            line-height: 1.25;
+        }
+
         /* Status & Rule Cards */
         .status-flow-container {
             display: flex;
@@ -223,6 +271,12 @@
             color: var(--text-black);
             line-height: 1.4;
             font-weight: 800;
+        }
+
+        body.mode-kh .status-desc-text {
+            font-family: 'Angkor', serif;
+            font-size: 1.2rem;
+            line-height: 1.5;
         }
 
         /* KPI Explanation Grid */
@@ -259,6 +313,12 @@
             color: var(--text-black);
             line-height: 1.4;
             font-weight: 800;
+        }
+
+        body.mode-kh .kpi-card-text {
+            font-family: 'Angkor', serif;
+            font-size: 1.15rem;
+            line-height: 1.5;
         }
 
         /* Right Visual Slide Paper Frame */
@@ -511,7 +571,7 @@
         }
     </style>
 </head>
-<body>
+<body class="mode-both">
 
     <!-- 16:9 Landscape Presentation Canvas -->
     <div class="landscape-canvas">
@@ -519,13 +579,22 @@
         <!-- Left Margin Vertical Stamp -->
         <div class="side-stamp">METFONE EXPRESS · INTERNAL TRAINING</div>
 
-        <!-- Top Navigation with Official Metfone Express Brand Logo -->
+        <!-- Top Navigation with Official Metfone Express Brand Logo & Language Switcher -->
         <div class="top-nav">
             <div class="logo-box">
                 <img src="https://theanlegendary.github.io/run-py/images/metfone_express_logo.png" alt="Metfone Express Logo" class="brand-logo-img">
                 <div class="nav-header-text">DAILY DISPATCH BOT TRAINING</div>
             </div>
-            <div class="nav-right-tag" id="slideTag">Slide 1 of 5 · Ops tms guide</div>
+
+            <div class="nav-right-controls">
+                <!-- SLEEK LANGUAGE SWITCHER TOGGLE BUTTONS -->
+                <div class="lang-switcher-box">
+                    <button class="lang-btn active" id="btnBoth" onclick="setLanguage('both')">🌐 EN+KH</button>
+                    <button class="lang-btn" id="btnEn" onclick="setLanguage('en')">🇬🇧 EN</button>
+                    <button class="lang-btn" id="btnKh" onclick="setLanguage('kh')">🇰🇭 KH</button>
+                </div>
+                <div class="nav-right-tag" id="slideTag">Slide 1 of 5 · Ops tms guide</div>
+            </div>
         </div>
 
         <!-- SLIDE 1 VIEW: CORE BOT OPERATIONS -->
@@ -533,21 +602,23 @@
             <div class="left-content">
                 <div class="eyebrow-line">Chapter 01 · Bot Core Operations</div>
                 
-                <h1 class="hero-title-bold">
+                <h1 class="hero-title-bold en-el">
                     Right report.<br><span>Every shift.</span>
                 </h1>
+                <h1 class="hero-title-bold kh-el">
+                    របាយការណ៍ត្រឹមត្រូវ<br><span>រៀងរាល់វេនការងារ</span>
+                </h1>
 
-                <p class="sub-english">
+                <p class="sub-english en-el">
                     A practical guide for automated daily pushes, 4-stage order tracking, 3-shift clearance comparison, and status logs.
                 </p>
 
-                <p class="sub-khmer">
+                <p class="sub-khmer kh-el">
                     សៀវភៅណែនាំសម្រាប់ការប្រើប្រាស់ Bot ស្វ័យប្រវត្តិនៃការទាញរបាយការណ៍ប្រចាំថ្ងៃ និងតាមដានទិន្នន័យ។
                 </p>
             </div>
 
             <div class="right-exhibit">
-                <!-- TAB 1 RENAMED TO '1. Pickup' -->
                 <div class="tab-switcher">
                     <button class="exhibit-tab active" onclick="switchExhibit('table1', this)">1. Pickup</button>
                     <button class="exhibit-tab" onclick="switchExhibit('table2', this)">2. Delivery</button>
@@ -559,7 +630,6 @@
                     <img id="exhibitImg" src="https://theanlegendary.github.io/run-py/images/thop001_branch_sharp.png" alt="Pickup Table" class="exhibit-img">
                 </div>
 
-                <!-- STICKER NOTE MOVED CLEANLY UNDER TABLE (NEVER OVERLAPS BUTTONS!) -->
                 <div class="sticky-note-under">
                     <div>📌 <b>Crisp Table View:</b> Click table to inspect full 100% size!</div>
                     <div class="badge-tag-inline">🏷️ VERIFIED DATA</div>
@@ -572,30 +642,41 @@
             <div class="left-content">
                 <div class="eyebrow-line">Chapter 02 · Delivery & Not Assign Logic</div>
                 
-                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                <h1 class="hero-title-bold en-el" style="font-size: 4.6rem;">
                     Clear pending.<br><span>Hit KPI 10h.</span>
+                </h1>
+                <h1 class="hero-title-bold kh-el" style="font-size: 4rem;">
+                    ដោះស្រាយទំនិញកកស្ទះ<br><span>សម្រេច KPI 10ម៉ោង</span>
                 </h1>
 
                 <div class="status-flow-container">
                     <div class="status-step-card" style="border-left-color: #f59e0b;">
                         <div class="status-code-badge" style="background: #f59e0b;">306</div>
-                        <div class="status-desc-text"><b>At Store / Pending:</b> Order pending at branch awaiting courier assignment.</div>
+                        <div class="status-desc-text en-el"><b>At Store / Pending:</b> Order pending at branch awaiting courier assignment.</div>
+                        <div class="status-desc-text kh-el"><b>ទំនិញនៅហាង / រង់ចាំ៖</b> ទំនិញកកស្ទះនៅសាខារង់ចាំការចាត់ចែងអ្នកដឹក។</div>
                     </div>
 
                     <div class="status-step-card" style="border-left-color: #2563eb;">
                         <div class="status-code-badge" style="background: #2563eb;">402</div>
-                        <div class="status-desc-text"><b>Assign Courier (10h KPI):</b> Courier assigned — 10h SLA timer starts!</div>
+                        <div class="status-desc-text en-el"><b>Assign Courier (10h KPI):</b> Courier assigned — 10h SLA timer starts!</div>
+                        <div class="status-desc-text kh-el"><b>ចាត់ចែងអ្នកដឹក (KPI 10h)៖</b> ចាត់ចែងអ្នកដឹក — ចាប់ផ្តើមរាប់ម៉ោង 10h KPI!</div>
                     </div>
 
                     <div class="status-step-card" style="border-left-color: #10b981;">
                         <div class="status-code-badge" style="background: #10b981;">OUTCOMES</div>
-                        <div class="status-desc-text">
+                        <div class="status-desc-text en-el">
                             <b>410</b> (Shipped) | <b>420</b> (Ship again) | <b>430</b> (Failed) | <b>460</b> (Return)
+                        </div>
+                        <div class="status-desc-text kh-el">
+                            <b>410</b> (ផ្ញើរួច) | <b>420</b> (ផ្ញើម្តងទៀត) | <b>430</b> (បរាជ័យ) | <b>460</b> (ត្រឡប់)
                         </div>
                     </div>
                 </div>
 
-                <p class="sub-khmer">
+                <p class="sub-english en-el">
+                    Operational Rule: Transition stuck 306 packages to 402 (Set 10h KPI) to start SLA timer and achieve 410, 420, 430, or 460 outcomes.
+                </p>
+                <p class="sub-khmer kh-el">
                     <b>ច្បាប់ប្រតិបត្តិការ៖</b> ប្តូរទំនិញកកស្ទះ 306 ទៅ 402 (កំណត់ KPI 10h) ដើម្បីចាប់ផ្តើមរាប់ម៉ោង និងទទួលបានលទ្ធផល 410, 420, 430 ឬ 460។
                 </p>
             </div>
@@ -622,23 +703,31 @@
             <div class="left-content">
                 <div class="eyebrow-line">Chapter 03 · Pickup & Mega Transit Action</div>
                 
-                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                <h1 class="hero-title-bold en-el" style="font-size: 4.6rem;">
                     Verify pickup.<br><span>Transit fast.</span>
+                </h1>
+                <h1 class="hero-title-bold kh-el" style="font-size: 4rem;">
+                    ពិនិត្យការយកទំនិញ<br><span>ដឹកជញ្ជូនបន្តលឿន</span>
                 </h1>
 
                 <div class="status-flow-container">
                     <div class="status-step-card" style="border-left-color: #e11b22;">
                         <div class="status-code-badge" style="background: #e11b22;">PICKUP APP</div>
-                        <div class="status-desc-text">For pending pickup bills, staff <b>must check Pickup Page in TMS App</b> for customer assignments!</div>
+                        <div class="status-desc-text en-el">For pending pickup bills, staff <b>must check Pickup Page in TMS App</b> for customer assignments!</div>
+                        <div class="status-desc-text kh-el">សម្រាប់អីវ៉ាន់ Pickup <b>ត្រូវពិនិត្យទំព័រ Pickup ក្នុង App</b> ដើម្បីមើលការ assign ពីអតិថិជន!</div>
                     </div>
 
                     <div class="status-step-card" style="border-left-color: #2563eb;">
                         <div class="status-code-badge" style="background: #2563eb;">MEGA TRANSIT</div>
-                        <div class="status-desc-text">Verify <b>Send Mega Table (302/306/311)</b> to ensure packages are loaded on transit trucks.</div>
+                        <div class="status-desc-text en-el">Verify <b>Send Mega Table (302/306/311)</b> to ensure packages are loaded on transit trucks.</div>
+                        <div class="status-desc-text kh-el">ពិនិត្យ <b>តារាង ដាក់ទៅ MEGA (302/306/311)</b> ដើម្បីប្រាកដថាទំនិញបានឡើងឡាន។</div>
                     </div>
                 </div>
 
-                <p class="sub-khmer">
+                <p class="sub-english en-el">
+                    Operational Rule: For pending pickup items, check TMS App Pickup Page to inspect customer assignments and send via MEGA transit.
+                </p>
+                <p class="sub-khmer kh-el">
                     <b>ច្បាប់ប្រតិបត្តិការ៖</b> សម្រាប់អីវ៉ាន់ត្រូវយក (Pickup) ត្រូវពិនិត្យទំព័រ Pickup ក្នុង App ដើម្បីមើលការ assign ពីអតិថិជន និងរៀបចំផ្ញើបន្តតាម MEGA។
                 </p>
             </div>
@@ -665,27 +754,39 @@
             <div class="left-content">
                 <div class="eyebrow-line">Chapter 04 · Operational KPI & Age SLA</div>
                 
-                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                <h1 class="hero-title-bold en-el" style="font-size: 4.6rem;">
                     Target 10h.<br><span>Zero overdue.</span>
+                </h1>
+                <h1 class="hero-title-bold kh-el" style="font-size: 4rem;">
+                    គោលដៅ 10ម៉ោង<br><span>គ្មានទំនិញយឺតយ៉ាវ</span>
                 </h1>
 
                 <div class="kpi-explain-box">
                     <div class="kpi-card" style="border-left: 6px solid #10b981;">
                         <div class="kpi-badge-tag green">🟢 GREEN (0h — 9h 59m)</div>
-                        <div class="kpi-card-text">
+                        <div class="kpi-card-text en-el">
                             <b>Safe SLA Zone:</b> Order age is within 10-hour target. Delivery on schedule.
+                        </div>
+                        <div class="kpi-card-text kh-el">
+                            <b>តំបន់សុវត្ថិភាព SLA៖</b> អាយុទំនិញស្ថិតក្នុងគោលដៅ 10ម៉ោង។
                         </div>
                     </div>
 
                     <div class="kpi-card" style="border-left: 6px solid #e11b22;">
                         <div class="kpi-badge-tag red">🔴 RED (≥ 10h 00m)</div>
-                        <div class="kpi-card-text">
+                        <div class="kpi-card-text en-el">
                             <b>Overdue Alert:</b> Order age exceeded 10 hours! Requires immediate courier follow-up.
+                        </div>
+                        <div class="kpi-card-text kh-el">
+                            <b>អាសន្នយឺតយ៉ាវ៖</b> អាយុទំនិញលើស 10ម៉ោង! ត្រូវប្រញាប់តាមដាន។
                         </div>
                     </div>
                 </div>
 
-                <p class="sub-khmer">
+                <p class="sub-english en-el">
+                    KPI SLA Logic: Green 🟢 order age is safe (<10h) | Red 🔴 order age is overdue (≥10h) and requires urgent resolution across all 3 shifts.
+                </p>
+                <p class="sub-khmer kh-el">
                     <b>ការរាប់ KPI៖</b> រយៈពេលអាយុ (Age) ពណ៌បៃតង 🟢 គឺទាន់ពេល (<10h) | ពណ៌ក្រហម 🔴 គឺហួសកាលកំណត់ (≥10h) ត្រូវតែប្រញាប់ដោះស្រាយ!
                 </p>
             </div>
@@ -712,27 +813,32 @@
             <div class="left-content">
                 <div class="eyebrow-line">Chapter 05 · End of Day Inventory Audit</div>
                 
-                <h1 class="hero-title-bold" style="font-size: 4.6rem;">
+                <h1 class="hero-title-bold en-el" style="font-size: 4.6rem;">
                     Scan inventory.<br><span>Close shift clean.</span>
                 </h1>
+                <h1 class="hero-title-bold kh-el" style="font-size: 4rem;">
+                    ស្កេនពិនិត្យស្តុក<br><span>បិទវេនដោយស្អាតស្អំ</span>
+                </h1>
 
-                <p class="sub-english">
+                <p class="sub-english en-el">
                     At the end of every operational shift, staff must perform a physical audit using the <b>Scan in Inventory feature</b> in the TMS app.
                 </p>
 
                 <div class="status-flow-container">
                     <div class="status-step-card" style="border-left-color: #2563eb;">
                         <div class="status-code-badge" style="background: #2563eb;">1. PHYSICAL AUDIT</div>
-                        <div class="status-desc-text">Scan all remaining store packages using <b>Scan in Inventory feature</b> to reconcile store stock.</div>
+                        <div class="status-desc-text en-el">Scan all remaining store packages using <b>Scan in Inventory feature</b> to reconcile store stock.</div>
+                        <div class="status-desc-text kh-el">ស្កេនទំនិញដែលនៅសល់ក្នុងហាងដោយប្រើ <b>មុខងារ Scan ចូលស្តុក</b> ដើម្បីផ្ទៀងផ្ទាត់ស្តុកហាង។</div>
                     </div>
 
                     <div class="status-step-card" style="border-left-color: #10b981;">
                         <div class="status-code-badge" style="background: #10b981;">2. MATCH BOT LOGS</div>
-                        <div class="status-desc-text">Ensure total scanned store count matches the <b>Not Assign & Branch Tables</b> in bot report.</div>
+                        <div class="status-desc-text en-el">Ensure total scanned store count matches the <b>Not Assign & Branch Tables</b> in bot report.</div>
+                        <div class="status-desc-text kh-el">ធានាថាចំនួនទំនិញដែលបានស្កេន ត្រូវគ្នានឹង <b>តារាង មិនទាន់ចាត់ចែង</b> ក្នុងរបាយការណ៍ Bot។</div>
                     </div>
                 </div>
 
-                <p class="sub-khmer">
+                <p class="sub-khmer kh-el">
                     <b>គ្រប់គ្រងស្តុកចុងម៉ោង៖</b> នៅចុងបញ្ចប់នៃវេនការងារ ត្រូវតែប្រើមុខងារ Scan ចូលស្តុក ក្នុង App ដើម្បីស៊ើបអង្កេតទំនិញ និងទិន្នន័យក្នុងប្រព័ន្ធ!
                 </p>
             </div>
@@ -806,6 +912,17 @@
             'inv2': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scan.png', title: '2. ស្កេនទំនិញចូលស្តុក (TMS App Scan Package Check)' },
             'inv3': { src: 'https://theanlegendary.github.io/run-py/images/tms_inventory_scanned_list.png', title: '3. បញ្ជីទំនិញដែលបានស្កេន (TMS App Scanned Inventory Items)' }
         };
+
+        function setLanguage(lang) {
+            document.body.className = 'mode-' + lang;
+            document.getElementById('btnBoth').classList.remove('active');
+            document.getElementById('btnEn').classList.remove('active');
+            document.getElementById('btnKh').classList.remove('active');
+
+            if (lang === 'both') document.getElementById('btnBoth').classList.add('active');
+            if (lang === 'en') document.getElementById('btnEn').classList.add('active');
+            if (lang === 'kh') document.getElementById('btnKh').classList.add('active');
+        }
 
         function goToSlide(slideNum) {
             currentSlide = slideNum;
